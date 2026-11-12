@@ -2,6 +2,16 @@
 
 **Status:** Independent, locally runnable adapter; as of 12 November 2026 **NOT YET TESTED on the GSE266265 human atlas**. The base Matrix aggregation is tested against completely synthetic data in R CI. This is a software engineering component, not completion of the source-rights, phase-stratification or model-validation gates.
 
+## Parallel implementation and consistency gate
+
+Open-Disease already includes **scripts/seurat_to_pseudobulk.R**, a second offline Seurat exporter that expects a locally reviewed one-row-per-cell metadata CSV with the columns cell_id, study_id, donor_id, diagnosis, phase, hormone_treatment and cell_type. Run it with:
+
+    Rscript scripts/seurat_to_pseudobulk.R --rds /approved/atlas.rds --metadata /approved/cell_mapping.csv --out data/processed/donor_pseudobulk.csv
+
+This document describes the **alternative sample-mapping interface**, which builds each cell's donor mapping by joining sample IDs from the Seurat object with the reviewed sample-to-donor file, and additionally emits an exclusion audit. Prefer whichever metadata contract the original data custodians can support without guessing missing patient identifiers.
+
+Both methods are tested on completely artificial raw counts, and tests/r/test_cross_exporters.R compares their exact donor × gene outputs. A matching synthetic result is a software invariant, **not** human biological validation.
+
 ## Purpose
 
 The 2026 60-donor endometrium atlas is distributed as an approximately 39 GB Seurat RDS. We must turn its **full raw RNA feature × cell count layer** into one complete, pseudonymous **donor × cell-type × gene** count table without mistaking thousands of cells for thousands of patients.

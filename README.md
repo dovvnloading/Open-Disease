@@ -69,3 +69,7 @@ Existing code handles only steps of this workflow; it **has not yet accessed or 
 **NOT FOR CLINICAL USE.** No output from this repository should be used to diagnose, treat, triage, or predict outcomes for individuals. Do not post personal health records, participants' raw data or protected participant metadata to GitHub. No source code is copied from unlicensed upstream research repositories. A gene expression difference is not evidence of causal disease mechanism or drug efficacy.
 
 See [ETHICS_AND_LIMITATIONS.md](ETHICS_AND_LIMITATIONS.md).
+
+### Alternative offline Seurat export with auditable sample-to-donor mapping
+
+A separate experimental adapter accepts a local sample-to-donor map rather than one row of mapping metadata per cell. It adds an exclusion audit for low-cell-count groups and is tested against the existing cell-mapped exporter on artificial sparse matrices. This does not mean the 60-donor atlas has been processed. Read [docs/ATLAS_EXPORT.md](docs/ATLAS_EXPORT.md) before use.
