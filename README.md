@@ -46,15 +46,18 @@ The demo writes **SIMULATED ONLY** data into an ignored directory. Any discovery
 
 Use `python -m open_disease --help` to see commands. The core input contract is documented in [DATA_SOURCES.md](DATA_SOURCES.md) and [PROTOCOL.md](PROTOCOL.md).
 
-## The first non-synthetic milestone
+## Immediate milestone: independent, public-data research (no lab prerequisite)
 
-1. Independently check licenses, metadata, ancestry/cohort overlap, tissue matching and permissions for the human datasets.
-2. Export **raw count** donor-by-cell-type pseudobulk from the 2026 atlas locally, preserving the original source file and analysis script. The full Seurat RDS is about 38.9 GB; do not download it in GitHub Actions.
-3. Preflight each phase and cell type; mark underpowered strata as ineligible.
-4. Replicate an established result with a count-aware statistical model and pre-specified confounders before claiming novelty.
-5. Lock a target selection plan, then evaluate a **truly independent and comparable cohort**. Publish negative findings, uncertainty, and exclusions.
+**Our next scientific goal is a real, reproducible analysis of existing publicly released biomedical data—not another synthetic demonstration or a request to recruit a laboratory.** See [Independent research plan](docs/INDEPENDENT_RESEARCH_PLAN.md) and [Issue #11](https://github.com/dovvnloading/Open-Disease/issues/11).
 
-Existing code handles only steps of this workflow; it **has not yet accessed or analyzed human datasets**.
+- Start with **GSE51981**, a manageable 148-sample endometrial *microarray* dataset from GEO. Original paper: 77 endometriosis cases, 34 pathology-free controls, **37 other pelvic-pathology samples**. The last 37 must not be silently treated as healthy controls. Respect clinical and cycle-phase metadata.
+- Obtain the released processed **log2 microarray intensity** Series Matrix under applicable source terms, log source SHA256 and sample QC, and reproduce a specific published result using a microarray-appropriate analysis (e.g. limma). **Do not feed array intensities into edgeR or raw RNA count tools.**
+- Document exact cohort exclusions, disease-vs-control contrast, menstrual phase, effect directions, FDR, negative controls, uncertainty and mismatches with the original publication. No invented gene discoveries.
+- Cross-reference **public Open Targets target/disease evidence**, but report prior findings, mapping ambiguity and association-versus-causation limits.
+- Include a truly independent source where scientifically comparable, or explicitly report a validation gap. Honest null results are valuable.
+- Reserve the huge GSE266265 Seurat import for a later, sufficiently resourced phase. Independent computational work does **not** require a clinician or laboratory coauthor to start. Laboratory/clinical collaboration remains necessary to claim experimentally validated therapeutic activity or a cure.
+
+**Science status: no actual human-data analysis completed yet.** The existing programs remain synthetic-only and do not support clinical use.
 
 ## Research materials
 
