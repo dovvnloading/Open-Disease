@@ -11,7 +11,21 @@ Version 0.1, November 2026. This is a plan, not a claim that scientific mileston
 - [x] Document the actual studies, access restrictions, patent interests and science limitations.
 - [ ] Verify CI is green and have an independent scientific reviewer assess protocol.
 
-## Milestone 1 — make genuine data use permissible and reproducible
+## Milestone 1A — public-data-first independent analysis (first priority, no lab required)
+
+Goal: produce the first genuine, fully documented computational research result using accessible, already released data on ordinary CPU hardware. **No external collaborator, high-memory Seurat system, restricted dataset or grant is a prerequisite to this milestone.** See [INDEPENDENT_RESEARCH_PLAN.md](INDEPENDENT_RESEARCH_PLAN.md) and [Issue #11](https://github.com/dovvnloading/Open-Disease/issues/11).
+
+- [ ] Independently review GSE51981 sample accession/diagnosis/tissue/phase and reuse terms. Explicitly preserve 77 cases, 34 pathology-free controls, and the 37 other pelvic-pathology samples as separate categories, subject to verification.
+- [ ] Download the processed Series Matrix, record actual source/version/checksum, and implement microarray-appropriate QC and limma analysis, **not** the RNA-count edgeR pipeline.
+- [ ] Predefine discovery contrast, phase sensitivity checks, negative controls and a complete gene/probe testing family.
+- [ ] Reproduce at least one published effect, publish divergences and failures, and report exact independent sample counts.
+- [ ] Check publicly accessible independent validation evidence without promoting cross-tissue or different-platform comparisons to full replication.
+- [ ] Integrate source-backed public target/disease evidence with explicit prior-art/causality limitations.
+- **Exit:** a reproducible public-data analysis and evidence table (positive or null). No gene-target, diagnostic, laboratory or cure claim.
+
+## Milestone 1B — high-memory Seurat and GWAS program (later, optional for Milestone 1A)
+
+Milestone 1 — make genuine data use permissible and reproducible
 
 - [ ] Review GSE266265 processed object and its license, metadata dictionary, cell counts, sample IDs and menstrual phase categories.
 - [ ] Verify Zenodo GWAS file layout and permitted uses; design reproducible gene-mapping schema with genomic build and provenance.
