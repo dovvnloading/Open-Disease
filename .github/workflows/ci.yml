@@ -20,12 +20,19 @@ jobs:
           cache: "pip"
       - name: Install
         run: python -m pip install -e ".[dev]"
-      - name: Validate research code
+      - name: Verify source catalog and restricted-file guard
+        run: |
+          python scripts/verify_catalog.py
+          python scripts/repo_safety.py
+      - name: Run unit and integration tests
         run: python -m pytest -q
-      - name: Exercise synthetic end-to-end workflow
-        run: bash scripts/run_demo.sh
-      - name: Check synthetic provenance and output
+      - name: Run synthetic end-to-end research demo
+        run: |
+          bash scripts/run_demo.sh
+          python scripts/audit_cohort.py --pseudobulk results/synthetic-demo/pseudobulk.csv --out results/synthetic-demo/qc.csv
+      - name: Verify synthetic provenance and output
         run: |
           test -f results/synthetic-demo/SYNTHETIC_ONLY.json
           test -s results/synthetic-demo/validation.csv
+          test -s results/synthetic-demo/qc.csv
           grep -q "SYN000" results/synthetic-demo/validation.csv
