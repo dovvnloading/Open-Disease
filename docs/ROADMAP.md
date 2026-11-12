@@ -9,7 +9,8 @@ Version 0.1, November 2026. This is a plan, not a claim that scientific mileston
 - [x] Add curated-evidence ranking separated from holdout validation.
 - [x] Add deterministic synthetic data and automated regression tests.
 - [x] Document the actual studies, access restrictions, patent interests and science limitations.
-- [ ] Verify CI is green and have an independent scientific reviewer assess protocol.
+- [x] Verify synthetic CI has passed on the current research foundation.
+- [ ] Obtain independent scientific review before making consequential human-data/therapeutic claims.
 
 ## Milestone 1A — public-data-first independent analysis (first priority, no lab required)
 
@@ -25,7 +26,6 @@ Goal: produce the first genuine, fully documented computational research result 
 
 ## Milestone 1B — high-memory Seurat and GWAS program (later, optional for Milestone 1A)
 
-Milestone 1 — make genuine data use permissible and reproducible
 
 - [ ] Review GSE266265 processed object and its license, metadata dictionary, cell counts, sample IDs and menstrual phase categories.
 - [ ] Verify Zenodo GWAS file layout and permitted uses; design reproducible gene-mapping schema with genomic build and provenance.
