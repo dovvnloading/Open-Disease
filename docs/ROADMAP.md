@@ -16,7 +16,8 @@ Version 0.1, November 2026. This is a plan, not a claim that scientific mileston
 - [ ] Review GSE266265 processed object and its license, metadata dictionary, cell counts, sample IDs and menstrual phase categories.
 - [ ] Verify Zenodo GWAS file layout and permitted uses; design reproducible gene-mapping schema with genomic build and provenance.
 - [ ] Freeze the first real discovery/validation comparison and define independent donor cohorts and statistical power.
-- [ ] Implement an R/Seurat (or equivalent) atlas adapter using stable column mapping and full-library normalization.
+- [x] Implement a synthetic-tested sparse raw-count aggregator and explicit-metadata Seurat adapter.
+- [ ] Validate the adapter's SeuratObject input behavior, high-memory performance and source field mappings on the actual rights-cleared atlas.
 - [ ] Produce checksums, source inventory and an independently reproduced published baseline result.
 - **Stop gate:** no actual human-data analysis if consent/terms or donor independence cannot be established.
 
