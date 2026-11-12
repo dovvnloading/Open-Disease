@@ -1,8 +1,8 @@
-# Metadata-only source registry
+# Canonical source registry moved
 
-catalog/sources.json records public evidence, access status and licensing questions.
-No patient-level, pseudonymized individual counts, genomes, restricted files, tokens or fabricated checksums belong here.
+The machine-readable public-metadata inventory lives at **data/sources.json**.
+The canonical narrative review is **DATA_SOURCES.md** at the repository root.
 
     python scripts/verify_catalog.py
 
-The validator performs **local structural checks only**. It does not download or verify any human data. For consent, reuse, conflict and statistical constraints see docs/DATA_SOURCES.md and docs/PROTOCOL.md.
+There are NO real human data downloads, results or unverified file hashes in the repository. Please do not create a second, divergent catalog. See docs/SOURCE_REVIEW_2026-11-12.md for the source-audit log.
