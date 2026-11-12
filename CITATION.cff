@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this research software, please cite this repository and the original studies and datasets."
+title: "Open-Disease: evidence-first open research infrastructure"
+type: software
+authors:
+  - name: "Open-Disease contributors"
+repository-code: "https://github.com/dovvnloading/Open-Disease"
+url: "https://github.com/dovvnloading/Open-Disease"
+date-released: "2026-11-12"
+license: MIT
+version: "0.1.0"
+abstract: "Exploratory donor-level computational research for unsolved diseases; currently endometriosis. Not for clinical use."

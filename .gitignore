@@ -1,0 +1,27 @@
+# Do NOT commit patient-level, raw, private or derivative human data
+data/raw/
+data/processed/
+data/private/
+results/
+outputs/
+*.h5ad
+*.rds
+*.bam
+*.cram
+*.fastq
+*.fastq.gz
+*.vcf
+*.vcf.gz
+*.parquet
+*.h5
+*.ipynb_checkpoints/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+!.env.example
