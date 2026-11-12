@@ -45,3 +45,7 @@ The supplied demo genetics table is entirely fabricated and clearly marked SYNTH
 Rank, frozen discovery information, validation_study, validation effect/q/donor counts, replicated Boolean and validation_status (replicated_exploratory, not_replicated or not_measured). Holdout results are never incorporated into rank sorting.
 
 **Privacy:** even donor-level outputs may expose protected human subject information. All actual human-derived datasets and output folders must remain in approved local/controlled storage, not GitHub.
+
+## Count-aware model output (new experimental R path)
+
+The independent edgeR v4 QL script emits every assayed gene with status tested or filtered_low_expression and the corresponding tested logFC_case_vs_control, logCPM, quasi_F, p_value and q_value. A negative logFC means lower expression in cases. FDR correction is within the selected study × phase × cell type, **not across all potential cell-type/phase hypotheses**. Donor counts, adjustment method, residual degrees of freedom and edgeR package version are retained. Full raw count-library equality is required before modeling. See [docs/EDGE_R_MODEL.md](EDGE_R_MODEL.md).

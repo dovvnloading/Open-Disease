@@ -19,6 +19,7 @@ Sources: [GEO GSE266265](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2
 - A **strict donor-level** cell-count aggregation adapter for small long-format input tables.
 - An exploratory, phase- and cell-type-stratified donor pseudobulk baseline (Welch test on log2(1+CPM), with Benjamini–Hochberg correction). **Not** a validated disease model or a publication-grade replacement for edgeR/DESeq2.
 - Structural cohort preflight auditing: missing genes, minimum donors, cell and library counts.
+- A separately tested **experimental edgeR v4 donor-count quasi-likelihood model** with estimability and explicit covariate gates ([methods and limitations](docs/EDGE_R_MODEL.md)); no real human atlas data have been analyzed.
 - A separately tested R/Matrix sparse aggregator and **local-only** Seurat raw-RNA-count adapter ([instructions](docs/ATLAS_EXPORT.md)); real RDS ingestion has not been verified.
 - Auditable, manually sourced *candidate* ranking, with a strict separate-study validation API.
 - Explicitly synthetic data, seeded tests, and GitHub Actions.
@@ -58,6 +59,7 @@ Existing code handles only steps of this workflow; it **has not yet accessed or 
 ## Research materials
 
 - [PROTOCOL.md](PROTOCOL.md): hypothesis, statistical guardrails, success/failure criteria.
+- [docs/EDGE_R_MODEL.md](docs/EDGE_R_MODEL.md): count-model design, assumptions, test gates, and limitations.
 - [DATA_SOURCES.md](DATA_SOURCES.md): source identifiers, access and validation caveats.
 - [data/sources.json](data/sources.json): machine-readable study inventory.
 - [ETHICS_AND_LIMITATIONS.md](ETHICS_AND_LIMITATIONS.md): research ethics, governance and limitations.
