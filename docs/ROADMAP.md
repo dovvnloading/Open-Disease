@@ -24,7 +24,8 @@ Version 0.1, November 2026. This is a plan, not a claim that scientific mileston
 ## Milestone 2 — statistically defensible discovery
 
 - [ ] Predefine multiple testing families, exact phenotypes, covariates and tissue contrasts.
-- [ ] Fit validated count-based pseudobulk model (edgeR/DESeq2) and benchmark against v0.1 baseline.
+- [x] Write an exploratory edgeR v4 count-aware QL model and synthetic test cases.
+- [ ] Run real-count reproduction, model diagnostics and comparison with v0.1 under biostatistical review, before any finding is called validated.
 - [ ] Perform phase-, treatment-, age-, batch- and cell-composition sensitivity analyses where permitted.
 - [ ] Integrate actual fine-mapping/colocalization evidence rather than heuristic invented scores.
 - [ ] Apply donor-level permutations, negative controls and leakage audit.
