@@ -1,18 +1,22 @@
 # Contributing to Open-Disease
 
-We welcome computational biologists, clinicians, statisticians, patient advocates, bioinformaticians, reproducibility researchers and software engineers.
+We welcome expertise in endometriosis biology, human genetics, statistical genomics, computational biology, reproducibility engineering, reproductive health and patient-centered research.
 
-## Before opening a PR
+## Good first contributions
 
-- Read docs/CHARTER.md, docs/PROTOCOL.md and docs/ETHICS_AND_LIMITATIONS.md.
-- Open an issue describing a falsifiable research question, the source's consent/license situation, donor units and independent comparison.
-- Keep actual patient data, human DNA/RNA counts and access credentials out of GitHub and issue attachments.
-- Add deterministic tests for new assumptions; execute python -m pytest and the synthetic demo.
-- State new limitations, statistical families, negative controls and risk of data leakage.
-- Avoid claims of diagnoses, safe interventions, causal genes or cure without independently validated evidence.
+- Independently verify source access, licenses, donor counts and menstrual-cycle labels without committing human data.
+- Suggest **published**, ethically reusable comparator cohorts and explain anatomical/clinical comparability.
+- Contribute tests for scientific failure modes (pseudoreplication, leakage, duplicate donors, partial gene matrices).
+- Reproduce a reference finding under a documented protocol with counts-aware methods.
+- Review target mapping logic, statistical methods, reproductive safety and accessible research communication.
 
-## Scientific review
+## Pull-request rules
 
-Any change to real-data inclusion, eligibility, genetic evidence, multiple testing, covariates, validation, clinical interpretation or human participant interactions requires review by qualified domain specialists before the related result can be presented as scientific evidence.
+1. Open an issue first for scientific hypothesis changes and describe the falsifiable question and data rights.
+2. Run `python -m pytest -q`; include regression tests for code changes.
+3. List source URLs, accession IDs, code/data licenses and versions. Distinguish observed data from synthetic or simulated examples.
+4. Report negative, null and nonreplicated outcomes; do not selectively omit them.
+5. Do not include records containing participant identifiers or individual medical history, any restricted dataset, secrets, or upstream code without compatible license.
+6. No medical advice or clinical promises in README, releases or submissions.
 
-Report bugs or suspected sensitive-data leaks privately rather than publicizing the data.
+Scientific proposals must state one primary endpoint, inference unit, planned covariate handling, power limitations, negative controls and what would falsify the hypothesis.

@@ -1,0 +1,107 @@
+{
+  "schema_version": "2026-11-12",
+  "catalog_is_not_redistribution_permission": true,
+  "automatic_downloads_enabled": false,
+  "biological_results_generated": false,
+  "sources": [
+    {
+      "id": "GSE266265",
+      "kind": "single_cell_eutopic_endometrium",
+      "study_name": "Duempelmann et al. 2026 atlas",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265",
+      "publication": "https://doi.org/10.1038/s41467-026-73020-4",
+      "independent_donors": 60,
+      "cases": 35,
+      "controls": 25,
+      "cell_count": 466371,
+      "processed_rds_gb_approx": 38.9,
+      "human_data_used_by_open_disease": false,
+      "access": "public GEO; original source and rights must be reviewed",
+      "role": "discovery_candidate",
+      "cautions": [
+        "count from donors not cells",
+        "cycle phase stratification required",
+        "upstream GitHub analysis source lacks explicit license",
+        "RDS uses substantial memory"
+      ]
+    },
+    {
+      "id": "zenodo.18983492",
+      "kind": "summary_statistics",
+      "study_name": "Koller et al. 2026 endometriosis GWAS",
+      "url": "https://doi.org/10.5281/zenodo.18983492",
+      "publication": "https://doi.org/10.1038/s41588-026-02582-2",
+      "case_count_reported": 105869,
+      "risk_regions": 80,
+      "human_data_used_by_open_disease": false,
+      "access": "public study summary-statistics release; constituent cohort restrictions differ",
+      "role": "genetic_gene_mapping_candidate",
+      "cautions": [
+        "not participant genotype data",
+        "nearest gene is not causal mapping",
+        "assembly/alleles/releases need independent auditing"
+      ]
+    },
+    {
+      "id": "GSE213216",
+      "kind": "single_cell_mixed_anatomical_tissue",
+      "study_name": "Lawrenson et al. 2023",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213216",
+      "publication": "https://doi.org/10.1038/s41588-022-01254-1",
+      "eutopic_endometrium_samples_reported": 10,
+      "eutopic_case_samples_reported": 7,
+      "eutopic_control_samples_reported": 3,
+      "human_data_used_by_open_disease": false,
+      "access": "public GEO; verify dataset terms",
+      "role": "potential_secondary_exploratory",
+      "cautions": [
+        "54 total specimens cover different tissue sites",
+        "some patients used exogenous hormones",
+        "not an established powerful holdout"
+      ]
+    },
+    {
+      "id": "GSE179640",
+      "kind": "single_cell_mixed_anatomical_tissue",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179640",
+      "human_data_used_by_open_disease": false,
+      "access": "public GEO; audit source terms",
+      "role": "potential_secondary_exploratory",
+      "cautions": [
+        "small endometrial healthy-control count in some published subsets",
+        "requires independent participant/tissue/phase audit"
+      ]
+    },
+    {
+      "id": "GSE51981",
+      "kind": "microarray",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981",
+      "human_data_used_by_open_disease": false,
+      "access": "public GEO; verify source terms",
+      "role": "potential_external_platform_direction_check",
+      "cautions": [
+        "not RNA-seq counts; current pipeline incompatible",
+        "review clinical cohort filters"
+      ]
+    },
+    {
+      "id": "zenodo.17203106",
+      "kind": "menstrual_fluid_processed_pilot",
+      "study_name": "Leap et al. BMC Medicine 2026",
+      "url": "https://doi.org/10.5281/zenodo.17203106",
+      "publication": "https://doi.org/10.1186/s12916-026-05020-6",
+      "independent_donors": 10,
+      "cases": 5,
+      "controls": 5,
+      "human_data_used_by_open_disease": false,
+      "access": "processed files/code public; individual donor sequencing requires DAC and DTA at doi:10.57745/ELWEGD",
+      "role": "exploratory_cross_compartment",
+      "cautions": [
+        "underpowered pilot",
+        "no clinical diagnostic validity",
+        "donor sequencing not open access",
+        "some donor comorbidities and anti-inflammatory treatment"
+      ]
+    }
+  ]
+}

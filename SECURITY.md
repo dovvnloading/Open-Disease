@@ -1,7 +1,7 @@
-# Responsible disclosure and data handling
+# Security and private participant data
 
-This project must not receive real patient or private genomic information through repository issues, pull requests, logs or attachments. Never include credentials, access-controlled source files or secret URLs in examples.
+Do not open an issue containing a participant's personal health information, genotype, raw RNA/DNA sequencing, private dataset identifiers, contact information, controlled-access download credentials, or transfer agreements.
 
-Report a software security flaw privately through the GitHub repository's security advisory mechanism, where enabled, or contact the maintainer by a nonpublic channel. For accidental health-data disclosure, do not paste sample data into the issue; immediately alert the dataset custodian and an authorized maintainer.
+Report a potential vulnerability or accidental data leak **privately to repository maintainers**, not in a public issue. If a repository private vulnerability reporting channel is available, use it. Otherwise contact maintainers through an established private GitHub channel. Do not post secrets or details publicly while awaiting remediation.
 
-Gitignore does not guarantee privacy. Confirm access, legal basis, ethics approval and restricted-data storage independently.
+Local acquisition and analysis environments must provide controlled access, input hashing, retention/erasure rules appropriate to data-use agreements, and isolation from public CI. Repository tests run on **synthetic data only**.

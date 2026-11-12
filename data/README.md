@@ -1,7 +1,9 @@
-# Research data policy
+# Local research data directory
 
-This directory contains **documentation only**. It must never store real patient-derived counts, raw genetic data, individual-level metadata, confidential study files or consent materials in the public repository.
+**No clinical or participant-level data belong in this Git repository.**
 
-Use local data/raw, data/processed or approved controlled-computing storage. These paths are gitignored, but permissions and access agreements remain mandatory. Synthetic examples are generated under results/ by scripts/run_demo.sh and are also gitignored.
+Subdirectories `data/raw/`, `data/processed/` and `data/private/` are ignored by Git. Use a suitably secured and lawful analysis environment for permitted data. The source catalog `sources.json` is a publicly shareable metadata inventory, not an automated download manifest or a grant of access.
 
-See docs/DATA_SOURCES.md and docs/SCHEMA.md. Run the local checksum utility on approved files rather than sharing any sensitive bytes in GitHub.
+Synthetic examples are generated into the ignored `results/` directory by `bash scripts/run_demo.sh`. No real genetic, clinical or endometriosis data are included in the demo.
+
+The donor-level pseudobulk schema and provenance requirements are documented in [DATA_SOURCES.md](../DATA_SOURCES.md).

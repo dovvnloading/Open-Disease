@@ -1,76 +1,71 @@
 # Open-Disease
 
-**Open-source research infrastructure for discovering reproducible disease mechanisms.**
+**An open-source, evidence-first research effort to accelerate understanding of diseases without reliable, generalizable cures.**
 
-**Status: preclinical research software, v0.1.0.** This repository has not discovered a cure, analyzed real endometriosis donors, or validated a diagnostic test. The runnable example uses explicitly simulated data.
+**Status: research infrastructure under active development. First active program: endometriosis. No treatment, diagnostic test, or validated therapeutic target has been produced.**
 
-## Mission
+Our long-term disease shortlist: (1) endometriosis, (2) ALS, (3) type 1 diabetes, (4) idiopathic pulmonary fibrosis, and (5) ME/CFS. We do not claim that software alone can cure any of them. Our immediate deliverable is reproducible biomedical evidence and independent validation of hypotheses that experimental scientists could test.
 
-Build transparent, testable computational methods to help scientific teams investigate serious diseases without broadly available cures. Prioritize independent replication, patient benefit, and biological safety over impressive-looking model scores.
+## First question: endometriosis
 
-Our five initial research priorities:
+*Can genetic evidence and donor-level cell-type expression analysis identify candidate endometriosis mechanisms that persist across comparable, independent studies?*
 
-1. **Endometriosis — ACTIVE FIRST PROGRAM:** genetics-informed, donor-level cell-state and target discovery.
-2. **ALS:** TDP-43 and cryptic RNA-splicing defects (exploratory program).
-3. **Type 1 diabetes:** beta-cell replacement and immune protection (exploratory program).
-4. **Idiopathic pulmonary fibrosis:** pathological fibroblast states and scarring (exploratory program).
-5. **ME/CFS:** reproducibility of genetic, immune and metabolic signatures (exploratory program).
+The primary human single-cell atlas contains 466,371 cells from **60 donors** (35 cases, 25 controls). Its individual cells are not 466,371 independent patients. The 2026 multi-ancestry GWAS identifies 80 risk regions, but a risk region alone does **not** implicate its nearest gene as a therapeutic target.
 
-These are research directions, not five parallel clinical cure claims. See docs/CHARTER.md and docs/ROADMAP.md.
+Sources: [GEO GSE266265](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265), [2026 atlas article](https://doi.org/10.1038/s41467-026-73020-4), [2026 GWAS](https://doi.org/10.1038/s41588-026-02582-2), and [GWAS summary statistics](https://doi.org/10.5281/zenodo.18983492).
 
 ## What works today
 
-- Validation of donor identity and metadata across gene rows.
-- Cell-to-donor pseudobulk aggregation with explicit zero-count handling for small datasets.
-- Exploratory per-study, per-cell-type, per-cycle-phase donor-level differential expression (Welch test on log2 CPM with Benjamini–Hochberg correction).
-- Hypothesis ranking from **externally curated gene-level mapping evidence**; a GWAS locus alone is not accepted as gene-level evidence.
-- Frozen candidate list evaluated on a **different study**, reporting both success and failure.
-- Fully synthetic two-cohort demo, deterministic tests and GitHub Actions CI.
+- A **strict donor-level** cell-count aggregation adapter for small long-format input tables.
+- An exploratory, phase- and cell-type-stratified donor pseudobulk baseline (Welch test on log2(1+CPM), with Benjamini–Hochberg correction). **Not** a validated disease model or a publication-grade replacement for edgeR/DESeq2.
+- Structural cohort preflight auditing: missing genes, minimum donors, cell and library counts.
+- Auditable, manually sourced *candidate* ranking, with a strict separate-study validation API.
+- Explicitly synthetic data, seeded tests, and GitHub Actions.
+- No background collection, API calls, data downloads, automatic diagnosis, clinical advice, or human data in the repository.
 
-**Not implemented:** automatic download and parsing of the ~39 GB tissue atlas, automatic GWAS fine-mapping, covariate-adjusted count-model analysis, independent human cohort validation, clinical tests or wet-lab assays. Results from the baseline statistical model are exploratory only.
+## Run the code locally
 
-## Quick start
+Requires Python 3.11 or newer.
 
-Python 3.11 or later:
+```bash
+git clone https://github.com/dovvnloading/Open-Disease.git
+cd Open-Disease
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+python -m pytest -q
+bash scripts/run_demo.sh
+python scripts/audit_cohort.py \
+  --pseudobulk results/synthetic-demo/pseudobulk.csv \
+  --out results/synthetic-demo/audit.csv
+```
 
-    git clone https://github.com/dovvnloading/Open-Disease.git
-    cd Open-Disease
-    python -m venv .venv
-    source .venv/bin/activate
-    python -m pip install -e ".[dev]"
-    python -m pytest -q
-    bash scripts/run_demo.sh
+The demo writes **SIMULATED ONLY** data into an ignored directory. Any discovery, target ranking or "replication" in synthetic data is a software test, **not** biological evidence.
 
-Windows: activate the virtual environment using the corresponding PowerShell command and run each demo command from scripts/run_demo.sh manually.
+Use `python -m open_disease --help` to see commands. The core input contract is documented in [DATA_SOURCES.md](DATA_SOURCES.md) and [PROTOCOL.md](PROTOCOL.md).
 
-Read the example outputs under results/synthetic-demo/. Every simulated gene is named SYNxxx and is biologically fictitious. The two simulated studies share planted effects; this exercises software controls and **does not constitute external scientific replication**. Generated results are gitignored.
+## The first non-synthetic milestone
 
-### Commands
+1. Independently check licenses, metadata, ancestry/cohort overlap, tissue matching and permissions for the human datasets.
+2. Export **raw count** donor-by-cell-type pseudobulk from the 2026 atlas locally, preserving the original source file and analysis script. The full Seurat RDS is about 38.9 GB; do not download it in GitHub Actions.
+3. Preflight each phase and cell type; mark underpowered strata as ineligible.
+4. Replicate an established result with a count-aware statistical model and pre-specified confounders before claiming novelty.
+5. Lock a target selection plan, then evaluate a **truly independent and comparable cohort**. Publish negative findings, uncertainty, and exclusions.
 
-    python -m open_disease simulate --out-dir results/synthetic-demo
-    python -m open_disease aggregate --cells data/raw/cell_counts.csv --out data/processed/pseudobulk.csv
-    python -m open_disease analyze --pseudobulk data/processed/pseudobulk.csv --out results/de.csv
-    python -m open_disease rank --de results/de.csv --evidence data/processed/curated_genetics.csv --discovery-study STUDY_A --phase proliferative --cell-type epithelial --out results/ranked.csv
-    python -m open_disease validate --ranked results/ranked.csv --de results/de.csv --validation-study STUDY_B --out results/validation.csv
-    python -m open_disease sha256 data/processed/pseudobulk.csv
+Existing code handles only steps of this workflow; it **has not yet accessed or analyzed human datasets**.
 
-The aggregate command is intended for *small, permitted datasets*, not to expand 39 GB of single-cell objects in memory. For genuine data, perform pseudobulk aggregation within the original analysis environment, with transcriptome-wide library-size normalization, and export a complete donor-by-gene count matrix in the documented schema.
+## Research materials
 
-The rank command requires a **curated** genetics evidence CSV. It does not infer causality from GWAS p-values and must not be run with fabricated scores for real genes. Rank weights are a deliberately simple heuristic for testing a research workflow, not a probability of target success.
+- [PROTOCOL.md](PROTOCOL.md): hypothesis, statistical guardrails, success/failure criteria.
+- [DATA_SOURCES.md](DATA_SOURCES.md): source identifiers, access and validation caveats.
+- [data/sources.json](data/sources.json): machine-readable study inventory.
+- [ETHICS_AND_LIMITATIONS.md](ETHICS_AND_LIMITATIONS.md): research ethics, governance and limitations.
+- [docs/RESEARCH_ROADMAP.md](docs/RESEARCH_ROADMAP.md): milestones for the five-disease effort.
+- [CONTRIBUTING.md](CONTRIBUTING.md): how scientists and software contributors can help.
+- [LICENSE](LICENSE): MIT **for our original code only**; third-party data and code have separate terms.
 
-## Read before analyzing human data
+## Boundaries
 
-- docs/PROTOCOL.md — hypothesis, validation rules, stop/go decisions and remaining statistical requirements.
-- docs/DATA_SOURCES.md — real source URLs, access controls, citation and licensing review.
-- docs/SCHEMA.md — exact data formats and scientifically important assumptions.
-- docs/ETHICS_AND_LIMITATIONS.md — patient privacy, research integrity and diagnostic boundaries.
-- docs/ROADMAP.md — milestones and collaboration needs.
-- CONTRIBUTING.md — review and contribution standards.
+**NOT FOR CLINICAL USE.** No output from this repository should be used to diagnose, treat, triage, or predict outcomes for individuals. Do not post personal health records, participants' raw data or protected participant metadata to GitHub. No source code is copied from unlicensed upstream research repositories. A gene expression difference is not evidence of causal disease mechanism or drug efficacy.
 
-**Never commit patient data, genetic sequences, patient-level pseudobulk, consent forms, credentials, raw images or protected annotations.** A pseudonymous donor ID is not an assurance of anonymity. Protected research may require ethics approval, access agreements, controlled computing and institutional collaborators.
-
-## License and scientific use
-
-The repository's existing MIT license remains intact and governs original software, not third-party datasets or patents. Every external dataset and tool requires its own license and consent review. This project does **not** provide medical advice or establish treatment efficacy.
-
-Research questions and corrections are welcome through GitHub issues. Do not post personal medical histories or genetic information.
+See [ETHICS_AND_LIMITATIONS.md](ETHICS_AND_LIMITATIONS.md).
