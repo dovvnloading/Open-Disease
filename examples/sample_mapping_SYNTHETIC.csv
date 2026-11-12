@@ -1,0 +1,3 @@
+sample_id,study_id,donor_id,diagnosis,phase,hormone_treatment
+SYN_SAMPLE_01,SYNTHETIC_STUDY,SYN_DONOR_01,case,proliferative,none
+SYN_SAMPLE_02,SYNTHETIC_STUDY,SYN_DONOR_02,control,proliferative,none

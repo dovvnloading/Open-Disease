@@ -36,3 +36,16 @@ jobs:
           test -s results/synthetic-demo/validation.csv
           test -s results/synthetic-demo/qc.csv
           grep -q "SYN000" results/synthetic-demo/validation.csv
+
+  r-pseudobulk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "release"
+      - name: Confirm Matrix is available
+        run: Rscript -e 'stopifnot(requireNamespace("Matrix", quietly = TRUE))'
+      - name: Verify offline count aggregation on entirely synthetic cells
+        run: Rscript tests/r/test_export_pseudobulk.R
