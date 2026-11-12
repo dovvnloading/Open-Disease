@@ -19,5 +19,9 @@ jobs:
           r-version: "4.4.3"
       - name: Verify Matrix availability
         run: Rscript -e 'stopifnot(requireNamespace("Matrix", quietly=TRUE))'
-      - name: Run synthetic-only sparse aggregation tests
+      - name: Run existing synthetic-only sparse exporter tests
         run: Rscript scripts/test_seurat_to_pseudobulk.R
+      - name: Test sample-mapping exporter and excluded-stratum audit
+        run: Rscript tests/r/test_export_pseudobulk.R
+      - name: Verify two mapping interfaces produce identical donor-level raw counts
+        run: Rscript tests/r/test_cross_exporters.R
