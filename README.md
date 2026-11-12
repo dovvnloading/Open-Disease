@@ -19,6 +19,7 @@ Sources: [GEO GSE266265](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2
 - A **strict donor-level** cell-count aggregation adapter for small long-format input tables.
 - An exploratory, phase- and cell-type-stratified donor pseudobulk baseline (Welch test on log2(1+CPM), with Benjamini–Hochberg correction). **Not** a validated disease model or a publication-grade replacement for edgeR/DESeq2.
 - Structural cohort preflight auditing: missing genes, minimum donors, cell and library counts.
+- A separately tested R/Matrix sparse aggregator and **local-only** Seurat raw-RNA-count adapter ([instructions](docs/ATLAS_EXPORT.md)); real RDS ingestion has not been verified.
 - Auditable, manually sourced *candidate* ranking, with a strict separate-study validation API.
 - Explicitly synthetic data, seeded tests, and GitHub Actions.
 - No background collection, API calls, data downloads, automatic diagnosis, clinical advice, or human data in the repository.
