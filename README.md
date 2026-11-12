@@ -70,3 +70,7 @@ Existing code handles only steps of this workflow; it **has not yet accessed or 
 **NOT FOR CLINICAL USE.** No output from this repository should be used to diagnose, treat, triage, or predict outcomes for individuals. Do not post personal health records, participants' raw data or protected participant metadata to GitHub. No source code is copied from unlicensed upstream research repositories. A gene expression difference is not evidence of causal disease mechanism or drug efficacy.
 
 See [ETHICS_AND_LIMITATIONS.md](ETHICS_AND_LIMITATIONS.md).
+
+### Audited sample-level map (alternative offline R interface)
+
+Alongside the existing cell-mapped Seurat exporter, scripts/r/export_seurat_pseudobulk.R accepts a separately reviewed sample-to-donor map and emits a private exclusion audit. Both exporters must agree on the same artificial raw-count data in R CI. No actual human atlas has been ingested. See [docs/ATLAS_EXPORT.md](docs/ATLAS_EXPORT.md).
