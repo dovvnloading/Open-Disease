@@ -131,3 +131,57 @@ def test_download_size_guard_cleans_partial_file(tmp_path, monkeypatch):
     assert not dest.exists()
     assert not Path(str(dest) + ".provenance.json").exists()
     assert list(dest.parent.iterdir()) == []
+
+
+
+def test_racing_provenance_is_not_deleted(tmp_path, monkeypatch):
+    """If another process creates provenance after preflight, preserve its file."""
+    dest = tmp_path / "data/raw/matrix.txt.gz"
+    sidecar = Path(str(dest) + ".provenance.json")
+
+    def fake_open(*_args, **_kwargs):
+        sidecar.write_text("owned by another process")
+        return io.BytesIO(gzip.compress(fixture_bytes()))
+
+    monkeypatch.setattr("open_disease.geo_microarray.urlopen", fake_open)
+    with pytest.raises(FileExistsError):
+        download_series_matrix(dest)
+    assert sidecar.read_text() == "owned by another process"
+    assert not dest.exists()
+    assert list(dest.parent.iterdir()) == [sidecar]
+
+
+def test_racing_download_destination_is_never_overwritten(tmp_path, monkeypatch):
+    """A different process wins the destination race after the initial check."""
+    dest = tmp_path / "data/raw/matrix.txt.gz"
+    sidecar = Path(str(dest) + ".provenance.json")
+
+    def fake_open(*_args, **_kwargs):
+        dest.write_bytes(b"competing owner's file")
+        return io.BytesIO(gzip.compress(fixture_bytes()))
+
+    monkeypatch.setattr("open_disease.geo_microarray.urlopen", fake_open)
+    with pytest.raises(ValueError, match="already exists"):
+        download_series_matrix(dest)
+    assert dest.read_bytes() == b"competing owner's file"
+    assert not sidecar.exists()
+
+
+def test_racing_prepare_output_is_never_overwritten(tmp_path, monkeypatch):
+    """Partially published owned files roll back; competing files stay intact."""
+    _, paths, run = prepare(tmp_path)
+    import open_disease.geo_microarray as geo
+    actual_link = geo.os.link
+
+    def racing_link(src, dest):
+        if Path(dest) == paths[0]:
+            paths[0].write_text("competing owner's manifest")
+            raise FileExistsError("concurrent output")
+        return actual_link(src, dest)
+
+    monkeypatch.setattr(geo.os, "link", racing_link)
+    with pytest.raises(ValueError, match="already exists"):
+        run()
+    assert paths[0].read_text() == "competing owner's manifest"
+    assert not paths[1].exists()
+    assert not paths[2].exists()
