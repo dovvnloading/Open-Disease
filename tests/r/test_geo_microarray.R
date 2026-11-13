@@ -69,6 +69,9 @@ bad$disease_group[1L] <- "healthy"
 expect_failure(bad, "disease_group must be exactly")
 bad <- manifest
 bad$hormone_treatment[1L] <- "unknown"
+expect_failure(bad, "hormone_treatment")
+bad <- manifest
+bad$hormone_treatment[1L] <- "hormonal_contraceptive"
 expect_failure(bad, "separate protocol")
 bad <- manifest
 bad$phase[bad$disease_group == "case"] <- "case_only_phase"
