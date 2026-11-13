@@ -20,9 +20,10 @@ jobs:
           cache: "pip"
       - name: Install
         run: python -m pip install -e ".[dev]"
-      - name: Verify source catalog and restricted-file guard
+      - name: Verify source catalog, research queue and restricted-file guard
         run: |
           python scripts/verify_catalog.py
+          python scripts/research_queue.py validate
           python scripts/repo_safety.py
       - name: Run unit and integration tests
         run: python -m pytest -q

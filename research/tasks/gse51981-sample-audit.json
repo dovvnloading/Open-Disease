@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "gse51981-sample-audit",
+  "title": "Audit public GSE51981 sample labels and independence",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/15",
+  "question": "Can every intended case, control, and other-pathology sample be traced to a source-backed phenotype, phase, tissue, and independent donor assignment?",
+  "scope": "Metadata and methods audit only. Do not infer a clinical label from a GSM title; do not access patient-level restricted data.",
+  "dependencies": [],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4239429/"
+  ],
+  "steps": [
+    "Check source terms, metadata fields, sample identifiers, diagnosis group definitions, menstrual phase, and donor independence.",
+    "Build a source-cited field mapping and explicit unknown/exclusion inventory; do not fabricate assignments.",
+    "Record whether an auditable case/control contrast is possible before viewing expression outcomes."
+  ],
+  "deliverables": [
+    "A PR with a metadata-only audit report under docs/research-notes/ and links to evidence; no sample-level data in Git.",
+    "A clear go/no-go or blocked decision for a GSE51981 limma replication."
+  ],
+  "acceptance": [
+    "Each included field assignment has a primary source citation or is marked unresolved.",
+    "The 37 other-pathology samples are not relabeled as pathology-free controls.",
+    "Donor independence and phase uncertainty are explicitly reported; no biology result is claimed."
+  ],
+  "budget": {
+    "max_runtime_minutes": 60,
+    "max_ram_gb": 4,
+    "network": "public-opt-in",
+    "max_download_mb": 10
+  }
+}
