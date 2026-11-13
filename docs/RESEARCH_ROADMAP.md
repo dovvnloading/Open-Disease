@@ -7,7 +7,7 @@
 - [x] Baseline synthetic Python/R pipelines, source catalog, tests and CI.
 - [x] Agent instructions, machine-readable task queue, resource limits and local run-provenance scaffold.
 - [ ] Complete a source-backed GSE51981 metadata/phenotype/donor audit and GPL570 mapping policy.
-- [ ] Demonstrate that the existing synthetic tests' rejection gates are sound.
+- [x] Run the synthetic Python/R CI and test the implemented rejection gates. Keep further regression testing in routine CI; it is not a separate research milestone.
 
 Exit: an agent can select a bounded task, reproduce or report a blocker, and leave a source-cited handoff with its commands and limitations.
 
@@ -18,7 +18,7 @@ Exit: an agent can select a bounded task, reproduce or report a blocker, and lea
 - [ ] Run a real public-data reproduction using the existing opt-in GEO + limma path and publish a permissible **aggregate** account of positive, null or failed results.
 - [ ] Compare findings with source-backed published evidence, record failures and distinguish reanalysis of an existing cohort from genuinely independent replication.
 
-Exit: a credible, reproducible computation or a documented blocker, **not** a validated disease target. See `docs/INDEPENDENT_RESEARCH_PLAN.md` and Issue #11. The ~39 GB Seurat atlas, new ML models and novel drugs are **not** prerequisites.
+Exit: a credible, reproducible computation or a documented blocker, **not** a validated disease target. See `docs/INDEPENDENT_RESEARCH_PLAN.md` and the current [reproduction issue #18](https://github.com/dovvnloading/Open-Disease/issues/18). The ~39 GB Seurat atlas, new ML models and novel drugs are **not** prerequisites.
 
 ## Later — independent computational triangulation
 

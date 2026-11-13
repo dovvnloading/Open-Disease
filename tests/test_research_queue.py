@@ -16,7 +16,7 @@ def task(ident="toy-one", deps=None):
     return {
         "schema_version": 1, "id": ident, "title": "Toy task", "program": "test",
         "priority": "P0", "status": "ready",
-        "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/11",
+        "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/15",
         "question": "Can we verify this toy?", "scope": "Synthetic only",
         "dependencies": [] if deps is None else deps,
         "sources": ["https://example.org/toy"], "steps": ["Run toy"],

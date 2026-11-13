@@ -1,6 +1,6 @@
 # GSE51981: auditable public microarray path (local and opt-in)
 
-**Status:** software pathway with **synthetic-only tests**. The maintainers have not yet downloaded, manually phenotype-reviewed, or analyzed GSE51981 with these scripts. There are **no biological findings, diagnostic claims, or validated targets** from this feature. This addresses the engineering portion of [Issue #11](https://github.com/dovvnloading/Open-Disease/issues/11), **not** its scientific acceptance criteria.
+**Status:** software pathway with **synthetic-only tests**. The maintainers have not yet downloaded, manually phenotype-reviewed, or analyzed GSE51981 with these scripts. There are **no biological findings, diagnostic claims, or validated targets** from this feature. This is engineering infrastructure for [the first real-data milestone (#18)](https://github.com/dovvnloading/Open-Disease/issues/18), **not** evidence that its scientific acceptance criteria are met.
 
 GSE51981 is a public Affymetrix GPL570 endometrial **microarray** study. The cited original paper describes 77 endometriosis cases, 34 pathology-free controls, and 37 *other pelvic-pathology* samples among 148 arrays, but these are **published cohort totals, not machine-verified per-GSM labels**. A GSM is a sample accession, not necessarily an independent person. GEO values are processed arrays, **not RNA-seq/edgeR counts**.
 

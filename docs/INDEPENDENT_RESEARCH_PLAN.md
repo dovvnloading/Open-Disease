@@ -1,7 +1,7 @@
 # The no-lab research plan: a useful result before a larger infrastructure project
 
 **Adopted:** November 12, 2026  
-**Issue:** https://github.com/dovvnloading/Open-Disease/issues/11
+**Active reproduction issue:** https://github.com/dovvnloading/Open-Disease/issues/18 (source audits #15 and #16 must finish first)
 
 ## Reset the project constraints
 
