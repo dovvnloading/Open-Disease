@@ -26,3 +26,20 @@
 The input must already have been acquired with appropriate source checks. The command **does not download anything**. It accepts local TSV or gzip GEO SOFT platform tables with `ID`, `Gene Symbol` and `ENTREZ_GENE_ID`, rejects duplicate/malformed probe rows, and emits aggregate-only mapping category counts, compressed/source-file SHA-256, bytes and an explicit `source_verified: false` field. This flag is intentionally **not upgraded by a parser**: the operator/agent still has to verify the platform release. Output is local/ignored and refuses overwrite. Synthetic tests use fake probes and fake symbols only.
 
 **Status / next gate:** policy and parser written; *actual GPL570 platform download, terms, complete row/annotation-date audit and versioned provenance are pending*. Do not close #16 or unblock the human-data reproduction simply because synthetic tests pass.
+
+## Incremental offline provenance checks (2026-11-12)
+
+The offline parser now rejects a GEO SOFT input that declares a platform other than `GPL570`, repeats `^PLATFORM`, or declares a platform without `!platform_table_begin`. The aggregate report includes `declared_platform_id` (`null` for a bare TSV or undeclared SOFT fragment) and `soft_platform_declaration_checked`. These are **internal file consistency checks**, not authentication of a public download.
+
+After the source and its archived bytes have been independently verified, the operator can pin the SHA-256:
+
+```bash
+python scripts/audit_gpl570.py \
+  --input data/raw/GPL570_platform_table.tsv.gz \
+  --expected-sha256 "$VERIFIED_SHA256" \
+  --out results/gpl570/annotation_audit.json
+```
+
+The optional expected digest must contain 64 hexadecimal digits for the **exact original input bytes** (compressed bytes when `.gz`). An invalid or mismatched pin causes an error before a report is written. A matching digest does **not** establish data rights, original GEO source URL, official annotation release or genome build; `source_verified` still remains `false`. Record the independently checked accession, download URL, retrieval date, annotation release/date, reuse terms and checksum separately.
+
+**Execution evidence:** `python -m pytest -q tests/test_audit_gpl570.py` → 13 passed on synthetic-only fixtures with Python 3.13; `python -m compileall -q scripts/audit_gpl570.py` → passed. No real GPL570 annotation was retrieved, parsed or counted. **Issue #16 remains open** and reproduction #18 is still gated until actual source/release/rights and full annotation verification.
