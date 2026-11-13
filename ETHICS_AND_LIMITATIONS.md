@@ -21,7 +21,7 @@ Open-Disease is **not** a healthcare provider, a regulated device, a clinical tr
 
 ## Community
 
-Patient advocates should be engaged in priority selection, study relevance and communication. Do not request anyone's diagnosis, personal contact details or sensitive health history on public GitHub. Share project feedback without personal health information.
+Patient-perspective input can improve future priority-setting, but no recruitment or outreach is required to undertake independent computational work. Do not request anyone's diagnosis, personal contact details or sensitive health history on public GitHub. Share project feedback without personal health information.
 
 ## IP and transparency
 

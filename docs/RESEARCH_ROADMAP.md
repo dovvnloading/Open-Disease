@@ -1,45 +1,36 @@
-# Research roadmap: five diseases, one disciplined first program
+# Research roadmap: compute-first, evidence-first
 
-**Status, 2026-11-12:** the endometriosis research software foundation is under development; test data are simulated. The other disease tracks are not yet under active experimental analysis. No claims of cure or validated targets.
+**As of November 2026:** Open-Disease has synthetic-tested software but **no finished real human-data result**. This is a small independent AI research effort. Its milestones are computational outputs, not fundraising, staffing or validation claims.
 
-| Disease | First credible computational milestone | Essential experimental partner | Key scientific failure mode |
-|---|---|---|---|
-| Endometriosis | Donor-level, phase-stratified replication of genetically supported targets | Endometrial tissue/organoid + gynecology lab | Confounding and sample/tissue mismatch |
-| ALS | Independent TDP-43 cryptic splicing map and functional-target evidence review | iPSC motor-neuron/ASO specialist | Splice correction may not rescue full disease |
-| Type 1 diabetes | Evidence atlas of immune–islet cell vulnerabilities and immune protection | Islet/transplant immunology lab | Immune evasion creates unacceptable risks |
-| Idiopathic pulmonary fibrosis | Cross-cohort fibroblast-state and antifibrotic pathway replication | Human lung fibroblast/ex vivo lung lab | Stopping scarring ≠ reversing it |
-| ME/CFS | Cross-study molecular reproducibility and rigorous phenotype alignment | Cohort and immunology/metabolomics collaborators | Cohort heterogeneity and no robust subtypes |
+## Now — make agents productive
 
-## Phase 0: infrastructure (now)
+- [x] Baseline synthetic Python/R pipelines, source catalog, tests and CI.
+- [x] Agent instructions, machine-readable task queue, resource limits and local run-provenance scaffold.
+- [ ] Complete a source-backed GSE51981 metadata/phenotype/donor audit and GPL570 mapping policy.
+- [ ] Demonstrate that the existing synthetic tests' rejection gates are sound.
 
-- Project charter, ethics and data catalog.
-- Strict donor-level schema, audit, artificial test data and CI.
-- A documented, falsifiable endometriosis protocol.
-- No proprietary or restricted source code copied.
+Exit: an agent can select a bounded task, reproduce or report a blocker, and leave a source-cited handoff with its commands and limitations.
 
-## Phase 1: verified human-data reproduction (next)
+## Next — first real computational research result
 
-1. Obtain data-rights and clinical metadata review (GEO + Zenodo); evaluate original analysis artifacts.
-2. Extract local donor-level raw count tables. Preserve batch, phase, cell type and tissue provenance; never commit human data.
-3. Reproduce one published result with a fit-for-purpose model and negative controls. Produce a source-versioned QC audit.
-4. Resolve case/control and cohort overlap in external candidates **before** approving a holdout.
-5. Freeze a target-selection model and keep holdout outcomes unobserved until that freeze.
+- [ ] Resolve the study's source rights, independent sample identities, diagnosis categories and menstrual phases, **before** inspecting an outcome.
+- [ ] Pin the GSE51981 processed-array source/checksum, limma model, one published comparison, negative controls, inclusion/exclusions and statistical family.
+- [ ] Run a real public-data reproduction using the existing opt-in GEO + limma path and publish a permissible **aggregate** account of positive, null or failed results.
+- [ ] Compare findings with source-backed published evidence, record failures and distinguish reanalysis of an existing cohort from genuinely independent replication.
 
-**Exit gate:** an auditable report explains where reference and reproduction agree/disagree. If rights or phenotype metadata prevent this, publish blockers and pivot to a feasible cohort rather than fabricate results.
+Exit: a credible, reproducible computation or a documented blocker, **not** a validated disease target. See `docs/INDEPENDENT_RESEARCH_PLAN.md` and Issue #11. The ~39 GB Seurat atlas, new ML models and novel drugs are **not** prerequisites.
 
-## Phase 2: target evidence and external evaluation
+## Later — independent computational triangulation
 
-- Curate genetics-to-gene mappings from 2026 study with strong mapping support, not nearest-locus shortcut.
-- Create a source-backed evidence table and sensitivity-analyze heuristic weights.
-- Test candidates in a cohort with matching anatomy, hormone context, menstrual phase and adequate participant n.
-- Assess effects on non-endometriosis reproductive tissue, off-target/broad-function risks and competing explanations.
-- Publish nulls and conditionally shortlisted hypotheses with uncertainty, not a diagnostic product.
+- [ ] Select other eligible public cohorts and check tissue, case definition, donor overlap, hormone phase, platform and statistical power.
+- [ ] Audit GWAS fine mapping and public target evidence without treating nearest genes or uncalibrated scores as causal confidence.
+- [ ] Freeze hypotheses before external comparisons; retain complete negative and inconclusive results.
+- [ ] If public data cannot answer a question, disclose the limitation and change research direction rather than automatically recruit a collaborator.
 
-## Phase 3: translation by qualified partners
+## Conditional, not a current project phase
 
-- Domain scientist, biostatistician, patient advocate and ethics/data-governance reviewers.
-- Independently designed and documented experiments, including appropriate controls.
-- Screen for assay reproducibility and safety before further laboratory development.
-- Reassess whether other disease tracks present stronger reproducible opportunities.
+If a result eventually warrants wet-lab, human-subject, diagnostic, therapeutic or clinical claims, those activities require appropriate expertise, consent/oversight and independently verifiable experimental evidence. Do **not** initiate outreach, grant applications or a new lab program through agents; seek explicit operator authorization only when there is a concrete exceptional reason.
 
-**Operating rule:** fund and launch one next bottleneck only after the preceding evidence gate is satisfied.
+## Possible future disease tracks
+
+ALS (TDP-43 splicing), type 1 diabetes (islet/immune evidence), idiopathic pulmonary fibrosis (fibroblast states) and ME/CFS (cohort-reproducible phenotypes) remain **unstarted computational questions**, each needing its own protocol. We are not building a universal cure engine.

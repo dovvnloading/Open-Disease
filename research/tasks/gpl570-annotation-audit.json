@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "gpl570-annotation-audit",
+  "title": "Audit versioned GPL570 probe-to-gene mappings",
+  "program": "endometriosis",
+  "priority": "P1",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/11",
+  "question": "Which GPL570 probes map ambiguously to genes, and what annotation version is defensible for the public microarray reproduction?",
+  "scope": "Source and mapping-method review, not a ranked biological target discovery.",
+  "dependencies": [],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL570",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981"
+  ],
+  "steps": [
+    "Identify annotation source, genome/probe release, download terms and unannotated or multiply mapped probes.",
+    "Specify a reproducible gene-aggregation or probe-reporting policy before looking at candidate significance.",
+    "Document ambiguity without promoting a nearest gene to a causal target."
+  ],
+  "deliverables": [
+    "A source-linked annotation policy and version record under docs/research-notes/.",
+    "A small synthetic test fixture for any new mapping helper; no patient expression matrix."
+  ],
+  "acceptance": [
+    "Ambiguous and unmapped probes remain identifiable rather than being silently dropped.",
+    "The selected release and mapping decisions can be reconstructed from sources.",
+    "The report makes no novel target or clinical claims."
+  ],
+  "budget": {
+    "max_runtime_minutes": 45,
+    "max_ram_gb": 4,
+    "network": "public-opt-in",
+    "max_download_mb": 30
+  }
+}

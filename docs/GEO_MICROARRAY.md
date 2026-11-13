@@ -44,7 +44,7 @@ Missing intensities remain `NA`, never zero. All three outputs are local and are
 
 ## 3. Create a defensible reviewed manifest *before* inspecting effects
 
-Manually review the sample attributes and the original paper. In the ignored `data/private/GSE51981_review.csv`, record every GSM and complete the following fields only when verified:
+Source-audit sample attributes and the original paper. An agent can prepare a citation-backed map, but included values should be marked reviewed only when sources genuinely verify them; unresolved fields require exclusion. An independent second check is recommended. In the ignored `data/private/GSE51981_review.csv`, record every GSM and complete the following fields only when verified:
 
 | Field | Required handling |
 | --- | --- |
@@ -59,9 +59,9 @@ Manually review the sample attributes and the original paper. In the ignored `da
 | `review_source_url` | HTTPS URL to GEO GSM / paper / eligible clinical metadata supporting the decision |
 | `review_notes` | Source ambiguity, harmonization decisions and explicit exclusion rationale |
 
-The `source_*` columns are **untrusted submitter text** for human review, not fitted covariates. The script cannot establish whether each submitted sample is independent or each published group label maps correctly to its GSM: the reviewer must audit those assertions. If metadata are insufficient, leave samples excluded, document the blocker and **do not run** an underpowered or mislabeled analysis. Do not place identifying clinical records in the manifest or source repository.
+The `source_*` columns are **untrusted submitter text** for human review, not fitted covariates. The script cannot establish whether each submitted sample is independent or each published group label maps correctly to its GSM: an evidence audit must substantiate those assertions; an independent cross-check is preferred. If metadata are insufficient, leave samples excluded, document the blocker and **do not run** an underpowered or mislabeled analysis. Do not place identifying clinical records in the manifest or source repository.
 
-Before the analysis, freeze the selected phase definitions, inclusion/exclusion rules, sample independence audit, primary case–control question, expected known expression theme, excluded probes, outcome interpretation and multiplicity family. Pre-registration of a specific publication finding and independent source review are **still needed** to complete the original research milestone.
+Before the analysis, freeze the selected phase definitions, inclusion/exclusion rules, sample independence audit, primary case–control question, expected known expression theme, excluded probes, outcome interpretation and multiplicity family. A dated, frozen pre-analysis note and source-backed cross-check are needed for this exploratory milestone; this is not formal scientific preregistration.
 
 ## 4. Fit the separate limma pathway on a reviewed log2 array scale
 
@@ -91,7 +91,7 @@ Rscript scripts/r/analyze_geo_microarray.R \
 
 All reported results must disclose the exact reviewed donor/sample counts, possible source selection, original publication overlap, hormone/cycle confounding, individual sample exclusions, nulls and missing probe rates, scale assumption, the complete false-discovery family and failures of the phase-permuted check. The other-pathology contrast is only run if its required reviewed records exist; otherwise the report **explicitly says it was not tested**.
 
-A public result still requires a real controlled execution, phenotype and reuse-rights audit, provenance bundle, predeclared original-gene/pathway replication checks, careful interpretation, a genuinely independent compatible comparison (or a documented absence), and qualified review. The tests here use invented sample and probe IDs exclusively. No cure, diagnosis, causal target or clinical use is supported.
+A public **exploratory computational report** requires a real controlled execution, source-backed phenotype and reuse-rights audit, provenance, predeclared comparison, careful interpretation and a genuinely independent compatible comparison **or an explicit validation gap**. Independent specialist review is needed before promoting a result as validated biological or clinically consequential evidence, not before honestly reporting preliminary computation. The tests here use invented sample and probe IDs exclusively. No cure, diagnosis, causal target or clinical use is supported.
 
 For offline verification:
 

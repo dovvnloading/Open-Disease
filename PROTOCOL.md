@@ -3,6 +3,8 @@
 **Date:** 2026-11-12  
 **Status:** PUBLIC DRAFT; **not formally preregistered**, not a published protocol and not validated on human data. Freeze a versioned protocol before accessing outcome labels for the first full human analysis. Changes after that are exploratory and must be explicitly labeled.
 
+**Agent-first scope:** Public-data computational exploration can begin and be reported as **exploratory** without grants, recruited experts, a lab or institutional affiliation. Scientific validation, causal/clinical claims and interventions require much stronger independent evidence and appropriate oversight. The protocol's later review and laboratory handoff stages do not gate source audits, software tests or clearly qualified computational reports. See [agent workflow](docs/AGENT_WORKFLOW.md).
+
 ## Question and scope
 
 Which endometriosis-associated genes are supported **simultaneously** by credible human genetic mapping, interpretable donor-level cell-specific expression changes, and comparable independent human cohorts, while presenting tractable experimental and reproductive-safety questions?
@@ -36,7 +38,7 @@ No hypothesis should be evaluated with a pipeline tuned on validation outcomes.
 
 Input: a long table with columns `study_id, donor_id, diagnosis, phase, hormone_treatment, cell_type, gene_id, counts, library_size, n_cells`. The schema rejects duplicates, missing keys, negative/noninteger counts, donor metadata inconsistencies and invalid library sizes. An explicit zero row is required when a gene is measured but unexpressed.
 
-The default software baseline requires at least **three donors per class in each study × phase × cell type stratum**, >=20 cells per donor/cell type and >=20 genes for technical smoke tests. **These are minimal software guards, NOT sample-size/power sufficiency thresholds for biological inference.** A statistician must define meaningful group sizes and power before any scientific result is interpreted.
+The default software baseline requires at least **three donors per class in each study × phase × cell type stratum**, >=20 cells per donor/cell type and >=20 genes for technical smoke tests. **These are minimal software guards, NOT sample-size/power sufficiency thresholds for biological inference.** For exploratory reports, document sample-size and power limitations; software minima do not establish scientific sufficiency. Strong confirmatory claims require justified power and independent methodological review.
 
 The preflight tool does not automatically establish covariate balance, consent/data rights, biological independence, gene universe completeness, batch correction or cell annotation quality. These require documented human review.
 

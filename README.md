@@ -1,83 +1,58 @@
 # Open-Disease
 
-**An open-source, evidence-first research effort to accelerate understanding of diseases without reliable, generalizable cures.**
+**An independent, AI-first computational disease research workbench.**
 
-**Status: research infrastructure under active development. First active program: endometriosis. No treatment, diagnostic test, or validated therapeutic target has been produced.**
+Open-Disease is a place to aim research agents and bounded compute at difficult disease questions. Agents can audit public papers/data, write and test analyses, reproduce known findings, explore falsifiable hypotheses, and publish the *methods, failures, uncertainties and source-backed evidence*. The goal is useful work that future agents or researchers can build on—not a grant-funded lab, research consortium, clinical service or claim to have cured anything.
 
-Our long-term disease shortlist: (1) endometriosis, (2) ALS, (3) type 1 diabetes, (4) idiopathic pulmonary fibrosis, and (5) ME/CFS. We do not claim that software alone can cure any of them. Our immediate deliverable is reproducible biomedical evidence and independent validation of hypotheses that experimental scientists could test.
+**Current status (November 2026): software and synthetic tests exist; no genuine human-data analysis, confirmed new molecular target, clinical test or cure has been produced by this repository.** Endometriosis is the only active disease research program. ALS, type 1 diabetes, pulmonary fibrosis and ME/CFS are possible later tracks, not staffed or validated projects.
 
-## First question: endometriosis
+## Give an agent a concrete task
 
-*Can genetic evidence and donor-level cell-type expression analysis identify candidate endometriosis mechanisms that persist across comparable, independent studies?*
+Read [AGENTS.md](AGENTS.md) for operating rules and [the agent workflow](docs/AGENT_WORKFLOW.md) for evidence/handoff standards. Select a bounded task from [research/tasks](research/tasks) instead of asking an agent to "solve a disease":
 
-The primary human single-cell atlas contains 466,371 cells from **60 donors** (35 cases, 25 controls). Its individual cells are not 466,371 independent patients. The 2026 multi-ancestry GWAS identifies 80 risk regions, but a risk region alone does **not** implicate its nearest gene as a therapeutic target.
+    python scripts/research_queue.py validate
+    python scripts/research_queue.py ready
 
-Sources: [GEO GSE266265](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265), [2026 atlas article](https://doi.org/10.1038/s41467-026-73020-4), [2026 GWAS](https://doi.org/10.1038/s41588-026-02582-2), and [GWAS summary statistics](https://doi.org/10.5281/zenodo.18983492).
+Each JSON task defines a falsifiable question, sources, dependencies, acceptance criteria and a rough resource budget. An agent can create a **local, ignored** run record with `python scripts/research_queue.py new-run --task TASK_ID --agent AGENT_ID --out results/TASK_ID/run.json`. The queue is a lightweight coordination format, **not** an automatic scheduler or a compute sandbox. A task does not automatically authorize network access, external API costs, high-memory workloads or contact with people.
+
+Starting tasks:
+
+- Audit public **GSE51981** sample/phenotype/menstrual-phase labels and person-level independence before analysis.
+- Audit **GPL570** probe annotations without forcing ambiguous probes to causal genes.
+- Run existing synthetic test suites and document failures.
+- After source audits pass, attempt a genuinely sourced **GSE51981 microarray reproduction** (not a novel drug discovery). A negative or blocked result is worth reporting.
+
+See [Issue #11](https://github.com/dovvnloading/Open-Disease/issues/11) and [the independent research plan](docs/INDEPENDENT_RESEARCH_PLAN.md). We use existing public computational data **without requiring grants, recruiting people, contacting experts or running a lab**. Validation gaps remain explicit; formal scientific/clinical claims require correspondingly stronger evidence and oversight.
 
 ## What works today
 
-- A **strict donor-level** cell-count aggregation adapter for small long-format input tables.
-- An exploratory, phase- and cell-type-stratified donor pseudobulk baseline (Welch test on log2(1+CPM), with Benjamini–Hochberg correction). **Not** a validated disease model or a publication-grade replacement for edgeR/DESeq2.
-- Structural cohort preflight auditing: missing genes, minimum donors, cell and library counts.
-- A separately tested **experimental edgeR v4 donor-count quasi-likelihood model** with estimability and explicit covariate gates ([methods and limitations](docs/EDGE_R_MODEL.md)); no real human atlas data have been analyzed.
-- A separately tested R/Matrix sparse aggregator and **local-only** Seurat raw-RNA-count adapter ([instructions](docs/ATLAS_EXPORT.md)); real RDS ingestion has not been verified.
-- Auditable, manually sourced *candidate* ranking, with a strict separate-study validation API.
-- Explicitly synthetic data, seeded tests, and GitHub Actions.
-- No background collection, automatic data downloads, diagnosis, clinical advice, or human data in the repository. An explicitly invoked, local-only GEO downloader is available.
+- A seeded synthetic end-to-end demo, structural cohort QC, source catalog and CI tests.
+- Strict donor-level RNA pseudobulk utilities and exploratory differential-expression baseline, with an experimental edgeR v4 path ([model limitations](docs/EDGE_R_MODEL.md)). These have **not** analyzed the real large Seurat atlas.
+- Sparse R/Seurat export utilities tested on artificial counts ([high-memory export guide](docs/ATLAS_EXPORT.md)).
+- An opt-in official GEO **GSE51981** processed-array downloader, provenance/manifest prep, and phase-aware R/limma implementation ([local-only workflow](docs/GEO_MICROARRAY.md)); **synthetic-tested only**, no audited real-GEO outcome yet.
+- Heuristic evidence ranking and strict study-separation checks as software prototypes, **not** established target biology.
 
-## Run the code locally
+### Run existing software
 
-Requires Python 3.11 or newer.
+Requires Python 3.11+; for R workflows, install the relevant Bioconductor dependencies separately.
 
-```bash
-git clone https://github.com/dovvnloading/Open-Disease.git
-cd Open-Disease
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -e ".[dev]"
-python -m pytest -q
-bash scripts/run_demo.sh
-python scripts/audit_cohort.py \
-  --pseudobulk results/synthetic-demo/pseudobulk.csv \
-  --out results/synthetic-demo/audit.csv
-```
+    git clone https://github.com/dovvnloading/Open-Disease.git
+    cd Open-Disease
+    python -m venv .venv
+    source .venv/bin/activate
+    python -m pip install -e '.[dev]'
+    python -m pytest -q
+    bash scripts/run_demo.sh
+    python scripts/verify_catalog.py
 
-The demo writes **SIMULATED ONLY** data into an ignored directory. Any discovery, target ranking or "replication" in synthetic data is a software test, **not** biological evidence.
+The demo generates **SIMULATED ONLY** data in ignored `results/`. No automated real-data collection or biological claim results from installation or tests.
 
-Use `python -m open_disease --help` to see commands. The core input contract is documented in [DATA_SOURCES.md](DATA_SOURCES.md) and [PROTOCOL.md](PROTOCOL.md).
+## Research directions and science boundary
 
-## Immediate milestone: independent, public-data research (no lab prerequisite)
+The immediate question is whether source-verified, phase-aware endometrial microarray results can reproduce a specific published signal, with other pelvic pathology **distinct from** healthy controls. Study: [GEO GSE51981](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981); [published paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC4239429/). Never treat arrays as RNA-seq counts. The large 60-donor [GSE266265](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265) atlas and genetic mapping are later optional paths, not blockers to the first experiment.
 
-**Our next scientific goal is a real, reproducible analysis of existing publicly released biomedical data—not another synthetic demonstration or a request to recruit a laboratory.** See [Independent research plan](docs/INDEPENDENT_RESEARCH_PLAN.md) and [Issue #11](https://github.com/dovvnloading/Open-Disease/issues/11).
+Computational evidence can suggest or rule against hypotheses. It does not by itself prove causal mechanisms, treatment benefit, clinical safety or a cure. Human/sample-level data and restricted files are never committed. A public source must still be checked for permission and data quality. See [protocol](PROTOCOL.md), [limitations](ETHICS_AND_LIMITATIONS.md), [data sources](DATA_SOURCES.md), [charter](docs/CHARTER.md), and [roadmap](docs/RESEARCH_ROADMAP.md).
 
-**New opt-in tooling (synthetic-tested, no real analysis yet):** `geo-download` retrieves the pinned GSE51981 Series Matrix with SHA-256 provenance, `geo-prepare` extracts a strictly unreviewed manifest, and a separate R/limma script fits reviewed, phase-aware microarray contrasts. All data and result artifacts stay local. See [GSE51981 microarray pipeline, gates and commands](docs/GEO_MICROARRAY.md).
+## Contribute
 
-- Start with **GSE51981**, a manageable 148-sample endometrial *microarray* dataset from GEO. Original paper: 77 endometriosis cases, 34 pathology-free controls, **37 other pelvic-pathology samples**. The last 37 must not be silently treated as healthy controls. Respect clinical and cycle-phase metadata.
-- Obtain the released processed **log2 microarray intensity** Series Matrix under applicable source terms, log source SHA256 and sample QC, and reproduce a specific published result using a microarray-appropriate analysis (e.g. limma). **Do not feed array intensities into edgeR or raw RNA count tools.**
-- Document exact cohort exclusions, disease-vs-control contrast, menstrual phase, effect directions, FDR, negative controls, uncertainty and mismatches with the original publication. No invented gene discoveries.
-- Cross-reference **public Open Targets target/disease evidence**, but report prior findings, mapping ambiguity and association-versus-causation limits.
-- Include a truly independent source where scientifically comparable, or explicitly report a validation gap. Honest null results are valuable.
-- Reserve the huge GSE266265 Seurat import for a later, sufficiently resourced phase. Independent computational work does **not** require a clinician or laboratory coauthor to start. Laboratory/clinical collaboration remains necessary to claim experimentally validated therapeutic activity or a cure.
-
-**Science status: no actual human-data analysis completed yet.** The existing programs remain synthetic-only and do not support clinical use.
-
-## Research materials
-
-- [PROTOCOL.md](PROTOCOL.md): hypothesis, statistical guardrails, success/failure criteria.
-- [docs/EDGE_R_MODEL.md](docs/EDGE_R_MODEL.md): count-model design, assumptions, test gates, and limitations.
-- [DATA_SOURCES.md](DATA_SOURCES.md): source identifiers, access and validation caveats.
-- [data/sources.json](data/sources.json): machine-readable study inventory.
-- [ETHICS_AND_LIMITATIONS.md](ETHICS_AND_LIMITATIONS.md): research ethics, governance and limitations.
-- [docs/RESEARCH_ROADMAP.md](docs/RESEARCH_ROADMAP.md): milestones for the five-disease effort.
-- [CONTRIBUTING.md](CONTRIBUTING.md): how scientists and software contributors can help.
-- [LICENSE](LICENSE): MIT **for our original code only**; third-party data and code have separate terms.
-
-## Boundaries
-
-**NOT FOR CLINICAL USE.** No output from this repository should be used to diagnose, treat, triage, or predict outcomes for individuals. Do not post personal health records, participants' raw data or protected participant metadata to GitHub. No source code is copied from unlicensed upstream research repositories. A gene expression difference is not evidence of causal disease mechanism or drug efficacy.
-
-See [ETHICS_AND_LIMITATIONS.md](ETHICS_AND_LIMITATIONS.md).
-
-### Audited sample-level map (alternative offline R interface)
-
-Alongside the existing cell-mapped Seurat exporter, scripts/r/export_seurat_pseudobulk.R accepts a separately reviewed sample-to-donor map and emits a private exclusion audit. Both exporters must agree on the same artificial raw-count data in R CI. No actual human atlas has been ingested. See [docs/ATLAS_EXPORT.md](docs/ATLAS_EXPORT.md).
+Agents and people can take a small task, submit a PR with reproducibility notes and tests, or record a well-supported blocker. See [CONTRIBUTING.md](CONTRIBUTING.md). No outreach, lab partnership or formal affiliation is expected for exploratory computational contributions. **Not for clinical use.** Original code is MIT licensed; upstream datasets and code retain their own rights.
