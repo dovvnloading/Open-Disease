@@ -40,6 +40,20 @@ def sha256_file(path: str | Path) -> str:
     return digest.hexdigest()
 
 
+def _publish_without_overwrite(temporary: Path, destination: Path) -> None:
+    """Publish a complete temp file atomically, only if destination is absent.
+
+    Both paths are in the same directory/filesystem, allowing a hard link with
+    exclusive-create semantics. Unlike os.replace, it cannot clobber a file
+    created by a concurrent process after our initial existence check.
+    """
+    try:
+        os.link(temporary, destination)
+    except FileExistsError as exc:
+        raise ValueError(f"Output already exists; refusing to overwrite: {destination}") from exc
+    temporary.unlink()
+
+
 def download_series_matrix(destination: str | Path, *, timeout: int = 90,
                            max_bytes: int = MAX_DOWNLOAD_BYTES) -> dict:
     """Explicitly download only the pinned public GEO matrix; fail closed on errors.
@@ -55,6 +69,7 @@ def download_series_matrix(destination: str | Path, *, timeout: int = 90,
         raise ValueError("timeout and max_bytes must be positive")
     dest.parent.mkdir(parents=True, exist_ok=True)
     temp_path: Path | None = None
+    sidecar_created = False
     try:
         with tempfile.NamedTemporaryFile(dir=dest.parent, prefix=".geo-", delete=False) as temp:
             temp_path = Path(temp.name)
@@ -86,16 +101,17 @@ def download_series_matrix(destination: str | Path, *, timeout: int = 90,
         }
         # Write provenance first, then publish the complete downloaded input.
         with sidecar.open("x", encoding="utf-8") as out:
+            sidecar_created = True
             json.dump(record, out, indent=2, sort_keys=True)
             out.write("\n")
-        os.replace(temp_path, dest)
+        _publish_without_overwrite(temp_path, dest)
         return record
     except Exception:
         if temp_path is not None:
             temp_path.unlink(missing_ok=True)
-        # Only remove the newly created sidecar; never overwrite user files.
-        if sidecar.exists() and not dest.exists():
-            sidecar.unlink()
+        # Never delete another process's provenance sidecar during a race.
+        if sidecar_created:
+            sidecar.unlink(missing_ok=True)
         raise
 
 
@@ -257,7 +273,7 @@ def prepare_series_matrix(source: str | Path, *, manifest: str | Path,
             json.dump(report, handle, indent=2, sort_keys=True)
             handle.write("\n")
         for tmp, dest in zip([manifest_tmp, expression_tmp, audit_tmp], outputs):
-            os.replace(tmp, dest)
+            _publish_without_overwrite(tmp, dest)
             published.append(dest)
         return report
     except Exception:
