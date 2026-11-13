@@ -100,3 +100,17 @@ python -m pytest -q tests/test_geo_microarray.py
 # In an R environment with limma installed:
 Rscript tests/r/test_geo_microarray.R
 ```
+
+## Public metadata audit status (2026-11-12)
+
+Source-only first-pass reports are available for [GSE51981 sample labels and donor independence](research-notes/GSE51981_SOURCE_AUDIT_2026-11-12.md) and [GPL570 probe mapping](research-notes/GPL570_ANNOTATION_AUDIT_2026-11-12.md). The original 2014 paper reports **four indeterminate cycle-phase samples**, while a later 2022 reanalysis used **71 cases + 34 no-pathology controls** after exclusions; these are **not** proof of a finished per-GSM manifest and the latter is not an independent cohort. Original GEO per-sample `VALUE` describes log2 GC-RMA, while the 2022 reanalysis independently normalized/adjusted arrays. Do not silently equate the preprocessing.
+
+The annotation audit command takes a locally sourced GPL570 table and classifies ambiguous or missing mappings without publishing probe-level or human-data results:
+
+```bash
+python scripts/audit_gpl570.py --input data/raw/GPL570_platform_table.tsv \
+  --out results/gpl570/annotation_audit.json
+python -m pytest -q tests/test_audit_gpl570.py
+```
+
+**Source checks and 148-record audit remain incomplete.** The first actual GSE51981 limma analysis remains gated and should not be described as completed.
