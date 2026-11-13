@@ -1,0 +1,102 @@
+# GSE51981: auditable public microarray path (local and opt-in)
+
+**Status:** software pathway with **synthetic-only tests**. The maintainers have not yet downloaded, manually phenotype-reviewed, or analyzed GSE51981 with these scripts. There are **no biological findings, diagnostic claims, or validated targets** from this feature. This addresses the engineering portion of [Issue #11](https://github.com/dovvnloading/Open-Disease/issues/11), **not** its scientific acceptance criteria.
+
+GSE51981 is a public Affymetrix GPL570 endometrial **microarray** study. The cited original paper describes 77 endometriosis cases, 34 pathology-free controls, and 37 *other pelvic-pathology* samples among 148 arrays, but these are **published cohort totals, not machine-verified per-GSM labels**. A GSM is a sample accession, not necessarily an independent person. GEO values are processed arrays, **not RNA-seq/edgeR counts**.
+
+Sources:
+
+- [GEO GSE51981](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981)
+- [Original study](https://pmc.ncbi.nlm.nih.gov/articles/PMC4239429/)
+- [NCBI's programmatic access convention](https://www.ncbi.nlm.nih.gov/geo/info/geo_paccess.html)
+- [GEO submitter metadata specification](https://www.ncbi.nlm.nih.gov/geo/info/soft.html)
+
+## 1. Verify rights, then optionally acquire the pinned processed matrix
+
+Do not use the full CEL archive for this process. Check the primary GEO record, attached platform and publication for source processing, permitted reuse, technology and metadata quality *before* interpreting results. GEO public availability is not a substitute for reviewing data rights. No data are downloaded by installation, the default CLI, or CI; the following explicit action requires an Internet connection:
+
+```bash
+python -m pip install -e '.[dev]'
+open-disease geo-download --out data/raw/GSE51981_series_matrix.txt.gz
+```
+
+The downloader uses the HTTPS URL:
+
+`https://ftp.ncbi.nlm.nih.gov/geo/series/GSE51nnn/GSE51981/matrix/GSE51981_series_matrix.txt.gz`
+
+It rejects non-gzip responses, enforces a 150 MB compressed transfer limit, streams an SHA-256 digest, and refuses overwrites. A same-directory `*.provenance.json` sidecar records the URL, UTC retrieval time, compressed byte count and digest. If GEO changes its delivery layout, confirm the new official source independently rather than silently substituting files. Save the sidecar as part of the **local** reproducibility bundle. All raw and derived human sample data must remain in ignored, controlled directories.
+
+Alternatively, obtain the official matrix manually after verifying the source URL and run the completely offline step below. In that case, the prep audit still computes its exact file SHA-256 (but no independent retrieval timestamp is available).
+
+## 2. Extract without inventing sample diagnoses
+
+```bash
+open-disease geo-prepare \
+  --matrix data/raw/GSE51981_series_matrix.txt.gz \
+  --manifest data/private/GSE51981_review.csv \
+  --expression data/processed/GSE51981_intensities.tsv \
+  --audit data/processed/GSE51981_audit.json
+```
+
+This parser requires the actual `!Series_geo_accession`, the exact `!Sample_geo_accession` order, 148 unique GSM columns, unique probe identifiers, a complete matrix table, and finite numeric intensities or explicit missing values. It preserves submitter titles/characteristics as **source text only**, creates a probe-by-GSM table, and records sample/probe/missing-value totals plus the compressed input SHA-256. It makes **no** case/control, phase, tissue, or donor inference; every row starts `include=false`, `reviewed=false`, and `exclusion_reason=pending_manual_review`.
+
+Missing intensities remain `NA`, never zero. All three outputs are local and are refused if the destination already exists. They are *not* committed or published in CI. The 148-sample check is an integrity gate for this chosen study; any mismatch requires human investigation of GEO file/platform versions, not an unquestioned `--expected-samples` override.
+
+## 3. Create a defensible reviewed manifest *before* inspecting effects
+
+Manually review the sample attributes and the original paper. In the ignored `data/private/GSE51981_review.csv`, record every GSM and complete the following fields only when verified:
+
+| Field | Required handling |
+| --- | --- |
+| `geo_accession` | Preserve the original GSM ID; do not add/remove samples silently |
+| `donor_id` | Independently verified, pseudonymous **person-level** ID; repeated donors are refused, and a GSM must not be assumed to equal a donor |
+| `include`, `reviewed` | Set to `true` only after evidence review; excluded rows must have `exclusion_reason` |
+| `disease_group` | Exactly `case`, `control`, or `other`; the 37 other-pathology samples are **never** healthy controls by default |
+| `phase` | Verified, harmonized menstrual-phase category; no guessed or imputed cycle phase |
+| `tissue` | Exactly `eutopic_endometrium` for this protocol; other tissues need another model |
+| `pathology` | Document the verified specific/other pathology, including pathology-free controls |
+| `hormone_treatment` | Exactly `none` for included samples; unknown/exposed samples require a separate protocol |
+| `review_source_url` | HTTPS URL to GEO GSM / paper / eligible clinical metadata supporting the decision |
+| `review_notes` | Source ambiguity, harmonization decisions and explicit exclusion rationale |
+
+The `source_*` columns are **untrusted submitter text** for human review, not fitted covariates. The script cannot establish whether each submitted sample is independent or each published group label maps correctly to its GSM: the reviewer must audit those assertions. If metadata are insufficient, leave samples excluded, document the blocker and **do not run** an underpowered or mislabeled analysis. Do not place identifying clinical records in the manifest or source repository.
+
+Before the analysis, freeze the selected phase definitions, inclusion/exclusion rules, sample independence audit, primary case–control question, expected known expression theme, excluded probes, outcome interpretation and multiplicity family. Pre-registration of a specific publication finding and independent source review are **still needed** to complete the original research milestone.
+
+## 4. Fit the separate limma pathway on a reviewed log2 array scale
+
+Install [Bioconductor limma](https://bioconductor.org/packages/limma/) in a suitable R environment, confirm **from GEO processing documentation** that the prepared intensities are normalized, comparable **log2 microarray intensities**, and only then explicitly acknowledge this with `--log2-confirmed yes`:
+
+```bash
+Rscript scripts/r/analyze_geo_microarray.R \
+  --expression data/processed/GSE51981_intensities.tsv \
+  --manifest data/private/GSE51981_review.csv \
+  --out-dir results/GSE51981-reviewed-v1 \
+  --log2-confirmed yes \
+  --min-group 3 \
+  --seed 20261112
+```
+
+`--log2-confirmed yes` is an **operator attestation**, not automatic normalization verification. The model fails closed on missing/ambiguous diagnoses, unreviewed included samples, duplicate donor IDs, incompatible tissue/treatment, absent case/control overlap within phase, non-estimable design, insufficient independent donors and mismatched GSM IDs.
+
+**Pre-specified exploratory model:** log2 probe intensity ~ group + menstrual-phase fixed effect (phase term omitted only when all reviewed included samples have one shared phase). The first contrast is `case - control`. If at least three independent `other` donors with shared-phase control comparisons are reviewed, the separate `other - control` contrast estimates *nonspecific pathology effects*, **not** a new control arm. The additive model assumes a constant group effect across phases; it does not test group-by-phase interactions, and it is not a reimplementation of the paper's exact phase-specific analysis.
+
+- Each probe with **any** missing value among included samples is marked `excluded_missing_intensity` in the full output. No missing-value imputation, silent feature omission or outcome-based filtering.
+- `case_vs_control.csv` and optional `other_vs_control.csv` report probe-level limma log2 fold differences, moderated tests, 95% confidence intervals, BH q values **within each contrast**, and a separate BH q across *both* planned contrast families. All input probes appear, including those excluded for missingness.
+- `phase_permuted_control.csv` uses one fixed-seed, **within-phase shuffled diagnosis** assignment as a negative-control stress check, *not* external replication or a calibrated permutation FDR.
+- `phase_group_counts.csv`, `sample_review_audit.csv`, `analysis_report.txt`, and `session_info.txt` capture cohort counts, exclusions, design, exact software version and the negative-control diagnostic. Keep all local; they are sample-derived.
+- Probe IDs are **not gene IDs**. Gene annotation must use a versioned GPL570 map with one-to-many ambiguity retained before any gene-level or pathway claim. No target ranking is executed here.
+
+## 5. Honest release / remaining science gates
+
+All reported results must disclose the exact reviewed donor/sample counts, possible source selection, original publication overlap, hormone/cycle confounding, individual sample exclusions, nulls and missing probe rates, scale assumption, the complete false-discovery family and failures of the phase-permuted check. The other-pathology contrast is only run if its required reviewed records exist; otherwise the report **explicitly says it was not tested**.
+
+A public result still requires a real controlled execution, phenotype and reuse-rights audit, provenance bundle, predeclared original-gene/pathway replication checks, careful interpretation, a genuinely independent compatible comparison (or a documented absence), and qualified review. The tests here use invented sample and probe IDs exclusively. No cure, diagnosis, causal target or clinical use is supported.
+
+For offline verification:
+
+```bash
+python -m pytest -q tests/test_geo_microarray.py
+# In an R environment with limma installed:
+Rscript tests/r/test_geo_microarray.R
+```
