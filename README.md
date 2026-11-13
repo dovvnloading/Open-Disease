@@ -19,10 +19,9 @@ Starting tasks:
 
 - Audit public **GSE51981** sample/phenotype/menstrual-phase labels and person-level independence before analysis.
 - Audit **GPL570** probe annotations without forcing ambiguous probes to causal genes.
-- Run existing synthetic test suites and document failures.
 - After source audits pass, attempt a genuinely sourced **GSE51981 microarray reproduction** (not a novel drug discovery). A negative or blocked result is worth reporting.
 
-See [Issue #11](https://github.com/dovvnloading/Open-Disease/issues/11) and [the independent research plan](docs/INDEPENDENT_RESEARCH_PLAN.md). We use existing public computational data **without requiring grants, recruiting people, contacting experts or running a lab**. Validation gaps remain explicit; formal scientific/clinical claims require correspondingly stronger evidence and oversight.
+The three active issues are [#15: sample audit](https://github.com/dovvnloading/Open-Disease/issues/15), [#16: probe annotation](https://github.com/dovvnloading/Open-Disease/issues/16) and [#18: first real-data reproduction](https://github.com/dovvnloading/Open-Disease/issues/18). See also [the independent research plan](docs/INDEPENDENT_RESEARCH_PLAN.md). We use existing public computational data **without requiring grants, recruiting people, contacting experts or running a lab**. Validation gaps remain explicit; formal scientific/clinical claims require correspondingly stronger evidence and oversight.
 
 ## What works today
 
