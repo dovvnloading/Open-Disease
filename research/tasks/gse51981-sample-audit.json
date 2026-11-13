@@ -5,7 +5,7 @@
   "program": "endometriosis",
   "priority": "P0",
   "status": "ready",
-  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/11",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/15",
   "question": "Can every intended case, control, and other-pathology sample be traced to a source-backed phenotype, phase, tissue, and independent donor assignment?",
   "scope": "Metadata and methods audit only. Do not infer a clinical label from a GSM title; do not access patient-level restricted data.",
   "dependencies": [],

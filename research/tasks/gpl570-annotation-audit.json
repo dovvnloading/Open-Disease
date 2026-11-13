@@ -5,7 +5,7 @@
   "program": "endometriosis",
   "priority": "P1",
   "status": "ready",
-  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/11",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/16",
   "question": "Which GPL570 probes map ambiguously to genes, and what annotation version is defensible for the public microarray reproduction?",
   "scope": "Source and mapping-method review, not a ranked biological target discovery.",
   "dependencies": [],
