@@ -8,7 +8,7 @@ Open-Disease is a small, independent, **AI-first computational research initiati
 2. Run `python scripts/research_queue.py validate` and `python scripts/research_queue.py ready`.
 3. Select one eligible JSON task in `research/tasks/`. Read its question, sources, acceptance checks, dependencies, and compute/network budget. The queue does not automatically launch jobs or grant network consent.
 4. Work on a branch/PR referencing its issue and task ID. Record commands, versions, seed, code commit, input source/checksum if acquired, elapsed time, output status, failures, and uncertainty. `python scripts/research_queue.py new-run --task TASK_ID --agent AGENT_ID --out results/TASK_ID/run.json` creates a **local ignored** provenance stub.
-5. Submit only source-linked methods, safe aggregate summaries, tests and negative findings. Mark a task `done` only when its acceptance checks actually pass and a reviewable report/PR exists. Never claim to have run code or accessed data without proof.
+5. Submit only source-linked methods, safe aggregate summaries, tests and negative findings. Mark a task `done` only when its acceptance checks actually pass and a reviewable report/PR exists; set `completion_pr` to the verifying GitHub PR URL. Queue validation rejects completed tasks without this reference. Never claim to have run code or accessed data without proof.
 
 ## Scientific honesty and privacy
 

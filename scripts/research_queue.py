@@ -37,6 +37,12 @@ def load_tasks(directory: Path = TASK_DIR) -> dict[str, dict]:
             raise ValueError(f"{ident}: issue_url must link to a project issue")
         if task.get("status") not in STATES or task.get("priority") not in PRIORITIES:
             raise ValueError(f"{ident}: invalid status or priority")
+        if task["status"] == "done":
+            completed_in = task.get("completion_pr")
+            if not isinstance(completed_in, str) or not re.fullmatch(
+                r"https://github\.com/dovvnloading/Open-Disease/pull/[1-9][0-9]*", completed_in
+            ):
+                raise ValueError(f"{ident}: done task requires a project completion_pr")
         for key in ("dependencies", "steps", "deliverables", "acceptance", "sources"):
             val = task.get(key)
             if not isinstance(val, list) or (key != "dependencies" and not val):

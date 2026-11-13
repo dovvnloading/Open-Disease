@@ -37,6 +37,7 @@ def test_ready_depends_on_completed_tasks(tmp_path):
     assert [x["id"] for x in ready_tasks(tasks)] == ["toy-one"]
     first = task()
     first["status"] = "done"
+    first["completion_pr"] = "https://github.com/dovvnloading/Open-Disease/pull/14"
     write(tmp_path, first)
     assert [x["id"] for x in ready_tasks(load_tasks(tmp_path))] == ["toy-two"]
 
@@ -85,3 +86,14 @@ def test_new_run_creates_unpublished_provenance_stub(tmp_path, monkeypatch):
     assert saved["clinical_use"] is False
     with pytest.raises(FileExistsError):
         new_run(tasks, "toy-one", "test-agent", destination)
+
+
+def test_done_requires_a_traceable_pr(tmp_path):
+    completed = task()
+    completed["status"] = "done"
+    write(tmp_path, completed)
+    with pytest.raises(ValueError, match="completion_pr"):
+        load_tasks(tmp_path)
+    completed["completion_pr"] = "https://github.com/dovvnloading/Open-Disease/pull/14"
+    write(tmp_path, completed)
+    assert load_tasks(tmp_path)["toy-one"]["status"] == "done"
