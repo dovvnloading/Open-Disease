@@ -3,9 +3,11 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 from pathlib import Path
 import pandas as pd
 from .analysis import analyze_pseudobulk
+from .geo_microarray import download_series_matrix, prepare_series_matrix
 from .pseudobulk import aggregate_cells
 from .synthetic import generate_synthetic
 from .targets import rank_targets, validate_targets
@@ -48,6 +50,14 @@ def main(argv: list[str] | None = None) -> None:
     a.add_argument("--out", required=True)
     a = commands.add_parser("sha256", help="Compute local input checksum")
     a.add_argument("files", nargs="+")
+    g = commands.add_parser("geo-download", help="Opt-in public GSE51981 Series Matrix download (local only)")
+    g.add_argument("--out", required=True, help="Ignored local path, e.g. data/raw/GSE51981.txt.gz")
+    g = commands.add_parser("geo-prepare", help="Offline GEO probe table + UNREVIEWED metadata manifest")
+    g.add_argument("--matrix", required=True)
+    g.add_argument("--manifest", required=True)
+    g.add_argument("--expression", required=True)
+    g.add_argument("--audit", required=True)
+    g.add_argument("--expected-samples", type=int, default=148)
     args = parser.parse_args(argv)
     try:
         if args.command == "simulate":
@@ -74,6 +84,13 @@ def main(argv: list[str] | None = None) -> None:
                     for chunk in iter(lambda: stream.read(1024 * 1024), b""):
                         digest.update(chunk)
                 print(digest.hexdigest(), filename)
+        elif args.command == "geo-download":
+            print(json.dumps(download_series_matrix(args.out), indent=2, sort_keys=True))
+        elif args.command == "geo-prepare":
+            print(json.dumps(prepare_series_matrix(
+                args.matrix, manifest=args.manifest, expression=args.expression,
+                audit=args.audit, expected_samples=args.expected_samples
+            ), indent=2, sort_keys=True))
     except ValueError as exc:
         parser.error(str(exc))
 

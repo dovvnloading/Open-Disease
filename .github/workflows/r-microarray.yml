@@ -1,0 +1,28 @@
+name: GEO microarray limma (synthetic only)
+on:
+  push:
+    branches: ["main", "research/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  microarray:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+          use-public-rspm: true
+      - name: Install Bioconductor limma
+        run: |
+          Rscript -e 'if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager", repos="https://cloud.r-project.org")'
+          Rscript -e 'BiocManager::install("limma", ask=FALSE, update=FALSE)'
+          Rscript -e 'stopifnot(requireNamespace("limma", quietly=TRUE))'
+      - name: Run synthetic microarray model and rejection tests
+        run: Rscript tests/r/test_geo_microarray.R
+      # No public participant-derived matrices are fetched in CI.

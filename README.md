@@ -23,7 +23,7 @@ Sources: [GEO GSE266265](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2
 - A separately tested R/Matrix sparse aggregator and **local-only** Seurat raw-RNA-count adapter ([instructions](docs/ATLAS_EXPORT.md)); real RDS ingestion has not been verified.
 - Auditable, manually sourced *candidate* ranking, with a strict separate-study validation API.
 - Explicitly synthetic data, seeded tests, and GitHub Actions.
-- No background collection, API calls, data downloads, automatic diagnosis, clinical advice, or human data in the repository.
+- No background collection, automatic data downloads, diagnosis, clinical advice, or human data in the repository. An explicitly invoked, local-only GEO downloader is available.
 
 ## Run the code locally
 
@@ -49,6 +49,8 @@ Use `python -m open_disease --help` to see commands. The core input contract is 
 ## Immediate milestone: independent, public-data research (no lab prerequisite)
 
 **Our next scientific goal is a real, reproducible analysis of existing publicly released biomedical data—not another synthetic demonstration or a request to recruit a laboratory.** See [Independent research plan](docs/INDEPENDENT_RESEARCH_PLAN.md) and [Issue #11](https://github.com/dovvnloading/Open-Disease/issues/11).
+
+**New opt-in tooling (synthetic-tested, no real analysis yet):** `geo-download` retrieves the pinned GSE51981 Series Matrix with SHA-256 provenance, `geo-prepare` extracts a strictly unreviewed manifest, and a separate R/limma script fits reviewed, phase-aware microarray contrasts. All data and result artifacts stay local. See [GSE51981 microarray pipeline, gates and commands](docs/GEO_MICROARRAY.md).
 
 - Start with **GSE51981**, a manageable 148-sample endometrial *microarray* dataset from GEO. Original paper: 77 endometriosis cases, 34 pathology-free controls, **37 other pelvic-pathology samples**. The last 37 must not be silently treated as healthy controls. Respect clinical and cycle-phase metadata.
 - Obtain the released processed **log2 microarray intensity** Series Matrix under applicable source terms, log source SHA256 and sample QC, and reproduce a specific published result using a microarray-appropriate analysis (e.g. limma). **Do not feed array intensities into edgeR or raw RNA count tools.**
