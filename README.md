@@ -28,7 +28,7 @@ The three active issues are [#15: sample audit](https://github.com/dovvnloading/
 - A seeded synthetic end-to-end demo, structural cohort QC, source catalog and CI tests.
 - Strict donor-level RNA pseudobulk utilities and exploratory differential-expression baseline, with an experimental edgeR v4 path ([model limitations](docs/EDGE_R_MODEL.md)). These have **not** analyzed the real large Seurat atlas.
 - Sparse R/Seurat export utilities tested on artificial counts ([high-memory export guide](docs/ATLAS_EXPORT.md)).
-- An opt-in official GEO **GSE51981** processed-array downloader, provenance/manifest prep, and phase-aware R/limma implementation ([local-only workflow](docs/GEO_MICROARRAY.md)); **synthetic-tested only**, no audited real-GEO outcome yet.
+- An opt-in official GEO **GSE51981** processed-array downloader, provenance/manifest prep, a new [metadata-only 148-sample audit](docs/research-notes/GSE51981_METADATA_PREFLIGHT_2026-11-12.md), and phase-aware R/limma implementation ([local-only workflow](docs/GEO_MICROARRAY.md)); **synthetic-tested only**, no audited real-GEO outcome yet.
 - Heuristic evidence ranking and strict study-separation checks as software prototypes, **not** established target biology.
 
 ### Run existing software

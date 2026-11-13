@@ -114,3 +114,18 @@ python -m pytest -q tests/test_audit_gpl570.py
 ```
 
 **Source checks and 148-record audit remain incomplete.** The first actual GSE51981 limma analysis remains gated and should not be described as completed.
+
+
+## Strict metadata-only preflight (before expression inspection)
+
+An optional **offline, standard-library** preflight can inspect the official local GSE51981 Series Matrix **header**, without parsing expression rows. It rejects an incorrect GEO accession, platform mismatch, non-148/duplicate GSM set or malformed metadata and only emits **aggregate** source-field coverage. The input file is still fully byte-hashed (SHA-256); this is not a gene-level analysis and cannot establish clinical truth, source rights or independent donors.
+
+    python scripts/audit_gse51981_metadata.py \
+      --matrix data/raw/GSE51981_series_matrix.txt.gz \
+      --out results/gse51981/header_preflight.json
+
+After an individually **source-reviewed** manifest is generated, the same command can add "--manifest data/private/GSE51981_review.csv" and report structural problems without making guesses. The tool **always returns NO_GO for clinical/scientific approval**; the operator's substantive donor, pathology, phase, reuse and original-result review must remain separate. Its output is aggregate-only under ignored results/, with no source titles, GSM IDs or individual medical information. It does not automatically download data.
+
+Published 2014 phase-eligible group counts are **75 cases / 35 other pathology / 34 pathology-free controls**, plus two indeterminate cases and two indeterminate other-pathology samples. This is a literature reference, **not** a verified 144-person manifest produced by the tool. The [2022 same-cohort reanalysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC8766492/) used 71 cases and 34 controls after different exclusions and processing and does not constitute external validation.
+
+See the [source audit](research-notes/GSE51981_METADATA_PREFLIGHT_2026-11-12.md), [pre-analysis plan](research-notes/GSE51981_PREANALYSIS_PLAN_2026-11-12.md) and [19 synthetic tests](../tests/test_audit_gse51981_metadata.py). These additions advance #15/#18 but **do not close either issue**.
