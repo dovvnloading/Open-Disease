@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import gzip
+import hashlib
 import json
 import subprocess
 import sys
@@ -44,6 +45,8 @@ def test_synthetic_counts_and_provenance(tmp_path, gzip_input, soft):
     }
     assert len(result["input_sha256"]) == 64
     assert result["source_verified"] is False
+    assert result["declared_platform_id"] == ("GPL570" if soft else None)
+    assert result["soft_platform_declaration_checked"] is soft
     assert result["biological_findings"] is False
     assert "PROBE_SYN" not in json.dumps(result)
 
@@ -88,5 +91,42 @@ def test_cli_no_overwrite_and_only_ignored_results(tmp_path):
         assert output.exists()
         retry = subprocess.run(command, capture_output=True, text=True)
         assert retry.returncode != 0
+    finally:
+        output.unlink(missing_ok=True)
+
+
+@pytest.mark.parametrize("prefix,error", [
+    ("^PLATFORM = GPL96\n!platform_table_begin\n", "Unexpected SOFT platform"),
+    ("^PLATFORM = GPL570\n^PLATFORM = GPL570\n!platform_table_begin\n", "Repeated SOFT platform"),
+    ("^PLATFORM = GPL570\n", "Missing SOFT platform table begin"),
+    ("^PLATFORM = bogus\n!platform_table_begin\n", "Malformed SOFT platform"),
+])
+def test_sof_platform_identity_fails_closed(tmp_path, prefix, error):
+    path = tmp_path / "wrong-platform.soft"
+    path.write_text(prefix + artificial_table())
+    with pytest.raises(ValueError, match=error):
+        inspect(path)
+
+
+def test_cli_expected_sha256_rejects_wrong_or_invalid_pins(tmp_path):
+    source = tmp_path / "synthetic.soft"
+    source.write_text(artificial_table(soft=True))
+    real_digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    script = ROOT / "scripts" / "audit_gpl570.py"
+    output = ROOT / "results" / "audit-gpl570-pin-test.json"
+    output.parent.mkdir(exist_ok=True)
+    try:
+        output.unlink(missing_ok=True)
+        base = [sys.executable, str(script), "--input", str(source), "--out", str(output),
+                "--expected-sha256"]
+        for bad in ("xyz", "0" * 64):
+            failed = subprocess.run(base + [bad], capture_output=True, text=True)
+            assert failed.returncode != 0
+            assert not output.exists()
+        passed = subprocess.run(base + [real_digest.upper()], capture_output=True, text=True)
+        assert passed.returncode == 0, passed.stderr
+        report = json.loads(output.read_text())
+        assert report["input_sha256"] == real_digest
+        assert report["source_verified"] is False  # A matching hash cannot verify release/rights.
     finally:
         output.unlink(missing_ok=True)
