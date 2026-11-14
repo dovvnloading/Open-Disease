@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "gse315857-fosb-transcript",
+  "title": "Measure the canonical FOSB transcript rank in proliferative endometrium",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "done",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/30",
+  "question": "Does the median within-biopsy percentile of the canonical FOSB transcript exceed the control median in this four-case, four-control cohort?",
+  "scope": "A descriptive comparison of eight histologically proliferative eutopic biopsies from GSE315857 using one prespecified transcript, ENST00000353609.",
+  "dependencies": [],
+  "sources": [
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE315857",
+    "https://doi.org/10.1093/reprod/xaag038",
+    "https://www.ebi.ac.uk/ena/browser/view/PRJNA1399448",
+    "https://api.genome.ucsc.edu/getData/track?genome=hg38;track=knownGene;chrom=chr19;start=45450000;end=45550000",
+    "https://www.ncbi.nlm.nih.gov/gene/2354"
+  ],
+  "steps": [
+    "Freeze the cohort, target, reference set, percentile and median contrast before inspecting any target outcomes.",
+    "Verify the archived matrix, clinical and technical sample joins and GENCODE v50 target annotation.",
+    "Compute and independently check the group medians, their difference and the leave-one-participant-out range."
+  ],
+  "deliverables": [
+    "Prospective plan, runnable analysis, regression tests and aggregate descriptive outcome or a source-backed blocker."
+  ],
+  "acceptance": [
+    "Require eight distinct assays, four women per study group, complete 8-column matrix and the exact audited source prefix counts.",
+    "Require a unique canonical target in 22,961 named transcript rows and the frozen matrix integrity checks.",
+    "Report median difference in percentile points and delete-one range without p-values or population-level inference."
+  ],
+  "budget": {
+    "max_runtime_minutes": 90,
+    "max_ram_gb": 2,
+    "network": "public-opt-in",
+    "max_download_mb": 50
+  },
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/29"
+}

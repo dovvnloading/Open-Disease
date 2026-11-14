@@ -1,6 +1,6 @@
 # Research roadmap: compute-first, evidence-first
 
-**As of November 2026:** Open-Disease has completed a real platform annotation audit and reconciled public cohort metadata. The original GSE51981 comparison remains blocked on individual eligibility. A prespecified comparison in a separately recruited surgical cohort has been executed. [GSE25628 FOSB result](research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md) This is a small independent AI research effort. Its milestones are computational outputs, not fundraising, staffing or validation claims.
+**As of November 2026**, four external FOSB comparisons are documented. The [project results table](../README.md) summarizes the three array cohorts and one canonical-transcript RNA-seq series. The original UCSF comparison remains blocked on individual eligibility.
 
 ## Now — make agents productive
 
@@ -24,10 +24,12 @@ Exit: a credible, reproducible computation or a documented blocker, **not** a va
 
 - [x] Execute the single-probe GSE25628 proliferative-phase case–control comparison. The estimate was positive and its interval included zero. Controls had benign surgical indications and individual recent treatment was unknown. [Report](research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md)
 
-- [x] Audit recruitment, hormone status, phase, donor uniqueness, platform and run balance in Finnish EndometDB. [Eligibility evidence and remaining measurement question](research-notes/GSE141549_ELIGIBILITY_2026-11-13.md)
-- [ ] [Resolve the EndometDB measurement (#26)](https://github.com/dovvnloading/Open-Disease/issues/26). The [measurement audit](research-notes/GSE141549_FOSB_MEASUREMENT_2026-11-13.md) verified the combined row label and the separate WG-6 expression workbook. A documented expression-to-clinical join or per-chip harmonization record would allow the donor-linked comparison to be reassessed.
+- [x] Resolve Finnish native assay identity for all 38 eligible donors and run the prospectively defined physical-probe test in seven shared chip/run/phase groups. The percentile difference was positive with an inconclusive exact test. [Chip census](research-notes/GSE141549_CHIP_CENSUS_2026-11-14.md) · [Result](research-notes/GSE141549_WG6_FOSB_RESULTS_2026-11-14.md)
+- [x] Test the secretory-phase contrast in GSE120103. Verify the original scanner headers and retain the complete separation of clinical groups across slides as an attribution limit. [Result](research-notes/GSE120103_FOSB_RESULTS_2026-11-14.md)
+- [x] Test a separately specified RNA-seq transcript contrast in eight proliferative biopsies. Retain the change of sign on participant omission. [Result](research-notes/GSE315857_FOSB_RESULTS_2026-11-14.md)
+- [ ] Resolve the authors' cross-chip derivation of the pooled normalized Finnish FOSB row. This question is separate from the completed native WG-6 analysis. [Issue #26](https://github.com/dovvnloading/Open-Disease/issues/26)
 - [ ] Audit GWAS fine mapping and public target evidence without treating nearest genes or uncalibrated scores as causal confidence.
-- [ ] Freeze hypotheses before external comparisons; retain complete negative and inconclusive results.
+- [x] Freeze each external comparison before inspecting its target outcomes and retain inconclusive results alongside positive estimates.
 - [ ] If public data cannot answer a question, disclose the limitation and change research direction rather than automatically recruit a collaborator.
 
 ## Conditional, not a current project phase

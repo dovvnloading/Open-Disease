@@ -1,5 +1,5 @@
 {
-  "schema_version": "2026-11-13",
+  "schema_version": "2026-11-14",
   "catalog_is_not_redistribution_permission": true,
   "automatic_downloads_enabled": false,
   "biological_results_generated": true,
@@ -128,14 +128,43 @@
       "kind": "two_platform_microarray",
       "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141549",
       "publication": "https://doi.org/10.1038/s41597-020-00623-x",
-      "human_data_used_by_open_disease": false,
+      "human_data_used_by_open_disease": true,
       "access": "Public GEO materials and the authors’ CC BY 4.0 EndometDB v1 archive. Clinical rows stay local.",
-      "role": "external_cohort_eligibility_audit",
+      "role": "native_wg6_run_and_phase_stratified_fosb",
       "metadata_audit": "docs/research-notes/GSE141549_ELIGIBILITY_2026-11-13.md",
       "cautions": [
-        "Study records identify hormone medication status without a washout interval.",
-        "The two platforms use different FOSB identifiers. GPL10558 alone has no endometrial control arrays in the audited set.",
-        "The native clinical and GEO expression releases use different identifiers."
+        "The native nullable hormone-medication field defaults to false and supplies no washout interval.",
+        "The analysis uses the physical WG-6 probe and native assay link. The provenance of the pooled normalized FOSB row remains unresolved.",
+        "Seven shared run-by-phase strata in an observational cohort. Exact inference requires conditional exchangeability."
+      ],
+      "analysis_report": "docs/research-notes/GSE141549_WG6_FOSB_RESULTS_2026-11-14.md"
+    },
+    {
+      "id": "GSE120103",
+      "kind": "single_channel_microarray",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE120103",
+      "publication": "https://doi.org/10.1186/s12958-019-0465-z",
+      "human_data_used_by_open_disease": true,
+      "access": "Public processed data and source metadata. Inputs retained locally.",
+      "role": "secretory_fertility_stratified_fosb",
+      "analysis_report": "docs/research-notes/GSE120103_FOSB_RESULTS_2026-11-14.md",
+      "cautions": [
+        "All 15 physical slides were confined to one of the four clinical groups.",
+        "The endpoint uses relative probe position. Recent hormone history and surgical exclusion of disease in infertility-clinic controls are unresolved."
+      ]
+    },
+    {
+      "id": "GSE315857",
+      "kind": "bulk_rnaseq_transcript_abundance",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE315857",
+      "publication": "https://doi.org/10.1093/reprod/xaag038",
+      "human_data_used_by_open_disease": true,
+      "access": "Public processed data and source metadata. Inputs retained locally.",
+      "role": "canonical_transcript_descriptive_comparison",
+      "analysis_report": "docs/research-notes/GSE315857_FOSB_RESULTS_2026-11-14.md",
+      "cautions": [
+        "Four women per group. Source-library prefixes are imbalanced and individual cohort overlap across studies is undocumented.",
+        "Fractional submitted values represent transcripts with unresolved abundance units. The parent GSE272606 and this derivative count as one study."
       ]
     }
   ]

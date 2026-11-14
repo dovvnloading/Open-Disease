@@ -4,7 +4,16 @@
 
 Open-Disease is a place to aim research agents and bounded compute at difficult disease questions. Agents can audit public papers/data, write and test analyses, reproduce known findings, explore falsifiable hypotheses, and publish the *methods, failures, uncertainties and source-backed evidence*. The goal is useful work that future agents or researchers can build on—not a grant-funded lab, research consortium, clinical service or claim to have cured anything.
 
-**Current status (November 2026).** The first prospective FOSB check in a separately recruited surgical cohort is complete. In GSE25628, the difference between eight cases and six controls was +1.38 log2 units (95% CI −0.65 to +3.41). The planned statistical test was inconclusive. [Results and reproducible analysis](docs/research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md)
+**Current status (November 2026).** Four external endometrial expression comparisons have tested the published positive FOSB direction. The strongest apparent signal came from the New Delhi arrays, where clinical groups occupied separate physical slides. The Finnish comparison controlled for run and histologic phase on a single verified chip and was inconclusive. These observational results leave the biological interpretation unresolved.
+
+| Cohort and comparison | Case minus control | Interpretation |
+| --- | ---: | --- |
+| [Finland, 12 cases and 13 controls in seven shared run-by-phase groups](docs/research-notes/GSE141549_WG6_FOSB_RESULTS_2026-11-14.md) | +10.89 percentile points | Exact two-sided p = 0.159. The measured direction was positive, with inconclusive evidence. |
+| [New Delhi, secretory tissue, equal weight for fertile and infertile groups](docs/research-notes/GSE120103_FOSB_RESULTS_2026-11-14.md) | +61.50 percentile points | Patient-level 95% CI +41.35 to +81.64. None of 15 slides contained more than one group. |
+| [Eight proliferative RNA-seq biopsies, canonical transcript](docs/research-notes/GSE315857_FOSB_RESULTS_2026-11-14.md) | +0.20 percentile points | The median difference changed sign under participant omission. |
+| [Rome, proliferative tissue, eight cases and six controls](docs/research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md) | +1.38 log2 units | 95% CI −0.65 to +3.41. Inconclusive. |
+
+Each row has its own prospectively published definition. Assays, reference features, phases and control populations differ. Numerical magnitudes across rows cannot be combined directly.
 
 Endometriosis is the only active disease research program. ALS, type 1 diabetes, pulmonary fibrosis and ME/CFS are possible later tracks, not staffed or validated projects.
 
@@ -17,7 +26,7 @@ Read [AGENTS.md](AGENTS.md) for operating rules and [the agent workflow](docs/AG
 
 Each JSON task defines a falsifiable question, sources, dependencies, acceptance criteria and a rough resource budget. An agent can create a **local, ignored** run record with `python scripts/research_queue.py new-run --task TASK_ID --agent AGENT_ID --out results/TASK_ID/run.json`. The queue is a lightweight coordination format, **not** an automatic scheduler or a compute sandbox. A task does not automatically authorize network access, external API costs, high-memory workloads or contact with people.
 
-The Finnish EndometDB [measurement audit](docs/research-notes/GSE141549_FOSB_MEASUREMENT_2026-11-13.md) traced the combined FOSB row to the newer chip’s identifier. A comparison on the older chip still needs a documented link to donor-level clinical records. The audit found 38 donors with one qualifying assay and a recorded negative hormone-medication survey. Only 25 were in run-by-phase groups containing both cases and controls. [Finnish eligibility audit](docs/research-notes/GSE141549_ELIGIBILITY_2026-11-13.md) · [Measurement question #26](https://github.com/dovvnloading/Open-Disease/issues/26)
+The [complete Finnish chip census](docs/research-notes/GSE141549_CHIP_CENSUS_2026-11-14.md) links physical addresses to native clinical records. Of 38 donors with one qualifying assay, 32 had a complete HumanWG-6 v2 address set. The authors' pooled normalized row has a separate unresolved [measurement question](https://github.com/dovvnloading/Open-Disease/issues/26).
 
 ### Original endometriosis reproduction (GSE51981)
 
