@@ -1,0 +1,42 @@
+{
+  "R-HSA-9008059": {
+    "full_members": 19,
+    "matched_members": 18,
+    "finland_full_pp": 1.5657781219576654,
+    "finland_matched_pp": 1.5609763435355635,
+    "rome_full_pp": -2.425548490077226,
+    "rome_matched_pp": -2.598872771673385
+  },
+  "R-HSA-5654741": {
+    "full_members": 38,
+    "matched_members": 33,
+    "finland_full_pp": 1.2280883802286167,
+    "finland_matched_pp": 1.1525548467808429,
+    "rome_full_pp": -1.7558325635204,
+    "rome_matched_pp": -1.9352120885653221
+  },
+  "R-HSA-163560": {
+    "full_members": 21,
+    "matched_members": 18,
+    "finland_full_pp": 2.7623016334747104,
+    "finland_matched_pp": 2.991351104155082,
+    "rome_full_pp": -1.8165133659814288,
+    "rome_matched_pp": -2.1196431352272356
+  },
+  "R-HSA-5654710": {
+    "full_members": 18,
+    "matched_members": 15,
+    "finland_full_pp": 2.1765364975719987,
+    "finland_matched_pp": 2.039361174748536,
+    "rome_full_pp": -3.966775544117077,
+    "rome_matched_pp": -4.5733660277416135
+  },
+  "R-HSA-432722": {
+    "full_members": 43,
+    "matched_members": 43,
+    "finland_full_pp": 1.1065134618958297,
+    "finland_matched_pp": 1.1065134618958297,
+    "rome_full_pp": -2.167350359271367,
+    "rome_matched_pp": -2.167350359271367
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "source": "HUGO Gene Nomenclature Committee, complete approved set",
+  "reference_date": "2026-10-06",
+  "reference_url": "https://storage.googleapis.com/public-download-files/hgnc/archive/archive/quarterly/tsv/hgnc_complete_set_2026-10-06.tsv",
+  "reference_license": "CC0",
+  "reference_bytes": 16973125,
+  "reference_sha256": "8bf6f686e640dbc864a346484626953621b0500d900d26cd085a35c2782d725d",
+  "ordered_feature_labels_sha256": "4f0d87790afbc35d8af755a3148ed09883ca57d9a309f5e54dfdc87feb03ad14",
+  "original_nominations_sha256": "ba140f2bb026b0416e1c705ab28f616f430cc4295f94d174feaf5d15947c1e31",
+  "projection_sha256": "6609ef4bb35608c7f791391b54344e0b0e9f77a44ed3004d95925aed2779a0c2",
+  "source_row_counts": {
+    "source_rows": 29034,
+    "no_match": 6458,
+    "ambiguous_label": 0,
+    "multiple_hgnc_entries": 3,
+    "multiple_feature_rows": 6,
+    "matched_symbol": 21976,
+    "matched_ensembl": 591
+  },
+  "coverage": {
+    "28": {
+      "family": "gene",
+      "mapped": 1,
+      "original": 1
+    },
+    "3797": {
+      "family": "gene",
+      "mapped": 1,
+      "original": 1
+    },
+    "90485": {
+      "family": "gene",
+      "mapped": 1,
+      "original": 1
+    },
+    "51228": {
+      "family": "gene",
+      "mapped": 1,
+      "original": 1
+    },
+    "2160": {
+      "family": "gene",
+      "mapped": 0,
+      "original": 1
+    },
+    "R-HSA-9008059": {
+      "family": "pathway",
+      "mapped": 18,
+      "original": 19
+    },
+    "R-HSA-5654741": {
+      "family": "pathway",
+      "mapped": 33,
+      "original": 38
+    },
+    "R-HSA-163560": {
+      "family": "pathway",
+      "mapped": 18,
+      "original": 21
+    },
+    "R-HSA-5654710": {
+      "family": "pathway",
+      "mapped": 15,
+      "original": 18
+    },
+    "R-HSA-432722": {
+      "family": "pathway",
+      "mapped": 43,
+      "original": 43
+    }
+  },
+  "distinct_mapped_genes": 115,
+  "distinct_mapped_pathway_genes": 111
+}

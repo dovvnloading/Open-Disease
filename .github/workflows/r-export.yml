@@ -25,3 +25,5 @@ jobs:
         run: Rscript tests/r/test_export_pseudobulk.R
       - name: Verify two mapping interfaces produce identical donor-level raw counts
         run: Rscript tests/r/test_cross_exporters.R
+      - name: Check Swiss sparse pathway scoring against a synthetic dense reference
+        run: Rscript tests/r/test_swiss_glandular.R
