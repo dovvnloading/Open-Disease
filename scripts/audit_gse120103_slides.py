@@ -21,6 +21,7 @@ import zlib
 from open_disease.geo_microarray import sha256_file
 
 MATRIX_HASH = "0ab4900ba460232b1c76ca25028b3a034dd50491d3a7e63d4bf2fa2c4afbc16e"
+HEADER_HASH = "95c8d970c0aab7eb384fb434cf9353a4b5bb40e076553a1597478b7db22b4f34"
 PREFIX_SIZE = 8192
 GROUPS = ("1A", "2A", "1B", "2B")
 
@@ -112,6 +113,8 @@ def audit(matrix, cache, fetch=False):
     total = sum(slides.values(), Counter())
     if total != Counter({group: 9 for group in GROUPS}):
         raise ValueError("Incomplete slide audit")
+    if manifest.hexdigest() != HEADER_HASH:
+        raise ValueError("Original scanner header digest or sample order changed")
     return {
         "group_order": GROUPS, "n_arrays": sum(total.values()), "unique_array_positions": len(arrays), "unique_slides": len(slides),
         "slides_per_group": [sum(group in groups for groups in slides.values()) for group in GROUPS],

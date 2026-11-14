@@ -29,6 +29,7 @@ def test_header_identity_and_missing_fields():
 
 def test_audit_requires_distinct_barcodes_to_establish_overlap(tmp_path, monkeypatch):
     source = []
+    manifest = hashlib.sha256()
     for group in slides.GROUPS:
         for i in range(9):
             url = f"synthetic/{group}/{i}"
@@ -41,13 +42,19 @@ def test_audit_requires_distinct_barcodes_to_establish_overlap(tmp_path, monkeyp
                 barcode = f"{k:012d}_1_{i}"
             protocol = "first" if i < 5 else "second"
             path = tmp_path / (hashlib.sha256(url.encode()).hexdigest() + ".prefix")
-            path.write_bytes(prefix(barcode, protocol))
+            blob = prefix(barcode, protocol)
+            path.write_bytes(blob)
+            manifest.update(hashlib.sha256(blob).digest())
     monkeypatch.setattr(slides, "sample_headers", lambda _: source)
+    monkeypatch.setattr(slides, "HEADER_HASH", manifest.hexdigest())
     result = slides.audit(None, tmp_path)
     assert result["unique_slides"] == 5
     assert result["slides_spanning_clinical_groups"] == 1
     assert result["slides_per_group"] == [2, 2, 1, 1]
     assert result["protocol_group_counts"] == {"first": [5] * 4, "second": [4] * 4}
+    source[0], source[-1] = source[-1], source[0]
+    with pytest.raises(ValueError, match="digest"):
+        slides.audit(None, tmp_path)
     source.pop()
     with pytest.raises(ValueError, match="Incomplete"):
         slides.audit(None, tmp_path)

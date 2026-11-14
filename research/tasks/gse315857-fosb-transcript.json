@@ -4,7 +4,7 @@
   "title": "Measure the canonical FOSB transcript rank in proliferative endometrium",
   "program": "endometriosis",
   "priority": "P0",
-  "status": "ready",
+  "status": "done",
   "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/30",
   "question": "Does the median within-biopsy percentile of the canonical FOSB transcript exceed the control median in this four-case, four-control cohort?",
   "scope": "A descriptive comparison of eight histologically proliferative eutopic biopsies from GSE315857 using one prespecified transcript, ENST00000353609.",
@@ -34,5 +34,6 @@
     "max_ram_gb": 2,
     "network": "public-opt-in",
     "max_download_mb": 50
-  }
+  },
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/29"
 }
