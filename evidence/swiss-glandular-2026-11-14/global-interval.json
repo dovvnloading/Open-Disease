@@ -1,0 +1,30 @@
+{
+  "endpoint": "GLOBAL",
+  "status": "post-outcome descriptive",
+  "assumption": "Constant additive shift on donor global score and null exchangeability within capture batch",
+  "units": "percentile points",
+  "donors": 13,
+  "batches": 4,
+  "assignments": 144,
+  "alpha": 0.05,
+  "minimum_extreme_for_inclusion": 8,
+  "absolute_tail_tolerance_pp": 1e-10,
+  "difference": 0.7092429609566695,
+  "closed_interval": [
+    -0.44224355421371037,
+    1.376924403975833
+  ],
+  "exact_bounds": [
+    "-444114961435396607/1004231621250000000",
+    "744558245061798869/540740103750000000"
+  ],
+  "direct_extreme_counts": {
+    "zero": 24,
+    "lower_minus_1e-8": 7,
+    "lower": 8,
+    "lower_plus_1e-8": 8,
+    "upper_minus_1e-8": 8,
+    "upper": 8,
+    "upper_plus_1e-8": 7
+  }
+}

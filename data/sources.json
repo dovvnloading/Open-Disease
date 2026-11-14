@@ -15,9 +15,10 @@
       "controls": 25,
       "cell_count": 466371,
       "processed_rds_gb_approx": 38.9,
-      "human_data_used_by_open_disease": false,
+      "human_data_used_by_open_disease": true,
+      "analysis_report": "docs/research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md",
       "access": "public GEO; original source and rights must be reviewed",
-      "role": "discovery_candidate",
+      "role": "independent_glandular_expression_followup",
       "cautions": [
         "count from donors not cells",
         "cycle phase stratification required",

@@ -1,0 +1,71 @@
+{
+  "protocol": "7f380a743491e98036b200bd6c2d097d7bd489cd",
+  "donors": 13,
+  "cases": 6,
+  "controls": 7,
+  "batches": 4,
+  "assignments": 144,
+  "endpoints": {
+    "GLOBAL": {
+      "difference": 0.7092429609566739,
+      "extreme": 24,
+      "p": 0.16666666666666666,
+      "holm": null,
+      "supported": false,
+      "batch_omit_low": 0.4051626512956261,
+      "batch_omit_high": 1.0284114207117152,
+      "cell_first": 0.3089894372857058
+    },
+    "R-HSA-9008059": {
+      "difference": 0.7607420355190193,
+      "extreme": 14,
+      "p": 0.09722222222222222,
+      "holm": 0.4861111111111111,
+      "supported": false,
+      "batch_omit_low": 0.70714772888662,
+      "batch_omit_high": 0.8443963526797328,
+      "cell_first": -0.014103156027656993
+    },
+    "R-HSA-5654741": {
+      "difference": 0.5460095374075582,
+      "extreme": 94,
+      "p": 0.6527777777777778,
+      "holm": 1.0,
+      "supported": false,
+      "batch_omit_low": -0.1576782497427255,
+      "batch_omit_high": 1.0857785682129588,
+      "cell_first": 0.39574969978033003
+    },
+    "R-HSA-163560": {
+      "difference": 1.368530413895316,
+      "extreme": 29,
+      "p": 0.2013888888888889,
+      "holm": 0.8055555555555556,
+      "supported": false,
+      "batch_omit_low": 0.6996533225838798,
+      "batch_omit_high": 1.957810000535763,
+      "cell_first": 0.4282322315400897
+    },
+    "R-HSA-5654710": {
+      "difference": 0.7458305588084482,
+      "extreme": 55,
+      "p": 0.3819444444444444,
+      "holm": 1.0,
+      "supported": false,
+      "batch_omit_low": 0.27432716176949157,
+      "batch_omit_high": 1.0115853954112428,
+      "cell_first": 0.1053036292606997
+    },
+    "R-HSA-432722": {
+      "difference": 0.12510225915299777,
+      "extreme": 112,
+      "p": 0.7777777777777778,
+      "holm": 1.0,
+      "supported": false,
+      "batch_omit_low": -0.3183005258558893,
+      "batch_omit_high": 0.6319976098591601,
+      "cell_first": 0.6297647818751448
+    }
+  },
+  "cells": 3564
+}

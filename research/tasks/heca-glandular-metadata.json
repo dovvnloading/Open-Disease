@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "heca-glandular-metadata",
+  "title": "Reconcile proliferative gland populations and study overlap in the Human Endometrial Cell Atlas",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/40",
+  "question": "Can the public annotation and donor metadata establish a separate, biologically comparable glandular case-control population?",
+  "scope": "Published metadata and cell-count tables from the HECA release. No individual expression outcomes.",
+  "dependencies": ["swiss-glandular-pathways"],
+  "sources": ["https://doi.org/10.1038/s41588-024-01873-w", "https://www.reproductivecellatlas.org/endometrium_reference.html", "https://www.repository.cam.ac.uk/"],
+  "steps": ["Identify the proliferative gland states from the authors' anatomical definitions.", "Audit published metadata, library links, hormone and phase evidence, cell-count denominators, and study overlap.", "Verify the coverage independently and document feasible contrasts or the precise missing keys."],
+  "deliverables": ["Aggregate metadata audit, source manifest and reproducible eligibility or feasibility determination."],
+  "acceptance": ["Separate donor, biopsy, cell, library and contributing-study denominators.", "Record the support for comparability and technical overlap or explain where the released tables stop.", "Report no expression outcomes."],
+  "budget": {"max_runtime_minutes": 30, "max_ram_gb": 2, "network": "public-opt-in", "max_download_mb": 20}
+}
