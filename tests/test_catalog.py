@@ -11,7 +11,7 @@ ROOT = Path(__file__).parents[1]
 
 def test_canonical_catalog_links_executed_analysis():
     catalog = ROOT / "data/sources.json"
-    assert audit(catalog) == {"sources": 7, "status": "exploratory_computation", "analyzed": 1}
+    assert audit(catalog) == {"sources": 8, "status": "exploratory_computation", "analyzed": 1}
     sources = json.loads(catalog.read_text())["sources"]
     assert [s["id"] for s in sources if s["human_data_used_by_open_disease"]] == ["GSE25628"]
 

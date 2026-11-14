@@ -122,6 +122,21 @@
         "donor sequencing not open access",
         "some donor comorbidities and anti-inflammatory treatment"
       ]
+    },
+    {
+      "id": "GSE141549",
+      "kind": "two_platform_microarray",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141549",
+      "publication": "https://doi.org/10.1038/s41597-020-00623-x",
+      "human_data_used_by_open_disease": false,
+      "access": "Public GEO materials and the authors’ CC BY 4.0 EndometDB v1 archive. Clinical rows stay local.",
+      "role": "external_cohort_eligibility_audit",
+      "metadata_audit": "docs/research-notes/GSE141549_ELIGIBILITY_2026-11-13.md",
+      "cautions": [
+        "Study records identify hormone medication status without a washout interval.",
+        "The two platforms use different FOSB identifiers. GPL10558 alone has no endometrial control arrays in the audited set.",
+        "The native clinical and GEO expression releases use different identifiers."
+      ]
     }
   ]
 }

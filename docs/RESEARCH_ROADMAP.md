@@ -24,7 +24,8 @@ Exit: a credible, reproducible computation or a documented blocker, **not** a va
 
 - [x] Execute the single-probe GSE25628 proliferative-phase case–control comparison. The estimate was positive and its interval included zero. Controls had benign surgical indications and individual recent treatment was unknown. [Report](research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md)
 
-- [ ] Select other eligible public cohorts and check tissue, case definition, donor overlap, hormone phase, platform and statistical power.
+- [x] Audit recruitment, hormone status, phase, donor uniqueness, platform and run balance in Finnish EndometDB. [Eligibility evidence and remaining measurement question](research-notes/GSE141549_ELIGIBILITY_2026-11-13.md)
+- [ ] [Resolve the EndometDB measurement (#26)](https://github.com/dovvnloading/Open-Disease/issues/26). Identify a source-backed FOSB probe and platform assignment for the donor-linked EndometDB results, or select another cohort with compatible measurements and controls.
 - [ ] Audit GWAS fine mapping and public target evidence without treating nearest genes or uncalibrated scores as causal confidence.
 - [ ] Freeze hypotheses before external comparisons; retain complete negative and inconclusive results.
 - [ ] If public data cannot answer a question, disclose the limitation and change research direction rather than automatically recruit a collaborator.

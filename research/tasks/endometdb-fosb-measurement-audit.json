@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "endometdb-fosb-measurement-audit",
+  "title": "Resolve which FOSB measurement the EndometDB combined release represents",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/26",
+  "question": "Can the authors' harmonized FOSB measurement be traced to a defined probe and platform for the donor-linked endometrial assays?",
+  "scope": "Methods and platform provenance, before Finnish expression analysis. Start from the existing cohort and oligo audits.",
+  "dependencies": [],
+  "sources": ["https://doi.org/10.6084/m9.figshare.12195975.v1", "https://doi.org/10.1038/s41597-020-00623-x", "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141549"],
+  "steps": ["Check the source-level platform assignment, probe harmonization and log scale for the native and combined releases.", "Identify which donor-linked assays can supply the same measurement across clinical groups.", "Report source-backed measurement eligibility or an unresolved mapping before examining outcomes."],
+  "deliverables": ["A source-linked measurement trace and aggregate eligibility decision; no participant keys or expression values in Git."],
+  "acceptance": ["Support each proposed cross-platform mapping with study or manufacturer evidence.", "Keep overlapping run and phase counts, treatment-window uncertainty and control definitions explicit.", "Do not infer participant links across releases from clinical attributes."],
+  "budget": {"max_runtime_minutes": 90, "max_ram_gb": 4, "network": "public-opt-in", "max_download_mb": 200}
+}
