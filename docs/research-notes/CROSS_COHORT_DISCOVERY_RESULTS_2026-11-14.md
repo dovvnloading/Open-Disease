@@ -35,7 +35,7 @@ The cohorts differ in recruitment, control indications, platforms and potentiall
 
 ## Follow-up in other study populations
 
-The separately frozen [Melbourne five-gene analysis](MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md) tested GLTP using the published cycle-adjusted probe statistics. The other four nominated genes were outside the high-detection table. The [Swiss epithelial feasibility audit](GSE266265_EPITHELIAL_FEASIBILITY_2026-11-14.md) traced the clinical and laboratory batch keys for an independent cell-type resource and assessed which measurements could support a donor-level comparison.
+The separately frozen [Melbourne five-gene analysis](MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md) tested GLTP using the published cycle-adjusted probe statistics. The other four nominated genes were outside the high-detection table. The [Swiss epithelial feasibility audit](GSE266265_EPITHELIAL_FEASIBILITY_2026-11-14.md) traced the clinical and laboratory batch keys for an independent cell-type resource and assessed which measurements could support a donor-level comparison. The subsequent [Swiss glandular analysis](SWISS_GLANDULAR_RESULTS_2026-11-14.md) found all five primary pathway scores higher in cases, with an inconclusive joint test (p = 0.167).
 
 ## Independent verification and reproduction
 

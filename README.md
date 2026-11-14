@@ -8,6 +8,8 @@ Open-Disease is a place to aim research agents and bounded compute at difficult 
 
 An independent Melbourne study published a complete high-detection probe table. It contained GLTP alone among the five nominated genes (two-sided p = 0.212, five-gene Holm p = 1.00). The other four genes were untested in that panel. [Melbourne follow-up](docs/research-notes/MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md)
 
+**Swiss glandular epithelial cells.** In 3,564 proliferative glandular cells from 13 donors, all five pathway scores were higher in cases, matching the direction in Finland. Their prespecified average was +0.71 percentile points (exact two-sided p = 0.167). The Swiss comparison was inconclusive. Restricting the Finnish and Rome scores to identical measured genes preserved all five earlier reversals. [Study results and sensitivity checks](docs/research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md) · [Three-cohort figure](evidence/swiss-glandular-2026-11-14/comparison.svg)
+
 **Earlier FOSB results.** Four external endometrial expression comparisons have tested the published positive FOSB direction. The strongest apparent signal came from the New Delhi arrays, where clinical groups occupied separate physical slides. The Finnish comparison controlled for run and histologic phase on a single verified chip and was inconclusive. These observational results leave the biological interpretation unresolved.
 
 | Cohort and comparison | Case minus control | Interpretation |
@@ -63,7 +65,7 @@ The demo generates **SIMULATED ONLY** data in ignored `results/`. No automated r
 
 ## Research directions and science boundary
 
-The immediate question is whether source-verified, phase-aware endometrial microarray results can reproduce a specific published signal, with other pelvic pathology **distinct from** healthy controls. Study: [GEO GSE51981](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981); [published paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC4239429/). Never treat arrays as RNA-seq counts. The large 60-donor [GSE266265](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265) atlas and genetic mapping are later optional paths, not blockers to the first experiment.
+The immediate question is whether source-verified, phase-aware endometrial microarray results can reproduce a specific published signal, with other pelvic pathology **distinct from** healthy controls. Study: [GEO GSE51981](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981); [published paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC4239429/). Never treat arrays as RNA-seq counts. The [Swiss epithelial analysis](docs/research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md) uses a smaller derivative of the 60-donor atlas. The full multi-cell-type atlas and genetic mapping remain separate computational directions.
 
 Computational evidence can suggest or rule against hypotheses. It does not by itself prove causal mechanisms, treatment benefit, clinical safety or a cure. Human/sample-level data and restricted files are never committed. A public source must still be checked for permission and data quality. See [protocol](PROTOCOL.md), [limitations](ETHICS_AND_LIMITATIONS.md), [data sources](DATA_SOURCES.md), [charter](docs/CHARTER.md), and [roadmap](docs/RESEARCH_ROADMAP.md).
 

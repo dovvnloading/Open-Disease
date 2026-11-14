@@ -1,6 +1,6 @@
 # Data sources and reproducibility contract
 
-**Last evidence audit: 2026-11-12.** Links are catalog entries, not authorizations to download, republish, or clinically use any material. Machine-readable metadata: [data/sources.json](data/sources.json).
+**Updated November 14, 2026.** Links are catalog entries, not authorizations to download, republish, or clinically use any material. Machine-readable metadata: [data/sources.json](data/sources.json).
 
 ## Executed and audited FOSB comparisons
 
@@ -13,10 +13,10 @@
 
 - [Authoritative GEO accession](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265) · [peer-reviewed article](https://doi.org/10.1038/s41467-026-73020-4) · [authors' analysis repository](https://github.com/DuempelmannLea/endometriosis_endometrium_scRNA_atlas).
 - 466,371 single cells, from **60 donor participants**: 35 endometriosis, 25 non-endometriosis; biopsied eutopic endometrium from participants without exogenous hormone treatment, and multiple cycle phases.
-- GEO lists a **38.9 GB** processed Seurat object and a **190.7 MB** separate epithelial trajectory object. The smaller object may not provide a suitable raw donor × gene matrix; **do not substitute it without auditing assays and metadata**.
+- GEO lists a **38.9 GB** processed Seurat object and a **190.7 MB** separate epithelial trajectory object. The smaller object preserves SCT depth-corrected counts and source-defined patient keys. [Assay and donor mapping](docs/research-notes/GSE266265_EPITHELIAL_FEASIBILITY_2026-11-14.md)
 - The authors' public README sometimes mentions a different GEO accession, **GSE111976**, while its own URL and the paper identify **GSE266265**. Follow the actual GEO series and article, not the apparent README typo.
 - The authors' analysis repository does **not** state a formal software license. Do **not** copy upstream source into this MIT repository without explicit permission. Independently implement documented concepts.
-- Stage: metadata and rights audit pending; no human files downloaded, tested, or mirrored into GitHub.
+- The epithelial derivative contributed 3,564 proliferative glandular cells from six cases and seven controls to a prospective donor-level pathway comparison. [Executed analysis](docs/research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md)
 
 ## Genetic data (not participant genotype uploads)
 
