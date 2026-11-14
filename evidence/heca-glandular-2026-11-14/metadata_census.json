@@ -1,0 +1,177 @@
+{
+  "source": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11387200.1/41588_2024_1873_MOESM3_ESM.xlsx",
+  "bytes": 400034,
+  "sha256": "f70030404af3f6070c10f22a064e20188b0fb3251c1042605563c0aea00d2ed3",
+  "clinical_donors_across_assays": {
+    "cases": 72,
+    "controls": 49
+  },
+  "donors_in_both_assays": 5,
+  "sc_cells_all_states": 313527,
+  "sc_attrition": {
+    "all_sc_donors": {
+      "cases": 31,
+      "controls": 32
+    },
+    "proliferative": {
+      "cases": 11,
+      "controls": 14
+    },
+    "untreated_superficial_proliferative": {
+      "cases": 11,
+      "controls": 12
+    },
+    "at_least_20_gland_cells": {
+      "cases": 9,
+      "controls": 10
+    }
+  },
+  "sc_attrition_by_study": {
+    "Fonseca": {
+      "all_sc_donors": {
+        "cases": 7,
+        "controls": 0
+      },
+      "proliferative": {
+        "cases": 3,
+        "controls": 0
+      },
+      "untreated_superficial_proliferative": {
+        "cases": 3,
+        "controls": 0
+      },
+      "at_least_20_gland_cells": {
+        "cases": 2,
+        "controls": 0
+      }
+    },
+    "GarciaAlonso": {
+      "all_sc_donors": {
+        "cases": 0,
+        "controls": 5
+      },
+      "proliferative": {
+        "cases": 0,
+        "controls": 2
+      },
+      "untreated_superficial_proliferative": {
+        "cases": 0,
+        "controls": 1
+      },
+      "at_least_20_gland_cells": {
+        "cases": 0,
+        "controls": 1
+      }
+    },
+    "Huang": {
+      "all_sc_donors": {
+        "cases": 6,
+        "controls": 4
+      },
+      "proliferative": {
+        "cases": 3,
+        "controls": 3
+      },
+      "untreated_superficial_proliferative": {
+        "cases": 3,
+        "controls": 3
+      },
+      "at_least_20_gland_cells": {
+        "cases": 3,
+        "controls": 3
+      }
+    },
+    "Lai": {
+      "all_sc_donors": {
+        "cases": 0,
+        "controls": 3
+      },
+      "proliferative": {
+        "cases": 0,
+        "controls": 1
+      },
+      "untreated_superficial_proliferative": {
+        "cases": 0,
+        "controls": 1
+      },
+      "at_least_20_gland_cells": {
+        "cases": 0,
+        "controls": 0
+      }
+    },
+    "Mareckova": {
+      "all_sc_donors": {
+        "cases": 9,
+        "controls": 7
+      },
+      "proliferative": {
+        "cases": 5,
+        "controls": 5
+      },
+      "untreated_superficial_proliferative": {
+        "cases": 5,
+        "controls": 4
+      },
+      "at_least_20_gland_cells": {
+        "cases": 4,
+        "controls": 3
+      }
+    },
+    "Tan": {
+      "all_sc_donors": {
+        "cases": 9,
+        "controls": 3
+      },
+      "proliferative": {
+        "cases": 0,
+        "controls": 1
+      },
+      "untreated_superficial_proliferative": {
+        "cases": 0,
+        "controls": 1
+      },
+      "at_least_20_gland_cells": {
+        "cases": 0,
+        "controls": 1
+      }
+    },
+    "Wang": {
+      "all_sc_donors": {
+        "cases": 0,
+        "controls": 10
+      },
+      "proliferative": {
+        "cases": 0,
+        "controls": 2
+      },
+      "untreated_superficial_proliferative": {
+        "cases": 0,
+        "controls": 2
+      },
+      "at_least_20_gland_cells": {
+        "cases": 0,
+        "controls": 2
+      }
+    }
+  },
+  "mixed_studies": [
+    "Huang",
+    "Mareckova"
+  ],
+  "donors_in_mixed_studies": {
+    "cases": 7,
+    "controls": 6
+  },
+  "selected_gland_cells_in_mixed_studies": 10044,
+  "diagnosis_ascertainment_in_mixed_studies": {
+    "surgical": 12,
+    "medical history": 1
+  },
+  "additional_endometrial_pathologies_in_mixed_studies": 0,
+  "library_qc_records_by_modality": {
+    "scRNAseq": 22,
+    "snRNAseq": 41,
+    "spatial": 8
+  },
+  "supplement_contains_donor_to_capture_crosswalk": false
+}

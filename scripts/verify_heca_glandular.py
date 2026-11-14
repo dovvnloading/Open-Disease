@@ -28,6 +28,41 @@ def unique_clinical_key(donor, study):
     return study, donor if study == "Fonseca" else f"{study}_{donor}"
 
 
+def verify_state_counts(workbook, datasets, genotypes, states):
+    """Check all donor-by-state counts, including published zeroes, against Table 3."""
+    with Path(workbook).open("rb") as source:
+        if file_digest(source, "sha256").hexdigest() != WORKBOOK_SHA256:
+            raise ValueError("Unrecognized HECA workbook checksum")
+    book = load_workbook(workbook, read_only=True, data_only=True)
+    try:
+        sheet = iter(book["Table3_cell_type_counts"].values)
+        next(sheet)
+        next(sheet)
+        header = next(sheet)
+        columns = header[1:37]
+        if header[0] != "Dataset_donorID" or len(columns) != 36 or len(set(columns)) != 36:
+            raise ValueError("Expected 36 distinct published HECA cell states")
+        expected = {}
+        for row in sheet:
+            if row and row[0]:
+                if row[0] in expected or any(int(value) != value or value < 0 for value in row[1:37]):
+                    raise ValueError("Invalid or duplicate HECA donor count row")
+                expected[row[0]] = tuple(map(int, row[1:37]))
+    finally:
+        book.close()
+    observed = Counter()
+    for study, genotype, state in zip(datasets, genotypes, states, strict=True):
+        key = genotype if study == "Fonseca" else f"{study}_{genotype}"
+        observed[key, state] += 1
+    if {key for key, _ in observed} != expected.keys() or {state for _, state in observed} != set(columns):
+        raise ValueError("Donor or cell-state identity differs between the atlas and Table 3")
+    for key, counts in expected.items():
+        if tuple(observed[key, state] for state in columns) != counts:
+            raise ValueError("The atlas disagrees with a published Table 3 donor-by-state count")
+    return {"donors": len(expected), "states": len(columns), "donor_state_counts_verified": len(expected) * len(columns),
+            "cells_verified": sum(observed.values())}
+
+
 def verify_anchor_libraries(path, sc_libraries, clinical, eligible):
     """Demultiplexed donor assignments must retain one diagnosis across repeated captures."""
     with path.open("rb") as source:

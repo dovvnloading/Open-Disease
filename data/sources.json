@@ -30,6 +30,17 @@
       "epithelial_feasibility": "docs/research-notes/GSE266265_EPITHELIAL_FEASIBILITY_2026-11-14.md"
     },
     {
+      "id": "HECA-2024",
+      "kind": "integrated_endometrial_cell_atlas",
+      "url": "https://www.reproductivecellatlas.org/endometrium_reference.html",
+      "publication": "https://doi.org/10.1038/s41588-024-01873-w",
+      "human_data_used_by_open_disease": false,
+      "role": "external_glandular_cohort_feasibility",
+      "access": "Public processed cell annotations, supplementary study metadata and component study manifests",
+      "metadata_audit": "docs/research-notes/HECA_GLANDULAR_FEASIBILITY_2026-11-14.md",
+      "cautions": ["Seven single-cell studies in one release", "Several donors occur in multiple libraries", "The named Glandular state is mid-secretory; proliferative functionalis glands have separate labels", "Metadata assessment only"]
+    },
+    {
       "id": "zenodo.18983492",
       "kind": "summary_statistics",
       "study_name": "Koller et al. 2026 endometriosis GWAS",

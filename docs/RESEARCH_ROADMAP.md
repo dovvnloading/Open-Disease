@@ -40,7 +40,7 @@ A [Melbourne expression-summary check](research-notes/MELBOURNE_FIVE_GENE_RESULT
 
 The [Swiss glandular study](research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md) now reports a prospectively defined corrected-expression comparison in those 13 donors. The positive combined score had exact p = 0.167. All five earlier whole-tissue reversals persisted after matching the genes.
 
-The next independent-cohort question is whether the Human Endometrial Cell Atlas has enough phase-matched donors in comparable glandular populations and shared technical batches. Its named glandular state is mid-secretory. The authors separately identify two proliferative functionalis gland states. Linking disease status, phase and those cell populations within contributing studies is necessary to define the comparison. [Issue #40](https://github.com/dovvnloading/Open-Disease/issues/40) · [Authors’ Supplementary Note 3](https://api.repository.cam.ac.uk/server/api/core/bitstreams/375f9e95-64ec-4b79-8139-20bf3b8ec10d/content)
+The [completed Human Endometrial Cell Atlas audit](research-notes/HECA_GLANDULAR_FEASIBILITY_2026-11-14.md) located 13 donors across two contributing studies in the proliferative functionalis gland states. Verified cell and library annotations left only two independent Oxford case–control pairs sharing any qualifying gland cells within a capture. Huang had no mixed capture. Even the most permissive Oxford design has a two-sided p-value floor of 0.50. A higher-resolution computational test needs a different cohort or a prospectively justified cross-library design. [Cell and library census](../evidence/heca-glandular-2026-11-14/cell-library-support.json)
 
 ## Possible future disease tracks
 
