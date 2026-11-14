@@ -5,7 +5,7 @@
   "program": "endometriosis",
   "priority": "P0",
   "status": "blocked",
-  "blocked_reason": "The combined FOSB row is labeled with the HT-12 probe. Per-chip measurement provenance and a documented join from WG-6 expression columns to the native clinical assay keys remain unresolved. See docs/research-notes/GSE141549_FOSB_MEASUREMENT_2026-11-13.md.",
+  "blocked_reason": "The authors' per-chip derivation of their pooled normalized FOSB row is unresolved. The native raw route is established separately: 32 eligible assays match the complete WG-6 manifest, with 12 cases and 13 controls in seven shared run-by-phase cells. See docs/research-notes/GSE141549_CHIP_CENSUS_2026-11-14.md.",
   "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/26",
   "question": "Can the authors' harmonized FOSB measurement be traced to a defined probe and platform for the donor-linked endometrial assays?",
   "scope": "Methods and platform provenance, before Finnish expression analysis. Start from the existing cohort and oligo audits.",
