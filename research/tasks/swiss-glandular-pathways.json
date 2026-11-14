@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "swiss-glandular-pathways",
+  "title": "Test the joint direction of five frozen pathways in Swiss glandular endometrium",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/38",
+  "question": "Does the joint direction of five previously nominated pathways recur within proliferative glandular epithelial cells?",
+  "scope": "A prospective donor-level analysis of the existing Swiss SCT epithelial derivative with exact capture-conditional inference.",
+  "dependencies": ["cross-cohort-pathway-discovery", "gse266265-epithelial-feasibility"],
+  "sources": ["https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265", "https://doi.org/10.1038/s41467-026-73020-4", "https://storage.googleapis.com/public-download-files/hgnc/archive/archive/quarterly/tsv/hgnc_complete_set_2026-10-06.tsv"],
+  "steps": ["Freeze the population, mapping and scoring rules before disease-group estimates.", "Calculate donor scores, exact stratified global and pathway tests, and prespecified robustness checks.", "Verify independently from source and report the complete aggregate outcomes."],
+  "deliverables": ["Source-pinned analysis and independent verification.", "Aggregate estimates and sensitivity results for every locked pathway and their average."],
+  "acceptance": ["Respect donor independence, mapped membership, capture overlap, and the prospective family decision.", "Report aggregate study size and uncertainty, assay scope and prior cohort context.", "Reproduce effect sizes and exact tests independently."],
+  "budget": {"max_runtime_minutes": 90, "max_ram_gb": 6, "network": "public-opt-in", "max_download_mb": 25}
+}
