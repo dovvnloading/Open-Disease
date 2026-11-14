@@ -1,6 +1,6 @@
 # Rights-reviewed Seurat raw-count export to donor pseudobulk
 
-**Research-only adapter.** Synthetic tests verify the sparse export. The complete 38.9 GB atlas still requires a suitable high-memory R environment. The [public summary feasibility audit](research-notes/GSE266265_SUMMARY_FEASIBILITY_2026-11-14.md) explains which cell-type results are available without loading that object.
+**Research-only adapter.** Synthetic tests verify the sparse export. The complete 38.9 GB atlas still requires a suitable high-memory R environment. The [public summary feasibility audit](research-notes/GSE266265_SUMMARY_FEASIBILITY_2026-11-14.md) and [epithelial derivative audit](research-notes/GSE266265_EPITHELIAL_FEASIBILITY_2026-11-14.md) document which smaller releases retain donor information, and the source of their count layers.
 
 ## Why
 

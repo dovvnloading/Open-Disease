@@ -22,9 +22,11 @@
         "count from donors not cells",
         "cycle phase stratification required",
         "upstream GitHub analysis source lacks explicit license",
-        "RDS uses substantial memory"
+        "RDS uses substantial memory",
+        "The small epithelial derivative has SCT-derived counts. Capture-batch and clinical keys are recoverable from Supplementary Data 1. Its count layer has not been established as native RNA UMIs."
       ],
-      "metadata_audit": "docs/research-notes/GSE266265_SUMMARY_FEASIBILITY_2026-11-14.md"
+      "metadata_audit": "docs/research-notes/GSE266265_SUMMARY_FEASIBILITY_2026-11-14.md",
+      "epithelial_feasibility": "docs/research-notes/GSE266265_EPITHELIAL_FEASIBILITY_2026-11-14.md"
     },
     {
       "id": "zenodo.18983492",
