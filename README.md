@@ -4,7 +4,7 @@
 
 Open-Disease is a place to aim research agents and bounded compute at difficult disease questions. Agents can audit public papers/data, write and test analyses, reproduce known findings, explore falsifiable hypotheses, and publish the *methods, failures, uncertainties and source-backed evidence*. The goal is useful work that future agents or researchers can build on—not a grant-funded lab, research consortium, clinical service or claim to have cured anything.
 
-**Current status (November 2026): software and synthetic tests exist; no genuine human-data analysis, confirmed new molecular target, clinical test or cure has been produced by this repository.** Endometriosis is the only active disease research program. ALS, type 1 diabetes, pulmonary fibrosis and ME/CFS are possible later tracks, not staffed or validated projects.
+**Current status (November 2026).** The project has audited 148 public endometrial microarray records and all 54,675 probe sets on their platform. The planned expression analysis is blocked on individual donor and treatment evidence. Endometriosis is the only active disease research program. ALS, type 1 diabetes, pulmonary fibrosis and ME/CFS are possible later tracks, not staffed or validated projects.
 
 ## Give an agent a concrete task
 
@@ -15,20 +15,18 @@ Read [AGENTS.md](AGENTS.md) for operating rules and [the agent workflow](docs/AG
 
 Each JSON task defines a falsifiable question, sources, dependencies, acceptance criteria and a rough resource budget. An agent can create a **local, ignored** run record with `python scripts/research_queue.py new-run --task TASK_ID --agent AGENT_ID --out results/TASK_ID/run.json`. The queue is a lightweight coordination format, **not** an automatic scheduler or a compute sandbox. A task does not automatically authorize network access, external API costs, high-memory workloads or contact with people.
 
-Starting tasks:
+### First endometriosis reproduction
 
-- Audit public **GSE51981** sample/phenotype/menstrual-phase labels and person-level independence before analysis.
-- Audit **GPL570** probe annotations without forcing ambiguous probes to causal genes.
-- After source audits pass, attempt a genuinely sourced **GSE51981 microarray reproduction** (not a novel drug discovery). A negative or blocked result is worth reporting.
-
-The three active issues are [#15: sample audit](https://github.com/dovvnloading/Open-Disease/issues/15), [#16: probe annotation](https://github.com/dovvnloading/Open-Disease/issues/16) and [#18: first real-data reproduction](https://github.com/dovvnloading/Open-Disease/issues/18). See also [the independent research plan](docs/INDEPENDENT_RESEARCH_PLAN.md). We use existing public computational data **without requiring grants, recruiting people, contacting experts or running a lab**. Validation gaps remain explicit; formal scientific/clinical claims require correspondingly stronger evidence and oversight.
+- [Cohort audit](docs/research-notes/GSE51981_COHORT_AUDIT_2026-11-13.md) ([#15](https://github.com/dovvnloading/Open-Disease/issues/15)). Two GEO representations agree on all 148 records. Of these, 144 meet the phase rule. Individual donor and recent-treatment evidence remains unresolved.
+- [GPL570 annotation audit](docs/research-notes/GPL570_ANNOTATION_RESULTS_2026-11-13.md) ([#16](https://github.com/dovvnloading/Open-Disease/issues/16)). The 54,675 probe sets include 42,901 with a single valid symbol and Entrez identifier under the pinned rules. The report retains every mapping category.
+- [Reproduction status](docs/research-notes/GSE51981_REPRODUCTION_STATUS_2026-11-13.md) ([#18](https://github.com/dovvnloading/Open-Disease/issues/18)). The complete processed matrix is pinned and the published FOSB comparison is specified. Zero arrays qualify under all protocol rules, so no biological effect was estimated.
 
 ## What works today
 
 - A seeded synthetic end-to-end demo, structural cohort QC, source catalog and CI tests.
 - Strict donor-level RNA pseudobulk utilities and exploratory differential-expression baseline, with an experimental edgeR v4 path ([model limitations](docs/EDGE_R_MODEL.md)). These have **not** analyzed the real large Seurat atlas.
 - Sparse R/Seurat export utilities tested on artificial counts ([high-memory export guide](docs/ATLAS_EXPORT.md)).
-- An opt-in official GEO **GSE51981** processed-array downloader, provenance/manifest prep, a new [metadata-only 148-sample audit](docs/research-notes/GSE51981_METADATA_PREFLIGHT_2026-11-12.md), and phase-aware R/limma implementation ([local-only workflow](docs/GEO_MICROARRAY.md)); **synthetic-tested only**, no audited real-GEO outcome yet.
+- An opt-in official GEO downloader, metadata reconciliation, probe annotation audit, local manifest preparation and phase-aware R/limma implementation. The model has been tested on synthetic data. [GEO workflow](docs/GEO_MICROARRAY.md)
 - Heuristic evidence ranking and strict study-separation checks as software prototypes, **not** established target biology.
 
 ### Run existing software

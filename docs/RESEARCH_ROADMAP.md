@@ -1,12 +1,12 @@
 # Research roadmap: compute-first, evidence-first
 
-**As of November 2026:** Open-Disease has synthetic-tested software but **no finished real human-data result**. This is a small independent AI research effort. Its milestones are computational outputs, not fundraising, staffing or validation claims.
+**As of November 2026:** Open-Disease has completed a real platform annotation audit and reconciled public cohort metadata. The first expression comparison remains blocked. This is a small independent AI research effort. Its milestones are computational outputs, not fundraising, staffing or validation claims.
 
 ## Now — make agents productive
 
 - [x] Baseline synthetic Python/R pipelines, source catalog, tests and CI.
 - [x] Agent instructions, machine-readable task queue, resource limits and local run-provenance scaffold.
-- [ ] Complete a source-backed GSE51981 metadata/phenotype/donor audit and GPL570 mapping policy.
+- [x] Audit the full GPL570 platform and reconcile the GSE51981 group and phase fields across all 148 array records. [Annotation results](research-notes/GPL570_ANNOTATION_RESULTS_2026-11-13.md) · [Cohort evidence and unresolved donor eligibility](research-notes/GSE51981_COHORT_AUDIT_2026-11-13.md)
 - [x] Run the synthetic Python/R CI and test the implemented rejection gates. Keep further regression testing in routine CI; it is not a separate research milestone.
 
 Exit: an agent can select a bounded task, reproduce or report a blocker, and leave a source-cited handoff with its commands and limitations.
@@ -14,7 +14,7 @@ Exit: an agent can select a bounded task, reproduce or report a blocker, and lea
 ## Next — first real computational research result
 
 - [ ] Resolve the study's source rights, independent sample identities, diagnosis categories and menstrual phases, **before** inspecting an outcome.
-- [ ] Pin the GSE51981 processed-array source/checksum, limma model, one published comparison, negative controls, inclusion/exclusions and statistical family.
+- [x] Pin the complete GSE51981 processed array and specify the FOSB probe, contrasts, phase rules, negative control and multiplicity. [Frozen comparison](research-notes/GSE51981_FOSB_ENDPOINT_2026-11-13.md) · [Full matrix provenance and blocked outcome](research-notes/GSE51981_REPRODUCTION_STATUS_2026-11-13.md)
 - [ ] Run a real public-data reproduction using the existing opt-in GEO + limma path and publish a permissible **aggregate** account of positive, null or failed results.
 - [ ] Compare findings with source-backed published evidence, record failures and distinguish reanalysis of an existing cohort from genuinely independent replication.
 

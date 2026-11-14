@@ -90,6 +90,9 @@ run_microarray <- function(opts) {
   if (!all(samples$disease_group %in% c("control", "case", "other"))) {
     stop("disease_group must be exactly case/control/other", call. = FALSE)
   }
+  if (!all(samples$phase %in% c("proliferative", "early_secretory", "mid_secretory"))) {
+    stop("Included phase must be proliferative, early_secretory or mid_secretory", call. = FALSE)
+  }
   if (!all(samples$tissue == "eutopic_endometrium")) {
     stop("Only reviewed eutopic_endometrium tissue is eligible", call. = FALSE)
   }

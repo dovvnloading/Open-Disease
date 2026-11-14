@@ -130,3 +130,58 @@ def test_cli_expected_sha256_rejects_wrong_or_invalid_pins(tmp_path):
         assert report["source_verified"] is False  # A matching hash cannot verify release/rights.
     finally:
         output.unlink(missing_ok=True)
+
+
+def artificial_geo_annotation():
+    return (
+        "^Annotation\n"
+        "!Annotation_date = Aug 09 2016\n"
+        "!Annotation_platform = GPL570\n"
+        "!Annotation_platform_title = Synthetic annotation\n"
+        "#Gene ID = Entrez Gene identifier\n"
+        "!platform_table_begin\n"
+        "Gene ID\tID\tGene symbol\n"
+        "33\tSYN1\tFAKEA\n"
+        "33///44\tSYN2\tFAKEA///FAKEB\n"
+        "\tSYN3\t\n"
+        "44///\tSYN4\tFAKEB\n"
+        "44///33\tSYN5\tFAKE@///FAKEA\n"
+        "33\tSYN6\tFAKEA\n"
+        "!platform_table_end\n"
+    )
+
+
+def test_geo_generated_annotation_uses_declared_format_and_release(tmp_path):
+    path = tmp_path / "annotation.gz"
+    path.write_bytes(gzip.compress(artificial_geo_annotation().encode()))
+    report = inspect(path)
+    assert report["table_schema"] == "geo_annotated_platform"
+    assert report["declared_annotation_date"] == "2016-08-09"
+    assert report["declared_platform_id"] == "GPL570"
+    assert report["soft_platform_declaration_checked"]
+    assert report["total_probes"] == 6
+    assert report["distinct_entrez_ids_among_single_mapped_probes"] == 1
+    assert report["probes_with_multiple_valid_entrez_ids"] == 2
+    assert report["classification"] == {
+        "single_symbol_single_entrez": 2, "multi_gene": 1, "unmapped": 1,
+        "incomplete": 0, "invalid_annotation": 2,
+    }
+
+
+@pytest.mark.parametrize("original,replacement", [
+    ("GPL570", "GPL96"),
+    ("!Annotation_platform = GPL570\n", ""),
+    ("!Annotation_platform = GPL570", "^PLATFORM = GPL570"),
+    ("!Annotation_platform = GPL570", "!Annotation_platform = GPL570\n!Annotation_platform = GPL570"),
+    ("!Annotation_date = Aug 09 2016\n", ""),
+    ("Aug 09 2016", "unknown"),
+    ("^Annotation\n", ""),
+    ("Gene ID\tID\tGene symbol", "ENTREZ_GENE_ID\tID\tGene Symbol"),
+    ("!platform_table_end\n", ""),
+    ("!platform_table_end\n", "!platform_table_end\n^Annotation\n"),
+])
+def test_fail_closed_inconsistent_geo_annotation(tmp_path, original, replacement):
+    path = tmp_path / "annotation.soft"
+    path.write_text(artificial_geo_annotation().replace(original, replacement))
+    with pytest.raises(ValueError):
+        inspect(path)

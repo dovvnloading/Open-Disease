@@ -4,6 +4,8 @@
 **Task:** `gpl570-annotation-audit` / [#16](https://github.com/dovvnloading/Open-Disease/issues/16)  
 **Evidence level:** source-audit and synthetic software test. **No full GPL570 platform file retrieved or counted in this session, no patient expression matrix analyzed.**
 
+The [completed real-source audit](GPL570_ANNOTATION_RESULTS_2026-11-13.md) records the subsequent release choice, checksum and results. The remainder of this note preserves the policy and status at the time it was written.
+
 ## Platform facts and mapping hazard
 
 - [GEO GPL570](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL570) is the Affymetrix Human Genome U133 Plus 2.0 array. Its table includes distinct `ID` (probe set identifier), `Gene Symbol`, `ENTREZ_GENE_ID`, and source/annotation-date fields. The observed platform page includes an **October 6, 2014** example annotation date. This is *not* a verified download timestamp or statement that all annotations have a single release date.

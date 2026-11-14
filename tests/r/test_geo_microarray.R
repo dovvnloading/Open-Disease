@@ -6,7 +6,7 @@ root <- tempfile("synthetic_geo_")
 dir.create(root)
 set.seed(78)
 sample_ids <- sprintf("GSM900%03d", 1:18)
-phase <- rep(c("proliferative", "secretory"), each = 9)
+phase <- rep(c("proliferative", "early_secretory", "mid_secretory"), 6)
 group <- rep(rep(c("control", "case", "other"), each = 3), 2)
 probe_ids <- sprintf("SYN_PROBE_%03d", 1:40)
 mat <- matrix(rnorm(40 * 18, mean = 7, sd = 0.35), nrow = 40)
@@ -74,12 +74,19 @@ bad <- manifest
 bad$hormone_treatment[1L] <- "hormonal_contraceptive"
 expect_failure(bad, "separate protocol")
 bad <- manifest
-bad$phase[bad$disease_group == "case"] <- "case_only_phase"
-expect_failure(bad, "no shared reviewed menstrual phase")
+bad$phase[bad$phase == "mid_secretory"] <- "late_secretory"
+expect_failure(bad, "Included phase must be")
+bad <- manifest
+bad$phase <- ifelse(bad$disease_group == "case", "mid_secretory", "proliferative")
+expect_failure(bad, "Case/control groups have no shared reviewed menstrual phase")
+bad <- manifest
+bad$phase <- ifelse(bad$disease_group == "other", "mid_secretory", "early_secretory")
+expect_failure(bad, "Other/control groups have no shared reviewed menstrual phase")
 
 # A separate specificity contrast is conditional on reviewed other-pathology samples.
 no_other <- manifest
 no_other$include[no_other$disease_group == "other"] <- "false"
+no_other$phase[no_other$disease_group == "other"] <- "late_secretory"
 no_other$exclusion_reason[no_other$disease_group == "other"] <- "not_in_this_contrast"
 write_manifest(no_other)
 opts[["out-dir"]] <- file.path(root, "no_other")
