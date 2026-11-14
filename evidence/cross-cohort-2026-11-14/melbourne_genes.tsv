@@ -1,0 +1,6 @@
+symbol	entrez_id	finnish_direction	s20_probes	measurement	gene_p	holm_input_p	holm_p	two_sided_result	direction_agreement
+ABO	28	higher	0	unmeasured		1.0		untested	unmeasured
+KIF3C	3797	lower	0	unmeasured		1.0		untested	unmeasured
+ZNF835	90485	lower	0	unmeasured		1.0		untested	unmeasured
+GLTP	51228	higher	1	measured	0.2116723	0.2116723	1.0	did_not_pass	source_orientation_unresolved
+F11	2160	lower	0	unmeasured		1.0		untested	unmeasured

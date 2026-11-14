@@ -36,7 +36,7 @@ Exit: a credible, reproducible computation or a documented blocker, **not** a va
 
 ## Next computational question
 
-Determine whether an independently recruited public cohort with documented treatment, comparable surgical controls, cycle phase and processing across groups can distinguish tissue composition and technical effects from within-cell expression differences. Reusing a discovery donor, a second paper on the same arrays or a phase subset of an evaluated cohort cannot supply new replication. [Prior cohort reuse and literature](research-notes/CROSS_COHORT_PRIOR_EVIDENCE_2026-11-14.md)
+A [Melbourne expression-summary check](research-notes/MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md) tested the one nominated gene represented in its high-detection panel. The [Swiss atlas supplement audit](research-notes/GSE266265_SUMMARY_FEASIBILITY_2026-11-14.md) found significance-filtered cell-type tables. For a donor-level test, confirm the count layer, clinical eligibility and technical overlap in an independently recruited cell-type-resolved cohort. Reusing a discovery donor, a second paper on the same arrays or a phase subset of an evaluated cohort cannot supply new replication. [Prior cohort reuse and literature](research-notes/CROSS_COHORT_PRIOR_EVIDENCE_2026-11-14.md)
 
 ## Possible future disease tracks
 

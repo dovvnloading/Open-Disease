@@ -11,10 +11,10 @@ ROOT = Path(__file__).parents[1]
 
 def test_canonical_catalog_links_executed_analysis():
     catalog = ROOT / "data/sources.json"
-    assert audit(catalog) == {"sources": 10, "status": "exploratory_computation", "analyzed": 4}
+    assert audit(catalog) == {"sources": 11, "status": "exploratory_computation", "analyzed": 5}
     sources = json.loads(catalog.read_text())["sources"]
     assert [s["id"] for s in sources if s["human_data_used_by_open_disease"]] == [
-        "GSE25628", "GSE141549", "GSE120103", "GSE315857"
+        "GSE25628", "GSE141549", "GSE120103", "GSE315857", "Fung2018-S20"
     ]
 
 
