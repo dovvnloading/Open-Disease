@@ -77,11 +77,15 @@
       "kind": "microarray",
       "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981",
       "human_data_used_by_open_disease": false,
-      "access": "public GEO; verify source terms",
-      "role": "potential_external_platform_direction_check",
+      "access": "public GEO; original submitters may retain rights; upstream files kept local",
+      "role": "first_same_cohort_microarray_reproduction",
+      "metadata_audit": "docs/research-notes/GSE51981_COHORT_AUDIT_2026-11-13.md",
+      "reproduction_status": "blocked_before_expression_fit",
+      "source_provenance": "docs/research-notes/GSE51981_REPRODUCTION_STATUS_2026-11-13.md",
       "cautions": [
-        "not RNA-seq counts; current pipeline incompatible",
-        "review clinical cohort filters"
+        "use the processed log2 GC-RMA limma pathway",
+        "per-array donor independence and recent treatment remain unresolved",
+        "other pelvic pathology is a separate comparison group"
       ]
     },
     {
