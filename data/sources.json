@@ -197,6 +197,34 @@
         "Only probes detected in at least 90% of samples entered Table S20.",
         "Endometriosis was self-reported in the IVF cohort. The reference direction of the published coefficient is unresolved."
       ]
+    },
+    {
+      "id": "GSE6364",
+      "kind": "whole_endometrium_affymetrix_microarray",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6364",
+      "publication": "https://doi.org/10.1210/en.2006-1692",
+      "human_data_used_by_open_disease": true,
+      "access": "Public source material. Individual records stay local.",
+      "role": "proliferative_pathways_descriptive",
+      "analysis_report": "docs/research-notes/EXTERNAL_BULK_PATHWAYS_RESULTS_2026-11-14.md",
+      "cautions": [
+        "All six case arrays and five historical comparator arrays occupied separate scan dates. Conditioning on date leaves one assignment.",
+        "Eight of these eleven physical scans recur in GSE51981. Four control scans were also identified in GSE4888."
+      ]
+    },
+    {
+      "id": "GSE153739",
+      "kind": "whole_endometrium_transcript_fpkm",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153739",
+      "publication": "https://doi.org/10.1093/humrep/deaa255",
+      "human_data_used_by_open_disease": true,
+      "access": "Public source material. Individual records stay local.",
+      "role": "midproliferative_pathway_test",
+      "analysis_report": "docs/research-notes/EXTERNAL_BULK_PATHWAYS_RESULTS_2026-11-14.md",
+      "cautions": [
+        "Four case and three comparator biopsies give 35 label assignments. Exchangeability is unverified because physical sequencing and preparation batch overlap is unknown.",
+        "RNA abundance and relative-rank scores depend on the original transcript quantification and gene annotation."
+      ]
     }
   ]
 }
