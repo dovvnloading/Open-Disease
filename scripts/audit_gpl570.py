@@ -1,8 +1,8 @@
 """Audit a locally obtained GEO GPL570 annotation table; never infer clinical outcomes.
 
 Accepts tab-separated platform table (plain or gzip), including a GEO SOFT
-platform_table_begin/end wrapper. Outputs only aggregate category counts and
-input checksum, never individual probe-to-gene assignments.
+platform_table_begin/end wrapper and the NCBI-generated annotated platform.
+Emits aggregate category counts and the input checksum.
 """
 from __future__ import annotations
 
@@ -13,9 +13,12 @@ import hashlib
 import json
 import re
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
+from typing import NamedTuple, TextIO
 
-REQUIRED = ("ID", "Gene Symbol", "ENTREZ_GENE_ID")
+SUBMITTER_COLUMNS = ("ID", "Gene Symbol", "ENTREZ_GENE_ID")
+GEO_ANNOTATION_COLUMNS = ("ID", "Gene symbol", "Gene ID")
 EMPTY = {"", "---", "NA", "N/A", "NULL", "NONE"}
 SYMBOL = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
 ENTREZ = re.compile(r"^[1-9][0-9]*$")
@@ -29,6 +32,8 @@ def tokens(value: str, *, id_field: bool) -> list[str] | None:
     chunks = [part.strip() for part in value.split("///")]
     # The archived Affymetrix release may list numeric Entrez IDs separated
     # by whitespace. Treat all as distinct; never silently keep the first.
+    if any(not chunk for chunk in chunks):
+        return None
     if id_field:
         chunks = [part for chunk in chunks for part in chunk.split()]
     valid = ENTREZ if id_field else SYMBOL
@@ -38,8 +43,10 @@ def tokens(value: str, *, id_field: bool) -> list[str] | None:
 
 
 def classify(symbol_field: str, entrez_field: str) -> str:
-    symbols = tokens(symbol_field, id_field=False)
-    entrez = tokens(entrez_field, id_field=True)
+    return mapping_category(tokens(symbol_field, id_field=False), tokens(entrez_field, id_field=True))
+
+
+def mapping_category(symbols: list[str] | None, entrez: list[str] | None) -> str:
     if symbols is None or entrez is None:
         return "invalid_annotation"
     if len(symbols) > 1 or len(entrez) > 1:
@@ -59,71 +66,119 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+class TableHeader(NamedTuple):
+    width: int
+    probe_column: int
+    symbol_column: int
+    entrez_column: int
+    wrapped: bool
+    platform: str | None
+    annotation_date: str | None
+
+
+def read_table_header(stream: TextIO) -> TableHeader:
+    """Select the column vocabulary from the source format and check its identity."""
+    is_annotation = False
+    platform = None
+    date = None
+    inside_table = False
+    for line in stream:
+        stripped = line.strip()
+        if not stripped:
+            continue
+        key, sep, value = stripped.partition("=")
+        key, value = key.strip(), value.strip()
+        if stripped == "^Annotation":
+            if is_annotation or platform is not None or inside_table:
+                raise ValueError("Repeated or mixed SOFT declarations")
+            is_annotation = True
+        elif stripped.startswith("^PLATFORM") and key != "^PLATFORM":
+            raise ValueError("Malformed SOFT platform accession")
+        elif key in ("^PLATFORM", "!Annotation_platform"):
+            if (key == "!Annotation_platform") != is_annotation or inside_table:
+                raise ValueError("Platform declaration conflicts with SOFT format")
+            if not sep or not re.fullmatch(r"GPL[0-9]+", value):
+                raise ValueError("Malformed SOFT platform accession")
+            if value != "GPL570":
+                raise ValueError(f"Unexpected SOFT platform: {value}")
+            if platform is not None:
+                raise ValueError("Repeated SOFT platform declaration")
+            platform = value
+        elif key == "!Annotation_date":
+            if not is_annotation or date is not None or not value or inside_table:
+                raise ValueError("Invalid or repeated SOFT annotation date")
+            date = datetime.strptime(value, "%b %d %Y").date().isoformat()
+        elif stripped == "!platform_table_begin":
+            if inside_table:
+                raise ValueError("Repeated SOFT platform table begin")
+            inside_table = True
+        elif stripped.startswith(("^", "!", "#")):
+            continue
+        else:
+            if (platform or is_annotation) and not inside_table:
+                raise ValueError("Missing SOFT platform table begin")
+            if is_annotation and (platform is None or date is None):
+                raise ValueError("Missing annotated platform accession or annotation date")
+            columns = GEO_ANNOTATION_COLUMNS if is_annotation else SUBMITTER_COLUMNS
+            header = next(csv.reader([line], delimiter="\t"))
+            if len(header) != len(set(header)) or any(col not in header for col in columns):
+                raise ValueError(f"Expected unique {', '.join(columns)} columns")
+            probe, symbol, entrez = (header.index(col) for col in columns)
+            return TableHeader(len(header), probe, symbol, entrez, inside_table, platform, date)
+    raise ValueError("Missing GPL570 annotation table")
+
+
 def inspect(path: str | Path) -> dict:
     """Scan public platform annotation into a reproducible aggregate-only audit."""
     source = Path(path)
     counts: Counter[str] = Counter()
     seen: set[str] = set()
+    single_mapped_ids: set[str] = set()
+    probes_with_multiple_entrez = 0
     opener = gzip.open if source.suffix.lower() == ".gz" else open
     with opener(source, "rt", encoding="utf-8-sig", newline="") as stream:
-        header = None
-        idx = None
-        inside_soft = False
-        saw_end = False
-        declared_platform_id = None
+        header = read_table_header(stream)
         for line in stream:
             stripped = line.strip()
             if not stripped:
                 continue
-            if header is None:
-                if stripped.startswith("^PLATFORM"):
-                    parts = stripped.split("=", 1)
-                    if (len(parts) != 2 or parts[0].strip() != "^PLATFORM" or
-                            not re.fullmatch(r"GPL[0-9]+", parts[1].strip())):
-                        raise ValueError("Malformed SOFT platform accession")
-                    platform_id = parts[1].strip()
-                    if platform_id != "GPL570":
-                        raise ValueError(f"Unexpected SOFT platform: {platform_id}")
-                    if declared_platform_id is not None:
-                        raise ValueError("Repeated SOFT platform declaration")
-                    declared_platform_id = platform_id
-                    continue
-                if stripped == "!platform_table_begin":
-                    if inside_soft:
-                        raise ValueError("Repeated SOFT platform table begin")
-                    inside_soft = True
-                    continue
-                if stripped.startswith(("^", "!", "#")):
-                    continue
-                if declared_platform_id is not None and not inside_soft:
-                    raise ValueError("Missing SOFT platform table begin")
-                header = next(csv.reader([line], delimiter="\t"))
-                if len(header) != len(set(header)) or any(x not in header for x in REQUIRED):
-                    raise ValueError("Expected unique ID, Gene Symbol and ENTREZ_GENE_ID columns")
-                idx = {column: header.index(column) for column in REQUIRED}
-                continue
             if stripped == "!platform_table_end":
-                saw_end = True
+                if header.annotation_date is not None and any(rest.strip() for rest in stream):
+                    raise ValueError("Unexpected records after annotated platform table")
                 break
             if stripped.startswith(("!", "^", "#")):
                 raise ValueError("Unexpected metadata within platform table")
             row = next(csv.reader([line], delimiter="\t"))
-            if len(row) != len(header):
+            if len(row) != header.width:
                 raise ValueError("Malformed annotation table row")
-            probe = row[idx["ID"]].strip()
+            probe = row[header.probe_column].strip()
             if not probe or probe in seen:
                 raise ValueError("Empty or duplicate platform probe ID")
             seen.add(probe)
-            counts[classify(row[idx["Gene Symbol"]], row[idx["ENTREZ_GENE_ID"]])] += 1
-    if header is None or not seen or (inside_soft and not saw_end):
+            symbols = tokens(row[header.symbol_column], id_field=False)
+            entrez = tokens(row[header.entrez_column], id_field=True)
+            category = mapping_category(symbols, entrez)
+            counts[category] += 1
+            if entrez and len(entrez) > 1:
+                probes_with_multiple_entrez += 1
+            elif category == "single_symbol_single_entrez":
+                single_mapped_ids.add(entrez[0])
+        else:
+            if header.wrapped:
+                raise ValueError("Missing, empty or incomplete GPL570 annotation table")
+    if not seen:
         raise ValueError("Missing, empty or incomplete GPL570 annotation table")
     return {
         "platform": "GPL570",
-        "declared_platform_id": declared_platform_id,
-        "soft_platform_declaration_checked": declared_platform_id == "GPL570" and inside_soft,
+        "declared_platform_id": header.platform,
+        "soft_platform_declaration_checked": header.platform == "GPL570" and header.wrapped,
+        "table_schema": "geo_annotated_platform" if header.annotation_date else "submitter_platform",
+        "declared_annotation_date": header.annotation_date,
         "input_sha256": sha256(source),
         "input_bytes": source.stat().st_size,
         "total_probes": len(seen),
+        "distinct_entrez_ids_among_single_mapped_probes": len(single_mapped_ids),
+        "probes_with_multiple_valid_entrez_ids": probes_with_multiple_entrez,
         "classification": {key: counts[key] for key in (
             "single_symbol_single_entrez", "multi_gene", "unmapped",
             "incomplete", "invalid_annotation")},

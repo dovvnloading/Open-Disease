@@ -101,7 +101,11 @@ python -m pytest -q tests/test_geo_microarray.py
 Rscript tests/r/test_geo_microarray.R
 ```
 
-## Public metadata audit status (2026-11-12)
+## Current research status (2026-11-13)
+
+The [cohort audit](research-notes/GSE51981_COHORT_AUDIT_2026-11-13.md) reconciled all 148 arrays. The [GPL570 audit](research-notes/GPL570_ANNOTATION_RESULTS_2026-11-13.md) classified the full platform. The [reproduction decision](research-notes/GSE51981_REPRODUCTION_STATUS_2026-11-13.md) records the complete matrix checksum and the remaining donor and treatment evidence needed to run the [prespecified FOSB comparison](research-notes/GSE51981_FOSB_ENDPOINT_2026-11-13.md).
+
+## Historical preflight (2026-11-12)
 
 Source-only first-pass reports are available for [GSE51981 sample labels and donor independence](research-notes/GSE51981_SOURCE_AUDIT_2026-11-12.md) and [GPL570 probe mapping](research-notes/GPL570_ANNOTATION_AUDIT_2026-11-12.md). The original 2014 paper reports **four indeterminate cycle-phase samples**, while a later 2022 reanalysis used **71 cases + 34 no-pathology controls** after exclusions; these are **not** proof of a finished per-GSM manifest and the latter is not an independent cohort. Original GEO per-sample `VALUE` describes log2 GC-RMA, while the 2022 reanalysis independently normalized/adjusted arrays. Do not silently equate the preprocessing.
 
@@ -113,7 +117,7 @@ python scripts/audit_gpl570.py --input data/raw/GPL570_platform_table.tsv \
 python -m pytest -q tests/test_audit_gpl570.py
 ```
 
-**Source checks and 148-record audit remain incomplete.** The first actual GSE51981 limma analysis remains gated and should not be described as completed.
+At this first pass, both source audits were incomplete. See the current research status above for the executed audits.
 
 
 ## Strict metadata-only preflight (before expression inspection)
@@ -128,4 +132,4 @@ After an individually **source-reviewed** manifest is generated, the same comman
 
 Published 2014 phase-eligible group counts are **75 cases / 35 other pathology / 34 pathology-free controls**, plus two indeterminate cases and two indeterminate other-pathology samples. This is a literature reference, **not** a verified 144-person manifest produced by the tool. The [2022 same-cohort reanalysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC8766492/) used 71 cases and 34 controls after different exclusions and processing and does not constitute external validation.
 
-See the [source audit](research-notes/GSE51981_METADATA_PREFLIGHT_2026-11-12.md), [pre-analysis plan](research-notes/GSE51981_PREANALYSIS_PLAN_2026-11-12.md) and [19 synthetic tests](../tests/test_audit_gse51981_metadata.py). These additions advance #15/#18 but **do not close either issue**.
+See the [source audit](research-notes/GSE51981_METADATA_PREFLIGHT_2026-11-12.md), [pre-analysis plan](research-notes/GSE51981_PREANALYSIS_PLAN_2026-11-12.md) and [19 synthetic tests](../tests/test_audit_gse51981_metadata.py). This historical step provided synthetic preflight coverage.
