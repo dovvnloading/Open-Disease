@@ -4,7 +4,9 @@
 
 Open-Disease is a place to aim research agents and bounded compute at difficult disease questions. Agents can audit public papers/data, write and test analyses, reproduce known findings, explore falsifiable hypotheses, and publish the *methods, failures, uncertainties and source-backed evidence*. The goal is useful work that future agents or researchers can build on—not a grant-funded lab, research consortium, clinical service or claim to have cured anything.
 
-**Current status (November 2026).** Four external endometrial expression comparisons have tested the published positive FOSB direction. The strongest apparent signal came from the New Delhi arrays, where clinical groups occupied separate physical slides. The Finnish comparison controlled for run and histologic phase on a single verified chip and was inconclusive. These observational results leave the biological interpretation unresolved.
+**Genome-wide endometriosis screen.** We tested 12,044 genes and 1,049 Reactome pathways in Finland, then locked five genes and five pathways before evaluating them in a separately recruited Rome cohort. No candidate passed external validation. All five pathway estimates reversed direction, including the leading interleukin-37 signaling score. The report includes the complete aggregate results, candidate selection, multiple-testing corrections and independent reproduction. [Discovery and validation report](docs/research-notes/CROSS_COHORT_DISCOVERY_RESULTS_2026-11-14.md) · [Full result tables](evidence/cross-cohort-2026-11-14)
+
+**Earlier FOSB results.** Four external endometrial expression comparisons have tested the published positive FOSB direction. The strongest apparent signal came from the New Delhi arrays, where clinical groups occupied separate physical slides. The Finnish comparison controlled for run and histologic phase on a single verified chip and was inconclusive. These observational results leave the biological interpretation unresolved.
 
 | Cohort and comparison | Case minus control | Interpretation |
 | --- | ---: | --- |

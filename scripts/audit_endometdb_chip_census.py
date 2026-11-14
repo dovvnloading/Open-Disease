@@ -25,6 +25,9 @@ CHUNK = 256 * 1024
 
 
 def input_bytes(directory, prefix):
+    # Fresh checkouts typically download the single prefix documented by the census.
+    if prefix is None and (directory / "raw-prefix.zip.part").is_file():
+        prefix = directory / "raw-prefix.zip.part"
     if prefix is not None:
         if prefix.stat().st_size != ZIP_PREFIX_BYTES:
             raise ValueError("Wrong Figshare prefix length")
