@@ -1,0 +1,65 @@
+{
+  "sources": [
+    {
+      "url": "https://ftp.ebi.ac.uk/biostudies/fire/E-MTAB-/039/E-MTAB-14039/Files/E-MTAB-14039.sdrf.txt",
+      "bytes": 61604,
+      "sha256": "cdcd25f5519b3ddac7b68a41140ae577b929a856c35732e598fc95fcb0bbf36b"
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE214nnn/GSE214411/soft/GSE214411_family.soft.gz",
+      "bytes": 3247,
+      "sha256": "9f167f0e9c87d0d86f0031989e1d074384b55fe353d8fe2db1cf0c929892bacf"
+    }
+  ],
+  "oxford": {
+    "eligible_donors": 7,
+    "eligible_donor_library_links": 13,
+    "eligible_libraries": 8,
+    "libraries_by_eligible_group_sizes": [
+      {
+        "cases": 0,
+        "controls": 1,
+        "libraries": 2
+      },
+      {
+        "cases": 1,
+        "controls": 0,
+        "libraries": 1
+      },
+      {
+        "cases": 1,
+        "controls": 1,
+        "libraries": 3
+      },
+      {
+        "cases": 2,
+        "controls": 0,
+        "libraries": 2
+      }
+    ],
+    "eligible_donors_in_multiple_libraries": 6,
+    "mixed_libraries": 3,
+    "unique_mixed_memberships": 2,
+    "mixed_unique_cases": 2,
+    "mixed_unique_controls": 2,
+    "libraries_per_distinct_mixed_pair": [
+      1,
+      2
+    ],
+    "allocations_preserving_mixed_library_case_totals": 4,
+    "allocations_preserving_all_eligible_library_case_totals": 2,
+    "glandular_cells_by_donor_and_library_available_in_these_tables": false
+  },
+  "huang": {
+    "geo_samples": 13,
+    "atlas_donors_exact_geo_matches": 10,
+    "diagnoses_agree": 10,
+    "coarse_phases_agree": 9,
+    "candidate_cases": 3,
+    "candidate_controls": 3,
+    "proliferative_in_both_cases": 3,
+    "proliferative_in_both_controls": 2,
+    "candidate_unique_sra_experiments": 6,
+    "shared_capture_identifier_in_SOFT_characteristics": false
+  }
+}

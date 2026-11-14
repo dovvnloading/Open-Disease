@@ -10,6 +10,8 @@ An independent Melbourne study published a complete high-detection probe table. 
 
 **Swiss glandular epithelial cells.** In 3,564 proliferative glandular cells from 13 donors, all five pathway scores were higher in cases, matching the direction in Finland. Their prespecified average was +0.71 percentile points (exact two-sided p = 0.167). The Swiss comparison was inconclusive. Restricting the Finnish and Rome scores to identical measured genes preserved all five earlier reversals. [Study results and sensitivity checks](docs/research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md) · [Three-cohort figure](evidence/swiss-glandular-2026-11-14/comparison.svg)
 
+A follow-up [Human Endometrial Cell Atlas audit](docs/research-notes/HECA_GLANDULAR_FEASIBILITY_2026-11-14.md) traced 313,527 cell annotations to the underlying donors and libraries. Only two independent Oxford pairs shared qualifying gland cells in a capture library, and no Huang pair did. This design cannot resolve the Swiss pathway result at its prespecified threshold.
+
 **Earlier FOSB results.** Four external endometrial expression comparisons have tested the published positive FOSB direction. The strongest apparent signal came from the New Delhi arrays, where clinical groups occupied separate physical slides. The Finnish comparison controlled for run and histologic phase on a single verified chip and was inconclusive. These observational results leave the biological interpretation unresolved.
 
 | Cohort and comparison | Case minus control | Interpretation |

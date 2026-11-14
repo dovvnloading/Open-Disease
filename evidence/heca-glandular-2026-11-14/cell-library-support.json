@@ -1,0 +1,50 @@
+{
+  "all_state_check": {
+    "donors": 63,
+    "states": 36,
+    "donor_state_counts_verified": 2268,
+    "cells_verified": 313527
+  },
+  "Oxford": {
+    "all_study_libraries": 22,
+    "eligible_gland_cells": 4858,
+    "eligible_donors": 7,
+    "thresholds": [
+      {
+        "minimum_per_donor_per_library": 1,
+        "mixed_libraries": 3,
+        "distinct_cases_in_mixed": 2,
+        "distinct_controls_in_mixed": 2,
+        "gland_cells_in_mixed": 416
+      },
+      {
+        "minimum_per_donor_per_library": 20,
+        "mixed_libraries": 1,
+        "distinct_cases_in_mixed": 1,
+        "distinct_controls_in_mixed": 1,
+        "gland_cells_in_mixed": 370
+      }
+    ]
+  },
+  "Huang": {
+    "all_study_libraries": 10,
+    "eligible_gland_cells": 5186,
+    "eligible_donors": 6,
+    "thresholds": [
+      {
+        "minimum_per_donor_per_library": 1,
+        "mixed_libraries": 0,
+        "distinct_cases_in_mixed": 0,
+        "distinct_controls_in_mixed": 0,
+        "gland_cells_in_mixed": 0
+      },
+      {
+        "minimum_per_donor_per_library": 20,
+        "mixed_libraries": 0,
+        "distinct_cases_in_mixed": 0,
+        "distinct_controls_in_mixed": 0,
+        "gland_cells_in_mixed": 0
+      }
+    ]
+  }
+}

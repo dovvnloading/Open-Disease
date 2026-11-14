@@ -1,0 +1,89 @@
+{
+  "url": "https://cellgeni.cog.sanger.ac.uk/vento/reproductivecellatlas/endometriumAtlasV2_cells_with_counts.h5ad",
+  "file_size": 16012377883,
+  "etag": "\"bf5a6b8b61b2cb51b0f9d52b216879b2-1019\"",
+  "columns": [
+    "dataset",
+    "genotype",
+    "library",
+    "label_long"
+  ],
+  "ranges": [
+    {
+      "start": 0,
+      "stop": 32768,
+      "sha256": "79f23165f2840a5bbf81e80a66d901231c27a9c73994465e5a0852ff59f6c637"
+    },
+    {
+      "start": 7882014720,
+      "stop": 7882047488,
+      "sha256": "00bf0a84c653bbebc6934562df4a4b59aaf2c78526d6676735d3730a3679d8e3"
+    },
+    {
+      "start": 7904559104,
+      "stop": 7904591872,
+      "sha256": "8846821671c61e20be71273aa04eec6280aaca0c7c66b0fab0f212efc319903d"
+    },
+    {
+      "start": 7907377152,
+      "stop": 7907737600,
+      "sha256": "12b7d94aee711d5e865a6b2304c3dfb5e0212adce480059b42e8efbdfe288b42"
+    },
+    {
+      "start": 7908655104,
+      "stop": 7908687872,
+      "sha256": "e1de01e41ad9e7190b4cc377a52c74006e38297ab7762f106e9ae9ae0add1cb9"
+    },
+    {
+      "start": 7913668608,
+      "stop": 7914029056,
+      "sha256": "f3cc4ba5355a21bcc7a265c383c5f3182653a2e6531fb5498a1766419c9ef9c4"
+    },
+    {
+      "start": 7914291200,
+      "stop": 7914323968,
+      "sha256": "57c28a8d63e51c1322bb287b104eab0b60cf4f3e5a81317e82e064f9b4f17294"
+    },
+    {
+      "start": 7914618880,
+      "stop": 7914651648,
+      "sha256": "4106902a4fc850cee66922c7897db0280cb323cf9089c4b8daf0db5651f49bea"
+    },
+    {
+      "start": 7915896832,
+      "stop": 7915929600,
+      "sha256": "c7f4694dbc68343b09d4783b3e3f63cbeb6262020bbefe7f458b498aec0136af"
+    },
+    {
+      "start": 7916191744,
+      "stop": 7916552192,
+      "sha256": "85ba00530624f817326a3c0b1bc9e0e342320f19b01a5cb9b6a3ea48658a0233"
+    },
+    {
+      "start": 7916847104,
+      "stop": 7916879872,
+      "sha256": "99f4b26e55907e2d2662c2d30b5f8ec7e1bb6cde85076167dd72b2fecb7215c9"
+    },
+    {
+      "start": 7917469696,
+      "stop": 7917502464,
+      "sha256": "47a942cd57d544b0bed4249f8422ad2b552bdcf95372e36d322afa6c02c31ec1"
+    },
+    {
+      "start": 7917797376,
+      "stop": 7917830144,
+      "sha256": "1dd46457fc617ba9f83243e9fbbf89f3de889ee2f0e138a8389076287e80e1ad"
+    },
+    {
+      "start": 7918419968,
+      "stop": 7918780416,
+      "sha256": "a9bcdb201e2c2a2048d4cf20e1f7c7d24091e0cca2be6b316ebd29f0b5632567"
+    },
+    {
+      "start": 16012312576,
+      "stop": 16012345344,
+      "sha256": "b4a6e22790cf9597e0c6cb611b28d61c984f4681a189f5db01eca7e65c9e002c"
+    }
+  ],
+  "total_bytes": 1802240
+}
