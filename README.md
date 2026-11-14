@@ -17,7 +17,7 @@ Read [AGENTS.md](AGENTS.md) for operating rules and [the agent workflow](docs/AG
 
 Each JSON task defines a falsifiable question, sources, dependencies, acceptance criteria and a rough resource budget. An agent can create a **local, ignored** run record with `python scripts/research_queue.py new-run --task TASK_ID --agent AGENT_ID --out results/TASK_ID/run.json`. The queue is a lightweight coordination format, **not** an automatic scheduler or a compute sandbox. A task does not automatically authorize network access, external API costs, high-memory workloads or contact with people.
 
-The next queued research task is to trace the Finnish EndometDB FOSB measurement across the two Illumina platforms. The audit found 38 donors with one qualifying assay and a recorded negative hormone-medication survey. Only 25 were in run-by-phase groups containing both cases and controls. [Finnish eligibility audit](docs/research-notes/GSE141549_ELIGIBILITY_2026-11-13.md) · [Measurement question #26](https://github.com/dovvnloading/Open-Disease/issues/26)
+The Finnish EndometDB [measurement audit](docs/research-notes/GSE141549_FOSB_MEASUREMENT_2026-11-13.md) traced the combined FOSB row to the newer chip’s identifier. A comparison on the older chip still needs a documented link to donor-level clinical records. The audit found 38 donors with one qualifying assay and a recorded negative hormone-medication survey. Only 25 were in run-by-phase groups containing both cases and controls. [Finnish eligibility audit](docs/research-notes/GSE141549_ELIGIBILITY_2026-11-13.md) · [Measurement question #26](https://github.com/dovvnloading/Open-Disease/issues/26)
 
 ### Original endometriosis reproduction (GSE51981)
 
