@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "gse25628-fosb-direction",
+  "title": "Test a prespecified FOSB direction in GSE25628 surgical samples",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "done",
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/25",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/24",
+  "question": "Is the prespecified FOSB mean contrast positive in proliferative eutopic case versus surgical control endometrium?",
+  "scope": "A separate single-probe comparison in a small surgical cohort with unknown individual hormone history.",
+  "dependencies": [],
+  "sources": ["https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE25628", "https://doi.org/10.1002/jcp.24358", "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL571"],
+  "steps": ["Freeze the endpoint and cohort before expression inspection.", "Verify source groups, published sampling design, annotation and processing.", "Compute the planned single-probe difference and uncertainty."],
+  "deliverables": ["Reproducible analysis, code, tests and aggregate-only outcome."],
+  "acceptance": ["Exactly eight eutopic case and six surgical control observations enter the single-probe test.", "Where source requirements fail, record a blocker without switching endpoints.", "Report uncertainty, exclusions, data versions, recruitment and unresolved treatment and control differences."],
+  "budget": {"max_runtime_minutes": 60, "max_ram_gb": 2, "network": "public-opt-in", "max_download_mb": 24}
+}

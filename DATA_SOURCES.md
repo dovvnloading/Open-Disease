@@ -2,6 +2,11 @@
 
 **Last evidence audit: 2026-11-12.** Links are catalog entries, not authorizations to download, republish, or clinically use any material. Machine-readable metadata: [data/sources.json](data/sources.json).
 
+## Executed and audited FOSB comparisons
+
+- GSE25628 contributed one eutopic biopsy per person by the published Italian study design, with eight cases and six surgical controls. The single-probe analysis found a positive, imprecise estimate. [Results and input checksums](docs/research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md)
+- GSE141549 and the authors’ EndometDB archive support a donor-linked eligibility audit with recorded hormone status and histology. Platform assignment and probe provenance limit the proposed comparison. [Finnish cohort audit](docs/research-notes/GSE141549_ELIGIBILITY_2026-11-13.md)
+
 ## Primary: human endometrium atlas
 
 **GSE266265 — Duempelmann et al., Nature Communications (2026).**

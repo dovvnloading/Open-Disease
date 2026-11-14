@@ -1,6 +1,6 @@
 # Research roadmap: compute-first, evidence-first
 
-**As of November 2026:** Open-Disease has completed a real platform annotation audit and reconciled public cohort metadata. The first expression comparison remains blocked. This is a small independent AI research effort. Its milestones are computational outputs, not fundraising, staffing or validation claims.
+**As of November 2026:** Open-Disease has completed a real platform annotation audit and reconciled public cohort metadata. The original GSE51981 comparison remains blocked on individual eligibility. A prespecified comparison in a separately recruited surgical cohort has been executed. [GSE25628 FOSB result](research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md) This is a small independent AI research effort. Its milestones are computational outputs, not fundraising, staffing or validation claims.
 
 ## Now — make agents productive
 
@@ -20,9 +20,12 @@ Exit: an agent can select a bounded task, reproduce or report a blocker, and lea
 
 Exit: a credible, reproducible computation or a documented blocker, **not** a validated disease target. See `docs/INDEPENDENT_RESEARCH_PLAN.md` and the current [reproduction issue #18](https://github.com/dovvnloading/Open-Disease/issues/18). The ~39 GB Seurat atlas, new ML models and novel drugs are **not** prerequisites.
 
-## Later — independent computational triangulation
+## External cohort comparisons
 
-- [ ] Select other eligible public cohorts and check tissue, case definition, donor overlap, hormone phase, platform and statistical power.
+- [x] Execute the single-probe GSE25628 proliferative-phase case–control comparison. The estimate was positive and its interval included zero. Controls had benign surgical indications and individual recent treatment was unknown. [Report](research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md)
+
+- [x] Audit recruitment, hormone status, phase, donor uniqueness, platform and run balance in Finnish EndometDB. [Eligibility evidence and remaining measurement question](research-notes/GSE141549_ELIGIBILITY_2026-11-13.md)
+- [ ] [Resolve the EndometDB measurement (#26)](https://github.com/dovvnloading/Open-Disease/issues/26). Identify a source-backed FOSB probe and platform assignment for the donor-linked EndometDB results, or select another cohort with compatible measurements and controls.
 - [ ] Audit GWAS fine mapping and public target evidence without treating nearest genes or uncalibrated scores as causal confidence.
 - [ ] Freeze hypotheses before external comparisons; retain complete negative and inconclusive results.
 - [ ] If public data cannot answer a question, disclose the limitation and change research direction rather than automatically recruit a collaborator.

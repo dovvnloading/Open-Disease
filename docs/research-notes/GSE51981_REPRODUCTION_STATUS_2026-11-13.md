@@ -29,3 +29,5 @@ The full-file reconciliation reproduced the counts from the header prefix. The d
 ## Evidence needed to resume
 
 A permitted source connecting the intended array records to independent participants and supporting the recent-treatment rule would allow a fresh eligibility review. The paper documents a cohort-level treatment exclusion. Its clinical supplement was located but could not be verified. Reusing a specimen title as a person identifier would leave repeated donors undetectable. Keep the original study-design evidence and the unresolved individual fields visible. If evidence becomes available, record its version, reconcile eligible rows, and apply the prospectively fixed endpoint. Independent cohort validation remains outstanding.
+
+The [complete ArrayExpress SDRF and IDF check](GSE51981_ARRAYEXPRESS_2026-11-13.md) confirmed the original submission’s labels. Its source identifiers are derived from assay accessions and its files do not document individual recent hormone use. The separately recruited [GSE25628 FOSB comparison](GSE25628_FOSB_RESULTS_2026-11-13.md) addresses a different surgical population.

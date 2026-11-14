@@ -1,8 +1,8 @@
 {
-  "schema_version": "2026-11-12",
+  "schema_version": "2026-11-13",
   "catalog_is_not_redistribution_permission": true,
   "automatic_downloads_enabled": false,
-  "biological_results_generated": false,
+  "biological_results_generated": true,
   "sources": [
     {
       "id": "GSE266265",
@@ -89,6 +89,22 @@
       ]
     },
     {
+      "id": "GSE25628",
+      "kind": "microarray",
+      "study_name": "Crispi et al. 2013, endometriosis transcription profiling",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE25628",
+      "publication": "https://doi.org/10.1002/jcp.24358",
+      "human_data_used_by_open_disease": true,
+      "access": "public GEO processed microarrays, acquired for local analysis and aggregate reporting",
+      "role": "exploratory_FOSB_direction_check",
+      "analysis_report": "docs/research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md",
+      "cautions": [
+        "eight eutopic cases and six surgical reference biopsies from the proliferative phase",
+        "reference participants underwent surgery for benign conditions",
+        "the study design supports one uterine biopsy per woman; individual recent hormone exposure is unresolved"
+      ]
+    },
+    {
       "id": "zenodo.17203106",
       "kind": "menstrual_fluid_processed_pilot",
       "study_name": "Leap et al. BMC Medicine 2026",
@@ -105,6 +121,21 @@
         "no clinical diagnostic validity",
         "donor sequencing not open access",
         "some donor comorbidities and anti-inflammatory treatment"
+      ]
+    },
+    {
+      "id": "GSE141549",
+      "kind": "two_platform_microarray",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141549",
+      "publication": "https://doi.org/10.1038/s41597-020-00623-x",
+      "human_data_used_by_open_disease": false,
+      "access": "Public GEO materials and the authors’ CC BY 4.0 EndometDB v1 archive. Clinical rows stay local.",
+      "role": "external_cohort_eligibility_audit",
+      "metadata_audit": "docs/research-notes/GSE141549_ELIGIBILITY_2026-11-13.md",
+      "cautions": [
+        "Study records identify hormone medication status without a washout interval.",
+        "The two platforms use different FOSB identifiers. GPL10558 alone has no endometrial control arrays in the audited set.",
+        "The native clinical and GEO expression releases use different identifiers."
       ]
     }
   ]

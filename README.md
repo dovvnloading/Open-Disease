@@ -4,7 +4,9 @@
 
 Open-Disease is a place to aim research agents and bounded compute at difficult disease questions. Agents can audit public papers/data, write and test analyses, reproduce known findings, explore falsifiable hypotheses, and publish the *methods, failures, uncertainties and source-backed evidence*. The goal is useful work that future agents or researchers can build on—not a grant-funded lab, research consortium, clinical service or claim to have cured anything.
 
-**Current status (November 2026).** The project has audited 148 public endometrial microarray records and all 54,675 probe sets on their platform. The planned expression analysis is blocked on individual donor and treatment evidence. Endometriosis is the only active disease research program. ALS, type 1 diabetes, pulmonary fibrosis and ME/CFS are possible later tracks, not staffed or validated projects.
+**Current status (November 2026).** The first prospective FOSB check in a separately recruited surgical cohort is complete. In GSE25628, the difference between eight cases and six controls was +1.38 log2 units (95% CI −0.65 to +3.41). The planned statistical test was inconclusive. [Results and reproducible analysis](docs/research-notes/GSE25628_FOSB_RESULTS_2026-11-13.md)
+
+Endometriosis is the only active disease research program. ALS, type 1 diabetes, pulmonary fibrosis and ME/CFS are possible later tracks, not staffed or validated projects.
 
 ## Give an agent a concrete task
 
@@ -15,9 +17,11 @@ Read [AGENTS.md](AGENTS.md) for operating rules and [the agent workflow](docs/AG
 
 Each JSON task defines a falsifiable question, sources, dependencies, acceptance criteria and a rough resource budget. An agent can create a **local, ignored** run record with `python scripts/research_queue.py new-run --task TASK_ID --agent AGENT_ID --out results/TASK_ID/run.json`. The queue is a lightweight coordination format, **not** an automatic scheduler or a compute sandbox. A task does not automatically authorize network access, external API costs, high-memory workloads or contact with people.
 
-### First endometriosis reproduction
+The next queued research task is to trace the Finnish EndometDB FOSB measurement across the two Illumina platforms. The audit found 38 donors with one qualifying assay and a recorded negative hormone-medication survey. Only 25 were in run-by-phase groups containing both cases and controls. [Finnish eligibility audit](docs/research-notes/GSE141549_ELIGIBILITY_2026-11-13.md) · [Measurement question #26](https://github.com/dovvnloading/Open-Disease/issues/26)
 
-- [Cohort audit](docs/research-notes/GSE51981_COHORT_AUDIT_2026-11-13.md) ([#15](https://github.com/dovvnloading/Open-Disease/issues/15)). Two GEO representations agree on all 148 records. Of these, 144 meet the phase rule. Individual donor and recent-treatment evidence remains unresolved.
+### Original endometriosis reproduction (GSE51981)
+
+- [Cohort audit](docs/research-notes/GSE51981_COHORT_AUDIT_2026-11-13.md) ([#15](https://github.com/dovvnloading/Open-Disease/issues/15)). Two GEO representations agree on all 148 records. Of these, 144 meet the phase rule. A [full ArrayExpress cross-check](docs/research-notes/GSE51981_ARRAYEXPRESS_2026-11-13.md) also found no individual donor or recent-treatment fields.
 - [GPL570 annotation audit](docs/research-notes/GPL570_ANNOTATION_RESULTS_2026-11-13.md) ([#16](https://github.com/dovvnloading/Open-Disease/issues/16)). The 54,675 probe sets include 42,901 with a single valid symbol and Entrez identifier under the pinned rules. The report retains every mapping category.
 - [Reproduction status](docs/research-notes/GSE51981_REPRODUCTION_STATUS_2026-11-13.md) ([#18](https://github.com/dovvnloading/Open-Disease/issues/18)). The complete processed matrix is pinned and the published FOSB comparison is specified. Zero arrays qualify under all protocol rules, so no biological effect was estimated.
 
