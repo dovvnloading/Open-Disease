@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "cross-cohort-pathway-discovery",
+  "title": "Screen genes and Reactome pathways and challenge frozen nominations in a separate cohort",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/33",
+  "question": "Which relative-expression associations in Finnish uterine tissue survive a genome-scale screen and a prespecified external test in Rome?",
+  "scope": "Computational analysis of previously audited cohorts and a pinned human Reactome release. One discovery cohort and one validation cohort.",
+  "dependencies": ["endometdb-eligible-chip-census", "gse25628-fosb-direction"],
+  "sources": ["https://doi.org/10.1038/s41597-020-00623-x", "https://doi.org/10.1002/jcp.24358", "https://reactome.org/download-data"],
+  "steps": ["Freeze the complete multistage design before screening.", "Commit candidate IDs and directions before computing Rome outcomes.", "Publish all aggregate test outcomes, decision gates and reproducibility information."],
+  "deliverables": ["Reusable offline pipeline and tests.", "Genome-wide aggregate discovery scores and locked external results.", "Evidence assessment, including any null findings."],
+  "acceptance": ["Use 12,096 Finnish and 3,003 Rome label assignments with frozen clinical units.", "Calibrate both discovery families and the external nomination family for multiplicity.", "Independently verify results and retain every nominated candidate."],
+  "budget": {"max_runtime_minutes": 120, "max_ram_gb": 4, "network": "public-opt-in", "max_download_mb": 130}
+}
