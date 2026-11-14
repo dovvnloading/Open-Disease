@@ -1,6 +1,6 @@
 # Open-Disease: instructions for research and coding agents
 
-Open-Disease is a small, independent, **AI-first computational research initiative**. It is not a funded lab, clinical project, validated scientific program, or a promise of a cure. The operator supplies direction; agents investigate public evidence, write code, spend bounded compute, test and leave reproducible work. **No recruitment, fundraising, grant seeking, or contacting scientists by default.**
+Open-Disease is a small, independent, **AI-first computational research initiative**. It is not a funded lab, clinical project, validated scientific program, or a promise of a cure. Wet-lab studies, specimen collection and participant recruitment are outside the project scope. The operator supplies direction; agents investigate public evidence, write code, spend bounded compute, test and leave reproducible work. **No recruitment, fundraising, grant seeking, or contacting scientists by default.**
 
 ## Start here
 
@@ -24,7 +24,7 @@ Open-Disease is a small, independent, **AI-first computational research initiati
 - Default to offline tests and metadata review. Public downloads occur **only if explicitly allowed by the chosen task and operator/environment**, with source checks. No unbounded crawling, self-replicating agents, unrestricted cloud spend, or implicit high-memory workloads.
 - Treat task `budget` values as operating limits to respect and report, **not enforced sandbox quotas**. Pause and request a change to the task before going beyond them. Avoid repeating expensive work when a verifiable result already exists.
 - Agents may propose or execute suitable computational studies and improvements without a grant, collaborator, or scientific sign-off **provided all resulting claims remain clearly exploratory and nonclinical**.
-- External contact is **not an agent action**. Escalate to the operator only for a concrete exceptional need: incident/security reporting, restricted-data/legal consent, proposed human-subject or wet-lab activity, or promotion of findings to clinically consequential claims. Obtain explicit approval before any outreach. Missing independent validation is a finding, not a reason to send unsolicited messages.
+- External contact is **not an agent action**. Escalate to the operator only for a concrete exceptional need: incident/security reporting, restricted-data/legal consent, or promotion of findings to clinically consequential claims. Obtain explicit approval before any outreach. Missing independent validation is a finding, not a reason to send unsolicited messages.
 
 ## Definition of a useful result
 

@@ -1,6 +1,8 @@
 # Research roadmap: compute-first, evidence-first
 
-**As of November 2026**, four external FOSB comparisons are documented. The [project results table](../README.md) summarizes the three array cohorts and one canonical-transcript RNA-seq series. The original UCSF comparison remains blocked on individual eligibility.
+**November 2026.** The first genome-wide external screen is complete. Among 12,044 shared genes and 1,049 human Reactome pathways, none cleared discovery multiplicity control and none of ten locked candidates validated in Rome. All five nominated pathways reversed direction. [Full screen, validation and phase diagnostic](research-notes/CROSS_COHORT_DISCOVERY_RESULTS_2026-11-14.md)
+
+Four earlier [FOSB comparisons](../README.md) remain documented. The original UCSF comparison requires individual eligibility evidence.
 
 ## Now — make agents productive
 
@@ -32,9 +34,9 @@ Exit: a credible, reproducible computation or a documented blocker, **not** a va
 - [x] Freeze each external comparison before inspecting its target outcomes and retain inconclusive results alongside positive estimates.
 - [ ] If public data cannot answer a question, disclose the limitation and change research direction rather than automatically recruit a collaborator.
 
-## Conditional, not a current project phase
+## Next computational question
 
-If a result eventually warrants wet-lab, human-subject, diagnostic, therapeutic or clinical claims, those activities require appropriate expertise, consent/oversight and independently verifiable experimental evidence. Do **not** initiate outreach, grant applications or a new lab program through agents; seek explicit operator authorization only when there is a concrete exceptional reason.
+Determine whether an independently recruited public cohort with documented treatment, comparable surgical controls, cycle phase and processing across groups can distinguish tissue composition and technical effects from within-cell expression differences. Reusing a discovery donor, a second paper on the same arrays or a phase subset of an evaluated cohort cannot supply new replication. [Prior cohort reuse and literature](research-notes/CROSS_COHORT_PRIOR_EVIDENCE_2026-11-14.md)
 
 ## Possible future disease tracks
 

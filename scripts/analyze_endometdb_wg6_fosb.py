@@ -125,7 +125,8 @@ def exact_contrast(cells, n_features):
     }
 
 
-def analyze(directory, prefix=None):
+def verified_wg6_source(directory, prefix=None):
+    """Return the census-verified eligible assay design, WG-6 addresses and a fresh row stream."""
     from inflate64 import Inflater
 
     head = directory / "archive-start.bin"
@@ -154,14 +155,19 @@ def analyze(directory, prefix=None):
     status = {}
     census(raw_keys(blocks()), selected, native_ids, manifests, selected_status=status)
     design = shared_design(selected, status)
-    cells = rank_signals(copy_lines(blocks()), design, wg6_addresses, TARGET)
+    return design, wg6_addresses, copy_lines(blocks())
+
+
+def analyze(directory, prefix=None):
+    design, wg6_addresses, source = verified_wg6_source(directory, prefix)
+    cells = rank_signals(source, design, wg6_addresses, TARGET)
     result = exact_contrast(cells, N_FEATURES)
     if result["total_assignments"] != 12_096:
         raise ValueError("Unexpected frozen label-assignment count")
     return {
         "cohort": "Finnish EndometDB v1", "platform": "HumanWG-6 v2",
         "probe": "ILMN_1730706", "address": TARGET, "reference_features": N_FEATURES,
-        "eligible_single_assay_donors": len(selected), "chip_verified_donors": 32,
+        "eligible_single_assay_donors": 38, "chip_verified_donors": 32,
         "shared_strata": len(cells), "included": {"case": 12, "control": 13}, **result,
     }
 

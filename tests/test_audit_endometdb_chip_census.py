@@ -51,3 +51,14 @@ def test_identical_signatures_report_ambiguous_chip():
     selected = [{"analysis_result_id": "a", "analysis_run_id": "3", "phase": "p", "group": "case"}]
     report = census([(b"a", b"6")], selected, {b"a"}, {"A": ({6}, 6), "B": ({6}, 6)})
     assert report["selected_by_status"] == {"ambiguous_manifest": 1}
+
+
+def test_default_source_accepts_documented_single_prefix(tmp_path, monkeypatch):
+    import hashlib
+    import audit_endometdb_chip_census as reader
+
+    content = b"synthetic archive bytes"
+    (tmp_path / "raw-prefix.zip.part").write_bytes(content)
+    monkeypatch.setattr(reader, "ZIP_PREFIX_BYTES", len(content))
+    monkeypatch.setattr(reader, "PREFIX_SHA256", hashlib.sha256(content).hexdigest())
+    assert b"".join(reader.input_bytes(tmp_path, None)) == content
