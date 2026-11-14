@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "gse120103-fosb-direction",
+  "title": "Test relative FOSB expression in secretory endometrium across fertility strata",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/28",
+  "question": "Is the average within-fertility case minus control difference in relative FOSB expression positive?",
+  "scope": "Thirty-six whole endometrium single-channel arrays from the New Delhi cohort. Equal stratum weighting and a common reference feature set.",
+  "dependencies": [],
+  "sources": ["https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE120103", "https://pmc.ncbi.nlm.nih.gov/articles/PMC6375207/", "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL6480"],
+  "steps": ["Freeze the phenotype, probe, relative-expression definition and uncertainty calculation before outcomes.", "Validate all group fields, the unique target and the common feature set.", "Compute and independently verify aggregate estimates."],
+  "deliverables": ["Prospective plan, runnable analysis, regression coverage and aggregate results or a documented blocker."],
+  "acceptance": ["Preserve all four source groups with nine arrays each.", "Make the source-name discrepancy, public units and source-design assumptions explicit.", "Report the frozen result with its interval, two-sided p-value and leave-one-array-out range."],
+  "budget": {"max_runtime_minutes": 90, "max_ram_gb": 2, "network": "public-opt-in", "max_download_mb": 100}
+}
