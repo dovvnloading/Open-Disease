@@ -1,0 +1,70 @@
+{
+  "source_rows": 145630,
+  "unique_gencode_transcripts": 137391,
+  "entrez_projected_transcripts": 130773,
+  "entrez_genes": 24977,
+  "cases": 4,
+  "controls": 3,
+  "pathway_coverage": {
+    "R-HSA-9008059": 19,
+    "R-HSA-5654741": 37,
+    "R-HSA-163560": 19,
+    "R-HSA-5654710": 17,
+    "R-HSA-432722": 43
+  },
+  "sources": {
+    "GSE153739_GT_SO_5238_Transcript_Expression_Matrix.txt.gz": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE153nnn/GSE153739/suppl/GSE153739_GT_SO_5238_Transcript_Expression_Matrix.txt.gz",
+      "sha256": "627634eb5df06434cec03b12f177b7c90e4ea54438eb468b0fc50c0df20a9f4d",
+      "bytes": 4939482
+    },
+    "GSE153739_family.soft.gz": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE153nnn/GSE153739/soft/GSE153739_family.soft.gz",
+      "sha256": "d26e97f9c15e62a8141874daca4cb33305a452152d1dbb59b845be49052b49f1",
+      "bytes": 2855
+    },
+    "wgEncodeGencodeAttrsV19.txt.gz": {
+      "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/wgEncodeGencodeAttrsV19.txt.gz",
+      "sha256": "d464efa58f6b72f0fcfea646addfe121c9b79a93cc1c02148562a841e492c941",
+      "bytes": 4542096
+    },
+    "ena-run-metadata.tsv": {
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA643835&result=read_run&fields=run_accession,experiment_accession,sample_accession,secondary_sample_accession,instrument_model,library_layout,submitted_ftp,fastq_ftp,first_public,library_name&format=tsv",
+      "sha256": "dce12fbbfb8b35392814e1431c82120e4736a004e8b6db516d4df1200355511c",
+      "bytes": 1764
+    }
+  },
+  "hgnc": {
+    "url": "https://storage.googleapis.com/public-download-files/hgnc/archive/archive/quarterly/tsv/hgnc_complete_set_2026-10-06.tsv",
+    "sha256": "8bf6f686e640dbc864a346484626953621b0500d900d26cd085a35c2782d725d"
+  },
+  "technical_metadata": {
+    "distinct_runs": 7,
+    "bounded_bytes_per_run": 4096,
+    "checked_first_mate_1_headers": 7,
+    "native_flowcell_identifiers": 0,
+    "submitted_fastq_links": 0,
+    "ena_library_names": 0,
+    "header_set_sha256": "3d899ce0d389b6a453270432bb3e1f5206ea016691e763e1e6c6457d8ab88711",
+    "interpretation": "Each ENA-generated first read name contains only an archive identifier and mate number. The common NextSeq 500 platform and seven distinct archive runs do not identify shared physical flowcells, lanes or library-preparation batches across diagnostic groups.",
+    "sequencing_provider": "Genotypic Technology Pvt. Ltd., as reported for cases and controls in the original article."
+  },
+  "mapping": {
+    "method": "Unversioned ENST to a single GENCODE v19 stable ENSG, then a single approved HGNC Entrez identifier. Require one approved HGNC identity per Entrez identifier and one observed mapped ENSG per Entrez identifier.",
+    "primary": "Sum mapped transcript FPKMs per gene using exact fixed-point units, then midrank all mapped gene totals within biopsy.",
+    "sensitivity": "Midrank all 145630 original transcripts within biopsy, including unmapped rows, then average ranks within mapped genes."
+  },
+  "clinical_metadata": {
+    "article": "https://doi.org/10.1093/humrep/deaa255",
+    "tissue": "Whole eutopic endometrium, histologically dated mid-proliferative phase.",
+    "controls": "Study controls underwent laparoscopy for interval tubal ligation or male-factor infertility and had no visible endometriosis.",
+    "medication": "Original study excluded participants reporting any medication or oral contraceptive in the previous three months. Lifetime contraceptive exposure was incompletely recorded.",
+    "staging": "The original study used revised ASRM surgical staging. GEO records disease site but supplies no stage field for the sequenced subgroup."
+  },
+  "transfer_bytes": {
+    "required_study_and_annotation_sources": 9486197,
+    "archive_read_name_ranges": 28672,
+    "optional_series_metadata_and_annotation_schema": 4788,
+    "reused_hgnc_snapshot": 0
+  }
+}

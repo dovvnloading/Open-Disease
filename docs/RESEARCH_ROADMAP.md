@@ -42,6 +42,8 @@ The [Swiss glandular study](research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md
 
 The [completed Human Endometrial Cell Atlas audit](research-notes/HECA_GLANDULAR_FEASIBILITY_2026-11-14.md) located 13 donors across two contributing studies in the proliferative functionalis gland states. Verified cell and library annotations left only two independent Oxford case–control pairs sharing any qualifying gland cells within a capture. Huang had no mixed capture. Even the most permissive Oxford design has a two-sided p-value floor of 0.50. A higher-resolution computational test needs a different cohort or a prospectively justified cross-library design. [Cell and library census](../evidence/heca-glandular-2026-11-14/cell-library-support.json)
 
+The [two additional proliferative whole-tissue comparisons](research-notes/EXTERNAL_BULK_PATHWAYS_RESULTS_2026-11-14.md) gave opposing combined estimates. A physical scan audit found extensive reuse across the U.S. archives. Matching 111 pathway genes across all five analyzed groups preserved the direction differences. A next computational question is whether published endometriosis GWAS–eQTL colocalization implicates any member of the frozen pathways, with tissue, locus and study overlap documented. Such evidence addresses inherited susceptibility, a different question from a general expression shift.
+
 ## Possible future disease tracks
 
 ALS (TDP-43 splicing), type 1 diabetes (islet/immune evidence), idiopathic pulmonary fibrosis (fibroblast states) and ME/CFS (cohort-reproducible phenotypes) remain **unstarted computational questions**, each needing its own protocol. We are not building a universal cure engine.

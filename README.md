@@ -12,6 +12,8 @@ An independent Melbourne study published a complete high-detection probe table. 
 
 A follow-up [Human Endometrial Cell Atlas audit](docs/research-notes/HECA_GLANDULAR_FEASIBILITY_2026-11-14.md) traced 313,527 cell annotations to the underlying donors and libraries. Only two independent Oxford pairs shared qualifying gland cells in a capture library, and no Huang pair did. This design cannot resolve the Swiss pathway result at its prespecified threshold.
 
+**Two additional proliferative biopsy studies.** The five-pathway average was −0.60 percentile points in Mumbai (17/35 assignments as extreme, p = 0.486) and +0.27 points in the U.S. study. The U.S. cases and controls were scanned on entirely separate dates. Eight of its eleven physical scans also appear in GSE51981. The five study estimates still differ in sign when scored on identical pathway genes. [Results and scan-overlap audit](docs/research-notes/EXTERNAL_BULK_PATHWAYS_RESULTS_2026-11-14.md) · [Five-cohort comparison](evidence/external-bulk-2026-11-14/comparison.svg)
+
 **Earlier FOSB results.** Four external endometrial expression comparisons have tested the published positive FOSB direction. The strongest apparent signal came from the New Delhi arrays, where clinical groups occupied separate physical slides. The Finnish comparison controlled for run and histologic phase on a single verified chip and was inconclusive. These observational results leave the biological interpretation unresolved.
 
 | Cohort and comparison | Case minus control | Interpretation |

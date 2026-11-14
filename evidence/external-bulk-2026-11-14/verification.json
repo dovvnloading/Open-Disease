@@ -1,0 +1,9 @@
+{
+  "distinct_endpoints": 12,
+  "exact_tails_verified": 6,
+  "holm_values_verified": 5,
+  "all_membership_ids_verified": true,
+  "us_scan_date_assignments": 1,
+  "mumbai_interval_and_global_decision_verified": true,
+  "maximum_absolute_difference": 3.008704396734174e-14
+}

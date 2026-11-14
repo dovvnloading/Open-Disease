@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "external-bulk-pathways",
+  "title": "Challenge the frozen pathway average in two additional proliferative whole-tissue series",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "done",
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/43",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/42",
+  "question": "Which direction does the five-pathway mean take in two additional proliferative whole-tissue series, and which contrasts can separate diagnosis from known technical handling?",
+  "scope": "Prospectively defined aggregate analysis of seven Mumbai RNA-seq biopsies and eleven U.S. microarrays using their common locked gene membership. The tissue is eutopic endometrium.",
+  "dependencies": ["heca-glandular-metadata", "swiss-glandular-pathways"],
+  "sources": ["https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6364", "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153739", "https://doi.org/10.1210/en.2006-1692", "https://doi.org/10.1093/humrep/deaa255", "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/wgEncodeGencodeAttrsV19.txt.gz"],
+  "steps": ["Audit source eligibility, physical processing, coverage and reuse before any disease-group estimates.", "Publish the source rules, locked membership and decision procedure before calculating the two outcomes.", "Execute the primary and sensitivity analyses and independently reproduce the aggregate estimates and exact reference."],
+  "deliverables": ["Source-pinned accession-specific loaders and an aggregate analysis.", "All six estimates in both cohorts, technical constraints, robustness checks and independent verification."],
+  "acceptance": ["Keep one unit per included biopsy under the study donor design, equal pathway weights and condition-blind gene coverage.", "Distinguish the unblocked reference from what the technical metadata identify.", "Publish all outcomes and a reproducible source receipt."],
+  "budget": {"max_runtime_minutes": 90, "max_ram_gb": 4, "network": "public-opt-in", "max_download_mb": 80}
+}

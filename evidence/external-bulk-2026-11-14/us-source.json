@@ -1,0 +1,108 @@
+{
+  "sources": {
+    "series.txt.gz": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE6nnn/GSE6364/matrix/GSE6364_series_matrix.txt.gz",
+      "bytes": 4665610,
+      "sha256": "b96db29937984402dc4fd13efdf6c609d1b58c007d11336a533fef1c86ccf7da"
+    },
+    "brief.soft": {
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6364&targ=gsm&view=brief&form=text",
+      "bytes": 77175,
+      "sha256": "663f7c276d364c252b36b3a2dc8d89eee37a9cac250ce662197506746c44e413"
+    },
+    "GPL570.annot.gz": {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPLnnn/GPL570/annot/GPL570.annot.gz",
+      "bytes": 8471521,
+      "sha256": "d7cd44352127b1e34f3a720ebea86093ef255a38f1612a85a2962b71bde8f394"
+    },
+    "GSE4888_brief.soft": {
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE4888&targ=gsm&view=brief&form=text",
+      "bytes": 60886,
+      "sha256": "48f89117347a351ef19c412df717af437be6bf305ffc596c04e11985f9f8f50b"
+    },
+    "GSE51981_quick.soft": {
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981&targ=gsm&view=quick&form=text",
+      "bytes": 546175,
+      "sha256": "767499b710e33598cffcc7cdaf414925630ec241d90fcc04bcfec93b903bd5d8"
+    }
+  },
+  "primary_paper": "https://doi.org/10.1210/en.2006-1692",
+  "clinical_context": "Burney et al. report surgically ascertained disease and historical comparator specimens from the earlier Talbi et al. study. GSE6364 group and cycle-phase fields were verified against its individual GEO records.",
+  "source_assay": "Individual uterine whole-tissue samples. GCOS v1.2 with within-array trimmed mean intensity scaled to 500.",
+  "reference_probes": 54675,
+  "uniquely_mapped_probes": 42891,
+  "entrez_genes": 20845,
+  "native_scan_audit": {
+    "arrays": 11,
+    "case_arrays": 6,
+    "control_arrays": 5,
+    "native_scanners": 1,
+    "scan_days": 6,
+    "mixed_scan_days": 0,
+    "day_sizes_cases": [
+      1,
+      1,
+      4
+    ],
+    "day_sizes_controls": [
+      1,
+      1,
+      3
+    ],
+    "conditional_assignments": 1,
+    "range_bytes": 22528,
+    "ordered_range_sha256": "9906fdd3faf7e2574d252aab6e672c9a8d61875d5f1961e3c29c9e491479ee37"
+  },
+  "comparison_method": "Use bytes 0–2047 of each original .CEL.gz linked from the sampled GEO records, ordered as in source metadata. Compare complete native DAT header text and all four grid corners after decoding CEL and trimming surrounding whitespace. Calvin files in GSE51981 record nonoverlapping scan years. A match identifies a shared physical array scan. Unmatched scans do not establish distinct donors.",
+  "normal_volunteers_among_scans_matching_both_archives": 3,
+  "gse6364_scan_years": [
+    2004,
+    2005
+  ],
+  "cross_archive_native_scans": {
+    "GSE4888": {
+      "cross_archive_clinical_labels": {
+        "proliferative": 4,
+        "leiomyomata": 1,
+        "normal_volunteer": 3
+      },
+      "array_headers": 27,
+      "formats": {
+        "text": 27
+      },
+      "calvin_native_scan_years": {},
+      "compressed_header_bytes": 55296,
+      "ordered_compressed_header_sha256": "86555a082e3322982b17f3f595e416b56b3cea796225e9bf7bd4b9b080c534b4",
+      "byte_identical_compressed_prefixes": 0,
+      "native_image_matches": 4,
+      "matched_gse6364_cases": 0,
+      "matched_gse6364_controls": 4
+    },
+    "GSE51981": {
+      "cross_archive_clinical_labels": {
+        "proliferative": 8,
+        "case_control_agreement": 8,
+        "moderate_severe": 5,
+        "control_other_pelvic_pathology": 0,
+        "control_no_pelvic_pathology": 3
+      },
+      "array_headers": 148,
+      "formats": {
+        "XDA_v4": 118,
+        "Calvin": 30
+      },
+      "calvin_native_scan_years": {
+        "2010": 17,
+        "2011": 13
+      },
+      "compressed_header_bytes": 303104,
+      "ordered_compressed_header_sha256": "73d9dc597c10563744e06d02a7800bce7336e302b1f8948d870e8837c4f02909",
+      "byte_identical_compressed_prefixes": 0,
+      "native_image_matches": 8,
+      "matched_gse6364_cases": 5,
+      "matched_gse6364_controls": 3
+    }
+  },
+  "gse6364_matching_either_archive": 9,
+  "gse6364_matching_both_archives": 3
+}
