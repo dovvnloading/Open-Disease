@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "melbourne-five-gene-summary",
+  "title": "Check the five frozen gene nominations in independent Melbourne expression summaries",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "done",
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/36",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/37",
+  "question": "Which originally nominated genes have corrected two-sided targeted evidence in the complete cycle-adjusted Melbourne summary family?",
+  "scope": "One existing public case-control aggregate table. Require source-backed orientation for any directional claim.",
+  "dependencies": ["cross-cohort-pathway-discovery"],
+  "sources": ["https://doi.org/10.1038/s41598-018-29462-y", "https://pmc-oa-opendata.s3.amazonaws.com/PMC6065421.1/41598_2018_29462_MOESM2_ESM.xlsx"],
+  "steps": ["Publish the independent follow-up protocol before Australia-specific candidate outcomes.", "Check the full probe universe and all exact gene-symbol matches.", "Calculate multiplicity-corrected results and independently verify all probe and gene summaries."],
+  "deliverables": ["Reproducible targeted summary analysis including missing nominees, source contrast limits and all covered probes."],
+  "acceptance": ["Use the exact locked five-gene family and every eligible probe per tested gene.", "Respect uncertainty about author coefficient orientation and report unknown coverage faithfully.", "Verify two-sided gene and family adjustments with a second implementation."],
+  "budget": {"max_runtime_minutes": 30, "max_ram_gb": 1, "network": "public-opt-in", "max_download_mb": 6}
+}

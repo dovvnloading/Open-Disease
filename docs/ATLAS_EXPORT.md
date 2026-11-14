@@ -1,6 +1,6 @@
 # Rights-reviewed Seurat raw-count export to donor pseudobulk
 
-**Research-only adapter; not tested on the real GSE266265 atlas.** The export algorithm has synthetic sparse-matrix tests; the large Seurat RDS reading path requires confirmation in a compatible, high-memory R environment by a qualified researcher.
+**Research-only adapter.** Synthetic tests verify the sparse export. The complete 38.9 GB atlas still requires a suitable high-memory R environment. The [public summary feasibility audit](research-notes/GSE266265_SUMMARY_FEASIBILITY_2026-11-14.md) and [epithelial derivative audit](research-notes/GSE266265_EPITHELIAL_FEASIBILITY_2026-11-14.md) document which smaller releases retain donor information, and the source of their count layers.
 
 ## Why
 
@@ -130,4 +130,4 @@ The R test validates sparse Matrix aggregation, integer counts, total library-si
 
 ## Next scientific step
 
-Audit GSE266265 object version/Seurat layer semantics, map donor and cell labels with an independent research specialist, verify sample-by-phase distribution, and compare output to an authors-reported published result. The current Python logCPM Welch test is only a computational baseline: a pre-specified covariate-adjusted count model and genuinely independent cohort are needed before making gene-level research claims. See issues #2–#6.
+Audit GSE266265 object version/Seurat layer semantics, verify the donor-to-cell metadata with an independently implemented check, verify sample-by-phase distribution, and compare output to an authors-reported published result. The current Python logCPM Welch test is only a computational baseline: a pre-specified covariate-adjusted count model and genuinely independent cohort are needed before making gene-level research claims. See issues #2–#6.

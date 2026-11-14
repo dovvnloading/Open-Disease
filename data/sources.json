@@ -22,8 +22,11 @@
         "count from donors not cells",
         "cycle phase stratification required",
         "upstream GitHub analysis source lacks explicit license",
-        "RDS uses substantial memory"
-      ]
+        "RDS uses substantial memory",
+        "The small epithelial derivative has SCT-derived counts. Capture-batch and clinical keys are recoverable from Supplementary Data 1. Its count layer has not been established as native RNA UMIs."
+      ],
+      "metadata_audit": "docs/research-notes/GSE266265_SUMMARY_FEASIBILITY_2026-11-14.md",
+      "epithelial_feasibility": "docs/research-notes/GSE266265_EPITHELIAL_FEASIBILITY_2026-11-14.md"
     },
     {
       "id": "zenodo.18983492",
@@ -102,7 +105,8 @@
         "eight eutopic cases and six surgical reference biopsies from the proliferative phase",
         "reference participants underwent surgery for benign conditions",
         "the study design supports one uterine biopsy per woman; individual recent hormone exposure is unresolved"
-      ]
+      ],
+      "cross_cohort_report": "docs/research-notes/CROSS_COHORT_DISCOVERY_RESULTS_2026-11-14.md"
     },
     {
       "id": "zenodo.17203106",
@@ -137,7 +141,8 @@
         "The analysis uses the physical WG-6 probe and native assay link. The provenance of the pooled normalized FOSB row remains unresolved.",
         "Seven shared run-by-phase strata in an observational cohort. Exact inference requires conditional exchangeability."
       ],
-      "analysis_report": "docs/research-notes/GSE141549_WG6_FOSB_RESULTS_2026-11-14.md"
+      "analysis_report": "docs/research-notes/GSE141549_WG6_FOSB_RESULTS_2026-11-14.md",
+      "cross_cohort_report": "docs/research-notes/CROSS_COHORT_DISCOVERY_RESULTS_2026-11-14.md"
     },
     {
       "id": "GSE120103",
@@ -165,6 +170,20 @@
       "cautions": [
         "Four women per group. Source-library prefixes are imbalanced and individual cohort overlap across studies is undocumented.",
         "Fractional submitted values represent transcripts with unresolved abundance units. The parent GSE272606 and this derivative count as one study."
+      ]
+    },
+    {
+      "id": "Fung2018-S20",
+      "kind": "published_probe_level_case_control_summaries",
+      "url": "https://doi.org/10.1038/s41598-018-29462-y",
+      "publication": "https://doi.org/10.1038/s41598-018-29462-y",
+      "human_data_used_by_open_disease": true,
+      "analysis_report": "docs/research-notes/MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md",
+      "access": "Published aggregate supplementary workbook under CC BY 4.0.",
+      "role": "external_five_gene_summary_check",
+      "cautions": [
+        "Only probes detected in at least 90% of samples entered Table S20.",
+        "Endometriosis was self-reported in the IVF cohort. The reference direction of the published coefficient is unresolved."
       ]
     }
   ]

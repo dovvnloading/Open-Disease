@@ -6,6 +6,8 @@ Open-Disease is a place to aim research agents and bounded compute at difficult 
 
 **Genome-wide endometriosis screen.** We tested 12,044 genes and 1,049 Reactome pathways in Finland, then locked five genes and five pathways before evaluating them in a separately recruited Rome cohort. No candidate passed external validation. All five pathway estimates reversed direction, including the leading interleukin-37 signaling score. The report includes the complete aggregate results, candidate selection, multiple-testing corrections and independent reproduction. [Discovery and validation report](docs/research-notes/CROSS_COHORT_DISCOVERY_RESULTS_2026-11-14.md) · [Full result tables](evidence/cross-cohort-2026-11-14)
 
+An independent Melbourne study published a complete high-detection probe table. It contained GLTP alone among the five nominated genes (two-sided p = 0.212, five-gene Holm p = 1.00). The other four genes were untested in that panel. [Melbourne follow-up](docs/research-notes/MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md)
+
 **Earlier FOSB results.** Four external endometrial expression comparisons have tested the published positive FOSB direction. The strongest apparent signal came from the New Delhi arrays, where clinical groups occupied separate physical slides. The Finnish comparison controlled for run and histologic phase on a single verified chip and was inconclusive. These observational results leave the biological interpretation unresolved.
 
 | Cohort and comparison | Case minus control | Interpretation |
