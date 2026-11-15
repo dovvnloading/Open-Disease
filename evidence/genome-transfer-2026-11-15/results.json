@@ -1,0 +1,205 @@
+{
+  "discovery_weights_sha256": "9df65b29615ec56767e9abaaf3844f8ebde5e21baf8cdab193ac24857a170da5",
+  "original_weight_count": 12044,
+  "prior_nominated_gene_union_size": 125,
+  "rome_scan_metadata": {
+    "source": "GSE25628",
+    "native_scanners": 1,
+    "scanner_dates": 3,
+    "source_arrays": 22,
+    "earliest_case_minus_latest_control_seconds_by_mixed_date": [
+      4611,
+      4887
+    ],
+    "mixed_dates_all_controls_scanned_before_all_cases": 2,
+    "mixed_scanner_dates": 2,
+    "by_date_chronological": [
+      {
+        "case": 3,
+        "control": 3,
+        "lesion": 3
+      },
+      {
+        "case": 2,
+        "control": 3,
+        "lesion": 2
+      },
+      {
+        "case": 3,
+        "control": 0,
+        "lesion": 3
+      }
+    ],
+    "eligible_conditional_assignments": 200,
+    "prefix_bytes_each": 4096,
+    "ordered_prefix_sha256": "437fe28852103bc6441560fbe6de85928bba244d06f4f4d66db4d044a701801d"
+  },
+  "rome_within_mixed_scan_dates": {
+    "measured_genes": 12044,
+    "genes_after_omitting_nominations": 11919,
+    "cases": 5,
+    "controls": 6,
+    "strata": 2,
+    "score_difference_pp": -4.154057692279384,
+    "exact_two_sided_extreme": 1,
+    "assignments": 200,
+    "p_two_sided": 0.005,
+    "constant_shift_95_interval": [
+      -5.430002007423984,
+      -2.663792329733878
+    ],
+    "leave_one_biopsy_out_range": [
+      -4.956343583673415,
+      -3.3517718008853548
+    ],
+    "admissible_deletions": 11,
+    "without_nominations_difference_pp": -4.165292719901626,
+    "sign_weights_difference_pp": -2.8874248409992553,
+    "p_holm_two_cohorts": 0.01
+  },
+  "mumbai": {
+    "measured_genes": 11464,
+    "genes_after_omitting_nominations": 11342,
+    "cases": 4,
+    "controls": 3,
+    "strata": 1,
+    "score_difference_pp": -0.03241089235777572,
+    "exact_two_sided_extreme": 33,
+    "assignments": 35,
+    "p_two_sided": 0.9428571428571428,
+    "constant_shift_95_interval": [
+      -3.9836203570274353,
+      5.293927012953029
+    ],
+    "leave_one_biopsy_out_range": [
+      -0.7978949556877573,
+      1.3341555724900043
+    ],
+    "admissible_deletions": 7,
+    "without_nominations_difference_pp": -0.026853122352639924,
+    "sign_weights_difference_pp": -0.08210174609769244,
+    "p_holm_two_cohorts": 0.9428571428571428
+  },
+  "rome_unrestricted_sensitivity": {
+    "measured_genes": 12044,
+    "genes_after_omitting_nominations": 11919,
+    "cases": 8,
+    "controls": 6,
+    "strata": 1,
+    "score_difference_pp": -3.682042569679697,
+    "exact_two_sided_extreme": 3,
+    "assignments": 3003,
+    "p_two_sided": 0.000999000999000999,
+    "constant_shift_95_interval": [
+      -5.191866834995805,
+      -2.1126760655012307
+    ],
+    "leave_one_biopsy_out_range": [
+      -4.110974869379839,
+      -3.445575831204557
+    ],
+    "admissible_deletions": 14,
+    "without_nominations_difference_pp": -3.6923765491057567,
+    "sign_weights_difference_pp": -2.554212894765549
+  },
+  "rome_published_feature_diagnostics": {
+    "28": {
+      "unrestricted_pp": 0.7896472694807279,
+      "matched_scanner_date_pp": 1.8268094147925371,
+      "exploratory_two_sided_extreme": 101,
+      "assignments": 200
+    },
+    "3797": {
+      "unrestricted_pp": 14.10685161077943,
+      "matched_scanner_date_pp": 18.359275635558348,
+      "exploratory_two_sided_extreme": 1,
+      "assignments": 200
+    },
+    "90485": {
+      "unrestricted_pp": 9.337451930990103,
+      "matched_scanner_date_pp": 10.925880205293952,
+      "exploratory_two_sided_extreme": 1,
+      "assignments": 200
+    },
+    "51228": {
+      "unrestricted_pp": -9.981333512890743,
+      "matched_scanner_date_pp": -11.59304813634391,
+      "exploratory_two_sided_extreme": 3,
+      "assignments": 200
+    },
+    "2160": {
+      "unrestricted_pp": 1.3075892923942476,
+      "matched_scanner_date_pp": 1.8202630515778608,
+      "exploratory_two_sided_extreme": 87,
+      "assignments": 200
+    },
+    "R-HSA-9008059": {
+      "unrestricted_pp": -2.425548490077226,
+      "matched_scanner_date_pp": -2.5317700421093576,
+      "exploratory_two_sided_extreme": 12,
+      "assignments": 200
+    },
+    "R-HSA-5654741": {
+      "unrestricted_pp": -1.7558325635204,
+      "matched_scanner_date_pp": -1.8485736934771495,
+      "exploratory_two_sided_extreme": 3,
+      "assignments": 200
+    },
+    "R-HSA-163560": {
+      "unrestricted_pp": -1.8165133659814288,
+      "matched_scanner_date_pp": -1.762880689576388,
+      "exploratory_two_sided_extreme": 62,
+      "assignments": 200
+    },
+    "R-HSA-5654710": {
+      "unrestricted_pp": -3.966775544117077,
+      "matched_scanner_date_pp": -3.969636027747155,
+      "exploratory_two_sided_extreme": 2,
+      "assignments": 200
+    },
+    "R-HSA-432722": {
+      "unrestricted_pp": -2.167350359271367,
+      "matched_scanner_date_pp": -2.5939467642493756,
+      "exploratory_two_sided_extreme": 4,
+      "assignments": 200
+    },
+    "FIVE_PATHWAY_MEAN": {
+      "unrestricted_pp": -2.4264040645934983,
+      "matched_scanner_date_pp": -2.5413614434318923,
+      "exploratory_two_sided_extreme": 2,
+      "assignments": 200
+    }
+  },
+  "rome_posthoc_hybridization_control_diagnostic": {
+    "BIOB": {
+      "difference_processed_log2": -0.3057711253055555,
+      "probe_sets": 6,
+      "date_only_reference_extreme": 10,
+      "assignments": 200
+    },
+    "BIOC": {
+      "difference_processed_log2": -0.2458023503749991,
+      "probe_sets": 4,
+      "date_only_reference_extreme": 19,
+      "assignments": 200
+    },
+    "BIOD": {
+      "difference_processed_log2": -0.45327981077083335,
+      "probe_sets": 4,
+      "date_only_reference_extreme": 3,
+      "assignments": 200
+    },
+    "CRE": {
+      "difference_processed_log2": -0.3158898139583326,
+      "probe_sets": 4,
+      "date_only_reference_extreme": 1,
+      "assignments": 200
+    },
+    "MEAN": {
+      "difference_processed_log2": -0.3301857751024304,
+      "probe_sets": 18,
+      "date_only_reference_extreme": 5,
+      "assignments": 200
+    }
+  }
+}

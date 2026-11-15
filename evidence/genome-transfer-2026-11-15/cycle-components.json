@@ -1,0 +1,36 @@
+{
+  "common_genes": 10809,
+  "original_genes": 12044,
+  "coverage_absolute_weight": 0.9071065065166758,
+  "stage_contrast_singular_values": [
+    1208.5919042788476,
+    545.4572216804202,
+    273.91516991088315,
+    190.7305343415829,
+    118.92847259693494,
+    84.66906443029153
+  ],
+  "cycle_fraction_squared_weight_norm": 0.14816732600345364,
+  "Melbourne_stage6_minus_stage3_full_model": {
+    "full": 2.080004829301944,
+    "cycle_aligned": 2.080004829301949,
+    "residual": -8.224389654203198e-16
+  },
+  "contrasts": {
+    "Rome": {
+      "full": -4.524587668283386,
+      "cycle_aligned": -0.5431495842894153,
+      "residual": -3.981438083993978
+    },
+    "Mumbai": {
+      "full": -0.028502377021611017,
+      "cycle_aligned": -0.15891813725394863,
+      "residual": 0.13041576023233784
+    },
+    "Swiss_glandular": {
+      "full": 0.034153831937417736,
+      "cycle_aligned": 0.10010312440077838,
+      "residual": -0.06594929246336062
+    }
+  }
+}

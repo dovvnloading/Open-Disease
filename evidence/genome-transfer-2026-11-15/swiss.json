@@ -1,0 +1,35 @@
+{
+  "cells": 3564,
+  "donors": 13,
+  "cases": 6,
+  "controls": 7,
+  "batches": 4,
+  "assignments": 144,
+  "features_ranked": 29034,
+  "reference_genes": 12044,
+  "measured_genes": 10945,
+  "absolute_weight_fraction_measured": 0.9172779223034253,
+  "primary_score_difference_pp": 0.02335323629022834,
+  "primary_exact_two_sided_extreme": 127,
+  "primary_exact_two_sided_p": 0.8819444444444444,
+  "constant_shift_95_interval": [
+    -0.2039737288638797,
+    0.4128915463320674
+  ],
+  "leave_one_batch_out_range": [
+    -0.05637198623012534,
+    0.09947092886947724
+  ],
+  "genes_after_removing_nominations": 10830,
+  "without_nominations_score_difference_pp": 0.019910583256088743,
+  "without_nominations_extreme": 129,
+  "prior_five_pathway_sentinel": {
+    "effect_pp": 0.7092429609566633,
+    "extreme": 24
+  },
+  "discovery_sha256": "9df65b29615ec56767e9abaaf3844f8ebde5e21baf8cdab193ac24857a170da5",
+  "source_rds_sha256": "50715d0e2f5a09b8f4075668569a75baff9ce24bf8e62503f259858bb1c7d683",
+  "source_clinical_sha256": "21d7996ad209662a550fceb9694b3e9b70eb1a7e9cb44cce26275a60a10891dd",
+  "source_hgnc_sha256": "8bf6f686e640dbc864a346484626953621b0500d900d26cd085a35c2782d725d",
+  "ordered_feature_labels_sha256": "4f0d87790afbc35d8af755a3148ed09883ca57d9a309f5e54dfdc87feb03ad14"
+}

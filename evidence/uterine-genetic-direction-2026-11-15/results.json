@@ -1,0 +1,329 @@
+{
+  "plan": "ba37b1ae3518d0750a644de31f8fd779fd1434d8",
+  "source_sha256": "c021b6c20c668644939fd83381307a2c8cf08f18d95156b33e65fb0301997815",
+  "models": 2533,
+  "selection_threshold": 1.9739439399921042e-05,
+  "selected": [
+    {
+      "symbol": "CRISPLD1",
+      "entrez": 83690,
+      "band": "8q21.13",
+      "uterus_z": 6.038591599,
+      "uterus_p": 1.55e-09,
+      "direction": 1,
+      "missing_from": [
+        "Rome"
+      ]
+    },
+    {
+      "symbol": "GMPPB",
+      "entrez": 29925,
+      "band": "3p21.31",
+      "uterus_z": 5.207280368,
+      "uterus_p": 1.92e-07,
+      "direction": 1,
+      "missing_from": [
+        "Rome"
+      ]
+    },
+    {
+      "symbol": "RBM6",
+      "entrez": 10180,
+      "band": "3p21.31",
+      "uterus_z": -5.194318031,
+      "uterus_p": 2.05e-07,
+      "direction": -1,
+      "missing_from": []
+    },
+    {
+      "symbol": "CISD2",
+      "entrez": 493856,
+      "band": "4q24",
+      "uterus_z": 4.780252641,
+      "uterus_p": 1.75e-06,
+      "direction": 1,
+      "missing_from": [
+        "Rome"
+      ]
+    },
+    {
+      "symbol": "TMEM115",
+      "entrez": 11070,
+      "band": "3p21.31",
+      "uterus_z": -4.420181176,
+      "uterus_p": 9.86e-06,
+      "direction": -1,
+      "missing_from": []
+    },
+    {
+      "symbol": "HYAL3",
+      "entrez": 8372,
+      "band": "3p21.31",
+      "uterus_z": -4.412234806,
+      "uterus_p": 1.02e-05,
+      "direction": -1,
+      "missing_from": []
+    },
+    {
+      "symbol": "EIF2AK4",
+      "entrez": 440275,
+      "band": "15q15.1",
+      "uterus_z": -4.291119798,
+      "uterus_p": 1.78e-05,
+      "direction": -1,
+      "missing_from": [
+        "Rome"
+      ]
+    }
+  ],
+  "measured_bands": {
+    "3p21.31": 3
+  },
+  "primary_replication": false,
+  "cohorts": {
+    "Finland": {
+      "cases": 12,
+      "controls": 13,
+      "strata": 7,
+      "case_minus_control_pp": -0.5991044152478294,
+      "assignments": 12096,
+      "positive_tail": 11522,
+      "positive_p": 0.9525462962962963,
+      "two_sided_tail": 1150,
+      "two_sided_p": 0.09507275132275132,
+      "constant_shift_95_interval": [
+        -1.1998199716219542,
+        0.10775177208864448
+      ],
+      "per_gene_native_pp": {
+        "RBM6": 1.2011095890277037,
+        "TMEM115": -0.42787817987506244,
+        "HYAL3": 1.0240818365908293
+      },
+      "per_band_oriented_pp": {
+        "3p21.31": -0.5991044152478294
+      },
+      "omit_one_band_pp": {},
+      "holm_positive_p": 0.9525462962962963
+    },
+    "Mumbai": {
+      "cases": 4,
+      "controls": 3,
+      "strata": 1,
+      "case_minus_control_pp": 2.8043577869417433,
+      "assignments": 35,
+      "positive_tail": 3,
+      "positive_p": 0.08571428571428572,
+      "two_sided_tail": 7,
+      "two_sided_p": 0.2,
+      "constant_shift_95_interval": [
+        -1.6019182095969005,
+        11.890939664891333
+      ],
+      "per_gene_native_pp": {
+        "RBM6": -2.853291695026087,
+        "TMEM115": -1.339565733808442,
+        "HYAL3": -4.220215931990751
+      },
+      "per_band_oriented_pp": {
+        "3p21.31": 2.8043577869417433
+      },
+      "omit_one_band_pp": {},
+      "holm_positive_p": 0.17142857142857143
+    },
+    "Rome": {
+      "cases": 5,
+      "controls": 6,
+      "strata": 2,
+      "case_minus_control_pp": -5.415650421710485,
+      "assignments": 200,
+      "positive_tail": 199,
+      "positive_p": 0.995,
+      "two_sided_tail": 2,
+      "two_sided_p": 0.01,
+      "constant_shift_95_interval": [
+        -7.548393210868873,
+        -2.8173053421978205
+      ],
+      "per_gene_native_pp": {
+        "RBM6": -10.167811345034483,
+        "TMEM115": 16.829764630186588,
+        "HYAL3": 9.584997979979352
+      },
+      "per_band_oriented_pp": {
+        "3p21.31": -5.415650421710485
+      },
+      "omit_one_band_pp": {}
+    },
+    "Finland_proliferative": {
+      "cases": 8,
+      "controls": 4,
+      "strata": 4,
+      "case_minus_control_pp": -0.7232625841586646,
+      "assignments": 72,
+      "positive_tail": 65,
+      "positive_p": 0.9027777777777778,
+      "two_sided_tail": 16,
+      "two_sided_p": 0.2222222222222222,
+      "constant_shift_95_interval": [
+        -1.6070543011532543,
+        0.27925504623879627
+      ],
+      "per_gene_native_pp": {
+        "RBM6": 3.5650363100004796,
+        "TMEM115": -1.3246647912773994,
+        "HYAL3": -0.07058376624709695
+      },
+      "per_band_oriented_pp": {
+        "3p21.31": -0.7232625841586646
+      },
+      "omit_one_band_pp": {}
+    }
+  },
+  "secondary": {
+    "complete_panel_bulk": {
+      "Finland": {
+        "cases": 12,
+        "controls": 13,
+        "strata": 7,
+        "case_minus_control_pp": -1.3977663507447298,
+        "assignments": 12096,
+        "positive_tail": 10940,
+        "positive_p": 0.904431216931217,
+        "two_sided_tail": 2317,
+        "two_sided_p": 0.19155092592592593,
+        "constant_shift_95_interval": [
+          -3.655232682028872,
+          0.6002274886671582
+        ],
+        "per_gene_native_pp": {
+          "CRISPLD1": -6.484661994815785,
+          "GMPPB": 1.034446344604245,
+          "RBM6": 1.2011095890277037,
+          "CISD2": 1.3007946448738208,
+          "TMEM115": -0.42787817987506244,
+          "HYAL3": 1.0240818365908222,
+          "EIF2AK4": 0.2164813277521511
+        },
+        "per_band_oriented_pp": {
+          "15q15.1": -0.21648132775214357,
+          "3p21.31": -0.19071672528480477,
+          "4q24": 1.3007946448738217,
+          "8q21.13": -6.484661994815786
+        },
+        "omit_one_band_pp": {
+          "15q15.1": -1.7915280250755898,
+          "3p21.31": -1.800116225898036,
+          "4q24": -2.297286682617578,
+          "8q21.13": 0.2978655306122911
+        },
+        "holm_positive_p": 0.904431216931217
+      },
+      "Mumbai": {
+        "cases": 4,
+        "controls": 3,
+        "strata": 1,
+        "case_minus_control_pp": 1.7934207804513482,
+        "assignments": 35,
+        "positive_tail": 8,
+        "positive_p": 0.22857142857142856,
+        "two_sided_tail": 16,
+        "two_sided_p": 0.45714285714285713,
+        "constant_shift_95_interval": [
+          -7.127390533023346,
+          7.678814509520026
+        ],
+        "per_gene_native_pp": {
+          "CRISPLD1": 4.049058467123096,
+          "GMPPB": 2.261080193778284,
+          "RBM6": -2.853291695026087,
+          "CISD2": 0.89715871935514,
+          "TMEM115": -1.339565733808442,
+          "HYAL3": -4.220215931990751,
+          "EIF2AK4": 0.44107245332373424
+        },
+        "per_band_oriented_pp": {
+          "15q15.1": -0.44107245332373424,
+          "3p21.31": 2.6685383886508927,
+          "4q24": 0.8971587193551365,
+          "8q21.13": 4.049058467123082
+        },
+        "omit_one_band_pp": {
+          "15q15.1": 2.5382518583763702,
+          "3p21.31": 1.5017149110514947,
+          "4q24": 2.0921748008167467,
+          "8q21.13": 1.0415415515607649
+        },
+        "holm_positive_p": 0.45714285714285713
+      }
+    },
+    "Swiss_glandular": {
+      "common_panel": {
+        "missing_genes": [],
+        "result": {
+          "cases": 6,
+          "controls": 7,
+          "strata": 4,
+          "case_minus_control_pp": 0.7296522085218093,
+          "assignments": 144,
+          "positive_tail": 51,
+          "positive_p": 0.3541666666666667,
+          "two_sided_tail": 109,
+          "two_sided_p": 0.7569444444444444,
+          "constant_shift_95_interval": [
+            -4.79805285772928,
+            8.480615501865666
+          ],
+          "per_gene_native_pp": {
+            "RBM6": -0.5049396110307427,
+            "TMEM115": -2.402642878464329,
+            "HYAL3": 0.7186258639296481
+          },
+          "per_band_oriented_pp": {
+            "3p21.31": 0.7296522085218093
+          },
+          "omit_one_band_pp": {}
+        }
+      },
+      "complete_panel": {
+        "missing_genes": [],
+        "result": {
+          "cases": 6,
+          "controls": 7,
+          "strata": 4,
+          "case_minus_control_pp": 0.6013737844710794,
+          "assignments": 144,
+          "positive_tail": 18,
+          "positive_p": 0.125,
+          "two_sided_tail": 36,
+          "two_sided_p": 0.25,
+          "constant_shift_95_interval": [
+            -0.44398377784001397,
+            2.2132456776815737
+          ],
+          "per_gene_native_pp": {
+            "CRISPLD1": -0.9740017450804679,
+            "GMPPB": 1.3080210557736969,
+            "RBM6": -0.5049396110307409,
+            "CISD2": 2.8512548506348843,
+            "TMEM115": -2.402642878464329,
+            "HYAL3": 0.7186258639296472,
+            "EIF2AK4": 0.3460023880048766
+          },
+          "per_band_oriented_pp": {
+            "15q15.1": -0.34600238800487126,
+            "3p21.31": 0.8742444203347812,
+            "4q24": 2.8512548506348914,
+            "8q21.13": -0.9740017450804803
+          },
+          "omit_one_band_pp": {
+            "15q15.1": 0.917165841963064,
+            "3p21.31": 0.5104169058498466,
+            "4q24": -0.14858657091685679,
+            "8q21.13": 1.1264989609882672
+          }
+        }
+      }
+    }
+  }
+}

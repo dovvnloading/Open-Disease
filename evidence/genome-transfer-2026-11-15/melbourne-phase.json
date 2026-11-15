@@ -1,0 +1,135 @@
+{
+  "cohort": "GSE234354",
+  "matrix_sha256": "1f0406b1884aa12ba379b6ac4a8ada5994c85dea203af71bd4b8006ac066c669",
+  "metadata_mapping_sha256": "73499ada2625d6b00c27854d0d2a82b8c77bed72d85c8f6fa21857913b69f937",
+  "archived_libraries": 295,
+  "distinct_source_biopsies": 272,
+  "known_phase_biopsies": 257,
+  "unique_biopsies_without_reported_phase": 15,
+  "redundant_libraries": 23,
+  "source_genes": 58302,
+  "pinned_mapped_genes": 41278,
+  "matched_finnish_genes": 11995,
+  "absolute_weight_coverage": 0.9955698905440727,
+  "phase_partial_r2": 0.7148572228962099,
+  "random_draws": 49999,
+  "extreme_random_draws": 0,
+  "plus_one_permutation_p": 2e-05,
+  "seed": 234354,
+  "phase_levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "stage6_minus_stage3": 1.9387017462495653,
+  "contrast_hc3_95_interval": [
+    1.7896790605110322,
+    2.0877244319880983
+  ],
+  "contrast_n": 137,
+  "by_batch": {
+    "batch 1": {
+      "cells": {
+        "1": {
+          "n": 0,
+          "mean_score": null
+        },
+        "2": {
+          "n": 1,
+          "mean_score": 2.8204460889795797
+        },
+        "3": {
+          "n": 13,
+          "mean_score": 2.446700559466262
+        },
+        "4": {
+          "n": 3,
+          "mean_score": 2.5427573740211957
+        },
+        "5": {
+          "n": 2,
+          "mean_score": 4.524903497065408
+        },
+        "6": {
+          "n": 8,
+          "mean_score": 4.556934201914734
+        },
+        "7": {
+          "n": 4,
+          "mean_score": 4.475229810729658
+        }
+      },
+      "stage6_minus_stage3": 2.110233642448472
+    },
+    "batch 2": {
+      "cells": {
+        "1": {
+          "n": 14,
+          "mean_score": 3.558392292623032
+        },
+        "2": {
+          "n": 4,
+          "mean_score": 2.0367500803378706
+        },
+        "3": {
+          "n": 73,
+          "mean_score": 2.3270529567503138
+        },
+        "4": {
+          "n": 21,
+          "mean_score": 2.72444510958442
+        },
+        "5": {
+          "n": 33,
+          "mean_score": 3.780959395723753
+        },
+        "6": {
+          "n": 35,
+          "mean_score": 4.263058156499867
+        },
+        "7": {
+          "n": 28,
+          "mean_score": 4.247148103220076
+        }
+      },
+      "stage6_minus_stage3": 1.9360051997495535
+    },
+    "batch 3": {
+      "cells": {
+        "1": {
+          "n": 2,
+          "mean_score": 3.897677433966999
+        },
+        "2": {
+          "n": 0,
+          "mean_score": null
+        },
+        "3": {
+          "n": 7,
+          "mean_score": 2.912874194700032
+        },
+        "4": {
+          "n": 2,
+          "mean_score": 3.09475143666237
+        },
+        "5": {
+          "n": 4,
+          "mean_score": 4.174082405364452
+        },
+        "6": {
+          "n": 1,
+          "mean_score": 3.953635373729653
+        },
+        "7": {
+          "n": 2,
+          "mean_score": 4.640882520859266
+        }
+      },
+      "stage6_minus_stage3": 1.0407611790296207
+    }
+  }
+}
