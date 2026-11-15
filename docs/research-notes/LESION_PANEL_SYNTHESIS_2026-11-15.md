@@ -4,6 +4,8 @@
 
 A fourth study supplied the critical comparator. Six people had sufficient data from all three sites. Using the same five genes on donor-level sums of single-cell counts, the lesion core averaged **+11.55 points** relative to uterus. Peritoneum adjacent to the lesion averaged **+12.00** relative to the same uterus. Comparing lesion core directly with adjacent peritoneum gave **−0.46 points**. Only two of six differences were positive (two-sided exact p = 56/64 = 0.875). Under a common paired shift, the exact 95% compatibility interval was **−6.38 to +6.40 points**. Three ways of handling a duplicate adjacent biopsy preserved that result. Nearby tissue can carry the score. The source does not establish histologically negative tissue at a fixed distance for every adjacent sample. Local disease effects and normal anatomy therefore remain competing explanations. [Matched three-site study](ADJACENT_PERITONEUM_RESULTS_2026-11-15.md)
 
+![The frozen panel in external biopsy cohorts and in matched lesion core, adjacent peritoneum and uterine tissue](../../evidence/lesion-transfer/tissue-comparators.svg)
+
 ## Replication across array and sequencing assays
 
 | External cohort | Lesion samples | Independent patient pairs | Pairs in predicted direction | Mean paired score difference | Exact one-sided p |
@@ -24,7 +26,9 @@ An independent spatial-transcriptomics study separated epithelium, stroma and ma
 
 ## Where the evidence leads
 
-Earlier work had already compared these tissue types and examined some of the same genes and datasets. The contribution here is a fixed, reproducible panel with an explicit sampling unit, three external bulk tests, complete genome-wide results and a direct cell-compartment check. Matched nearby peritoneum already reproduces the average shift relative to uterus in a separate cohort. This leaves several explanations, including normal anatomical differences, tissue composition and a local response to the lesion. Distinguishing them requires tissue from the same anatomical location at documented distances, including histology-confirmed lesion-free peritoneum and benign disease comparators, with matched handling and blinded scoring.
+Tan et al. had already observed broad similarity between lesion cores and adjacent peritoneum, particularly among epithelial cells. Other studies had compared the lesion and uterine datasets and examined several individual genes. Here a score chosen in different patients reproduces the broad tissue contrast and quantifies what happens to it when the comparator moves from uterus to nearby peritoneum. [Tan et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC9901845/)
+
+Several explanations remain, including normal anatomical differences, tissue composition and a local response to the lesion. A source audit found that the four histology-negative peritoneal samples in the Fonseca atlas came from two people with confirmed endometriosis. None of the four participants without confirmed endometriosis contributed peritoneal tissue. A more discriminating comparison would score histology-verified samples from matched anatomical sites, including distant peritoneum in affected patients and peritoneum from patients without endometriosis, with matched handling and blinded scoring. [Independent atlas comparator audit](FONSECA_PERITONEUM_COMPARATOR_2026-11-15.md)
 
 A uterine case–control comparison asked a different question. The Finnish disease-associated expression pattern reversed for 64.7% of 11,464 genes in Rome (Spearman ρ = −0.447). The reversal persisted within shared scan dates. Mumbai showed little alignment. Separately, none of five genes selected from endometrial eQTL evidence showed a corrected common-direction change in both paired lesion cohorts. [Uterine transcriptome results](TRANSCRIPTOME_TRANSFER_RESULTS_2026-11-15.md) · [Genetic anchors](GENETIC_ANCHORS_TISSUE_RESULTS_2026-11-15.md)
 
