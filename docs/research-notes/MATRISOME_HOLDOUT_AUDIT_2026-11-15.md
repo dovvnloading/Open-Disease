@@ -29,7 +29,7 @@ The source verifier checks the pinned notebook, R and Python implementations and
 
 ## A benchmark with the shared scans removed before fitting
 
-We built a different fixed, cross-platform scoring rule with the authors' matrisome gene family. It asks whether the *direction* of the phase-stratified U.S. disease contrast transfers. Preprocessing is independent within each array. All fitted weights came exclusively from GSE51981, with no target expression or target labels used to fit the score. The target platforms defined which genes could be measured. We used the authors' public clinical categories and removed the 35 eligible other-pathology comparators. Of the remaining 75 case and 34 pathology-free comparator arrays, 19 cases and seven comparators also appeared in GSE6364 and were excluded, leaving **56 case and 27 comparator arrays** in training. The reference gave the three cycle phases equal weight. Of 1,026 listed symbols, 944 genes mapped on GPL570 and 688 Entrez genes qualified across all three target platforms. The complete measurement and scoring rules were recorded after the reuse result and before running this benchmark. [Local analysis design](MATRISOME_BENCHMARK_PLAN_2026-11-15.md) · [Benchmark implementation](../../scripts/matrisome_transfer_benchmark.py)
+We built a different fixed, cross-platform scoring rule with the authors' matrisome gene family. It asks whether the *direction* of the phase-stratified U.S. disease contrast transfers. We ranked each array independently starting from the deposited study-processed signals. All fitted weights came exclusively from the retained GSE51981 rows. The benchmark fitting procedure never received target labels or expression rows. GSE51981’s historical GC-RMA normalization was joint across its original arrays, including rows later excluded here. This benchmark therefore achieves separation of physical scans at fitting and evaluation; it cannot undo prior processing or establish fully independent end-to-end normalization. The target platforms defined which genes could be measured. We used the authors' public clinical categories and removed the 35 eligible other-pathology comparators. Of the remaining 75 case and 34 pathology-free comparator arrays, 19 cases and seven comparators also appeared in GSE6364 and were excluded, leaving **56 case and 27 comparator arrays** in training. The reference gave the three cycle phases equal weight. Of 1,026 listed symbols, 944 genes mapped on GPL570 and 688 Entrez genes qualified across all three target platforms. The complete measurement and scoring rules were recorded after the reuse result and before running this benchmark. [Local analysis design](MATRISOME_BENCHMARK_PLAN_2026-11-15.md) · [Benchmark implementation](../../scripts/matrisome_transfer_benchmark.py)
 
 | Target | Cases / comparators | Pairs where case scored higher, scan-disjoint training | Same rule with reused scans retained in training |
 | --- | ---: | ---: | ---: |
@@ -73,7 +73,7 @@ Use the pinned Rome matrix and platform annotation, the official Mumbai RNA-sequ
 b=data/private/matrisome-benchmark
 r=data/private/gse25628
 m=data/private/gse153739
-h=data/private/hgnc/hgnc_complete_set_2026-10-06.tsv
+h=data/private/gse266265/hgnc_complete_set_2026-10-06.tsv
 python scripts/matrisome_transfer_benchmark.py "$b" "$d" "$r" "$m" "$h"
 python scripts/verify_matrisome_benchmark.py "$b" "$d" "$c" "$r" "$m" "$h" \
   evidence/matrisome-holdout-2026-11-15/transfer-benchmark.json
