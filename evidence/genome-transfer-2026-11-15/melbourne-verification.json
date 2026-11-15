@@ -1,0 +1,12 @@
+{
+  "recalculation": "Passed",
+  "phase_partial_r2": 0.7148572228962096,
+  "stage6_minus_stage3": 1.9387017462495642,
+  "hc3_95_interval": [
+    1.789679060511031,
+    2.0877244319880974
+  ],
+  "checked_biopsies": 257,
+  "matched_finnish_genes": 11995,
+  "absolute_tolerance": 1e-10
+}

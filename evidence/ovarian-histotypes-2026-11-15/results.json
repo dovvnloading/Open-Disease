@@ -1,0 +1,92 @@
+{
+  "standardized": [
+    {
+      "country": "Finland",
+      "observed_target": 35,
+      "observed_total": 86,
+      "expected_target": 8.957802322288304,
+      "expected_total": 45.26315789473684,
+      "target_sir": 3.907208346506481,
+      "complement_sir": 1.404751425674039,
+      "ratio_of_sirs": 2.7814233003050304,
+      "ci95": [
+        1.7555959162943404,
+        4.360969153702561
+      ],
+      "p_two_sided": 8.539028247285647e-06,
+      "ratio_rounding_range": [
+        2.76761711326583,
+        2.7953017238537696
+      ],
+      "ci95_rounding_envelope": [
+        1.7468816419934965,
+        4.3827290120425095
+      ]
+    },
+    {
+      "country": "Sweden",
+      "observed_target": 20,
+      "observed_total": 68,
+      "expected_target": 4.7890818858560795,
+      "expected_total": 35.78947368421053,
+      "target_sir": 4.176165803108808,
+      "complement_sir": 1.5483675274887305,
+      "ratio_of_sirs": 2.6971411689846385,
+      "ci95": [
+        1.5162882394520583,
+        4.631417214746708
+      ],
+      "p_two_sided": 0.00048532130169249297,
+      "ratio_rounding_range": [
+        2.5736927114879875,
+        2.827066196631414
+      ],
+      "ci95_rounding_envelope": [
+        1.446887554596124,
+        4.854518999921805
+      ]
+    }
+  ],
+  "dutch": [
+    {
+      "exposure": "endometriosis",
+      "rows_exposure_nevus_cols_target_complement": [
+        [
+          30,
+          39
+        ],
+        [
+          41,
+          200
+        ]
+      ],
+      "conditional_case_mix_odds_ratio": 3.7329110340279286,
+      "ci95": [
+        2.000031367780702,
+        6.9763316396088495
+      ],
+      "p_two_sided": 1.4607605384395822e-05,
+      "follow_up_stratified_mantel_haenszel_odds_ratio": 3.690870989075784
+    },
+    {
+      "exposure": "adenomyosis",
+      "rows_exposure_nevus_cols_target_complement": [
+        [
+          33,
+          103
+        ],
+        [
+          41,
+          200
+        ]
+      ],
+      "conditional_case_mix_odds_ratio": 1.5609505697683825,
+      "ci95": [
+        0.8984582733819306,
+        2.699735648016769
+      ],
+      "p_two_sided": 0.10509057122239632,
+      "follow_up_stratified_mantel_haenszel_odds_ratio": 1.6306581869573995
+    }
+  ]
+}

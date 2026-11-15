@@ -1,0 +1,222 @@
+{
+  "ABO_selected_tissue_models": {
+    "Breast mammary tissue": {
+      "p": 1.73e-09,
+      "z": 6.021378023
+    },
+    "Ovary": {
+      "p": 0.413774158,
+      "z": 0.817269981
+    },
+    "Sigmoid colon": {
+      "p": 0.017108982,
+      "z": 2.384357303
+    },
+    "Transverse colon": {
+      "p": 0.044237312,
+      "z": 2.011835205
+    },
+    "Uterus": {
+      "p": 0.121858056,
+      "z": 1.54702152
+    },
+    "Vagina": {
+      "p": 0.074423187,
+      "z": 1.784002942
+    },
+    "Whole blood": {
+      "p": 4.9e-08,
+      "z": -5.454846768
+    }
+  },
+  "colocalization_rows": 29,
+  "colocalization_unique_genes": 15,
+  "colocalization_unique_snps": 13,
+  "denmark_female_phecode_615": {
+    "person_years": 10418467.488021905,
+    "ref_O_or_Rh_negative": {
+      "A": {
+        "adjusted_95ci": [
+          0.92,
+          1.2
+        ],
+        "adjusted_p": 0.462,
+        "group_events": 2894,
+        "irr": 1.05
+      },
+      "AB": {
+        "adjusted_95ci": [
+          0.56,
+          1.59
+        ],
+        "adjusted_p": 0.836,
+        "group_events": 284,
+        "irr": 0.94
+      },
+      "B": {
+        "adjusted_95ci": [
+          0.54,
+          1.8
+        ],
+        "adjusted_p": 0.97,
+        "group_events": 778,
+        "irr": 0.99
+      },
+      "RhD": {
+        "adjusted_95ci": [
+          0.63,
+          1.55
+        ],
+        "adjusted_p": 0.956,
+        "group_events": 5618,
+        "irr": 0.99
+      }
+    },
+    "ref_other_ABO_groups_or_Rh_negative": {
+      "0": {
+        "adjusted_p": 0.7260700886797453,
+        "irr": 0.9714990727997834,
+        "raw_p": 0.2083806547710101
+      },
+      "A": {
+        "adjusted_p": 0.19566270010304693,
+        "irr": 1.0585285807891778,
+        "raw_p": 0.0118709991830812
+      },
+      "AB": {
+        "adjusted_p": 0.6935827559104459,
+        "irr": 0.9231175256404722,
+        "raw_p": 0.1824883897410716
+      },
+      "B": {
+        "adjusted_p": 0.8540635493314456,
+        "irr": 0.9667241847296564,
+        "raw_p": 0.370984201999204
+      },
+      "RhD": {
+        "adjusted_p": 0.9660810964283096,
+        "irr": 0.9860371611021392,
+        "raw_p": 0.6695868197905619
+      }
+    },
+    "total_events": 6640
+  },
+  "families": {
+    "ABO": {
+      "colocalized_ids": [],
+      "locked_genes": 1,
+      "minimum_multi_tissue_p": 1.68e-12,
+      "multi_tissue_hits": [
+        "ABO"
+      ],
+      "multi_tissue_models": 1,
+      "uterus_models": 1
+    },
+    "F11": {
+      "colocalized_ids": [],
+      "locked_genes": 1,
+      "minimum_multi_tissue_p": 0.638340525,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 1,
+      "uterus_models": 0
+    },
+    "GLTP": {
+      "colocalized_ids": [],
+      "locked_genes": 1,
+      "minimum_multi_tissue_p": 0.027532461,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 1,
+      "uterus_models": 1
+    },
+    "Golgi Associated Vesicle Biogenesis": {
+      "colocalized_ids": [],
+      "locked_genes": 43,
+      "minimum_multi_tissue_p": 0.063930189,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 32,
+      "uterus_models": 4
+    },
+    "Interleukin-37 signaling": {
+      "colocalized_ids": [],
+      "locked_genes": 19,
+      "minimum_multi_tissue_p": 0.065344649,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 12,
+      "uterus_models": 2
+    },
+    "KIF3C": {
+      "colocalized_ids": [],
+      "locked_genes": 1,
+      "minimum_multi_tissue_p": 0.019769445,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 1,
+      "uterus_models": 0
+    },
+    "PI-3K cascade:FGFR3": {
+      "colocalized_ids": [],
+      "locked_genes": 18,
+      "minimum_multi_tissue_p": 0.013871956,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 11,
+      "uterus_models": 2
+    },
+    "Signaling by FGFR3": {
+      "colocalized_ids": [],
+      "locked_genes": 38,
+      "minimum_multi_tissue_p": 0.005157553,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 25,
+      "uterus_models": 5
+    },
+    "Triglyceride catabolism": {
+      "colocalized_ids": [],
+      "locked_genes": 21,
+      "minimum_multi_tissue_p": 0.049617325,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 13,
+      "uterus_models": 3
+    },
+    "ZNF835": {
+      "colocalized_ids": [],
+      "locked_genes": 1,
+      "minimum_multi_tissue_p": 0.559096973,
+      "multi_tissue_hits": [],
+      "multi_tissue_models": 1,
+      "uterus_models": 0
+    }
+  },
+  "locked_genes_colocalized": [],
+  "multi_tissue_genes_total": 13457,
+  "multi_tissue_hits_genomewide": 41,
+  "multi_tissue_locked_genes_tested": 87,
+  "multi_tissue_locked_hits": [
+    "ABO"
+  ],
+  "ukb_mixed_sex_main_diagnosis_N80": {
+    "cases": 1516,
+    "controls": 359678,
+    "probability_change_per_tag_allele": {
+      "A1_rs507666_A": {
+        "beta": 0.000473955,
+        "p": 0.0154207,
+        "se": 0.000195658
+      },
+      "A2_rs8176704_A": {
+        "beta": -0.000328707,
+        "p": 0.267656,
+        "se": 0.00029654
+      },
+      "B_rs8176746_T": {
+        "beta": -0.000304379,
+        "p": 0.336014,
+        "se": 0.000316379
+      },
+      "O_rs687289_G": {
+        "beta": 0.000168264,
+        "p": 0.302116,
+        "se": 0.000163061
+      }
+    }
+  },
+  "unique_locked_genes": 125
+}
