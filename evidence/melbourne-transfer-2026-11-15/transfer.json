@@ -1,0 +1,68 @@
+[
+  {
+    "sheet": "TableS20",
+    "published_probes": 15262,
+    "mapped_probes": 8921,
+    "genes": 6908,
+    "rome_r": 0.0478240875307639,
+    "rome_extreme": 1534,
+    "assignments": 3003,
+    "p_two_sided": 0.5108225108225108,
+    "null_central_95": [
+      -0.1202733394583617,
+      0.12665372018859788
+    ],
+    "rome_loo_r_range": [
+      0.04060461888873132,
+      0.06342068441846559
+    ],
+    "finland_r": -0.06364863318980402,
+    "rome_abs_magnitude_r": -0.03363432456995076,
+    "finland_abs_magnitude_r": -0.006682182873157406,
+    "mixed_scan_dates": {
+      "cases": 5,
+      "controls": 6,
+      "n_dates": 2,
+      "excluded": 3,
+      "r": 0.06256635793781719,
+      "extreme": 43,
+      "assignments": 200,
+      "p_two_sided": 0.215,
+      "p_holm": 0.43
+    },
+    "p_holm": 0.8524808524808525
+  },
+  {
+    "sheet": "TableS3",
+    "published_probes": 1555,
+    "mapped_probes": 1047,
+    "genes": 872,
+    "rome_r": -0.37047034966677794,
+    "rome_extreme": 1280,
+    "assignments": 3003,
+    "p_two_sided": 0.42624042624042624,
+    "null_central_95": [
+      -0.6914108828217452,
+      0.6726136322071994
+    ],
+    "rome_loo_r_range": [
+      -0.44947125379627967,
+      -0.27355175873928367
+    ],
+    "finland_r": 0.7772350997224375,
+    "rome_abs_magnitude_r": 0.06503308398677306,
+    "finland_abs_magnitude_r": 0.23056696517111533,
+    "mixed_scan_dates": {
+      "cases": 5,
+      "controls": 6,
+      "n_dates": 2,
+      "excluded": 3,
+      "r": -0.21843344334321071,
+      "extreme": 101,
+      "assignments": 200,
+      "p_two_sided": 0.505,
+      "p_holm": 0.505
+    },
+    "p_holm": 0.8524808524808525
+  }
+]

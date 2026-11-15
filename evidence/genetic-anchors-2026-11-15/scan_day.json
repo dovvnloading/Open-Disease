@@ -1,0 +1,134 @@
+{
+  "shared_dates": 2,
+  "cases": 5,
+  "controls": 6,
+  "smr": {
+    "value": 2.65212053556409,
+    "extreme": 2,
+    "assignments": 200,
+    "p": 0.01,
+    "background_mean_squared_z": 3.216632493710124,
+    "holm_2": 0.01
+  },
+  "smr_competitive": {
+    "value": -0.564511958146034,
+    "extreme": 198,
+    "assignments": 200,
+    "p": 0.99
+  },
+  "rbm6": {
+    "value": 2.172401191251711,
+    "extreme": 1,
+    "assignments": 200,
+    "p": 0.005,
+    "effect_pp": -10.167811345034483,
+    "holm_2": 0.01
+  },
+  "smr_genes_descriptive": {
+    "ABO": {
+      "effect_pp": 1.8268094147925358,
+      "value": 0.6845845016695313,
+      "extreme": 101,
+      "assignments": 200,
+      "p": 0.505
+    },
+    "ESR1": {
+      "effect_pp": -3.8810997557686973,
+      "value": 2.326202545910392,
+      "extreme": 3,
+      "assignments": 200,
+      "p": 0.015
+    },
+    "FSHB": {
+      "effect_pp": 2.6312639344016997,
+      "value": 2.143874651411452,
+      "extreme": 4,
+      "assignments": 200,
+      "p": 0.02
+    },
+    "HOXB9": {
+      "effect_pp": 0.11933084945609174,
+      "value": 0.054278087801657465,
+      "extreme": 192,
+      "assignments": 200,
+      "p": 0.96
+    },
+    "SRP14": {
+      "effect_pp": -0.09838248716913137,
+      "value": 0.5742497697862013,
+      "extreme": 124,
+      "assignments": 200,
+      "p": 0.62
+    },
+    "MLLT10": {
+      "effect_pp": -3.787351678113448,
+      "value": 1.9867412744964015,
+      "extreme": 6,
+      "assignments": 200,
+      "p": 0.03
+    },
+    "GREB1": {
+      "effect_pp": 5.892724434269523,
+      "value": 1.218685535216852,
+      "extreme": 50,
+      "assignments": 200,
+      "p": 0.25
+    },
+    "CALCRL": {
+      "effect_pp": -6.047343298768534,
+      "value": 1.10990018377816,
+      "extreme": 57,
+      "assignments": 200,
+      "p": 0.285
+    },
+    "SYNE1": {
+      "effect_pp": 0.885535903996646,
+      "value": 0.412945342808954,
+      "extreme": 137,
+      "assignments": 200,
+      "p": 0.685
+    },
+    "TRA2A": {
+      "effect_pp": -12.530487348685487,
+      "value": 2.6548164799262293,
+      "extreme": 1,
+      "assignments": 200,
+      "p": 0.005
+    },
+    "GDAP1": {
+      "effect_pp": -7.046505364277055,
+      "value": 1.912523128329415,
+      "extreme": 6,
+      "assignments": 200,
+      "p": 0.03
+    },
+    "WNT4": {
+      "effect_pp": 13.56144603552244,
+      "value": 1.2386961859170251,
+      "extreme": 46,
+      "assignments": 200,
+      "p": 0.23
+    },
+    "VEZT": {
+      "effect_pp": -12.821519953315079,
+      "value": 2.8071217135909454,
+      "extreme": 1,
+      "assignments": 200,
+      "p": 0.005
+    },
+    "LINC00574": {
+      "effect_pp": 2.1367329532701884,
+      "value": 1.408973051027138,
+      "extreme": 33,
+      "assignments": 200,
+      "p": 0.165
+    },
+    "HCG4P6": {
+      "effect_pp": -0.17843515733716425,
+      "value": 0.1816257319332684,
+      "extreme": 177,
+      "assignments": 200,
+      "p": 0.885
+    }
+  }
+}

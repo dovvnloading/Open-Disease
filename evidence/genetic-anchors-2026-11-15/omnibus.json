@@ -1,0 +1,37 @@
+{
+  "rome_permutations": 3003,
+  "table1_all": {
+    "genes": 15,
+    "mean_squared_z": 3.3525977209817763,
+    "extreme": 2,
+    "p": 0.000666000666000666,
+    "holm_2": 0.000666000666000666
+  },
+  "table1_omit_abo": {
+    "genes": 14,
+    "mean_squared_z": 3.581531457717536,
+    "extreme": 1,
+    "p": 0.000333000333000333
+  },
+  "table1_endometrium_eqtl": {
+    "genes": 4,
+    "mean_squared_z": 4.836700125209114,
+    "extreme": 1,
+    "p": 0.000333000333000333
+  },
+  "uterus_twas": {
+    "source_models": 2533,
+    "eligible": 4,
+    "measured": 1,
+    "aligned_mean_sd_difference": 1.3116690618858744,
+    "extreme_one_sided": 1,
+    "p": 0.000333000333000333,
+    "range_omit_donor_fixed_scale": [
+      0.9894520289623047,
+      1.4354602499337483
+    ],
+    "range_omit_gene": null,
+    "finland_mean_aligned_z": -0.941274580397055,
+    "holm_2": 0.000666000666000666
+  }
+}

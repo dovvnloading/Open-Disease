@@ -1,0 +1,91 @@
+{
+  "primary": {
+    "genes": 12044,
+    "mean_product": -0.8618661849987125,
+    "assignments": 3003,
+    "sign_oriented_difference_pp": -2.554212894765546,
+    "case_control_pairs": 48,
+    "pairs_with_higher_case_score": 0,
+    "pairs_tied": 0,
+    "absolute_extreme": 3,
+    "exact_two_sided_p": 0.000999000999000999,
+    "lower_extreme": 1,
+    "upper_extreme": 3003,
+    "null_q025": -0.5456892661088055,
+    "null_q975": 0.5537432125980202,
+    "omission_min": -0.9558852301423103,
+    "omission_max": -0.7980845065484435
+  },
+  "signs": {
+    "same": 4363,
+    "opposite": 7681,
+    "tied": 0,
+    "tolerance": 1e-10
+  },
+  "pearson": -0.43142958074680693,
+  "spearman": -0.43172533436292526,
+  "top_overlap": [
+    {
+      "percent": 1,
+      "n": 121,
+      "concordant_finnish_subset": 26,
+      "shared_in_top": 3,
+      "shared_same_direction": 0,
+      "shared_opposite_direction": 3
+    },
+    {
+      "percent": 5,
+      "n": 603,
+      "concordant_finnish_subset": 114,
+      "shared_in_top": 49,
+      "shared_same_direction": 2,
+      "shared_opposite_direction": 47
+    },
+    {
+      "percent": 10,
+      "n": 1205,
+      "concordant_finnish_subset": 233,
+      "shared_in_top": 159,
+      "shared_same_direction": 4,
+      "shared_opposite_direction": 155
+    }
+  ],
+  "sensitivity": {
+    "without_prior_nominations_and_members": {
+      "genes": 11919,
+      "mean_product": -0.8628951788348378,
+      "assignments": 3003,
+      "sign_oriented_difference_pp": -2.5607653658117306,
+      "case_control_pairs": 48,
+      "pairs_with_higher_case_score": 0,
+      "pairs_tied": 0,
+      "absolute_extreme": 3,
+      "exact_two_sided_p": 0.000999000999000999,
+      "lower_extreme": 1,
+      "upper_extreme": 3003,
+      "null_q025": -0.5462802574123558,
+      "null_q975": 0.5552298990470924,
+      "omission_min": -0.9570178307458188,
+      "omission_max": -0.7988342590195638
+    },
+    "without_finnish_top_one_percent": {
+      "genes": 11923,
+      "mean_product": -0.8358213175938308,
+      "assignments": 3003,
+      "sign_oriented_difference_pp": -2.51160392872743,
+      "case_control_pairs": 48,
+      "pairs_with_higher_case_score": 0,
+      "pairs_tied": 0,
+      "absolute_extreme": 3,
+      "exact_two_sided_p": 0.000999000999000999,
+      "lower_extreme": 1,
+      "upper_extreme": 3003,
+      "null_q025": -0.528407589894622,
+      "null_q975": 0.5370460874125047,
+      "omission_min": -0.9268792457742614,
+      "omission_max": -0.7726635869457676
+    }
+  },
+  "sentinel_count": 10,
+  "sentinel_max_effect_difference": 6.217248937900877e-15
+}

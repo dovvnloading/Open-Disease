@@ -1,0 +1,40 @@
+{
+  "genes": 12044,
+  "cases": 5,
+  "controls": 6,
+  "mixed_dates": 2,
+  "excluded_arrays": 3,
+  "assignments": 200,
+  "absolute_extreme": 1,
+  "two_sided_p": 0.005,
+  "lower_extreme": 1,
+  "upper_extreme": 200,
+  "mean_product": -0.9982881651218064,
+  "pearson": -0.42153862912322565,
+  "sign_oriented_difference_pp": -2.8874248409992496,
+  "case_control_pairs": 15,
+  "pairs_case_higher": 0,
+  "pairs_tied": 0,
+  "omission_min": -1.2103178748631862,
+  "omission_max": -0.7862584553804266,
+  "date_specific": [
+    {
+      "cases": 3,
+      "controls": 3,
+      "mean_product": -1.1032533749411046,
+      "case_control_pairs": 9,
+      "pairs_case_higher": 0,
+      "pairs_tied": 0
+    },
+    {
+      "cases": 2,
+      "controls": 3,
+      "mean_product": -0.8933229553025082,
+      "case_control_pairs": 6,
+      "pairs_case_higher": 0,
+      "pairs_tied": 0
+    }
+  ],
+  "same_date_case_scanned_before_control": 0,
+  "same_date_case_scanned_after_control": 15
+}
