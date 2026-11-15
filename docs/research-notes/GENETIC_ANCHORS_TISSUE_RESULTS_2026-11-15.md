@@ -1,0 +1,34 @@
+# Five genetically mapped endometrial genes across disease and tissue contrasts
+
+None of the five genes linked to endometriosis by Rahmioglu et al.'s endometrial expression-QTL analysis showed a multiplicity-adjusted common lesion-versus-uterus change in both paired cohorts. All five common-direction Holm p-values were 1.00. Four genes were measurable in both series. LNC-LBCS was measurable only in the ovarian series. This finding concerns total expression in established disease. Regulatory effects from inherited variants may occur in other cell states or stages. [Mapping study, Table 1 and Supplementary Table 15](https://doi.org/10.1038/s41588-023-01323-z) · [Analysis plan fixed before outcome calculation](https://github.com/dovvnloading/Open-Disease/commit/e2ed37589c05e5e4c33c2544f174fe2834b85a43)
+
+| Gene | Ovarian lesion minus uterine, 10 pairs | Peritoneal or broad-ligament lesion minus uterine, 9 pairs | Finnish uterine case minus control, 12/13 | Rome uterine case minus control, 8/6 | Mumbai uterine case minus control, 4/3 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| LNC-LBCS | −3.56 | Unmeasured | Unmeasured | Unmeasured | +2.90 |
+| TRA2A | −0.15 | −1.65 | +1.28 | −10.66 | −0.13 |
+| VEZT | +3.20 | −7.22 | +0.80 | −10.98 | −1.07 |
+| SRP14 | −0.13 | −0.01 | +0.02 | −0.05 | +0.12 |
+| HOXB9 | −9.82 | −2.06 | +1.72 | +0.86 | +7.13 |
+
+Effects are differences in within-specimen expression rank, in percentile points. The two lesion comparisons use a uterine biopsy from the same woman. Uterine case–control comparisons use different patients. The platform references, treatment histories and tissue compositions differ. [Full effects, probe checks, deletion sensitivities and exact tails](../../evidence/genetic-anchors/results.json)
+
+**HOXB9** was lower in all 10 ovarian lesions (two-sided p = 2/1,024). Both ovarian probes agreed. Seven of nine extraovarian pairs pointed down, but their mean was compatible with a wide range of pair-specific changes (two-sided p = 394/512). The cross-study common-direction p was 0.770 before correction. One plausible source of discordance is probe coverage. The ovarian assay had a second probe with a larger effect. HOX dysregulation, including HOXB9, has already been investigated experimentally in endometriosis. [Previous HOX study](https://doi.org/10.1186/s12958-021-00816-y)
+
+**TRA2A and VEZT** each had a pronounced negative uterine case–control difference in Rome. In an additional check prompted by the native scan-header audit, their differences were −12.53 and −12.82 points among 11 patients on two shared scan dates. Each had a two-sided p of 1/200 and a five-target Holm p of 0.025. The Finnish estimates pointed up for both. The two Melbourne probe p-values were 0.561 and 0.590. Both genes' eQTL mapping used the Fung endometrial microarray cohort, so the Melbourne evidence overlaps the genetic mapping input. The Rome finding merits an explanation of that particular cohort. The expected external agreement was absent. [Scan audit](TRANSCRIPTOME_TRANSFER_RESULTS_2026-11-15.md) · [Melbourne](https://doi.org/10.1038/s41598-018-29462-y)
+
+**Beijing RNA-seq follow-up.** The GEO sample metadata and the originating paper's Tables S1 and S6 agree on eight sequenced donor pairs. The deposited count header also has eight EC and eight EU columns, but only four of the 16 identifiers match the paper and GEO, covering two of eight suffixes. An ENA metadata check supplied no library-name crosswalk. No anchor passed the primary two-array rule, and we could not verify donor assignments for a descriptive paired analysis of this matrix. We did not infer a mapping from column order. [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE105764) · [Original study and supplements](https://pmc.ncbi.nlm.nih.gov/articles/PMC5776778/)
+
+## Sources and reproduction
+
+The discovery family comprises the five distinct genes named in the endometrium eQTL rows of Rahmioglu et al. Table 1. Supplementary Table 15 also lists a LINC00339 association with significant HEIDI heterogeneity, which is absent from the Table 1 family. The prior genetic evidence provided a selection rule independent of the lesion measurements. It conveys no predicted direction for the total abundance in a mixed biopsy. We verified all five Entrez identifiers against the pinned HGNC October 2026 release. For Finland we used the project's complete seven-stratum aggregate table. For Rome, Mumbai and Melbourne we reused its source-pinned readers and reference scales. Melbourne Table S20's orientation remains unverified. SRP14 had a Bonferroni-within-gene p of 0.208. LNC-LBCS and HOXB9 had no matching high-detection probe. [Finnish analysis](CROSS_COHORT_DISCOVERY_RESULTS_2026-11-14.md) · [Rome and Mumbai sources](EXTERNAL_BULK_PATHWAYS_RESULTS_2026-11-14.md) · [Melbourne source](MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md)
+
+The Hever data come from ovarian endometriomas and the Hull data from peritoneal or broad-ligament lesions. The GSE11691 analysis includes the nine human pairs. Tissue source, platform, processing and patient population all vary together across those two series. The exact tests compare within-patient differences under the sharp null and the assumed sign exchangeability. Two-sided sign tests, omission ranges and individual probe effects are provided for every measured gene. A second implementation independently read GEO, recovered paired ranks via binary searches and enumerated integer subset sums. It agreed on all nine measured contrasts and all common-direction p-values. [Hever study](https://doi.org/10.1073/pnas.0703451104) · [Hull study](https://doi.org/10.2353/ajpath.2008.071128) · [Verification receipt](../../evidence/genetic-anchors/paired-verification.json)
+
+Place the two original series matrices [GSE7305](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE7nnn/GSE7305/matrix/GSE7305_series_matrix.txt.gz) and [GSE11691](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE11nnn/GSE11691/matrix/GSE11691_series_matrix.txt.gz), plus [GPL570](https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPLnnn/GPL570/annot/GPL570.annot.gz) and [GPL96](https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPLnnn/GPL96/annot/GPL96.annot.gz), in the directory below. The source readers enforce SHA-256 values. The main analysis also needs the cached Rome, Mumbai, HGNC and Fung inputs from the linked reports, plus the Rome header prefixes from the scan audit. All steps below operate on cached files. Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0 and openpyxl 3.1.5 were used. No random seed applies.
+
+```sh
+mkdir -p results/genetic-anchors
+OPENBLAS_NUM_THREADS=1 python scripts/genetic_anchor_tissue.py data/private > results/genetic-anchors/results.json
+cmp results/genetic-anchors/results.json evidence/genetic-anchors/results.json
+python scripts/verify_genetic_anchor_pairs.py data/private/genetics-expression evidence/genetic-anchors/results.json
+```

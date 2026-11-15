@@ -1,0 +1,14 @@
+{
+  "workbook_sha256": "9a05e5fc20a726dca2e685ad671b18bada4545a1f353bc0fa7c4abe8fcf9087b",
+  "participants_without_confirmed_endometriosis": 4,
+  "surgical_specimens_from_these_participants": {
+    "Eutopic endometrium": 3,
+    "Unaffected ovary": 2
+  },
+  "peritoneal_specimens_from_these_participants": 0,
+  "peritoneal_specimens_negative_on_pathology": 4,
+  "distinct_donors_of_negative_peritoneal_specimens": 2,
+  "negative_peritoneal_donors_with_confirmed_disease": 2,
+  "donors_with_positive_and_negative_peritoneal_specimens": 2,
+  "paired_donors_with_any_identical_anatomic_location_label": 0
+}

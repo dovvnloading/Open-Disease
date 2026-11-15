@@ -1,0 +1,345 @@
+{
+  "paired": {
+    "GSE7305": {
+      "LNC-LBCS": {
+        "effect_pp": -3.5614997713763143,
+        "pairs": 10,
+        "higher": 3,
+        "lower": 7,
+        "ties": 0,
+        "assignments": 1024,
+        "upper": 986,
+        "lower_tail": 39,
+        "two_sided": 78,
+        "p_sign": 0.34375,
+        "omit_low": -4.580907382004776,
+        "omit_high": -2.804755372656607,
+        "probes": {
+          "1558858_at": -3.5614997713763143
+        }
+      },
+      "TRA2A": {
+        "effect_pp": -0.15389117512574346,
+        "pairs": 10,
+        "higher": 6,
+        "lower": 4,
+        "ties": 0,
+        "assignments": 1024,
+        "upper": 603,
+        "lower_tail": 422,
+        "two_sided": 844,
+        "p_sign": 0.75390625,
+        "omit_low": -0.4490575623634613,
+        "omit_high": 0.32775491540923607,
+        "probes": {
+          "204658_at": -1.9005029721079083,
+          "213575_at": -0.4476451760402398,
+          "213593_s_at": 0.36360310928211986,
+          "227939_s_at": 0.5122085048010977,
+          "229574_at": 0.702880658436213
+        }
+      },
+      "VEZT": {
+        "effect_pp": 3.199154092363969,
+        "pairs": 10,
+        "higher": 7,
+        "lower": 3,
+        "ties": 0,
+        "assignments": 1024,
+        "upper": 42,
+        "lower_tail": 983,
+        "two_sided": 84,
+        "p_sign": 0.34375,
+        "omit_low": 1.9994665447340338,
+        "omit_high": 4.237921048620638,
+        "probes": {
+          "207263_x_at": 2.069958847736624,
+          "223089_at": 6.748422496570649,
+          "223090_x_at": 0.7394604481024217,
+          "223675_s_at": 3.2387745770461818
+        }
+      },
+      "SRP14": {
+        "effect_pp": -0.1252857796067687,
+        "pairs": 10,
+        "higher": 1,
+        "lower": 9,
+        "ties": 0,
+        "assignments": 1024,
+        "upper": 1023,
+        "lower_tail": 2,
+        "two_sided": 4,
+        "p_sign": 0.021484375,
+        "omit_low": -0.1404257481075067,
+        "omit_high": -0.11502311639485975,
+        "probes": {
+          "200007_at": -0.1252857796067687
+        }
+      },
+      "HOXB9": {
+        "effect_pp": -9.8185642432556,
+        "pairs": 10,
+        "higher": 0,
+        "lower": 10,
+        "ties": 0,
+        "assignments": 1024,
+        "upper": 1024,
+        "lower_tail": 1,
+        "two_sided": 2,
+        "p_sign": 0.001953125,
+        "omit_low": -10.871208657216888,
+        "omit_high": -8.846212467611643,
+        "probes": {
+          "216417_x_at": -6.018838591678097,
+          "226461_at": -13.618289894833106
+        }
+      }
+    },
+    "GSE11691": {
+      "LNC-LBCS": null,
+      "TRA2A": {
+        "effect_pp": -1.6528128900789671,
+        "pairs": 9,
+        "higher": 3,
+        "lower": 6,
+        "ties": 0,
+        "assignments": 512,
+        "upper": 398,
+        "lower_tail": 115,
+        "two_sided": 230,
+        "p_sign": 0.5078125,
+        "omit_low": -3.143745605768224,
+        "omit_high": -0.6957845293123306,
+        "probes": {
+          "204658_at": -0.6018539295028107,
+          "213575_at": -6.811370900586892,
+          "213593_s_at": 2.4547861598528034
+        },
+        "mean_log2_signal_ratio": -0.09514512695100759
+      },
+      "VEZT": {
+        "effect_pp": -7.219006018539296,
+        "pairs": 9,
+        "higher": 1,
+        "lower": 8,
+        "ties": 0,
+        "assignments": 512,
+        "upper": 489,
+        "lower_tail": 24,
+        "two_sided": 48,
+        "p_sign": 0.0390625,
+        "omit_low": -10.079152268545528,
+        "omit_high": -5.321321186554774,
+        "probes": {
+          "207263_x_at": -7.219006018539296
+        },
+        "mean_log2_signal_ratio": -0.4932536469213522
+      },
+      "SRP14": {
+        "effect_pp": -0.013961814437515664,
+        "pairs": 9,
+        "higher": 4,
+        "lower": 5,
+        "ties": 0,
+        "assignments": 512,
+        "upper": 283,
+        "lower_tail": 232,
+        "two_sided": 464,
+        "p_sign": 1.0,
+        "omit_low": -0.0942422474532183,
+        "omit_high": 0.06675492527935845,
+        "probes": {
+          "200007_at": -0.013961814437515664
+        },
+        "mean_log2_signal_ratio": 0.02047148982797964
+      },
+      "HOXB9": {
+        "effect_pp": -2.0581210389584492,
+        "pairs": 9,
+        "higher": 2,
+        "lower": 7,
+        "ties": 0,
+        "assignments": 512,
+        "upper": 316,
+        "lower_tail": 197,
+        "two_sided": 394,
+        "p_sign": 0.1796875,
+        "omit_low": -7.319200735987076,
+        "omit_high": 1.0307745815195437,
+        "probes": {
+          "216417_x_at": -2.0581210389584492
+        },
+        "mean_log2_signal_ratio": -0.2111767134927092
+      }
+    }
+  },
+  "common_direction_p": {
+    "LNC-LBCS": 1.0,
+    "TRA2A": 0.82421875,
+    "VEZT": 1.0,
+    "SRP14": 0.90625,
+    "HOXB9": 0.76953125
+  },
+  "common_direction_holm": {
+    "LNC-LBCS": 1.0,
+    "TRA2A": 1.0,
+    "VEZT": 1.0,
+    "SRP14": 1.0,
+    "HOXB9": 1.0
+  },
+  "finland": {
+    "LNC-LBCS": null,
+    "TRA2A": {
+      "effect_pp": 1.28070118830062,
+      "p": 0.32837301587301587
+    },
+    "VEZT": {
+      "effect_pp": 0.8007560224147152,
+      "p": 0.48933531746031744
+    },
+    "SRP14": {
+      "effect_pp": 0.015302316076427826,
+      "p": 0.7158564814814815
+    },
+    "HOXB9": {
+      "effect_pp": 1.7171349762056327,
+      "p": 0.5515046296296297
+    }
+  },
+  "rome": {
+    "LNC-LBCS": null,
+    "TRA2A": {
+      "effect_pp": -10.663339867227279,
+      "p": 0.000666000666000666,
+      "extreme": 2,
+      "assignments": 3003
+    },
+    "VEZT": {
+      "effect_pp": -10.983301162634106,
+      "p": 0.000333000333000333,
+      "extreme": 1,
+      "assignments": 3003
+    },
+    "SRP14": {
+      "effect_pp": -0.052370905717403105,
+      "p": 0.7815517815517815,
+      "extreme": 2347,
+      "assignments": 3003
+    },
+    "HOXB9": {
+      "effect_pp": 0.8583217369184979,
+      "p": 0.6503496503496503,
+      "extreme": 1953,
+      "assignments": 3003
+    }
+  },
+  "rome_scan_matched": {
+    "LNC-LBCS": null,
+    "TRA2A": {
+      "effect_pp": -12.530487348685485,
+      "p": 0.005,
+      "extreme": 1,
+      "assignments": 200
+    },
+    "VEZT": {
+      "effect_pp": -12.821519953315075,
+      "p": 0.005,
+      "extreme": 1,
+      "assignments": 200
+    },
+    "SRP14": {
+      "effect_pp": -0.09838248716912545,
+      "p": 0.62,
+      "extreme": 124,
+      "assignments": 200
+    },
+    "HOXB9": {
+      "effect_pp": 0.11933084945609451,
+      "p": 0.96,
+      "extreme": 192,
+      "assignments": 200
+    }
+  },
+  "rome_scan_matched_holm": {
+    "LNC-LBCS": 1.0,
+    "TRA2A": 0.025,
+    "VEZT": 0.025,
+    "SRP14": 1.0,
+    "HOXB9": 1.0
+  },
+  "mumbai": {
+    "LNC-LBCS": {
+      "effect_pp": 2.895664010890029,
+      "p": 0.7714285714285715,
+      "extreme": 27,
+      "assignments": 35
+    },
+    "TRA2A": {
+      "effect_pp": -0.12678330730939003,
+      "p": 0.9142857142857143,
+      "extreme": 32,
+      "assignments": 35
+    },
+    "VEZT": {
+      "effect_pp": -1.0739880690235033,
+      "p": 0.08571428571428572,
+      "extreme": 3,
+      "assignments": 35
+    },
+    "SRP14": {
+      "effect_pp": 0.12044414194393482,
+      "p": 0.4,
+      "extreme": 14,
+      "assignments": 35
+    },
+    "HOXB9": {
+      "effect_pp": 7.1295591944589045,
+      "p": 0.2857142857142857,
+      "extreme": 10,
+      "assignments": 35
+    }
+  },
+  "melbourne": {
+    "LNC-LBCS": {
+      "probes": {},
+      "p_bonferroni": null
+    },
+    "TRA2A": {
+      "probes": {
+        "ILMN_1731043": 0.5610102
+      },
+      "p_bonferroni": 0.5610102
+    },
+    "VEZT": {
+      "probes": {
+        "ILMN_1774828": 0.5901012
+      },
+      "p_bonferroni": 0.5901012
+    },
+    "SRP14": {
+      "probes": {
+        "ILMN_2234758": 0.1037642,
+        "ILMN_3251269": 0.220971
+      },
+      "p_bonferroni": 0.2075284
+    },
+    "HOXB9": {
+      "probes": {},
+      "p_bonferroni": null
+    }
+  },
+  "uterine_conjunction_p": {
+    "LNC-LBCS": 1.0,
+    "TRA2A": 1.0,
+    "VEZT": 1.0,
+    "SRP14": 1.0,
+    "HOXB9": 0.6503496503496503
+  },
+  "uterine_conjunction_holm": {
+    "LNC-LBCS": 1.0,
+    "TRA2A": 1.0,
+    "VEZT": 1.0,
+    "SRP14": 1.0,
+    "HOXB9": 1.0
+  }
+}

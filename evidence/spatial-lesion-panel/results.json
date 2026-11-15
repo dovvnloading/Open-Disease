@@ -1,0 +1,257 @@
+{
+  "reference_genes": 18676,
+  "negative_probes": 139,
+  "panel": {
+    "TMEM255A": 1,
+    "DIRAS3": 1,
+    "GABRP": -1,
+    "SALL1": -1,
+    "JCHAIN": 1
+  },
+  "source_model": {
+    "Stroma": {
+      "TMEM255A": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      },
+      "DIRAS3": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      },
+      "GABRP": {
+        "log2FC": -0.701544589892365,
+        "raw_p": 0.119789822269046,
+        "source_bh": 0.998787595721085,
+        "targeted_holm_p": 1.0
+      },
+      "SALL1": {
+        "log2FC": -0.177707022547452,
+        "raw_p": 0.608351445761363,
+        "source_bh": 0.998787595721085,
+        "targeted_holm_p": 1.0
+      },
+      "JCHAIN": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      }
+    },
+    "Epithelium": {
+      "TMEM255A": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      },
+      "DIRAS3": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      },
+      "GABRP": {
+        "log2FC": -1.08168755725404,
+        "raw_p": 0.0176353963101799,
+        "source_bh": 0.268442265283,
+        "targeted_holm_p": 0.2468955483425186
+      },
+      "SALL1": {
+        "log2FC": -0.853190268560715,
+        "raw_p": 0.0158020602939233,
+        "source_bh": 0.253740743787712,
+        "targeted_holm_p": 0.23703090440884947
+      },
+      "JCHAIN": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      }
+    },
+    "Macrophages": {
+      "TMEM255A": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      },
+      "DIRAS3": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      },
+      "GABRP": {
+        "log2FC": 0.0675184930903372,
+        "raw_p": 0.89979884581468,
+        "source_bh": 0.971082977260232,
+        "targeted_holm_p": 1.0
+      },
+      "SALL1": {
+        "log2FC": -0.319756079876958,
+        "raw_p": 0.442610443800009,
+        "source_bh": 0.777986752242397,
+        "targeted_holm_p": 1.0
+      },
+      "JCHAIN": {
+        "log2FC": null,
+        "raw_p": null,
+        "source_bh": null,
+        "targeted_holm_p": null
+      }
+    }
+  },
+  "all_regions": {
+    "Stroma": {
+      "pairs": 5,
+      "regions": 20,
+      "positive_pairs": 5,
+      "effect_pp": 11.723388305847077,
+      "extreme": 1,
+      "assignments": 32,
+      "one_sided_p": 0.03125,
+      "gene_effects_pp": {
+        "TMEM255A": -0.8909830798886272,
+        "DIRAS3": 10.191154422788605,
+        "GABRP": -14.582887127864637,
+        "SALL1": -10.66850503319769,
+        "JCHAIN": 24.065378025273077
+      },
+      "regions_above_loq": {
+        "TMEM255A": 0,
+        "DIRAS3": 1,
+        "GABRP": 0,
+        "SALL1": 3,
+        "JCHAIN": 3
+      },
+      "holm_p": 0.09375
+    },
+    "Epithelium": {
+      "pairs": 5,
+      "regions": 20,
+      "positive_pairs": 4,
+      "effect_pp": 11.43622831441422,
+      "extreme": 2,
+      "assignments": 32,
+      "one_sided_p": 0.0625,
+      "gene_effects_pp": {
+        "TMEM255A": -2.116620261297922,
+        "DIRAS3": 7.350074962518742,
+        "GABRP": -27.425572927821804,
+        "SALL1": -21.549582351681302,
+        "JCHAIN": 2.972531591347179
+      },
+      "regions_above_loq": {
+        "TMEM255A": 0,
+        "DIRAS3": 1,
+        "GABRP": 16,
+        "SALL1": 4,
+        "JCHAIN": 0
+      },
+      "holm_p": 0.125
+    },
+    "Macrophages": {
+      "pairs": 5,
+      "regions": 20,
+      "positive_pairs": 3,
+      "effect_pp": 1.0772649389590914,
+      "extreme": 10,
+      "assignments": 32,
+      "one_sided_p": 0.3125,
+      "gene_effects_pp": {
+        "TMEM255A": 1.0267187834654081,
+        "DIRAS3": 6.279449560933818,
+        "GABRP": -3.6509423859498833,
+        "SALL1": 0.6521739130434796,
+        "JCHAIN": -4.918612122510175
+      },
+      "regions_above_loq": {
+        "TMEM255A": 1,
+        "DIRAS3": 0,
+        "GABRP": 3,
+        "SALL1": 2,
+        "JCHAIN": 1
+      },
+      "holm_p": 0.3125
+    }
+  },
+  "detection_filtered": {
+    "Stroma": {
+      "pairs": 4,
+      "regions": 17,
+      "positive_pairs": 4,
+      "effect_pp": 7.845162240308418,
+      "extreme": 1,
+      "assignments": 16,
+      "one_sided_p": 0.0625,
+      "gene_effects_pp": {
+        "TMEM255A": -0.8613996573142,
+        "DIRAS3": 0.7673618547868917,
+        "GABRP": -11.593422038980508,
+        "SALL1": -10.844466159777257,
+        "JCHAIN": 16.88196080531163
+      },
+      "regions_above_loq": {
+        "TMEM255A": 0,
+        "DIRAS3": 1,
+        "GABRP": 0,
+        "SALL1": 3,
+        "JCHAIN": 3
+      },
+      "holm_p": 0.1875
+    },
+    "Epithelium": {
+      "pairs": 5,
+      "regions": 18,
+      "positive_pairs": 4,
+      "effect_pp": 9.471674876847292,
+      "extreme": 2,
+      "assignments": 32,
+      "one_sided_p": 0.0625,
+      "gene_effects_pp": {
+        "TMEM255A": -1.5975048190190608,
+        "DIRAS3": 4.514349967873207,
+        "GABRP": -27.31286142642964,
+        "SALL1": -21.61490683229814,
+        "JCHAIN": -4.486239023345474
+      },
+      "regions_above_loq": {
+        "TMEM255A": 0,
+        "DIRAS3": 1,
+        "GABRP": 15,
+        "SALL1": 4,
+        "JCHAIN": 0
+      },
+      "holm_p": 0.1875
+    },
+    "Macrophages": {
+      "pairs": 3,
+      "regions": 14,
+      "positive_pairs": 2,
+      "effect_pp": 2.322053259084744,
+      "extreme": 2,
+      "assignments": 8,
+      "one_sided_p": 0.25,
+      "gene_effects_pp": {
+        "TMEM255A": 13.56687727564789,
+        "DIRAS3": 17.125812093953023,
+        "GABRP": 1.6991504247876026,
+        "SALL1": -0.8393124866138374,
+        "JCHAIN": -18.22258513600343
+      },
+      "regions_above_loq": {
+        "TMEM255A": 1,
+        "DIRAS3": 0,
+        "GABRP": 3,
+        "SALL1": 2,
+        "JCHAIN": 1
+      },
+      "holm_p": 0.25
+    }
+  }
+}

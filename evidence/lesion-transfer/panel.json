@@ -1,0 +1,27 @@
+[
+  {
+    "entrez": 55026,
+    "discovery_pp": 78.90772748056699,
+    "direction": 1
+  },
+  {
+    "entrez": 9077,
+    "discovery_pp": 75.67937814357568,
+    "direction": 1
+  },
+  {
+    "entrez": 2568,
+    "discovery_pp": -69.28523090992226,
+    "direction": -1
+  },
+  {
+    "entrez": 6299,
+    "discovery_pp": -61.92075903063558,
+    "direction": -1
+  },
+  {
+    "entrez": 3512,
+    "discovery_pp": 71.51668952903522,
+    "direction": 1
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "source_subset_digest": "2a2d62c1531355122be2de5bcfe1f748fef86a6e59e6e9e566f10880b0bc1bcb",
+  "compressed_input_bytes": 315533135,
+  "features": 33538,
+  "cells_per_site": {
+    "Ectopic": 24798,
+    "Ectopic Adjacent": 20873,
+    "Eutopic": 30348
+  },
+  "counts_of_libraries": {
+    "Ectopic": 6,
+    "Ectopic Adjacent": 7,
+    "Eutopic": 6
+  },
+  "core_minus_adjacent": {
+    "pairs": 6,
+    "score_pp": -0.455105651301011,
+    "positive": 2,
+    "leave_one_range": [
+      -1.8256306279444203,
+      0.7299183016280049
+    ],
+    "extreme_one": 37,
+    "extreme_two": 56,
+    "assignments": 64,
+    "exact_95pct_constant_shift_pp": [
+      -6.38022541594609,
+      6.397519231916036
+    ]
+  },
+  "core_minus_uterus": {
+    "pairs": 6,
+    "score_pp": 11.548541952412188,
+    "positive": 5,
+    "leave_one_range": [
+      6.115510763909595,
+      14.8690440694138
+    ]
+  },
+  "adjacent_minus_uterus": {
+    "pairs": 6,
+    "score_pp": 12.0036476037132,
+    "positive": 6,
+    "leave_one_range": [
+      7.310751982825451,
+      14.139125767785794
+    ]
+  },
+  "sensitivities": {
+    "pool_first": {
+      "pairs": 6,
+      "score_pp": -0.6118432822470029,
+      "positive": 2,
+      "leave_one_range": [
+        -2.0137157850796106,
+        0.5418331444928146
+      ],
+      "extreme_one": 41,
+      "extreme_two": 48,
+      "assignments": 64
+    },
+    "first_adjacent_only": {
+      "pairs": 6,
+      "score_pp": -0.5090742838968723,
+      "positive": 2,
+      "leave_one_range": [
+        -1.8903929870594538,
+        0.6651559425129714
+      ],
+      "extreme_one": 41,
+      "extreme_two": 48,
+      "assignments": 64
+    },
+    "last_adjacent_only": {
+      "pairs": 6,
+      "score_pp": -0.40113701870514995,
+      "positive": 2,
+      "leave_one_range": [
+        -1.760868268829387,
+        0.7946806607430381
+      ],
+      "extreme_one": 37,
+      "extreme_two": 56,
+      "assignments": 64
+    }
+  },
+  "gene_effects_pp": {
+    "core_minus_adjacent": {
+      "TMEM255A": 1.3049873775021368,
+      "DIRAS3": -2.586245452919075,
+      "GABRP": -4.174245134871886,
+      "SALL1": 0.575590872045642,
+      "JCHAIN": -4.59292444391436
+    },
+    "core_minus_uterus": {
+      "TMEM255A": 7.208241397817402,
+      "DIRAS3": 2.6030174727175166,
+      "GABRP": -25.811765758244388,
+      "SALL1": -21.749706800246486,
+      "JCHAIN": 0.3699783330351636
+    },
+    "adjacent_minus_uterus": {
+      "TMEM255A": 5.9032540203152655,
+      "DIRAS3": 5.189262925636592,
+      "GABRP": -21.637520623372495,
+      "SALL1": -22.325297672292123,
+      "JCHAIN": 4.962902776949524
+    }
+  }
+}

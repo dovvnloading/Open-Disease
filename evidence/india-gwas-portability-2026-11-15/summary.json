@@ -1,0 +1,32 @@
+{
+  "tested_family": 21,
+  "validation_rows_scanned": 8312193,
+  "validation_present": 15,
+  "aligned": 15,
+  "concordant": 7,
+  "nonzero_log_or": 15,
+  "binomial_one_sided": 0.696380615234375,
+  "same_direction_bonferroni_pass": 0,
+  "family_ci_within_10_percent": 12,
+  "family_upper_below_india_point": 15,
+  "positive_controls": {
+    "rs10917151": {
+      "alleles": [
+        "A",
+        "G"
+      ],
+      "risk_allele": "A",
+      "external_or": 1.1624153051031354,
+      "external_p": 3.08e-25
+    },
+    "rs10122243": {
+      "alleles": [
+        "T",
+        "C"
+      ],
+      "risk_allele": "T",
+      "external_or": 1.0908966797182778,
+      "external_p": 1.37e-14
+    }
+  }
+}
