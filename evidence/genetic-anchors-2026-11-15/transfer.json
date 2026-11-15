@@ -1,0 +1,94 @@
+{
+  "rome_smr": {
+    "panel_genes": 15,
+    "background_genes": 12029,
+    "missing_panel_ids": [],
+    "inactive_common_genes": 0,
+    "self_contained": {
+      "value": 3.352597720981777,
+      "extreme": 2,
+      "assignments": 3003,
+      "p": 0.000666000666000666
+    },
+    "background_mean_squared_z": 3.54898995050071,
+    "competitive": {
+      "value": -0.19639222951893265,
+      "extreme": 2221,
+      "assignments": 3003,
+      "p": 0.7395937395937396
+    },
+    "rbm6_abs_z_rank": 2982
+  },
+  "mumbai_smr": {
+    "panel_genes": 14,
+    "background_genes": 11450,
+    "missing_panel_ids": [
+      2488
+    ],
+    "inactive_common_genes": 0,
+    "self_contained": {
+      "value": 1.0081355182625764,
+      "extreme": 14,
+      "assignments": 35,
+      "p": 0.4,
+      "holm_2": 0.4
+    },
+    "background_mean_squared_z": 0.7661122078423183,
+    "competitive": {
+      "value": 0.24202331042025815,
+      "extreme": 8,
+      "assignments": 35,
+      "p": 0.22857142857142856
+    },
+    "rbm6_abs_z_rank": 4356
+  },
+  "mumbai_twas": {
+    "value": 0.42823560815989264,
+    "extreme": 6,
+    "assignments": 35,
+    "p": 0.17142857142857143,
+    "rbm6_only": {
+      "value": 0.6313938100236552,
+      "extreme": 10,
+      "assignments": 35,
+      "p": 0.2857142857142857
+    },
+    "excluding_rbm6": {
+      "value": 0.36051620753863856,
+      "extreme": 6,
+      "assignments": 35,
+      "p": 0.17142857142857143
+    },
+    "per_gene_effects_pp": {
+      "GMPPB": 2.261080193778284,
+      "CRISPLD1": 4.049058467123096,
+      "RBM6": -2.853291695026087,
+      "CISD2": 0.89715871935514
+    },
+    "holm_2": 0.34285714285714286
+  },
+  "mumbai_twas_alternative": {
+    "value": 0.026834984881250794,
+    "extreme": 16,
+    "assignments": 35,
+    "p": 0.45714285714285713,
+    "rbm6_only": {
+      "value": 0.3765478193831083,
+      "extreme": 12,
+      "assignments": 35,
+      "p": 0.34285714285714286
+    },
+    "excluding_rbm6": {
+      "value": -0.0897359599527016,
+      "extreme": 21,
+      "assignments": 35,
+      "p": 0.6
+    },
+    "per_gene_effects_pp": {
+      "GMPPB": -3.40759115566847,
+      "CRISPLD1": -1.0608219460275947,
+      "RBM6": -1.8945021916271827,
+      "CISD2": 4.431082957571334
+    }
+  }
+}

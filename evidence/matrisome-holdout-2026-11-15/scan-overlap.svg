@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img">
+  <title>Training scan reuse in the 37-array endometriosis test set</title>
+  <desc>Shared training scans by phase: proliferative 9 of 11, early secretory 8 of 9, mid-secretory 17 of 17.</desc>
+  <rect width="760" height="260" fill="#fff" />
+  <text font-family="system-ui, sans-serif" font-size="25" font-weight="bold" x="25" y="37" fill="#183449">34 of 37 test scans also appeared in training</text>
+  <text font-family="system-ui, sans-serif" font-size="16" font-weight="normal" x="25" y="87" fill="#183449">Proliferative</text>
+  <rect x="186" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="211" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="236" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="261" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="286" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="311" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="336" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="361" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="386" y="68" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="411" y="68" width="21" height="24" rx="2" fill="#d3dce2" />
+  <rect x="436" y="68" width="21" height="24" rx="2" fill="#d3dce2" />
+  <text font-family="system-ui, sans-serif" font-size="16" font-weight="bold" x="634" y="87" fill="#183449">9 / 11</text>
+  <text font-family="system-ui, sans-serif" font-size="16" font-weight="normal" x="25" y="134" fill="#183449">Early secretory</text>
+  <rect x="186" y="115" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="211" y="115" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="236" y="115" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="261" y="115" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="286" y="115" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="311" y="115" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="336" y="115" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="361" y="115" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="386" y="115" width="21" height="24" rx="2" fill="#d3dce2" />
+  <text font-family="system-ui, sans-serif" font-size="16" font-weight="bold" x="634" y="134" fill="#183449">8 / 9</text>
+  <text font-family="system-ui, sans-serif" font-size="16" font-weight="normal" x="25" y="181" fill="#183449">Mid-secretory</text>
+  <rect x="186" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="211" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="236" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="261" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="286" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="311" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="336" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="361" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="386" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="411" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="436" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="461" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="486" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="511" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="536" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="561" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <rect x="586" y="162" width="21" height="24" rx="2" fill="#11666e" />
+  <text font-family="system-ui, sans-serif" font-size="16" font-weight="bold" x="634" y="181" fill="#183449">17 / 17</text>
+  <rect x="25" y="222" width="17" height="17" rx="2" fill="#11666e" />
+  <text font-family="system-ui, sans-serif" font-size="15" font-weight="normal" x="51" y="236" fill="#183449">Scan found in training</text>
+  <rect x="300" y="222" width="17" height="17" rx="2" fill="#d3dce2" />
+  <text font-family="system-ui, sans-serif" font-size="15" font-weight="normal" x="326" y="236" fill="#183449">No training scan match found</text>
+</svg>

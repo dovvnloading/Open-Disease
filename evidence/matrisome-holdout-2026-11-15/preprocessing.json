@@ -1,0 +1,84 @@
+{
+  "revision": "df538583652d3359d71959437837ea3e0d1195e6",
+  "analysis": "static source-code and table audit",
+  "source_sha256": {
+    "data_prep/prep.ipynb": "cc54b17ac7c4c7b1184a84aefa118272461e0fd764b1f66655b76b66432cd5ea",
+    "data_prep/batch_correction.r": "20366a374148d732602894f80a53e126224c278dc9492dfbe560d4097efab6be",
+    "analysis/regression_classifier.py": "efdb65cb1adc5bc0763420ee71678d8ec8726eb454a6335b61ae55601460349b"
+  },
+  "table_sha256": {
+    "coldata.tsv": "a2696216f28f6f80a8e7db716f280c45e4d2e4264730723fb3775b94751ebc4a",
+    "test.tsv": "35cbd873dabf6f5567f9a01a2c6fad29850a2920597328edeac762cca1f4f273"
+  },
+  "notebook_data_flow": {
+    "pool_four_studies": {
+      "zero_based_cell": 5,
+      "one_based_lines": [
+        3,
+        9,
+        16
+      ]
+    },
+    "copy_all_labels": {
+      "zero_based_cell": 6,
+      "one_based_lines": [
+        2,
+        4
+      ]
+    },
+    "align_expression": {
+      "zero_based_cell": 7,
+      "one_based_lines": [
+        5,
+        7
+      ]
+    },
+    "condition_aware_batch_correction": {
+      "zero_based_cell": 8,
+      "one_based_lines": [
+        6,
+        8,
+        9
+      ]
+    },
+    "create_matrisome_matrix": {
+      "zero_based_cell": 9,
+      "one_based_lines": [
+        8,
+        18
+      ]
+    },
+    "make_fit_test_tables": {
+      "zero_based_cell": 11,
+      "one_based_lines": [
+        6,
+        9,
+        41,
+        44
+      ]
+    }
+  },
+  "R_preprocessing_lines": [
+    8,
+    9,
+    13,
+    18,
+    19,
+    26,
+    31
+  ],
+  "python_classifier_lines": [
+    68,
+    69,
+    469,
+    470,
+    475,
+    486,
+    491
+  ],
+  "clinical_rows_supplied_to_joint_preprocessing": 216,
+  "nominal_test_rows": 37,
+  "test_labels_entering_documented_preprocessing": 37,
+  "test_rows_with_diagnosis_held_out_of_documented_preprocessing": 0,
+  "historical_execution_verified": false
+}

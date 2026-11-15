@@ -1,0 +1,93 @@
+{
+  "disease_contrast": {
+    "TableS20": {
+      "cases_or_secretory": 12,
+      "controls_or_proliferative": 13,
+      "strata": 7,
+      "genes": 6908,
+      "assignments": 12096,
+      "r": -0.06364863318980402,
+      "extreme": 5083,
+      "p_two_sided": 0.42022156084656087,
+      "null_central_95": [
+        -0.14543881584002247,
+        0.14297848742597397
+      ],
+      "max_published_abs_diff": 0.0,
+      "p_holm_two_references": 0.42022156084656087
+    },
+    "TableS3": {
+      "cases_or_secretory": 12,
+      "controls_or_proliferative": 13,
+      "strata": 7,
+      "genes": 872,
+      "assignments": 12096,
+      "r": 0.7772350997224375,
+      "extreme": 754,
+      "p_two_sided": 0.06233465608465608,
+      "null_central_95": [
+        -0.7986120285170903,
+        0.7796122853673496
+      ],
+      "max_published_abs_diff": 0.0,
+      "p_holm_two_references": 0.12466931216931217
+    }
+  },
+  "disease_contrast_by_phase": {
+    "proliferative": {
+      "cases_or_secretory": 8,
+      "controls_or_proliferative": 4,
+      "strata": 4,
+      "genes": 872,
+      "assignments": 72,
+      "r": 0.6279216206656393,
+      "extreme": 13,
+      "p_two_sided": 0.18055555555555555,
+      "null_central_95": [
+        -0.7532366726954598,
+        0.681289646428125
+      ],
+      "p_holm_two_phase_splits": 0.3611111111111111
+    },
+    "secretory": {
+      "cases_or_secretory": 4,
+      "controls_or_proliferative": 9,
+      "strata": 3,
+      "genes": 872,
+      "assignments": 168,
+      "r": 0.6738904031482189,
+      "extreme": 47,
+      "p_two_sided": 0.27976190476190477,
+      "null_central_95": [
+        -0.8235117921945021,
+        0.8340978272532474
+      ],
+      "p_holm_two_phase_splits": 0.3611111111111111
+    }
+  },
+  "positive_control_secretory_vs_proliferative": {
+    "cases_or_secretory": 5,
+    "controls_or_proliferative": 5,
+    "strata": 4,
+    "genes": 872,
+    "assignments": 36,
+    "r": 0.5069523550600428,
+    "extreme": 8,
+    "p_two_sided": 0.2222222222222222,
+    "null_central_95": [
+      -0.6297619338549475,
+      0.5950450893684917
+    ],
+    "from_donors": 25,
+    "included_cases": 5,
+    "included_controls": 5
+  },
+  "same_gene_descriptive_sensitivity": {
+    "genes": 872,
+    "fin_vs_melbourne_disease_r": -0.12057704023387197,
+    "rome_vs_melbourne_disease_r": 0.06593604483974508,
+    "fin_vs_rome_disease_r": -0.4773540956722723,
+    "fin_vs_rome_partial_r_after_linear_phase_axis": -0.32409153511172883,
+    "melbourne_disease_vs_phase_r": -0.1936087173549069
+  }
+}
