@@ -1,0 +1,56 @@
+{
+  "n_train": 179,
+  "n_test": 37,
+  "physical_grid_cells": 100,
+  "formats_in_train": {
+    "text": 15,
+    "XDA": 115,
+    "Calvin": 49
+  },
+  "results": {
+    "all": {
+      "tested": 37,
+      "correct": 37,
+      "intensity_matched": 34,
+      "unmatched_prefixes": 3,
+      "matched_training_arrays": 41,
+      "test_matches_by_training_study": {
+        "GSE4888": 15,
+        "GSE51981": 26
+      }
+    },
+    "proliferative": {
+      "tested": 11,
+      "correct": 11,
+      "intensity_matched": 9,
+      "unmatched_prefixes": 2,
+      "matched_training_arrays": 12,
+      "test_matches_by_training_study": {
+        "GSE4888": 4,
+        "GSE51981": 8
+      }
+    },
+    "early_secretory": {
+      "tested": 9,
+      "correct": 9,
+      "intensity_matched": 8,
+      "unmatched_prefixes": 1,
+      "matched_training_arrays": 8,
+      "test_matches_by_training_study": {
+        "GSE4888": 3,
+        "GSE51981": 5
+      }
+    },
+    "mid_secretory": {
+      "tested": 17,
+      "correct": 17,
+      "intensity_matched": 17,
+      "unmatched_prefixes": 0,
+      "matched_training_arrays": 21,
+      "test_matches_by_training_study": {
+        "GSE4888": 8,
+        "GSE51981": 13
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1, "id": "cross-study-evidence-audit",
+  "title": "Audit a published test split and challenge expression patterns in separate cohorts",
+  "program": "endometriosis", "priority": "P0", "status": "done",
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/47",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/45",
+  "question": "How many physical scans were actually held out in the published matrisome analysis, and which uterine expression associations survive technical and external checks?",
+  "scope": "Retrospective audit of public computational research. Include earlier known results and post hoc choices in each report. Benchmarks are array-level research comparisons.",
+  "dependencies": ["cross-cohort-pathway-discovery", "external-bulk-pathways", "melbourne-five-gene-summary"],
+  "sources": ["https://doi.org/10.1007/s43032-023-01359-w", "https://doi.org/10.1038/s41598-018-29462-y", "https://doi.org/10.1038/s41588-023-01323-z", "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE25628", "https://github.com/fogg-lab/characterizing-ecm-transcriptome-of-endometriosis"],
+  "steps": ["Trace the actual fit and test split to GEO instrument files.", "Verify the matches independently and evaluate a scan-disjoint same-feature benchmark.", "Challenge whole-transcriptome, cycle and genetic references in available cohorts with appropriate labels, independent units, negative controls and corrections."],
+  "deliverables": ["Aggregate audit and independent verification.", "Reproducible programs, benchmark, sensitivity analyses and evidence reports."],
+  "acceptance": ["Account for every test prediction and clinical phase, and independently verify physical reuse.", "Keep validation labels out of the new benchmark's fitted parameters.", "Report scan order, measurement and clinical limitations along with counterevidence and source hashes."],
+  "budget": {"max_runtime_minutes": 120, "max_ram_gb": 6, "network": "public-opt-in", "max_download_mb": 1100}
+}
