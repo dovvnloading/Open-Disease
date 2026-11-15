@@ -1,0 +1,88 @@
+{
+  "pairs": 11,
+  "reference_features": 54359,
+  "annotation_features": 56448,
+  "panel": {
+    "effect_pp": 24.906538851975668,
+    "pairs": 11,
+    "higher": 11,
+    "lower": 0,
+    "ties": 0,
+    "assignments": 2048,
+    "upper": 1,
+    "lower_tail": 2048,
+    "two_sided": 2,
+    "p_sign": 0.0009765625,
+    "omit_low": 23.674491191277742,
+    "omit_high": 26.661619970933977,
+    "p_directional": 0.00048828125,
+    "omit_suffix_mismatch": {
+      "effect_pp": 26.661619970933977,
+      "pairs": 10,
+      "higher": 10,
+      "lower": 0,
+      "ties": 0,
+      "assignments": 1024,
+      "upper": 1,
+      "lower_tail": 1024,
+      "two_sided": 2,
+      "p_sign": 0.001953125,
+      "omit_low": 25.487687138931644,
+      "omit_high": 28.28861349069594
+    },
+    "by_site": {
+      "ovarian": {
+        "n": 6,
+        "effect_pp": 29.20635650643561,
+        "positive": 6
+      },
+      "peritoneal": {
+        "n": 3,
+        "effect_pp": 18.70365941651286,
+        "positive": 3
+      },
+      "unspecified": {
+        "n": 2,
+        "effect_pp": 21.311405041790074,
+        "positive": 2
+      }
+    }
+  },
+  "genes": {
+    "55026": {
+      "effect_pp": 8.727751028933906,
+      "eligible_probes": 1,
+      "p_directional": 0.18798828125,
+      "concordant_pairs": 8,
+      "holm": 0.18798828125
+    },
+    "9077": {
+      "effect_pp": 33.369568307665034,
+      "eligible_probes": 1,
+      "p_directional": 0.00048828125,
+      "concordant_pairs": 11,
+      "holm": 0.00244140625
+    },
+    "2568": {
+      "effect_pp": -38.53171424318797,
+      "eligible_probes": 1,
+      "p_directional": 0.00048828125,
+      "concordant_pairs": 11,
+      "holm": 0.00244140625
+    },
+    "6299": {
+      "effect_pp": -4.168917416033808,
+      "eligible_probes": 3,
+      "p_directional": 0.015625,
+      "concordant_pairs": 9,
+      "holm": 0.03125
+    },
+    "3512": {
+      "effect_pp": 39.73474326405764,
+      "eligible_probes": 1,
+      "p_directional": 0.00048828125,
+      "concordant_pairs": 11,
+      "holm": 0.00244140625
+    }
+  }
+}

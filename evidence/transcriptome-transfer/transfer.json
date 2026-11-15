@@ -1,0 +1,120 @@
+{
+  "initially_shared": 11464,
+  "variable_shared": 11464,
+  "melbourne_mapped_single": 5252,
+  "finland_melbourne_spearman_unoriented": -0.06900887598214564,
+  "families": {
+    "Finland": {
+      "Rome": {
+        "genes": 11464,
+        "cases": 8,
+        "controls": 6,
+        "score_difference": -0.5311296604914151,
+        "extreme": 3,
+        "assignments": 3003,
+        "p_two_sided": 0.000999000999000999,
+        "omit_one_range": [
+          -0.5887310734878552,
+          -0.49177541573512734
+        ],
+        "unscaled_difference_pp": -3.828724672045432,
+        "spearman": -0.44674733526668187,
+        "genes_nonzero": 11464,
+        "same_sign": 4050,
+        "p_holm": 0.001998001998001998
+      },
+      "Mumbai": {
+        "genes": 11464,
+        "cases": 4,
+        "controls": 3,
+        "score_difference": 0.015192292640928895,
+        "extreme": 32,
+        "assignments": 35,
+        "p_two_sided": 0.9142857142857143,
+        "omit_one_range": [
+          -0.09485198965474026,
+          0.19693991795349824
+        ],
+        "unscaled_difference_pp": -0.032410892357768485,
+        "spearman": 0.01311403591373529,
+        "genes_nonzero": 11464,
+        "same_sign": 5686,
+        "p_holm": 0.9142857142857143
+      }
+    },
+    "Finland_without_nominees": {
+      "Rome": {
+        "genes": 11342,
+        "cases": 8,
+        "controls": 6,
+        "score_difference": -0.5330209281332055,
+        "extreme": 3,
+        "assignments": 3003,
+        "p_two_sided": 0.000999000999000999,
+        "omit_one_range": [
+          -0.5908253116833979,
+          -0.49348003859773626
+        ],
+        "unscaled_difference_pp": -3.83993816463462,
+        "spearman": -0.4476015859405693,
+        "genes_nonzero": 11342,
+        "same_sign": 3998
+      },
+      "Mumbai": {
+        "genes": 11342,
+        "cases": 4,
+        "controls": 3,
+        "score_difference": 0.016796884943054306,
+        "extreme": 31,
+        "assignments": 35,
+        "p_two_sided": 0.8857142857142857,
+        "omit_one_range": [
+          -0.09316082305538924,
+          0.19856910911125858
+        ],
+        "unscaled_difference_pp": -0.026853122352654572,
+        "spearman": 0.01503602036492118,
+        "genes_nonzero": 11342,
+        "same_sign": 5633
+      }
+    },
+    "Melbourne_unoriented": {
+      "Rome": {
+        "genes": 5152,
+        "cases": 8,
+        "controls": 6,
+        "score_difference": 0.019687046816495836,
+        "extreme": 1930,
+        "assignments": 3003,
+        "p_two_sided": 0.6426906426906427,
+        "omit_one_range": [
+          0.0032685963184686216,
+          0.045468994581241616
+        ],
+        "unscaled_difference_pp": 0.23708355185928043,
+        "spearman": 0.04928097949120817,
+        "genes_nonzero": 5152,
+        "same_sign": 2655,
+        "p_holm": 1.0
+      },
+      "Mumbai": {
+        "genes": 5152,
+        "cases": 4,
+        "controls": 3,
+        "score_difference": -0.031533062939670425,
+        "extreme": 25,
+        "assignments": 35,
+        "p_two_sided": 0.7142857142857143,
+        "omit_one_range": [
+          -0.08992938105572507,
+          0.023775032770297275
+        ],
+        "unscaled_difference_pp": -0.08278453574350769,
+        "spearman": -0.04933087283434973,
+        "genes_nonzero": 5152,
+        "same_sign": 2482,
+        "p_holm": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+# A transcriptome-wide endometriosis expression contrast reverses between Finland and Rome
+
+**Exploratory human-data computation, November 15, 2026.** Across 11,464 matched genes, the Finnish and Roman case–control expression contrasts pointed in opposite directions for 7,414 genes (64.7%). The genome-wide rank correlation was −0.447. The Finnish-weighted expression score was lower in affected Roman biopsies even within each of the two scan dates shared by cases and controls. Only one of 200 possible within-date label assignments gave a difference at least as large in absolute value. Mumbai showed little alignment in either direction. These results challenge the transfer of a single bulk-tissue expression signature between these populations. They leave its biological or technical origin unresolved. [Complete contrasts](../../evidence/transcriptome-transfer/transfer.json) · [Scan and control checks](../../evidence/transcriptome-transfer/rome-diagnostics.json)
+
+## What the broader test adds
+
+The original Finnish screen selected five genes and five pathways. Four genes and all five pathways reversed in Rome. A few selected, correlated pathways could give a misleading impression of a transcriptome-wide reversal. We therefore tested one external score comprising **all** measured, variable genes shared between Finland, Rome and Mumbai. The direction, weight and inclusion rule for each gene came from the Finnish screen or from label-blind platform coverage. We tested the Finnish vector in each external cohort and used Holm adjustment across the two cohort tests. The earlier pathway reversals motivated the present analysis. The [local follow-up plan](TRANSCRIPTOME_TRANSFER_LOCAL_PLAN_2026-11-15.md) preceded inspection of the new genome-wide test outcomes, with no public preregistration or fresh Rome holdout. [Earlier screen](CROSS_COHORT_DISCOVERY_RESULTS_2026-11-14.md)
+
+| External uterine tissue | Cases / controls | Finnish-weighted difference | Opposite signs | Spearman rho | Two-sided exact tail | Holm p |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Rome, proliferative | 8 / 6 | −0.531 | 7,414 / 11,464 | −0.447 | 3 / 3,003 | 0.0020 |
+| Mumbai, mid-proliferative | 4 / 3 | +0.015 | 5,778 / 11,464 | +0.013 | 32 / 35 | 0.914 |
+
+For each external biopsy, we used the original gene-level rank percentiles, standardized each gene by its mean and standard deviation across **all biopsies of that cohort**, then applied its signed Finnish weight. The weights are the Finnish blocked permutation statistics divided by the sum of their absolute values. An effect of −0.531 means an average shift of −0.531 external *gene-specific standard deviations* along the Finnish-weighted direction. The statistic is conditional on the Finnish vector. The correlation compares the Finnish statistics with external standardized gene contrasts. All gene measurements from a woman moved together during enumeration. The independent units for the external tests number 14 and seven.
+
+The Finnish discovery comparison involved 12 cases and 13 controls, with seven shared assay-run and histologic-phase groups each contributing equally. The repository published 12,044 eligible Finnish statistics. Of these, 11,464 also had an eligible Mumbai gene and varied in both external datasets. The Rome study used eight eutopic case biopsies after exclusion of the eight paired lesions. Its sampling description supports separate women for the analyzed biopsies but lacks an individual crosswalk. The Mumbai study used four cases and three laparoscopically assessed controls and reports a three-month medication exclusion. Native sequencing batch keys remain unresolved there. The studies differ in clinical indications, population, platform, expression unit and cycle information. [Finnish cohort](https://doi.org/10.1038/s41597-020-00623-x) · [Rome study](https://doi.org/10.1002/jcp.24358) · [Mumbai study](https://doi.org/10.1093/humrep/deaa255) · [Mumbai source audit](../../evidence/external-bulk-2026-11-14/mumbai-source.json)
+
+**Selection and individual-biopsy sensitivity.** Removing the 122 shared genes belonging to any original gene or pathway nomination left 11,342 genes, a Rome correlation of −0.448 and the same 3/3,003 tail. On the full vector, each leave-one-biopsy-out Rome difference stayed negative, from −0.589 to −0.492, with original gene scales held fixed. The comparable Mumbai range spanned −0.095 to +0.197. Removing gene-specific external scaling produced a weighted rank difference of −3.83 percentile points in Rome and −0.03 in Mumbai. The two small studies do not identify the distribution of effects across other populations.
+
+## Native Roman scans and biological specificity
+
+We retrieved the initial 2,048 compressed bytes of each eligible raw GEO CEL file and parsed the Affymetrix native scanner and acquisition date. All 14 arrays used one scanner. One date contained three cases only. The two mixed dates contained 2 cases and 3 controls, and 3 cases and 3 controls. Comparing cases and controls within each mixed date and weighting the two dates equally gave **−0.615** (five cases and six controls, exact two-sided p = 1/200 = 0.005). The two date-specific contrasts were −0.679 and −0.551. The scan-matched analysis is a diagnostic specified after the first genome-wide result. Scanning is only one stage of tissue acquisition and processing. [Scan diagnostic plan](ROME_SCAN_LOCAL_PLAN_2026-11-15.md) · [Native GEO archive](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE25628)
+
+| Within-scan-date technical check | Case minus control, log2 units | Two-sided p | Holm p across four |
+| --- | ---: | ---: | ---: |
+| ACTB 3′ minus 5′ RMA signal | −0.790 | 0.070 | 0.210 |
+| GAPDH 3′ minus 5′ RMA signal | −0.331 | 0.155 | 0.210 |
+| Mean exogenous hybridization spike signal | −0.314 | 0.030 | 0.120 |
+| Mean exogenous RNA preparation spike signal | +0.158 | 0.085 | 0.210 |
+
+Both scan dates gave lower hybridization-spike intensity in cases. The four adjusted tests were inconclusive. The controls have limited power, and spikes measured after quantile normalization can also change with the distribution of endogenous RNA. The 3′–5′ RMA contrasts assess group differences in these processed data. Absolute MAS5 assay thresholds have a different measurement basis. RNA preparation, tissue composition, disease severity and clinical selection remain plausible sources of divergence. [Affymetrix control documentation](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/data_analysis_fundamentals_manual.pdf) · [Published comparison of RNA-quality metrics](https://pmc.ncbi.nlm.nih.gov/articles/PMC2361161/)
+
+A separate post-result check removed all 2,333 shared genes listed in any of the four adjacent menstrual-phase contrasts in Fung et al. Tables S2–S5. Among the remaining 9,131 genes, the Rome score stayed lower within both matched dates (mean difference −0.634, 1/200). Restricting the score to the cycle-listed genes alone also yielded a lower estimate (−0.549, 3/200). This tests dependence on the published, thresholded list. Residual cycle timing and unlisted cycle-responsive genes remain possible contributors. [Cycle diagnostic plan](ROME_PHASE_LOCAL_PLAN_2026-11-15.md) · [Fung et al. and supplements](https://doi.org/10.1038/s41598-018-29462-y)
+
+## Independent reference from Melbourne
+
+We also used the cycle-adjusted Melbourne probe t statistics in Table S20 as weights. Across 15,262 probes the exact, unambiguous symbol mapping and the single-probe-per-gene rule retained 5,252 genes, of which 5,152 met the cross-cohort coverage rule. The Melbourne coefficient reference group is unresolved, so only a two-sided alignment test is interpretable. Rome gave 1,930/3,003 (p = 0.643) and Mumbai 25/35 (p = 0.714), both Holm p = 1. The absolute Finland–Melbourne rank correlation was 0.069 across these genes. Melbourne enrolled 229 participants from two clinics, mixed surgical and self-reported diagnoses, and adjusted for stage. These analyses therefore give no consistent cross-population disease direction or evidence of a diagnostic marker. [Published S20 summary and clinical context](MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md)
+
+## Reproduction
+
+The Finnish weights are SHA-256 pinned to `9df65b29615ec56767e9abaaf3844f8ebde5e21baf8cdab193ac24857a170da5` from project commit `7a566619d0c67f534ecb3a49d7d84656608764bd`. The frozen local primary plan has SHA-256 `1538ffb2dbb9fed014460889e17f70e937f5aef606efbd3329c50f1add189b6a`. All input matrices, platform annotations and Melbourne workbook undergo pin checks. The 14 CEL prefixes totaled 28,672 compressed bytes with concatenated SHA-256 `360626a37e13529bb37331a8f389a9ebe0e597ba1da43cbd1500e0843d439825` in source matrix order, omitting lesions. The new exact tests use no random seed. They were run with Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0 and openpyxl 3.1.5. Two equivalent numerical forms checked every unblocked allocation and its tail. The primary cached analysis took about 12 seconds. The scan diagnostic and cycle checks use the same source matrices. No individualized results are distributed.
+
+From the repository root, install the development dependencies. For a fresh cache, acquire the two Rome files using the [Rome instructions](GSE25628_FOSB_RESULTS_2026-11-13.md) into `data/private/gse25628/`. Acquire the [Melbourne workbook](https://pmc-oa-opendata.s3.amazonaws.com/PMC6065421.1/41598_2018_29462_MOESM2_ESM.xlsx) into `data/private/fung-2018/Fung_supplementary_tables.xlsx` and use `python scripts/fetch_external_bulk_sources.py --fetch` for the Mumbai inputs. The downloader checks a pinned GEO/ENA/GENCODE/HGNC release. The ENA service can vary row order between requests. The analysis requires the existing pin. The complete input URLs and hashes appear in the project’s [Rome](GSE25628_FOSB_RESULTS_2026-11-13.md), [Mumbai](../../evidence/external-bulk-2026-11-14/mumbai-source.json) and [Melbourne](MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md) source receipts. The workbook is CC BY 4.0.
+
+```bash
+export OPENBLAS_NUM_THREADS=1 PYTHONPATH=src:scripts
+mkdir -p results/transcriptome-transfer
+python scripts/rome_scan.py --fetch-headers
+python scripts/transcriptome_transfer.py > results/transcriptome-transfer/transfer.json
+python scripts/rome_diagnostics.py > results/transcriptome-transfer/rome-diagnostics.json
+python -m pytest -q tests/test_transcriptome_transfer.py
+```
+
+The header command uses bounded network requests for missing prefixes. Subsequent analysis runs are offline. The source URLs in the pinned GEO matrix identify each CEL file. Results from both scripts can be checked against the [aggregate output directory](../../evidence/transcriptome-transfer).

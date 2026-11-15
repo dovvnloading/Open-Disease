@@ -1,0 +1,89 @@
+{
+  "study": "GSE282532",
+  "pairs": 5,
+  "transcripts": 83064,
+  "genes": 19688,
+  "panel_genes": {
+    "GABRP": {
+      "ensembl": "ENSG00000094755",
+      "transcripts": 9,
+      "direction": -1,
+      "difference_pp": -33.45794392523364,
+      "concordant": 5,
+      "one_sided_p": 0.03125,
+      "holm_p": 0.15625
+    },
+    "JCHAIN": {
+      "ensembl": "ENSG00000132465",
+      "transcripts": 6,
+      "direction": 1,
+      "difference_pp": 60.09345794392524,
+      "concordant": 5,
+      "one_sided_p": 0.03125,
+      "holm_p": 0.15625
+    },
+    "SALL1": {
+      "ensembl": "ENSG00000103449",
+      "transcripts": 4,
+      "direction": -1,
+      "difference_pp": -25.232629012596504,
+      "concordant": 5,
+      "one_sided_p": 0.03125,
+      "holm_p": 0.15625
+    },
+    "TMEM255A": {
+      "ensembl": "ENSG00000125355",
+      "transcripts": 5,
+      "direction": 1,
+      "difference_pp": 29.978667208451846,
+      "concordant": 5,
+      "one_sided_p": 0.03125,
+      "holm_p": 0.15625
+    },
+    "DIRAS3": {
+      "ensembl": "ENSG00000162595",
+      "transcripts": 2,
+      "direction": 1,
+      "difference_pp": 65.93356359203577,
+      "concordant": 5,
+      "one_sided_p": 0.03125,
+      "holm_p": 0.15625
+    }
+  },
+  "primary_pp": {
+    "effect_pp": 42.939252336448604,
+    "pairs": 5,
+    "higher": 5,
+    "lower": 0,
+    "ties": 0,
+    "assignments": 32,
+    "upper": 1,
+    "lower_tail": 32,
+    "two_sided": 2,
+    "p_sign": 0.0625,
+    "omit_low": 41.257110930516056,
+    "omit_high": 44.98780983340106,
+    "one_sided_p": 0.03125
+  },
+  "transcript_first_pp": {
+    "effect_pp": 27.30678312305371,
+    "pairs": 5,
+    "higher": 5,
+    "lower": 0,
+    "ties": 0,
+    "assignments": 32,
+    "upper": 1,
+    "lower_tail": 32,
+    "two_sided": 2,
+    "p_sign": 0.0625,
+    "omit_low": 25.88897700702002,
+    "omit_high": 28.286413020214667,
+    "one_sided_p": 0.03125
+  },
+  "input_sha256": {
+    "GSE282532_mRNA_FPKM.xlsx": "fd2be96816176f62d3ad2632b7bb81f8ab383a9663a3259c8222e1336c532911",
+    "GSE282532_series_matrix.txt.gz": "5fe3ea41dcc26c85a01c749e2c2a29a82aff6d87ef6ea4b2c4241d28dd2b5564",
+    "hgnc_complete_set_2026-10-06.tsv": "8bf6f686e640dbc864a346484626953621b0500d900d26cd085a35c2782d725d",
+    "panel.json": "4c634a65d648a83af8418e7ad1bf50e03d1a83982d0265d47d9ccbd06aba0114"
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "discovery": "GSE7305",
+  "validation": "GSE11691",
+  "excluded_known_anchor_entrez": [
+    3219,
+    6727,
+    29896,
+    55591,
+    100506885
+  ],
+  "primary": {
+    "genes": 12498,
+    "global_pp": {
+      "effect_pp": 6.103472734776075,
+      "pairs": 9,
+      "higher": 8,
+      "lower": 1,
+      "ties": 0,
+      "assignments": 512,
+      "upper": 6,
+      "lower_tail": 507,
+      "two_sided": 12,
+      "p_sign": 0.0390625,
+      "omit_low": 5.602299904718677,
+      "omit_high": 7.92002356108661,
+      "one_sided_p": 0.01171875
+    },
+    "panel_pp": {
+      "effect_pp": 22.175150962118607,
+      "pairs": 9,
+      "higher": 7,
+      "lower": 2,
+      "ties": 0,
+      "assignments": 512,
+      "upper": 19,
+      "lower_tail": 494,
+      "two_sided": 38,
+      "p_sign": 0.1796875,
+      "omit_low": 18.19172687699143,
+      "omit_high": 30.877406543104613,
+      "one_sided_p": 0.037109375,
+      "genes": 5
+    },
+    "panel_genes": [
+      {
+        "entrez": 2568,
+        "direction": -1,
+        "validation_pp": -29.46217096241779,
+        "directional_p": 0.05859375,
+        "directional_pairs": 8,
+        "directional_holm": 0.17578125
+      },
+      {
+        "entrez": 3512,
+        "direction": 1,
+        "validation_pp": 35.27128304088318,
+        "directional_p": 0.01171875,
+        "directional_pairs": 8,
+        "directional_holm": 0.05859375
+      },
+      {
+        "entrez": 6299,
+        "direction": -1,
+        "validation_pp": -30.144803961166208,
+        "directional_p": 0.03125,
+        "directional_pairs": 7,
+        "directional_holm": 0.125
+      },
+      {
+        "entrez": 9077,
+        "direction": 1,
+        "validation_pp": 3.6186031204655262,
+        "directional_p": 0.318359375,
+        "directional_pairs": 7,
+        "directional_holm": 0.318359375
+      },
+      {
+        "entrez": 55026,
+        "direction": 1,
+        "validation_pp": 12.378893725660317,
+        "directional_p": 0.15234375,
+        "directional_pairs": 7,
+        "directional_holm": 0.3046875
+      }
+    ],
+    "missing_panel_entrez": [],
+    "pearson": 0.47641113800967627,
+    "spearman": 0.41482066844808946,
+    "discovery_omit_one_refit_effect_pp": [
+      5.77763806804006,
+      6.160605392406708
+    ],
+    "top_one_percent_removed": {
+      "effect_pp": 5.143131617582777,
+      "pairs": 9,
+      "higher": 8,
+      "lower": 1,
+      "ties": 0,
+      "assignments": 512,
+      "upper": 5,
+      "lower_tail": 508,
+      "two_sided": 10,
+      "p_sign": 0.0390625,
+      "omit_low": 4.702789182785492,
+      "omit_high": 6.59636707664609,
+      "one_sided_p": 0.009765625
+    },
+    "validation_gene_sign_only": {
+      "effect_pp": 0.2824809819754829,
+      "pairs": 9,
+      "higher": 8,
+      "lower": 1,
+      "ties": 0,
+      "assignments": 512,
+      "upper": 3,
+      "lower_tail": 510,
+      "two_sided": 6,
+      "p_sign": 0.0390625,
+      "omit_low": 0.2588854489079825,
+      "omit_high": 0.35528845627610584,
+      "one_sided_p": 0.005859375
+    },
+    "direction_agreement": 8090
+  },
+  "shared_probe_ids": 19917,
+  "shared_probe_sensitivity": {
+    "genes": 12498,
+    "global_pp": {
+      "effect_pp": 6.561020416520198,
+      "pairs": 9,
+      "higher": 8,
+      "lower": 1,
+      "ties": 0,
+      "assignments": 512,
+      "upper": 6,
+      "lower_tail": 507,
+      "two_sided": 12,
+      "p_sign": 0.0390625,
+      "omit_low": 6.032252563905349,
+      "omit_high": 8.54534190687121,
+      "one_sided_p": 0.01171875
+    },
+    "panel_pp": {
+      "effect_pp": 22.181386085588528,
+      "pairs": 9,
+      "higher": 7,
+      "lower": 2,
+      "ties": 0,
+      "assignments": 512,
+      "upper": 20,
+      "lower_tail": 493,
+      "two_sided": 40,
+      "p_sign": 0.1796875,
+      "omit_low": 18.192875433047146,
+      "omit_high": 30.96475372797108,
+      "one_sided_p": 0.0390625,
+      "genes": 5
+    },
+    "panel_genes": [
+      {
+        "entrez": 2568,
+        "direction": -1,
+        "validation_pp": -30.183316318276404,
+        "directional_p": 0.05859375,
+        "directional_pairs": 8,
+        "directional_holm": 0.17578125
+      },
+      {
+        "entrez": 3512,
+        "direction": 1,
+        "validation_pp": 34.842652563694884,
+        "directional_p": 0.01171875,
+        "directional_pairs": 8,
+        "directional_holm": 0.05859375
+      },
+      {
+        "entrez": 6299,
+        "direction": -1,
+        "validation_pp": -30.607019129386952,
+        "directional_p": 0.029296875,
+        "directional_pairs": 7,
+        "directional_holm": 0.1171875
+      },
+      {
+        "entrez": 9077,
+        "direction": 1,
+        "validation_pp": 3.2607543527862854,
+        "directional_p": 0.345703125,
+        "directional_pairs": 7,
+        "directional_holm": 0.345703125
+      },
+      {
+        "entrez": 55026,
+        "direction": 1,
+        "validation_pp": 12.013188063798093,
+        "directional_p": 0.15234375,
+        "directional_pairs": 7,
+        "directional_holm": 0.3046875
+      }
+    ],
+    "missing_panel_entrez": [],
+    "pearson": 0.5050239573836255,
+    "spearman": 0.44048856241511675,
+    "discovery_omit_one_refit_effect_pp": [
+      6.1894780042133535,
+      6.631377882678854
+    ],
+    "top_one_percent_removed": {
+      "effect_pp": 5.446882547069646,
+      "pairs": 9,
+      "higher": 8,
+      "lower": 1,
+      "ties": 0,
+      "assignments": 512,
+      "upper": 5,
+      "lower_tail": 508,
+      "two_sided": 10,
+      "p_sign": 0.0390625,
+      "omit_low": 5.00222436136954,
+      "omit_high": 6.999166021564422,
+      "one_sided_p": 0.009765625
+    },
+    "validation_gene_sign_only": {
+      "effect_pp": 0.3004685978590328,
+      "pairs": 9,
+      "higher": 8,
+      "lower": 1,
+      "ties": 0,
+      "assignments": 512,
+      "upper": 3,
+      "lower_tail": 510,
+      "two_sided": 6,
+      "p_sign": 0.0390625,
+      "omit_low": 0.2757906551163549,
+      "omit_high": 0.37794298424721995,
+      "one_sided_p": 0.005859375
+    },
+    "direction_agreement": 8201
+  },
+  "lowest_gene_conjunction_p": 0.00390625,
+  "holm_genes_lt_0.05": 0,
+  "panel_symbols": {
+    "55026": [
+      "TMEM255A"
+    ],
+    "9077": [
+      "DIRAS3"
+    ],
+    "2568": [
+      "GABRP"
+    ],
+    "6299": [
+      "SALL1"
+    ],
+    "3512": [
+      "JCHAIN"
+    ]
+  }
+}

@@ -33,7 +33,7 @@ def check_nominations(lock):
         raise ValueError("Source candidate IDs or directions disagree with the locked family")
 
 
-def candidate_probes(rows, expected_count=15262):
+def candidate_probes(rows, expected_count=15262, *, targets=TARGETS):
     title = next(rows, ())
     header = next(rows, ())
     if (not title or title[0] != TITLE or tuple(header[:len(HEADER)]) != HEADER
@@ -48,13 +48,13 @@ def candidate_probes(rows, expected_count=15262):
             raise ValueError("Invalid or repeated probe in Table S20")
         seen.add(probe)
         symbol = row[8].strip() if isinstance(row[8], str) else ""
-        if symbol not in TARGETS:
+        if symbol not in targets:
             continue
         coef, pv = row[1], row[4]
         if (type(coef) not in (float, int) or not math.isfinite(coef) or
                 type(pv) not in (float, int) or not 0 <= pv <= 1):
             raise ValueError("Invalid coefficient or nominal probability for a matching probe")
-        selected.append(dict(symbol=symbol, entrez_id=TARGETS[symbol][0], probe_id=probe,
+        selected.append(dict(symbol=symbol, entrez_id=targets[symbol][0], probe_id=probe,
                              source_logFC=coef, two_sided_p=pv))
     if len(seen) != expected_count:
         raise ValueError("Table S20 does not contain the frozen high-detection probe universe")

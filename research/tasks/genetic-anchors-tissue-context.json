@@ -7,7 +7,7 @@
   "status": "ready",
   "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/5",
   "question": "Which endometrial eQTL-linked endometriosis genes show consistent lesion-versus-uterus shifts within patients, and do their uterine case-control contrasts agree?",
-  "scope": "Five genes from Rahmioglu et al. Table 1. Paired Hever and Hull human series. Separate case-control estimates in Finland, Rome, Mumbai and Melbourne.",
+  "scope": "Five genes from Rahmioglu et al. Table 1. Paired Hever and Hull human series. Separate case-control estimates in Finland, Rome, Mumbai and Melbourne, plus a design audit for the planned RNA-seq follow-up.",
   "dependencies": [
     "cross-cohort-pathway-discovery",
     "external-bulk-pathways",

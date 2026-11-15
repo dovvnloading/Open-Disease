@@ -1,0 +1,119 @@
+{
+  "native_scan_metadata": {
+    "arrays": 14,
+    "native_scanners": 1,
+    "scan_dates": 3,
+    "mixed_scan_dates": 2,
+    "scan_day_case_control_counts": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "conditional_assignments": 200,
+    "compressed_bytes": 28672,
+    "ordered_sha256": "360626a37e13529bb37331a8f389a9ebe0e597ba1da43cbd1500e0843d439825"
+  },
+  "Finnish_weighted_score": {
+    "effect": -0.6153853548661937,
+    "extremes": 1,
+    "assignments": 200,
+    "p_two_sided": 0.005,
+    "cases": 5,
+    "controls": 6,
+    "within_day_effects": [
+      -0.6793950164762819,
+      -0.5513756932561056
+    ]
+  },
+  "technical_controls": {
+    "ACTB_log2_3minus5": {
+      "effect": -0.7898466233333328,
+      "extremes": 14,
+      "assignments": 200,
+      "p_two_sided": 0.07,
+      "cases": 5,
+      "controls": 6,
+      "within_day_effects": [
+        -0.8463461969999999,
+        -0.7333470496666665
+      ],
+      "p_holm": 0.21000000000000002
+    },
+    "GAPDH_log2_3minus5": {
+      "effect": -0.33101920333333246,
+      "extremes": 31,
+      "assignments": 200,
+      "p_two_sided": 0.155,
+      "cases": 5,
+      "controls": 6,
+      "within_day_effects": [
+        -0.39626795666666637,
+        -0.26577044999999855
+      ],
+      "p_holm": 0.21000000000000002
+    },
+    "hybridization_spike_mean_log2": {
+      "effect": -0.3137953738090271,
+      "extremes": 6,
+      "assignments": 200,
+      "p_two_sided": 0.03,
+      "cases": 5,
+      "controls": 6,
+      "within_day_effects": [
+        -0.3615492440347232,
+        -0.2660415035833328
+      ],
+      "p_holm": 0.12
+    },
+    "RNA_preparation_spike_mean_log2": {
+      "effect": 0.15812067189583356,
+      "extremes": 17,
+      "assignments": 200,
+      "p_two_sided": 0.085,
+      "cases": 5,
+      "controls": 6,
+      "within_day_effects": [
+        0.08526991762500025,
+        0.23097142616666666
+      ],
+      "p_holm": 0.21000000000000002
+    }
+  },
+  "cycle_specificity": {
+    "excluding_phase_table_genes": {
+      "effect": -0.6335457625131524,
+      "extremes": 1,
+      "assignments": 200,
+      "p_two_sided": 0.005,
+      "cases": 5,
+      "controls": 6,
+      "within_day_effects": [
+        -0.6621919175452028,
+        -0.6048996074811019
+      ],
+      "genes": 9131
+    },
+    "phase_table_genes_only": {
+      "effect": -0.5494470026990583,
+      "extremes": 3,
+      "assignments": 200,
+      "p_two_sided": 0.015,
+      "cases": 5,
+      "controls": 6,
+      "within_day_effects": [
+        -0.7418574907629443,
+        -0.35703651463517244
+      ],
+      "genes": 2333
+    }
+  }
+}

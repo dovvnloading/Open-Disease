@@ -1,0 +1,13 @@
+{
+  "paired_score_estimate_verified": true,
+  "genes_verified": 5,
+  "all_reported_fields_verified": true,
+  "same_direction_pairs": 11,
+  "total_pairs": 11,
+  "upper": 1,
+  "assignments": 2048,
+  "curated_tissue_subsets_checked": true,
+  "curated_individual_subsets_checked": 11,
+  "suffix_mismatch_omission_checked": true,
+  "subgroup_aggregates_checked": 3
+}

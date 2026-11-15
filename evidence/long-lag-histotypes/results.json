@@ -1,0 +1,185 @@
+{
+  "nordic": [
+    {
+      "registry": "Finland",
+      "window": "under_0.5",
+      "pair_observed": 2,
+      "remaining_observed": 3,
+      "expected_pair": 0.19806411906227273,
+      "expected_other": 0.8936389377062861,
+      "pair_sir": 10.09774011299435,
+      "remaining_sir": 3.357060523459437,
+      "ratio": 3.0079112492701414,
+      "low": 0.25122927048811067,
+      "high": 26.25796692280518,
+      "two_sided_p": 0.22518633260358575,
+      "excess_share": 0.4610539851784799,
+      "ratio_rounding_min": 3.001305697976815,
+      "ratio_rounding_max": 3.0145307969253228,
+      "ci_rounding_low": 0.250677556127191,
+      "ci_rounding_high": 26.31575315682916
+    },
+    {
+      "registry": "Finland",
+      "window": "0.5_to_4.9",
+      "pair_observed": 7,
+      "remaining_observed": 11,
+      "expected_pair": 2.220376522702104,
+      "expected_other": 9.318085015759435,
+      "pair_sir": 3.1526184538653363,
+      "remaining_sir": 1.1805000685651597,
+      "ratio": 2.670578797760842,
+      "low": 0.8778042840164862,
+      "high": 7.5437864907215655,
+      "two_sided_p": 0.06390539591038746,
+      "excess_share": 0.739703633391341,
+      "ratio_rounding_min": 2.6545660878013084,
+      "ratio_rounding_max": 2.6866935218072623,
+      "ci_rounding_low": 0.8725409959933141,
+      "ci_rounding_high": 7.589306974020922
+    },
+    {
+      "registry": "Finland",
+      "window": "5_to_9.9",
+      "pair_observed": 10,
+      "remaining_observed": 10,
+      "expected_pair": 3.244097106750915,
+      "expected_other": 12.14051827786447,
+      "pair_sir": 3.082521783700666,
+      "remaining_sir": 0.8236880643088172,
+      "ratio": 3.7423412056933327,
+      "low": 1.397939756659845,
+      "high": 10.018398599159397,
+      "two_sided_p": 0.003911902922047206,
+      "excess_share": 1.4637789602039681,
+      "ratio_rounding_min": 3.715829152398397,
+      "ratio_rounding_max": 3.769056233095138,
+      "ci_rounding_low": 1.3880362627519962,
+      "ci_rounding_high": 10.089915806807802
+    },
+    {
+      "registry": "Finland",
+      "window": "10_plus",
+      "pair_observed": 35,
+      "remaining_observed": 51,
+      "expected_pair": 8.957802322288304,
+      "expected_other": 36.30535557244854,
+      "pair_sir": 3.907208346506481,
+      "remaining_sir": 1.404751425674039,
+      "ratio": 2.7814233003050304,
+      "low": 1.7555959162943404,
+      "high": 4.360969153702561,
+      "two_sided_p": 8.539028247285647e-06,
+      "excess_share": 0.6392787543624319,
+      "ratio_rounding_min": 2.76761711326583,
+      "ratio_rounding_max": 2.7953017238537696,
+      "ci_rounding_low": 1.7468816419934965,
+      "ci_rounding_high": 4.3827290120425095
+    },
+    {
+      "registry": "Sweden",
+      "window": "same_calendar_year",
+      "pair_observed": 36,
+      "remaining_observed": 72,
+      "expected_pair": 0.48980582524271843,
+      "expected_other": 2.2374669020300084,
+      "pair_sir": 73.49851337958376,
+      "remaining_sir": 32.1792469576537,
+      "ratio": 2.2840345977115053,
+      "low": 1.4867226752075502,
+      "high": 3.453452120306902,
+      "two_sided_p": 0.0001283325338542767,
+      "excess_share": 0.3373161795529621,
+      "ratio_rounding_min": 2.27853733556161,
+      "ratio_rounding_max": 2.2895456462461006,
+      "ci_rounding_low": 1.4831444000369385,
+      "ci_rounding_high": 3.4617848059264555
+    },
+    {
+      "registry": "Sweden",
+      "window": "subsequent_under_10",
+      "pair_observed": 39,
+      "remaining_observed": 46,
+      "expected_pair": 7.899686520376175,
+      "expected_other": 39.32253570184605,
+      "pair_sir": 4.936904761904763,
+      "remaining_sir": 1.1698126577793524,
+      "ratio": 4.2202524729698645,
+      "low": 2.6823231764224067,
+      "high": 6.609952325051077,
+      "two_sided_p": 3.714353022371064e-10,
+      "excess_share": 0.8232435921076895,
+      "ratio_rounding_min": 4.017787002695375,
+      "ratio_rounding_max": 4.433972454766405,
+      "ci_rounding_low": 2.5536394479438704,
+      "ci_rounding_high": 6.944690329384687
+    },
+    {
+      "registry": "Sweden",
+      "window": "10_plus",
+      "pair_observed": 20,
+      "remaining_observed": 48,
+      "expected_pair": 4.7890818858560795,
+      "expected_other": 31.00039179835445,
+      "pair_sir": 4.176165803108808,
+      "remaining_sir": 1.5483675274887305,
+      "ratio": 2.6971411689846385,
+      "low": 1.5162882394520583,
+      "high": 4.631417214746708,
+      "two_sided_p": 0.00048532130169249297,
+      "excess_share": 0.472234385896625,
+      "ratio_rounding_min": 2.5736927114879875,
+      "ratio_rounding_max": 2.827066196631414,
+      "ci_rounding_low": 1.446887554596124,
+      "ci_rounding_high": 4.854518999921805
+    }
+  ],
+  "dutch": {
+    "group_pair_and_total": {
+      "endometriosis": [
+        30,
+        69
+      ],
+      "nevus": [
+        41,
+        241
+      ]
+    },
+    "conditional_odds_ratio": 3.734131779999623,
+    "low": 1.9912365837884507,
+    "high": 7.018914852272921,
+    "two_sided_p": 2.3482266747764756e-05
+  },
+  "dutch_adenomyosis": {
+    "group_pair_and_total": {
+      "adenomyosis": [
+        33,
+        136
+      ],
+      "nevus": [
+        41,
+        241
+      ]
+    },
+    "conditional_odds_ratio": 1.6269937052216528,
+    "low": 0.930299585140997,
+    "high": 2.836241756282788,
+    "two_sided_p": 0.09065748284410031
+  },
+  "dutch_all_unspecified_control_cancers_reassigned": {
+    "group_pair_and_total": {
+      "endometriosis": [
+        30,
+        69
+      ],
+      "nevus": [
+        66,
+        241
+      ]
+    },
+    "conditional_odds_ratio": 1.999846061685485,
+    "low": 1.0963409290138184,
+    "high": 3.634669210511909,
+    "two_sided_p": 0.022762308511407217
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "lead": "rs35236165",
+    "rsid": "rs9512061",
+    "discovery_risk_allele": "C",
+    "india_risk_or": 1.336,
+    "india_p": 1.1e-06,
+    "status": "aligned",
+    "external_p": 0.4812,
+    "external_bonferroni_p": 1,
+    "external_or": 0.9919327166055711,
+    "lower_95": 0.9698246471118898,
+    "upper_95": 1.0145447604395552
+  },
+  {
+    "lead": "rs28698234",
+    "rsid": "rs28375533",
+    "discovery_risk_allele": "C",
+    "india_risk_or": 1.7985611510791366,
+    "india_p": 5.87e-06,
+    "status": "absent"
+  },
+  {
+    "lead": "rs28698234",
+    "rsid": "rs28520525",
+    "discovery_risk_allele": "C",
+    "india_risk_or": 1.7985611510791366,
+    "india_p": 5.87e-06,
+    "status": "absent"
+  },
+  {
+    "lead": "rs28698234",
+    "rsid": "rs28533879",
+    "discovery_risk_allele": "T",
+    "india_risk_or": 1.7985611510791366,
+    "india_p": 5.87e-06,
+    "status": "absent"
+  },
+  {
+    "lead": "rs2679859",
+    "rsid": "rs893249",
+    "discovery_risk_allele": "C",
+    "india_risk_or": 1.342,
+    "india_p": 9.5e-06,
+    "status": "aligned",
+    "external_p": 0.8359,
+    "external_bonferroni_p": 1,
+    "external_or": 1.002904209067782,
+    "lower_95": 0.9757586577914783,
+    "upper_95": 1.0308049480620838
+  },
+  {
+    "lead": "rs2679859",
+    "rsid": "rs1010029",
+    "discovery_risk_allele": "G",
+    "india_risk_or": 1.347,
+    "india_p": 7.42e-06,
+    "status": "strand_ambiguous",
+    "external_p": 0.8471,
+    "external_bonferroni_p": 1
+  },
+  {
+    "lead": "rs2679859",
+    "rsid": "rs2576760",
+    "discovery_risk_allele": "C",
+    "india_risk_or": 1.346,
+    "india_p": 7.69e-06,
+    "status": "aligned",
+    "external_p": 0.8695,
+    "external_bonferroni_p": 1,
+    "external_or": 1.002302647029,
+    "lower_95": 0.9751733781982398,
+    "upper_95": 1.0301866506010338
+  },
+  {
+    "lead": "rs2679859",
+    "rsid": "rs1469938",
+    "discovery_risk_allele": "T",
+    "india_risk_or": 1.346,
+    "india_p": 7.69e-06,
+    "status": "absent"
+  },
+  {
+    "lead": "rs2679859",
+    "rsid": "rs1133218",
+    "discovery_risk_allele": "G",
+    "india_risk_or": 1.346,
+    "india_p": 7.69e-06,
+    "status": "aligned",
+    "external_p": 0.8695,
+    "external_bonferroni_p": 1,
+    "external_or": 1.002302647029,
+    "lower_95": 0.9751733781982398,
+    "upper_95": 1.0301866506010338
+  },
+  {
+    "lead": "rs2679859",
+    "rsid": "rs2679865",
+    "discovery_risk_allele": "G",
+    "india_risk_or": 1.303780964797914,
+    "india_p": 6.89e-06,
+    "status": "aligned",
+    "external_p": 0.5738,
+    "external_bonferroni_p": 1,
+    "external_or": 0.9937198033910547,
+    "lower_95": 0.972143355805495,
+    "upper_95": 1.015775134145061
+  },
+  {
+    "lead": "rs56991723",
+    "rsid": "rs67922716",
+    "discovery_risk_allele": "G",
+    "india_risk_or": 1.4662756598240467,
+    "india_p": 9e-06,
+    "status": "aligned",
+    "external_p": 0.2333,
+    "external_bonferroni_p": 1,
+    "external_or": 0.9628092169990138,
+    "lower_95": 0.9046311386213942,
+    "upper_95": 1.0247288079768635
+  }
+]
