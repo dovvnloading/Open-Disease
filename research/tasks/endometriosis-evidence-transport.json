@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "endometriosis-evidence-transport",
+  "title": "Test cross-cohort expression transfer, inherited susceptibility and long-lag population associations",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "done",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/44",
+  "question": "Which endometriosis associations remain interpretable across independently recruited cohorts, measurement methods and registry definitions?",
+  "scope": "Exploratory real-data comparisons of a complete transcriptomic profile, expression predicted by inherited susceptibility variants, and published long-lag ovarian cancer histotype counts. Each comparison retains its own estimand.",
+  "dependencies": [
+    "cross-cohort-pathway-discovery",
+    "swiss-glandular-pathways",
+    "external-bulk-pathways"
+  ],
+  "sources": [
+    "https://doi.org/10.1038/s41588-026-02582-2",
+    "https://doi.org/10.1038/s41588-023-01323-z",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE25628",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153739",
+    "https://doi.org/10.6084/m9.figshare.12195975.v1",
+    "https://doi.org/10.1097/AOG.0000000000002624",
+    "https://doi.org/10.1111/aogs.70223",
+    "https://doi.org/10.1016/j.ygyno.2021.07.006",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265",
+    "https://doi.org/10.7554/eLife.83116",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234354"
+  ],
+  "steps": [
+    "Audit molecular measurements, processing order, registry denominators, phenotype definitions and pre-existing evidence.",
+    "Evaluate full expression weights and a direction-fixed uterine genetics score in separately recruited endometrial cohorts.",
+    "Calculate population contrasts from public aggregates and retain source-specific interpretations."
+  ],
+  "deliverables": [
+    "Reproducible offline methods, aggregate data and source-linked research notes.",
+    "Documented controls, missing coverage, cohort overlap risks and null findings."
+  ],
+  "acceptance": [
+    "Recompute the main estimates with independent checks or reference calculations.",
+    "Keep all individual records outside the repository.",
+    "Expose assumptions that can change the interpretation and distinguish prior art from new calculations."
+  ],
+  "budget": {
+    "max_runtime_minutes": 180,
+    "max_ram_gb": 8,
+    "network": "public-opt-in",
+    "max_download_mb": 1600
+  },
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/46"
+}

@@ -1,0 +1,23 @@
+{
+  "download": {
+    "koller.xlsx": "https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41588-026-02582-2/MediaObjects/41588_2026_2582_MOESM4_ESM.xlsx",
+    "uk.xlsx": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7669452.2/12916_2020_1795_MOESM1_ESM.xlsx",
+    "elife-83116-table2-data1.zip": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10042530.1/elife-83116-table2-data1.zip",
+    "elife-83116-supp7.docx": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10042530.1/elife-83116-supp7.docx"
+  },
+  "sha256": {
+    "koller.xlsx": "c021b6c20c668644939fd83381307a2c8cf08f18d95156b33e65fb0301997815",
+    "uk.xlsx": "89b10d67708917163367ec5c8c1097095c63212ee411cd8ff65182a175ee266e",
+    "elife-83116-table2-data1.zip": "89de3468717a77e04b239de2b1a977d9c1c87a83a63619c8be5db9688fddb7a5",
+    "elife-83116-supp7.docx": "ba768d117fa9088b3d5ea974652f6445824248977cca3a180ca5b6f4e665efe8",
+    "locked_gene_crosswalk.tsv": "2284dcd5ccd11cc941823537f2c22f69f1509aa9267d6747f1a96d00c445cb63",
+    "nominations.json": "ba140f2bb026b0416e1c705ab28f616f430cc4295f94d174feaf5d15947c1e31"
+  },
+  "checked": "2026-11-15",
+  "crosswalk": {
+    "url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+    "sha256": "6df77ac3cbaeb86a6dce5e17d851ebb27b6b3cdcd2471a211a3d8464f00c54c4",
+    "derivation": "Subset official HGNC complete TSV by the original 125 Entrez IDs, retaining unique nonempty Ensembl/HGNC IDs and approved symbols; numeric Entrez sort. All 125 approved symbols also matched NCBI Gene eSummary.",
+    "versioned_url": "https://storage.googleapis.com/download/storage/v1/b/public-download-files/o/hgnc%2Ftsv%2Ftsv%2Fhgnc_complete_set.txt?generation=1794574799610852&alt=media"
+  }
+}

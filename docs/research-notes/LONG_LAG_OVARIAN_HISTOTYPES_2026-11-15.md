@@ -10,6 +10,8 @@
 
 The excess can be counted in the Nordic cohorts. Finland observed 35 cancers in the two histotypes, against an estimated 8.96 expected, and 51 in the remaining histotypes, against 36.31 expected. Sweden observed 20 against 4.79 expected, and 48 against 31.00 expected. The two histotypes accounted for approximately 64% and 47%, respectively, of each study’s total observed-minus-expected case count at long lag. These descriptive shares use registry reference rates and carry sampling uncertainty. They are distinct from the fraction of cancers caused by endometriosis.
 
+**Overlap with existing research.** PR #46 also analyzed the Finnish, Swedish and Dutch registry sources. Those calculations are parallel examinations of overlapping participant populations, not three additional independent cohorts. [Earlier registry comparison](OVARIAN_HISTOTYPES_LONG_LAG_2026-11-15.md).
+
 ## What this adds
 
 Previous studies established preferential associations with clear-cell and endometrioid ovarian cancer. Here the question was whether the distribution remains shifted after the diagnostic episode is more than a decade in the past, against the full remaining ovarian cancer denominator, and whether the effect survives in a different comparator design. We chose the histotypes and long-lag window during a targeted literature review. The comparisons are retrospective. An independent, prespecified replication would require a fourth population with accessible long-lag data. [Danish primary study](https://pubmed.ncbi.nlm.nih.gov/27430396/)

@@ -1,0 +1,11 @@
+{
+  "score_effect_and_exact_tail_verified": [
+    "rome_within_mixed_scan_dates",
+    "mumbai"
+  ],
+  "rome_native_time_gaps_verified_seconds": [
+    4611,
+    4887
+  ],
+  "absolute_score_tolerance_pp": 1e-10
+}
