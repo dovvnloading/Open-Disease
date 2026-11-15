@@ -4,7 +4,7 @@
   "title": "Test genetically mapped endometrial genes across paired lesion sites and uterine case-control studies",
   "program": "endometriosis",
   "priority": "P0",
-  "status": "ready",
+  "status": "done",
   "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/5",
   "question": "Which endometrial eQTL-linked endometriosis genes show consistent lesion-versus-uterus shifts within patients, and do their uterine case-control contrasts agree?",
   "scope": "Five genes from Rahmioglu et al. Table 1. Paired Hever and Hull human series. Separate case-control estimates in Finland, Rome, Mumbai and Melbourne, plus a design audit for the planned RNA-seq follow-up.",
@@ -37,5 +37,6 @@
     "max_ram_gb": 4,
     "network": "public-opt-in",
     "max_download_mb": 200
-  }
+  },
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/48"
 }
