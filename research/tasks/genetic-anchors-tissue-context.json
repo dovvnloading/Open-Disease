@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "genetic-anchors-tissue-context",
+  "title": "Test genetically mapped endometrial genes across paired lesion sites and uterine case-control studies",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/5",
+  "question": "Which endometrial eQTL-linked endometriosis genes show consistent lesion-versus-uterus shifts within patients, and do their uterine case-control contrasts agree?",
+  "scope": "Five genes from Rahmioglu et al. Table 1. Paired Hever and Hull human series. Separate case-control estimates in Finland, Rome, Mumbai and Melbourne.",
+  "dependencies": [
+    "cross-cohort-pathway-discovery",
+    "external-bulk-pathways",
+    "melbourne-five-gene-summary"
+  ],
+  "sources": [
+    "https://doi.org/10.1038/s41588-023-01323-z",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE7305",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE11691"
+  ],
+  "steps": [
+    "Fix gene family, primary estimand, multiplicity correction and tissue contrasts before calculating results.",
+    "Verify source-declared donor pairing, target identifiers and platform annotation.",
+    "Report every anchor and independently recompute exact tests."
+  ],
+  "deliverables": [
+    "Tested offline analysis and aggregate result tables.",
+    "Source-linked interpretation including tissue and cellular composition limitations."
+  ],
+  "acceptance": [
+    "No inferred pairs or nearest-gene substitutions.",
+    "Calibrate both candidate directions and five tested anchors.",
+    "Report paired and between-patient comparisons separately."
+  ],
+  "budget": {
+    "max_runtime_minutes": 100,
+    "max_ram_gb": 4,
+    "network": "public-opt-in",
+    "max_download_mb": 200
+  }
+}
