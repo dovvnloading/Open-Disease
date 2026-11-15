@@ -40,7 +40,7 @@
 
 **GSE51981 — uterine expression microarray study.** [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981).
 
-- A 2026 secondary analysis describes **77 case / 34 healthy-control** samples after excluding uterine-pelvic-pathology controls. The cited inclusion exclusions and original study labels must be independently checked.
+- A 2026 secondary analysis describes **77 case / 34 healthy-control** samples after excluding uterine-pelvic-pathology controls. The project reconciled all 148 GEO records. Its separate scan-disjoint array benchmark retained 56 case and 27 no-pathology comparator arrays after phase selection and physical deduplication. [Cohort reconciliation](docs/research-notes/GSE51981_COHORT_AUDIT_2026-11-13.md) · [Benchmark and independence audit](docs/research-notes/MATRISOME_HOLDOUT_AUDIT_2026-11-15.md)
 - Microarray expression is **not raw RNA-seq count data** and must never be run through the current count-based pseudobulk pipeline as if they were counts. Cross-platform gene-level direction could be a separate, pre-specified analysis.
 
 ## Menstrual fluid — separate biological endpoint

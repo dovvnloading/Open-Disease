@@ -1,0 +1,23 @@
+{
+  "housekeeping_3prime_minus_5prime": {
+    "log2_difference": -0.5604329133333328,
+    "absolute_extreme": 15,
+    "assignments": 200,
+    "two_sided_p": 0.075,
+    "holm_three_controls": 0.15
+  },
+  "hybridization_control_probes": {
+    "log2_difference": -0.3137953738090271,
+    "absolute_extreme": 6,
+    "assignments": 200,
+    "two_sided_p": 0.03,
+    "holm_three_controls": 0.09
+  },
+  "polya_control_probes": {
+    "log2_difference": 0.15812067189583356,
+    "absolute_extreme": 17,
+    "assignments": 200,
+    "two_sided_p": 0.085,
+    "holm_three_controls": 0.15
+  }
+}

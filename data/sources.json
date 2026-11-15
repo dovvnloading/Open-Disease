@@ -1,5 +1,5 @@
 {
-  "schema_version": "2026-11-14",
+  "schema_version": "2026-11-15",
   "catalog_is_not_redistribution_permission": true,
   "automatic_downloads_enabled": false,
   "biological_results_generated": true,
@@ -88,14 +88,45 @@
       ]
     },
     {
+      "id": "Fogg-matrisome-split",
+      "kind": "published_classifier_workflow_and_tables",
+      "url": "https://github.com/fogg-lab/characterizing-ecm-transcriptome-of-endometriosis/tree/df538583652d3359d71959437837ea3e0d1195e6",
+      "role": "audit_classifier_split_and_benchmark_feature_family",
+      "access": "Public author code, feature list and released classifier tables",
+      "human_data_used_by_open_disease": true,
+      "analysis_report": "docs/research-notes/MATRISOME_HOLDOUT_AUDIT_2026-11-15.md",
+      "cautions": ["Technical scan identity is distinct from participant identity", "Released code describes the workflow and does not authenticate a historical execution"]
+    },
+    {
+      "id": "Rahmioglu-2023-T1",
+      "kind": "published_genetic_gene_mapping_table",
+      "url": "https://doi.org/10.1038/s41588-023-01323-z",
+      "role": "external_expression_and_methylation_QTL_panel",
+      "access": "Published aggregate results, Table 1",
+      "human_data_used_by_open_disease": true,
+      "analysis_report": "docs/research-notes/GENETIC_ANCHOR_TRANSFER_2026-11-15.md",
+      "cautions": ["Multiple tissues and QTL types", "Genetic mapping does not establish a disease-associated uterine RNA change"]
+    },
+    {
+      "id": "Koller-2026-S13",
+      "kind": "published_genetic_summary_workbook",
+      "url": "https://doi.org/10.1038/s41588-026-02582-2",
+      "role": "external_uterine_TWAS_reference",
+      "access": "Publisher supplementary workbook, Table S13",
+      "human_data_used_by_open_disease": true,
+      "analysis_report": "docs/research-notes/GENETIC_ANCHOR_TRANSFER_2026-11-15.md",
+      "cautions": ["Uses the European-ancestry combined definition", "Consortia overlap with earlier genetic studies"]
+    },
+    {
       "id": "GSE51981",
       "kind": "microarray",
       "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981",
-      "human_data_used_by_open_disease": false,
+      "human_data_used_by_open_disease": true,
+      "analysis_report": "docs/research-notes/MATRISOME_HOLDOUT_AUDIT_2026-11-15.md",
       "access": "public GEO; original submitters may retain rights; upstream files kept local",
       "role": "first_same_cohort_microarray_reproduction",
       "metadata_audit": "docs/research-notes/GSE51981_COHORT_AUDIT_2026-11-13.md",
-      "reproduction_status": "blocked_before_expression_fit",
+      "reproduction_status": "original_donor_level_endpoint_blocked_separate_array_benchmark_executed",
       "source_provenance": "docs/research-notes/GSE51981_REPRODUCTION_STATUS_2026-11-13.md",
       "cautions": [
         "use the processed log2 GC-RMA limma pathway",

@@ -1,0 +1,56 @@
+{
+  "author_revision": "df538583652d3359d71959437837ea3e0d1195e6",
+  "calvin_train_scan_years": [
+    2010,
+    2011
+  ],
+  "condition": {
+    "case": {
+      "matched": 19,
+      "unmatched": 2
+    },
+    "comparator": {
+      "matched": 15,
+      "unmatched": 1
+    }
+  },
+  "cross_split_label_disagreements_among_matching_row_pairs": 0,
+  "cross_split_phase_disagreements_among_matching_row_pairs": 0,
+  "included_by_accession": {
+    "GSE29981": 20,
+    "GSE4888": 15,
+    "GSE51981": 144,
+    "GSE6364": 37
+  },
+  "matched_test_scans": 34,
+  "matched_training_rows": 41,
+  "phase": {
+    "early_secretory": {
+      "matched": 8,
+      "unmatched": 1
+    },
+    "mid_secretory": {
+      "matched": 17
+    },
+    "proliferative": {
+      "matched": 9,
+      "unmatched": 2
+    }
+  },
+  "reported_predictions_correct": {
+    "matched": 34,
+    "unmatched": 3
+  },
+  "study_combinations": {
+    "GSE4888": 8,
+    "GSE4888+GSE51981": 7,
+    "GSE51981": 19,
+    "unmatched": 3
+  },
+  "test_records": 37,
+  "test_scan_years": [
+    2004,
+    2005
+  ],
+  "training_records": 179
+}

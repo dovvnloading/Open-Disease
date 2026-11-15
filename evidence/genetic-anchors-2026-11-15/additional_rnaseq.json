@@ -1,0 +1,27 @@
+{
+  "cases": 4,
+  "controls": 4,
+  "gene_effects": {
+    "GMPPB": {
+      "transcripts": 1,
+      "effect_pp": 2.1918554006968662
+    },
+    "CRISPLD1": {
+      "transcripts": 1,
+      "effect_pp": -6.717116724738673
+    },
+    "RBM6": {
+      "transcripts": 5,
+      "effect_pp": 8.352787456445995
+    },
+    "CISD2": {
+      "transcripts": 0
+    }
+  },
+  "n_genes": 3,
+  "score_difference": -0.39718650942147504,
+  "leave_one_donor_fixed_scale": [
+    -0.503355917757635,
+    -0.2702314597391922
+  ]
+}

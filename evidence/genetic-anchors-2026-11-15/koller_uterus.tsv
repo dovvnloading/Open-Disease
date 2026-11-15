@@ -1,0 +1,5 @@
+symbol	gene_id	ensembl	twas_z	twas_p	measured_both	finland_effect_pp	rome_effect_pp	melbourne_probes	melbourne_within_gene_p	melbourne_holm_4
+GMPPB	29925	ENSG00000173540.12	5.207280368	1.92e-07	False			2	0.305917	1.0
+CRISPLD1	83690	ENSG00000121005.8	6.038591599	1.55e-09	False			0		
+RBM6	10180	ENSG00000004534.14	-5.194318031	2.05e-07	True	1.2011095890277041	-7.828515210007321	1	0.4556452	1.0
+CISD2	493856	ENSG00000145354.9	4.780252641	1.75e-06	False			1	0.4423503	1.0
