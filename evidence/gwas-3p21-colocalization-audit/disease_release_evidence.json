@@ -1,0 +1,201 @@
+{
+  "checked": "2026-11-16",
+  "clinical": {
+    "accession_id": "GCST90841386",
+    "initial_sample_size": "36,695 European ancestry cases, 567,775 European ancestry controls",
+    "cohort": [
+      "UKB",
+      "AllofUs",
+      "MVP",
+      "FinnGen",
+      "EB"
+    ],
+    "snp_count": 8334944,
+    "disease_trait": "Clinical endometriosis",
+    "full_summary_stats_available": false
+  },
+  "zenodo": {
+    "doi": "10.5281/zenodo.18983492",
+    "revision": 5,
+    "modified": "2026-05-06T10:47:27.239432+00:00",
+    "files": [
+      {
+        "key": "README_GWAS.txt",
+        "size": 5055,
+        "checksum": "md5:57078acfd8d2137a0115d0879ea7cc88"
+      },
+      {
+        "key": "Endometriosis_wo.23andMe_PRS_weights.txt.gz",
+        "size": 15655860,
+        "checksum": "md5:1307ae060a80984b336b0a1bbf5de1bf"
+      },
+      {
+        "key": "endometriosis_AMR.txt.gz",
+        "size": 73796441,
+        "checksum": "md5:183de2f4c40d0ae6e0f7550b139823ac"
+      },
+      {
+        "key": "README_PRS.txt",
+        "size": 2002,
+        "checksum": "md5:45d32debdb9d2f42022555160f611dde"
+      },
+      {
+        "key": "endometriosis_AFR.txt.gz",
+        "size": 164855231,
+        "checksum": "md5:f0332d41dded04597ab3411f7f05d2fe"
+      },
+      {
+        "key": "adenomyosis_EUR.txt.gz",
+        "size": 156862766,
+        "checksum": "md5:f51397ca8bf1904d207e89e43da0ea42"
+      },
+      {
+        "key": "endometriosis_wo.adenomyosis_EUR.txt.gz",
+        "size": 99260186,
+        "checksum": "md5:4dce0b224ec3f37d02824740dd7bf840"
+      },
+      {
+        "key": "endometriosis_EAS.txt.gz",
+        "size": 112792402,
+        "checksum": "md5:d18e08168de5a2af57ed6b429393973a"
+      },
+      {
+        "key": "endometriosis_EUR_wo_23andMe.txt.gz",
+        "size": 169689165,
+        "checksum": "md5:8eb17a286fcbd654454624c7dabd039a"
+      }
+    ],
+    "interpretation": "No file for the exact EUR clinical GWAS is listed. The README identifies IEGC in the EUR no-23andMe aggregate. Use for noncommercial scientific research under the deposited terms. No genome-wide Zenodo payload acquired."
+  },
+  "catalog_curated_associations": {
+    "total": 75,
+    "entries_in_interval": [
+      {
+        "association_id": 218953382,
+        "snp_effect_allele": [
+          "rs9831967-T"
+        ],
+        "risk_frequency": "0.4016",
+        "locations": [
+          "3:50179801"
+        ],
+        "beta": "0.0153004 unit decrease",
+        "p_value": 8e-06,
+        "mapped_genes": [
+          "SEMA3F"
+        ]
+      }
+    ],
+    "interpretation": "This is a selected Catalog list. A missing variant in these rows does not establish a null association."
+  },
+  "changed_disease_input": {
+    "accession": "GCST90205183",
+    "assembly": "GRCh38",
+    "chr3_interval_inclusive": [
+      48614715,
+      50614717
+    ],
+    "rows": 2857,
+    "sha256": "8f996e0bf80ae9d79b10450e4449b96cc92a4f907c43ac471ae65ad47f6f2739",
+    "bytes_local_tsv": 190603,
+    "sample_sizes": {
+      "European": 470866,
+      "Japanese": 3294
+    },
+    "N_per_variant": "not supplied",
+    "ascertainment": "Overall endometriosis, public 23andMe-excluded release. Recruitment and ancestry differ from clinical GCST90841386.",
+    "variants": {
+      "rs1352889": {
+        "rsid": "rs1352889",
+        "base_pair_location": "49614715",
+        "effect_allele": "C",
+        "other_allele": "T",
+        "beta": "-0.0404",
+        "standard_error": "0.0151",
+        "effect_allele_frequency": "0.8278",
+        "p_value": "0.007462"
+      },
+      "rs9831967": {
+        "rsid": "rs9831967",
+        "base_pair_location": "50179801",
+        "effect_allele": "T",
+        "other_allele": "C",
+        "beta": "-0.027",
+        "standard_error": "0.0113",
+        "effect_allele_frequency": "0.5631",
+        "p_value": "0.01688"
+      },
+      "rs13100173": {
+        "rsid": "rs13100173",
+        "base_pair_location": "50295266",
+        "effect_allele": "A",
+        "other_allele": "G",
+        "beta": "0.008",
+        "standard_error": "0.0113",
+        "effect_allele_frequency": "0.4702",
+        "p_value": "0.479"
+      }
+    },
+    "smallest_p": {
+      "rsid": "rs113660021",
+      "base_pair_location": "48677812",
+      "effect_allele": "T",
+      "other_allele": "C",
+      "beta": "-0.2865",
+      "standard_error": "0.0740",
+      "effect_allele_frequency": "0.009",
+      "p_value": "0.0001081"
+    },
+    "harmonisation_code_counts": {
+      "10": 1553,
+      "11": 916,
+      "5": 188,
+      "6": 200
+    },
+    "source": "https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90205001-GCST90206000/GCST90205183/harmonised/GCST90205183.h.tsv.gz",
+    "range_receipts": [
+      {
+        "range": "bytes 0-65535/165797641",
+        "bytes": 65536,
+        "sha256": "c302cfb46077c631627cb983a123a33748d3d810ff7859bbefa16cc85890eef0"
+      },
+      {
+        "range": "bytes 30081598-30205335/165797641",
+        "bytes": 123738,
+        "sha256": "3418178900c53efb0d3e7fe5a5b7af82e1fa3839aa43a5893d7327118837df04"
+      }
+    ]
+  },
+  "source_objects": {
+    "zenodo_record.json": {
+      "url": "https://zenodo.org/api/records/18983492",
+      "bytes": 5836,
+      "sha256": "a86c96d0c6a8b86d64b7621da027b87a2e884221938a3a09a128b866c5b0e24a"
+    },
+    "README_GWAS.txt": {
+      "url": "https://zenodo.org/api/records/18983492/files/README_GWAS.txt/content",
+      "bytes": 5055,
+      "sha256": "1eecf3321ab58a99039145bd5e7499f9a358dab8b3dcf88bdf0c376711324874"
+    },
+    "clinical_study.json": {
+      "url": "https://www.ebi.ac.uk/gwas/rest/api/v2/studies/GCST90841386",
+      "bytes": 996,
+      "sha256": "7f8b1fd75f21a929ae773079c4f4701b3a0e4ac7a03b7253e29b92ed782d57b8"
+    },
+    "clinical_top_associations.json": {
+      "url": "https://www.ebi.ac.uk/gwas/rest/api/v2/associations?accession_id=GCST90841386&size=100",
+      "bytes": 68674,
+      "sha256": "d2ab769dcb3a1e93a493c22fbc88381023150326a1d8ec8c998a163ab27be16f"
+    },
+    "gwas_tbi_index.gz": {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90205001-GCST90206000/GCST90205183/harmonised/GCST90205183.h.tsv.gz.tbi",
+      "bytes": 1466917,
+      "sha256": "bc8904cc2a25332ea9ed952f5031be3c9e7c4510cf9174ab8989e6d6ede772ff"
+    },
+    "rahmioglu_meta.yaml": {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90205001-GCST90206000/GCST90205183/harmonised/GCST90205183.h.tsv.gz-meta.yaml",
+      "bytes": 1441,
+      "sha256": "2b97f2a09805aa845d9ca06312d2ed4aae213b5679430ab12f726232cc4c729d"
+    }
+  }
+}

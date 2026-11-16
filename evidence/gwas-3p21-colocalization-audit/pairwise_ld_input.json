@@ -1,0 +1,59 @@
+{
+  "measurement": "Haplotype counts for one pair in an external reference population",
+  "service": "National Cancer Institute LDlink LDpair",
+  "version": "7.4.1",
+  "retrieved_utc_date": "2026-11-16",
+  "input_assembly": "GRCh37",
+  "reference_panel": "1000 Genomes Project Phase 3",
+  "population": "EUR",
+  "subpopulations": [
+    "CEU",
+    "TSI",
+    "FIN",
+    "GBR",
+    "IBS"
+  ],
+  "panel_donors": 503,
+  "marker_order": [
+    {
+      "rsid": "rs1352889",
+      "chromosome": "3",
+      "position": 49652148,
+      "alleles": [
+        "C",
+        "T"
+      ],
+      "counted_allele": "T"
+    },
+    {
+      "rsid": "rs13100173",
+      "chromosome": "3",
+      "position": 50332697,
+      "alleles": [
+        "A",
+        "G"
+      ],
+      "counted_allele": "A"
+    }
+  ],
+  "count_layout": "Each X_Y count in the receipt is a phased chromosome carrying allele X at rs1352889 and allele Y at rs13100173.",
+  "calculator_url": "https://ldlink.nih.gov/ldpair",
+  "method_url": "https://doi.org/10.1093/bioinformatics/btv402",
+  "populations_url": "https://static.ensembl.org/info/genome/variation/species/populations.html",
+  "replay": "In LDpair choose GRCh37, enter rs1352889 and rs13100173 in that order, select the European group (all five populations), and calculate. For credentialed API replays the documented LDpair GET uses var1=rs1352889, var2=rs13100173, pop=EUR, genome_build=grch37, json_out=false. The web form was used for this run.",
+  "api_documentation": "https://ldlink.nih.gov/apiaccess",
+  "retrieval": "Read the public calculator's displayed table and retrieved its Download Results text by HTTPS GET (HTTP 200). The service labels this export as temporary. Raw aggregate receipt is preserved below with original whitespace.",
+  "temporary_receipt_url": "https://ldlink.nih.gov/LDlinkRestWeb/tmp/LDpair_dff6f77b-7833-46f2-a962-ad59183e9232.txt",
+  "receipt_bytes": 629,
+  "receipt_sha256": "b1605ef5cfa6660a64e21eaef2aab687936176583ca3012a8fbf1ff6ac07a04d",
+  "receipt_text": "Query SNPs:\nrs1352889 (chr3:49652148)\nrs13100173 (chr3:50332697)\n\nEUR Haplotypes:\n               rs13100173\n               A       G\n             -----------------\n           C | 345   | 494   | 839   (0.834)\nrs1352889    -----------------\n           T | 121   | 46    | 167   (0.166)\n             -----------------\n               466     540     1006\n              (0.463) (0.537)\n\n          C_G: 494 (0.491)\n          C_A: 345 (0.343)\n          T_A: 121 (0.12)\n          T_G: 46 (0.046)\n\n          D': 0.4868\n          R2: 0.0547\n      Chi-sq: 54.9981\n     p-value: <0.0001\n\nrs1352889 and rs13100173 are in linkage equilibrium\n",
+  "ensembl": {
+    "source": "Ensembl GRCh37 REST pairwise LD",
+    "documentation_url": "https://grch37.rest.ensembl.org/documentation/info/ld_pairwise_get",
+    "url": "https://grch37.rest.ensembl.org/ld/human/pairwise/rs1352889/rs13100173?population_name=1000GENOMES%3Aphase_3%3AEUR",
+    "retrieval": "HTTPS GET with Accept: application/json on 2026-11-16, HTTP 200. Same nominal EUR reference as LDpair. Source does not give haplotype counts, sign, or sample count in the response.",
+    "receipt_text": "[{\"r2\":\"0.053964\",\"d_prime\":\"0.483694\",\"variation1\":\"rs1352889\",\"variation2\":\"rs13100173\",\"population_name\":\"1000GENOMES:phase_3:EUR\"}]",
+    "receipt_bytes": 135,
+    "receipt_sha256": "19bce782d7af43c14561c223da0bd294f4caa84a404371be380cb34a08635e90"
+  }
+}

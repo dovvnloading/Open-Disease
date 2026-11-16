@@ -1,0 +1,33 @@
+{
+  "assembly": "GRCh37",
+  "panel": "1000 Genomes Project Phase 3",
+  "population": "EUR",
+  "reference_donors": 503,
+  "counted_alleles": {
+    "rs1352889": "T",
+    "rs13100173": "A"
+  },
+  "counts_by_haplotype": {
+    "C_A": 345,
+    "C_G": 494,
+    "T_A": 121,
+    "T_G": 46
+  },
+  "ldpair_count_calculation": {
+    "phased_chromosomes": 1006,
+    "counted_allele_1_frequency": 0.16600397614314116,
+    "counted_allele_2_frequency": 0.46322067594433397,
+    "d": 0.04338185598140778,
+    "signed_r": 0.23381643548921677,
+    "r_squared": 0.054670125504883066,
+    "signed_d_prime": 0.4868485251718785,
+    "pearson_chi_squared_df1_uncorrected": 54.99814625791237,
+    "pearson_asymptotic_p_value": 1.206435583802026e-13
+  },
+  "ldpair_receipt_sha256": "b1605ef5cfa6660a64e21eaef2aab687936176583ca3012a8fbf1ff6ac07a04d",
+  "ensembl_same_panel_crosscheck": {
+    "r_squared": 0.053964,
+    "d_prime": 0.483694,
+    "receipt_sha256": "19bce782d7af43c14561c223da0bd294f4caa84a404371be380cb34a08635e90"
+  }
+}

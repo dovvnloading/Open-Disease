@@ -1,0 +1,308 @@
+{
+  "doi": "10.1038/s41588-023-01323-z",
+  "workbook_sha256": "01cc0de4f3cb9aeec523ba312a17b931606d627e17e83581700b559741c7585e",
+  "bytes": 120578101,
+  "S3_overall": {
+    "lead": "rs1352889",
+    "hg19": 49652148,
+    "risk_allele_EUR_JPT_frequency": "T (0.17; N/A)",
+    "odds_ratio_CI": "1.05 (1.03-1.07)",
+    "p_as_printed": "2.79x10-8",
+    "distinct_signals": 1
+  },
+  "S8_BSN_rows": 0,
+  "S10_S11_99pct_credible_set": {
+    "index": "rs1352889",
+    "unique_members": 341,
+    "hg19_min_max": [
+      49137904,
+      50301584
+    ],
+    "sorted_member_ids_lf_sha256": "468d2dffb084718971627a063fe28ad511d047ca01a9d514ae68e533a045c15b",
+    "lead_is_member": true,
+    "HYAL3_candidate_is_member": false,
+    "named_cross_study_markers": {
+      "rs9831967": true,
+      "rs6804970": true,
+      "rs6446298": false,
+      "rs6792892": false
+    },
+    "bp_candidate_beyond_largest_member": 31113,
+    "individual_posteriors_in_S11": false
+  },
+  "S12_coding_members": [
+    {
+      "variant": "rs4955418",
+      "gene": "CCDC71",
+      "consequence": "missense_variant"
+    },
+    {
+      "variant": "rs1062633",
+      "gene": "MST1R",
+      "consequence": "missense_variant"
+    },
+    {
+      "variant": "rs2230590",
+      "gene": "MST1R",
+      "consequence": "missense_variant"
+    }
+  ],
+  "S13_high_confidence_BSN_rows": 0,
+  "S31_chr3_selected_endometrial_eqtl_rows": [
+    {
+      "variant": "rs1352889",
+      "position_as_printed": 49614715,
+      "allele1": "T",
+      "allele2": "C",
+      "allele1_frequency": 0.21,
+      "beta": 0.425,
+      "se": 0.094,
+      "p": 5.80494e-06,
+      "gene": "KLHDC8B"
+    },
+    {
+      "variant": "rs1352889",
+      "position_as_printed": 49614715,
+      "allele1": "T",
+      "allele2": "C",
+      "allele1_frequency": 0.21,
+      "beta": -0.397,
+      "se": 0.094,
+      "p": 2.34871e-05,
+      "gene": "UBA7"
+    },
+    {
+      "variant": "rs1352889",
+      "position_as_printed": 49614715,
+      "allele1": "T",
+      "allele2": "C",
+      "allele1_frequency": 0.21,
+      "beta": 0.376,
+      "se": 0.094,
+      "p": 8.20361e-05,
+      "gene": "GMPPB"
+    },
+    {
+      "variant": "rs4955420",
+      "position_as_printed": 49171432,
+      "allele1": "T",
+      "allele2": "C",
+      "allele1_frequency": 0.3398,
+      "beta": -0.137811,
+      "se": 0.0278615,
+      "p": 7.56345e-07,
+      "gene": "NCKIPSD"
+    },
+    {
+      "variant": "rs9835439",
+      "position_as_printed": 49182897,
+      "allele1": "C",
+      "allele2": "G",
+      "allele1_frequency": 0.06796,
+      "beta": -0.531067,
+      "se": 0.0931441,
+      "p": 1.18717e-08,
+      "gene": "CCDC36"
+    },
+    {
+      "variant": "rs6446298",
+      "position_as_printed": 49823421,
+      "allele1": "T",
+      "allele2": "C",
+      "allele1_frequency": 0.3301,
+      "beta": 0.152221,
+      "se": 0.039403,
+      "p": 0.000111926,
+      "gene": "HYAL3"
+    },
+    {
+      "variant": "rs6792892",
+      "position_as_printed": 49958085,
+      "allele1": "T",
+      "allele2": "C",
+      "allele1_frequency": 0.4442,
+      "beta": 0.135642,
+      "se": 0.0223457,
+      "p": 1.27785e-09,
+      "gene": "RBM6"
+    }
+  ],
+  "S33_selected_top10000_rows_at_two_markers": [
+    {
+      "variant_id": "chr3:49652148",
+      "effect_allele": "t",
+      "other_allele": "c",
+      "frequency": 0.1734,
+      "beta": 0.0511,
+      "se": 0.0092,
+      "p": 2.787e-08,
+      "sample_size_column": 202818
+    }
+  ],
+  "S34_S35_UK_endometrial_QTL": {
+    "N_donors": 163,
+    "marker_rows": {
+      "rs1352889": {
+        "matched_id": 35,
+        "matched_position": 35,
+        "matched_both": 35,
+        "distinct_gene_ids": 35,
+        "slope_squared_divided_by_L_range": [
+          3.404370083274784,
+          3.404407129134338
+        ],
+        "prespecified_genes": {
+          "HYAL3": [
+            {
+              "gene_id": "ENSG00000186792",
+              "sheet": 34,
+              "row": 362737,
+              "cis_variant_count_column": 2667,
+              "column_L_as_reported": 0.0377381,
+              "slope_unoriented": 0.358435
+            }
+          ],
+          "RBM6": [
+            {
+              "gene_id": "ENSG00000004534",
+              "sheet": 34,
+              "row": 341835,
+              "cis_variant_count_column": 2692,
+              "column_L_as_reported": 0.106394,
+              "slope_unoriented": 0.601836
+            }
+          ],
+          "TMEM115": [
+            {
+              "gene_id": "ENSG00000126062",
+              "sheet": 34,
+              "row": 386663,
+              "cis_variant_count_column": 2647,
+              "column_L_as_reported": 8.0857e-06,
+              "slope_unoriented": -0.00524661
+            }
+          ],
+          "GMPPB": [
+            {
+              "gene_id": "ENSG00000173540",
+              "sheet": 34,
+              "row": 323141,
+              "cis_variant_count_column": 2266,
+              "column_L_as_reported": 0.020808,
+              "slope_unoriented": -0.266155
+            }
+          ]
+        }
+      },
+      "rs13100173": {
+        "matched_id": 0,
+        "matched_position": 0,
+        "matched_both": 0,
+        "distinct_gene_ids": 0,
+        "slope_squared_divided_by_L_range": null,
+        "prespecified_genes": {
+          "HYAL3": [],
+          "RBM6": [],
+          "TMEM115": [],
+          "GMPPB": []
+        }
+      }
+    },
+    "rows_in_audit_interval_by_numeric_variant_id": {
+      "ENSG00000001617": 1766,
+      "ENSG00000003756": 1817,
+      "ENSG00000004534": 1936,
+      "ENSG00000004838": 1559,
+      "ENSG00000012171": 1634,
+      "ENSG00000068001": 1585,
+      "ENSG00000068028": 1567,
+      "ENSG00000088543": 1245,
+      "ENSG00000114353": 1682,
+      "ENSG00000114378": 1598,
+      "ENSG00000114383": 1581,
+      "ENSG00000114388": 1547,
+      "ENSG00000114395": 1544,
+      "ENSG00000114735": 1231,
+      "ENSG00000114737": 1189,
+      "ENSG00000114738": 1179,
+      "ENSG00000126062": 1538,
+      "ENSG00000164061": 2248,
+      "ENSG00000164062": 2196,
+      "ENSG00000164068": 2175,
+      "ENSG00000164077": 1973,
+      "ENSG00000164078": 1995,
+      "ENSG00000173531": 2180,
+      "ENSG00000173540": 2137,
+      "ENSG00000176095": 2127,
+      "ENSG00000182179": 2054,
+      "ENSG00000183763": 2036,
+      "ENSG00000185614": 2055,
+      "ENSG00000186792": 1608,
+      "ENSG00000187492": 2068,
+      "ENSG00000213600": 1660,
+      "ENSG00000214706": 1612,
+      "ENSG00000230454": 1640,
+      "ENSG00000243477": 1605,
+      "ENSG00000271858": 1519
+    },
+    "all_cis_column_L_checks": {
+      "GMPPB": {
+        "n_cis_rows": 2266,
+        "column_L_min": 3.18618e-08,
+        "column_L_max": 0.0549936,
+        "flagged_best": [
+          {
+            "sheet": 34,
+            "row": 323529,
+            "id": "3:49970310",
+            "column_L": 0.0549936
+          }
+        ]
+      },
+      "RBM6": {
+        "n_cis_rows": 2692,
+        "column_L_min": 2.02589e-07,
+        "column_L_max": 0.199438,
+        "flagged_best": [
+          {
+            "sheet": 34,
+            "row": 342206,
+            "id": "3:49960388",
+            "column_L": 0.199438
+          }
+        ]
+      },
+      "HYAL3": {
+        "n_cis_rows": 2667,
+        "column_L_min": 3.7392e-08,
+        "column_L_max": 0.105112,
+        "flagged_best": [
+          {
+            "sheet": 34,
+            "row": 363605,
+            "id": "3:50337032",
+            "column_L": 0.105112
+          }
+        ]
+      },
+      "TMEM115": {
+        "n_cis_rows": 2647,
+        "column_L_min": 9.78778e-09,
+        "column_L_max": 0.0368905,
+        "flagged_best": [
+          {
+            "sheet": 34,
+            "row": 388942,
+            "id": "3:51389976",
+            "column_L": 0.0368905
+          }
+        ]
+      }
+    },
+    "caveats": [
+      "The numeric variant ID and variant position columns use different coordinates at the BSN lead.",
+      "Neither sheet reports REF, ALT, dosage allele, frequency or standard error. No risk-allele effect is inferred.",
+      "Column L has the nominal P-value heading. Its proportionality to squared slopes across genes at the lead makes its interpretation as a P-value unsafe."
+    ]
+  }
+}

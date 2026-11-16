@@ -1,0 +1,137 @@
+{
+  "provider": "eQTL Catalogue, imported original GTEx v8 nominal all-pairs; GRCh38 reference plus Ensembl assembly mapping; GTEx Portal v8 significant eQTL API as a format/orientation check.",
+  "grch38_envelope": [
+    48614715,
+    50614717
+  ],
+  "grch38_unmapped_insertions": [
+    50214403,
+    50269326
+  ],
+  "regional_matrices": {
+    "Uterus": {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/imported/GTEx_V8/ge/Uterus.tsv.gz",
+      "tbi_sha256": "4edee25b8f2df922fc833fad5c1dc64bdababd95db17e1c91612fcae2e76562c",
+      "tbi_bytes": 2246721,
+      "tsv_sha256": "ab140f050bf5186e75e27d857068a22fa4e7ecb0585b5eda9e00c5c96790f990",
+      "ranges": [
+        {
+          "range": "bytes 0-65535/3649379097",
+          "bytes": 65536,
+          "sha256": "cfbbff4be9cff74094c6bd32a929e68ea9ed636a5d5e4836b07982819b64e8c5"
+        },
+        {
+          "range": "bytes 593001421-598144619/3649379097",
+          "bytes": 5143199,
+          "sha256": "5fbf80f892dcb424e35e349b092ed9c0cfb588d597c62cdca069feb0d5cd721b"
+        }
+      ],
+      "rows": 222233
+    },
+    "Colon_Sigmoid": {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/spot/eQTL/imported/GTEx_V8/ge/Colon_Sigmoid.tsv.gz",
+      "tbi_sha256": "d657eaf121e28dda8f300ae6365194b70640de7b2bfefe77a3ff717339510c7d",
+      "tbi_bytes": 2270991,
+      "tsv_sha256": "239fe0f800b9002681a68243b49ef86728e7c4c6eac636794cb4a207387a2153",
+      "ranges": [
+        {
+          "range": "bytes 0-65535/3703541977",
+          "bytes": 65536,
+          "sha256": "14605f518d9aeae932fd1cea1f99618b03813db470ffef11a0e989e91fcdd47d"
+        },
+        {
+          "range": "bytes 609470875-614869554/3703541977",
+          "bytes": 5398680,
+          "sha256": "1b46bc06fdfdfbcf78d3aa24174c0f78faf7f288f00d4863517ac4923de0ee3f"
+        }
+      ],
+      "rows": 225236
+    }
+  },
+  "small_sources": {
+    "GRCh38.fa.txt": {
+      "url": "https://rest.ensembl.org/sequence/region/human/3:48614715..50614717:1",
+      "accept": "text/plain",
+      "max_bytes": 2001000,
+      "bytes": 2000003,
+      "sha256": "973fa89f78cecb010e127f09eed36c995be0217bf81eff4da500f0ffca42059c"
+    },
+    "map37to38": {
+      "url": "https://rest.ensembl.org/map/human/GRCh37/3:48652148..50652148:1/GRCh38",
+      "accept": "application/json",
+      "max_bytes": 4096,
+      "bytes": 770,
+      "sha256": "86146a098724476aad7beca48002f8d9b4b703efe3ce7f3466d2ef20657c2dd2"
+    },
+    "gtex-uterus": {
+      "url": "https://gtexportal.org/api/v2/association/singleTissueEqtl?datasetId=gtex_v8&tissueSiteDetailId=Uterus&variantId=chr3_50295266_G_A_b38",
+      "accept": "application/json",
+      "max_bytes": 8192,
+      "bytes": 416,
+      "sha256": "b77784376db918b37dbeec75ed10cc056d14742835d97d1a22f500fcab7fe737"
+    },
+    "gtex-sigmoid": {
+      "url": "https://gtexportal.org/api/v2/association/singleTissueEqtl?datasetId=gtex_v8&tissueSiteDetailId=Colon_Sigmoid&variantId=chr3_50295266_G_A_b38",
+      "accept": "application/json",
+      "max_bytes": 8192,
+      "bytes": 1067,
+      "sha256": "7bcc871734a99391b279a6ea411b3bd2a350d5cc4ad32c2b13e738f205c62428"
+    }
+  },
+  "selected_marker": "rs13100173",
+  "effect_allele": "A (chr3_50295266_G_A_b38 ALT)",
+  "targeted_nominal_rows": {
+    "Uterus": {
+      "GMPPB": {
+        "beta_per_alt": 0.147646,
+        "se": 0.059635,
+        "nominal_p": 0.014907,
+        "gene_id": "ENSG00000173540"
+      },
+      "TMEM115": {
+        "beta_per_alt": -0.119025,
+        "se": 0.0573542,
+        "nominal_p": 0.0404304,
+        "gene_id": "ENSG00000126062"
+      },
+      "RBM6": {
+        "beta_per_alt": -0.120233,
+        "se": 0.0721337,
+        "nominal_p": 0.0985624,
+        "gene_id": "ENSG00000004534"
+      },
+      "HYAL3": {
+        "beta_per_alt": -0.594879,
+        "se": 0.0793156,
+        "nominal_p": 2.2302e-11,
+        "gene_id": "ENSG00000186792"
+      }
+    },
+    "Colon_Sigmoid": {
+      "GMPPB": {
+        "beta_per_alt": 0.180749,
+        "se": 0.0464842,
+        "nominal_p": 0.000127849,
+        "gene_id": "ENSG00000173540"
+      },
+      "RBM6": {
+        "beta_per_alt": -0.0897923,
+        "se": 0.0473137,
+        "nominal_p": 0.0588163,
+        "gene_id": "ENSG00000004534"
+      },
+      "TMEM115": {
+        "beta_per_alt": -0.0572297,
+        "se": 0.0321467,
+        "nominal_p": 0.0761866,
+        "gene_id": "ENSG00000126062"
+      },
+      "HYAL3": {
+        "beta_per_alt": -0.6644,
+        "se": 0.0466437,
+        "nominal_p": 1.6373e-34,
+        "gene_id": "ENSG00000186792"
+      }
+    }
+  }
+}
