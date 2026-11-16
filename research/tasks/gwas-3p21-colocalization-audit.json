@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "gwas-3p21-colocalization-audit",
+  "title": "Resolve what the 3p21.31 endometriosis association establishes",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/50",
+  "question": "Can disease and molecular associations distinguish HYAL3 regulation from linked signals, co-regulation and non-endometrial effects at 3p21.31?",
+  "scope": "Source audit and gated regional analysis for inherited susceptibility. Use only public primary publications, aggregate supplements, public regional summary statistics and signed aggregate LD where permitted. Exclude participant records, whole-genome analyses, lesion panels and issue 49.",
+  "dependencies": [],
+  "sources": [
+    "https://doi.org/10.1038/s41588-023-01323-z",
+    "https://doi.org/10.1038/s41588-026-02582-2",
+    "https://doi.org/10.5281/zenodo.18983492",
+    "https://www.ebi.ac.uk/gwas/studies/GCST90205183",
+    "https://www.ebi.ac.uk/eqtl/",
+    "https://doi.org/10.5858/arpa.2023-0468-OA"
+  ],
+  "steps": [
+    "Read the four prior project reports and primary study methods.",
+    "Audit regional GWAS, credible sets, secondary signals and QTL measurement coverage.",
+    "Check availability of matching clinical GWAS, unselected QTL statistics and signed LD. Apply the dedicated design before any new regional estimates.",
+    "Report all attempted analyses, missing comparators and the most informative follow-up."
+  ],
+  "deliverables": [
+    "Dedicated issue, branch, P0 queue entry and reviewable PR.",
+    "Source-linked locus report and dated release inventory under task-specific paths.",
+    "Offline check, tests and safe aggregate results where data permit."
+  ],
+  "acceptance": [
+    "Document locus alleles, builds, ancestry, phenotype, fine-mapping assumptions and reuse where verified.",
+    "Distinguish signal sharing, correlated TWAS predictors and compartment identity.",
+    "Apply the frozen input gates and document blocked comparisons.",
+    "Give one scientific decision and a discriminating next experiment. Isolate all changes from issue 49."
+  ],
+  "budget": {"max_runtime_minutes": 90, "max_ram_gb": 4, "network": "public-opt-in", "max_download_mb": 250}
+}
