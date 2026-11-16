@@ -1,0 +1,15 @@
+{
+  "all_three_tissues": 11,
+  "arrays": 57,
+  "arrays_by_tissue": {
+    "endometrium": 17,
+    "peritoneal endometriosis lesion": 18,
+    "peritoneum": 22
+  },
+  "case_donors": 27,
+  "lesion_peritoneum_pairs": 13,
+  "lesion_uterus_pairs": 16,
+  "noncase_peritoneum_donors": 0,
+  "peritoneum_only_donors": 8,
+  "uterus_peritoneum_pairs": 12
+}
