@@ -1,0 +1,19 @@
+{
+  "checked_tissue_flags": 38,
+  "clinical_donors": 19,
+  "clinical_phases": {
+    "Proliferative": 9,
+    "Secretory": 10
+  },
+  "clinical_rAFS_stages": {
+    "I": 10,
+    "II": 4,
+    "III": 1,
+    "IV": 4
+  },
+  "donors_without_clinical_rows": 8,
+  "lesion_peritoneum_pair_phases": {
+    "Proliferative": 5,
+    "Secretory": 8
+  }
+}

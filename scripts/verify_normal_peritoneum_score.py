@@ -18,11 +18,9 @@ from normal_peritoneum_preflight import blocks, preflight
 SIGNED_ADDRESSES = {60064: 1, 4570725: 1, 6450672: 1, 3840113: -1, 2360678: -1}
 
 
-def verified_scores(lines, pairs, addresses):
-    """Compute midrank percentiles via sorted-value insertion points."""
-    if len(pairs) < 6:
-        raise ValueError("Too few physically verified donor pairs")
-    assays = {a.encode(): {} for pair in pairs for a in pair.peritoneum_assays + pair.uterus_assays}
+def verified_assay_scores(lines, assay_ids, addresses):
+    """Compute signed midrank percentiles independently via sorted-value insertion points."""
+    assays = {a.encode(): {} for a in assay_ids}
     for line in lines:
         _, assay, rest = line.split(b"\t", 2)
         if assay not in assays:
@@ -41,6 +39,15 @@ def verified_scores(lines, pairs, addresses):
         numerator = sum(sign * (bisect_left(ordered, values[addr]) + bisect_right(ordered, values[addr]))
                         for addr, sign in SIGNED_ADDRESSES.items())
         scores[assay.decode()] = Fraction(100 * numerator, 2 * len(addresses) * len(SIGNED_ADDRESSES))
+    return scores
+
+
+def verified_scores(lines, pairs, addresses):
+    """Calculate the original noncase tissue comparison from independently ranked assays."""
+    if len(pairs) < 6:
+        raise ValueError("Too few physically verified donor pairs")
+    assay_ids = [a for pair in pairs for a in pair.peritoneum_assays + pair.uterus_assays]
+    scores = verified_assay_scores(lines, assay_ids, addresses)
     diffs = []
     sensitivity = []
     rep_gaps = []

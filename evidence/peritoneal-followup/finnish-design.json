@@ -1,0 +1,118 @@
+{
+  "address_census_case_control_and_prior_organ_candidates": {
+    "clinically_selected": 49,
+    "native_assay_rows": 418,
+    "native_raw_assays": 400,
+    "native_raw_rows": 25355096,
+    "selected_assays_with_repeated_addresses": 3,
+    "selected_by_status": {
+      "WG6": 46,
+      "repeated_addresses": 3
+    },
+    "selected_excess_address_rows": 331271
+  },
+  "chip_gate": {
+    "candidate_assay_status_by_tissue": {
+      "case_peritoneum": {
+        "WG6": 7,
+        "repeated_addresses": 1
+      },
+      "lesion": {
+        "WG6": 7,
+        "repeated_addresses": 2
+      }
+    },
+    "candidate_pairs_by_chip_status_lesion_then_peritoneum": {
+      "WG6 / WG6": 7,
+      "repeated_addresses / repeated_addresses": 1
+    },
+    "donors_excluded_by_chip": 1,
+    "donors_passing_wg6_both_arms": 7,
+    "retained_donors_by_run": {
+      "10": 5,
+      "12": 1,
+      "9": 1
+    },
+    "retained_donors_by_survey_hormone_flag": {
+      "stored_false": 1,
+      "stored_true": 6
+    },
+    "retained_uterine_histology_by_donor_unverified_as_same_operation": {
+      "other_or_unclassified": 5,
+      "proliferative": 1,
+      "secretory": 1
+    },
+    "retained_wg6_assays_by_tissue": {
+      "case_peritoneum": 7,
+      "lesion": 7
+    }
+  },
+  "clinical_design": {
+    "donors_with_both_tissues": 17,
+    "donors_with_either_tissue": 67,
+    "donors_with_one_shared_run_and_one_specimen_per_arm": 8,
+    "excluded_donors": {
+      "multiple_specimens_in_shared_run": 1,
+      "no_shared_run": 8,
+      "only_case_peritoneum": 17,
+      "only_lesion": 33
+    }
+  },
+  "head_sha256": "023a9ee95ecb6901cac61f1fdf82ed699e1c8d2159e61665d2ef499ebd8708fa",
+  "prefix_sha256": "74316094156c43ebb693c060178238b46c0b3f5fa032f8333488063da9e5ce7a",
+  "same_run_noncase_reference": {
+    "candidate_noncase_assays_in_retained_case_runs_by_chip_status": {
+      "WG6": 8
+    },
+    "case_pairs_in_runs_with_wg6_noncase_peritoneum": 7,
+    "case_pairs_with_same_run_noncase_sharing_reported_nonmissing_flag": {
+      "stored_false": 1
+    },
+    "distinct_noncase_donors": 8,
+    "distinct_noncase_donors_by_survey_flag": {
+      "stored_false": 8
+    },
+    "distinct_noncase_specimens": 8,
+    "noncase_donors_in_multiple_case_runs": 0,
+    "noncase_donors_outside_prior_paired_organ_controls": 4,
+    "overlap_with_prior_paired_organ_control_donors": 4,
+    "prior_paired_organ_control_donors": 8,
+    "retained_noncase_wg6_assays": 8,
+    "run_summary": {
+      "10": {
+        "case_pairs": 5,
+        "case_survey_flags": {
+          "stored_false": 1,
+          "stored_true": 4
+        },
+        "noncase_peritoneum_donors": 2,
+        "noncase_survey_flags": {
+          "stored_false": 2
+        }
+      },
+      "12": {
+        "case_pairs": 1,
+        "case_survey_flags": {
+          "stored_true": 1
+        },
+        "noncase_peritoneum_donors": 1,
+        "noncase_survey_flags": {
+          "stored_false": 1
+        }
+      },
+      "9": {
+        "case_pairs": 1,
+        "case_survey_flags": {
+          "stored_true": 1
+        },
+        "noncase_peritoneum_donors": 5,
+        "noncase_survey_flags": {
+          "stored_false": 5
+        }
+      }
+    },
+    "stored_false_interpretation": "Schema defaults to false. A stored false does not establish absence of exposure."
+  },
+  "source": "https://doi.org/10.6084/m9.figshare.12195975.v1",
+  "tail_sha256": "75f0e4ce7f600af1716c16b5b551331725d437f0608b92dc4544024f2a351fc8"
+}

@@ -1,0 +1,101 @@
+{
+  "candidates": {
+    "E-MTAB-694": {
+      "catalogue_control_matches": [
+        "adjacen",
+        "periton"
+      ],
+      "collection": "Sohler",
+      "named_in_prior_report": true,
+      "official_record": "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-694",
+      "primary_source_disposition": "Case-only Erlangen collection. Histology and anatomical subsite of negative peritoneal biopsies remain unverified.",
+      "source": "https://doi.org/10.1177/1933719112451147"
+    },
+    "GSE141549": {
+      "catalogue_control_matches": [
+        "adjacen",
+        "periton"
+      ],
+      "collection": "Finnish EndometDB",
+      "named_in_prior_report": true,
+      "official_record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141549",
+      "primary_source_disposition": "Shared recruitment with the Finnish audit. Biopsy-level negative pathology and matching pelvic subsites remain unverified.",
+      "source": "https://doi.org/10.1038/s41597-020-00623-x"
+    },
+    "GSE15309": {
+      "catalogue_control_matches": [
+        "periton"
+      ],
+      "collection": "CGAP SAGE library collection",
+      "named_in_prior_report": true,
+      "official_record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE15309",
+      "primary_source_disposition": "One archival peritoneal library also appears in GSE14. No matched superficial-lesion cohort.",
+      "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE15309"
+    },
+    "GSE179640": {
+      "catalogue_control_matches": [
+        "adjacen",
+        "periton"
+      ],
+      "collection": "Tan",
+      "named_in_prior_report": true,
+      "official_record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179640",
+      "primary_source_disposition": "Adjacent case material. Noncase specimens are uterine.",
+      "source": "https://doi.org/10.1038/s41556-022-00961-5"
+    },
+    "GSE197928": {
+      "catalogue_control_matches": [
+        "adjacen"
+      ],
+      "collection": "Mortlock",
+      "named_in_prior_report": false,
+      "official_record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE197928",
+      "primary_source_disposition": "Endometrioma and adjacent stromal chromatin profiling. Wrong organ and molecular assay.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9040176/"
+    },
+    "GSE213216": {
+      "catalogue_control_matches": [
+        "adjacen",
+        "periton"
+      ],
+      "collection": "Fonseca",
+      "named_in_prior_report": true,
+      "official_record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213216",
+      "primary_source_disposition": "Four pathology-negative profiles from two case donors. No noncase peritoneum.",
+      "source": "https://doi.org/10.1038/s41588-022-01254-1"
+    },
+    "GSE56414": {
+      "catalogue_control_matches": [
+        "adjacen",
+        "periton"
+      ],
+      "collection": "Saare",
+      "named_in_prior_report": true,
+      "official_record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56414",
+      "primary_source_disposition": "Small RNA sequencing of two cases and adjacent material cannot measure the frozen mRNA score.",
+      "source": "https://doi.org/10.1371/journal.pone.0112630"
+    },
+    "GSE86534": {
+      "catalogue_control_matches": [
+        "adjacen"
+      ],
+      "collection": "Zhang",
+      "named_in_prior_report": false,
+      "official_record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE86534",
+      "primary_source_disposition": "Four case donors with ovarian lesions, adjacent ovary and uterus on an mRNA/lncRNA array. No peritoneal biopsy.",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/30496345/"
+    }
+  },
+  "catalogue": "https://doi.org/10.7554/eLife.103825",
+  "catalogue_search_date": "2025-01-27",
+  "discovery_rule": "Case-insensitive substring adjacen or periton in BIOLOGICAL CONTROL across every series.",
+  "included_series": 122,
+  "matched_series": 8,
+  "peritoneal_control_label_series": 6,
+  "peritoneal_control_label_series_in_prior_report": 6,
+  "series_with_nonempty_endo_tissue_field": 36,
+  "sheet": "Included Series",
+  "workbook_bytes": 36933,
+  "workbook_sha256": "03f6d4130afce2184c52d45dc43d5b894048006cda351802c2fd7b331b40cde4",
+  "workbook_url": "https://cdn.elifesciences.org/articles/103825/elife-103825-supp1-v1.xlsx"
+}
