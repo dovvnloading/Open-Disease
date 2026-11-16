@@ -1,0 +1,109 @@
+{
+  "by_platform": {
+    "GPL10558": {
+      "array_cycle_category_by_arm": {
+        "case_peritoneum": {
+          "medication": 3,
+          "menstruation": 1,
+          "proliferative": 1,
+          "secretory": 2,
+          "unknown": 2
+        },
+        "lesion": {
+          "medication": 2,
+          "secretory": 1,
+          "unknown": 1
+        }
+      },
+      "arrays": {
+        "case_peritoneum": 9,
+        "control_endometrium": 0,
+        "control_peritoneum": 0,
+        "lesion": 4
+      },
+      "link_groups": {
+        "case_peritoneum": 9,
+        "control_endometrium": 0,
+        "control_peritoneum": 0,
+        "lesion": 4
+      },
+      "link_groups_with_both_control_tissues_by_phase": {},
+      "link_groups_with_lesion_and_case_peritoneum": 1
+    },
+    "GPL13376": {
+      "array_cycle_category_by_arm": {
+        "case_peritoneum": {
+          "medication": 12,
+          "menstruation": 1,
+          "proliferative": 3,
+          "secretory": 5,
+          "unknown": 5
+        },
+        "control_endometrium": {
+          "No disease": 1,
+          "medication": 10,
+          "proliferative": 7,
+          "secretory": 12,
+          "unknown": 7
+        },
+        "control_peritoneum": {
+          "medication": 12,
+          "menstruation": 1,
+          "proliferative": 3,
+          "secretory": 6,
+          "unknown": 2
+        },
+        "lesion": {
+          "medication": 35,
+          "menstruation": 4,
+          "proliferative": 13,
+          "secretory": 14,
+          "unknown": 5
+        }
+      },
+      "arrays": {
+        "case_peritoneum": 26,
+        "control_endometrium": 37,
+        "control_peritoneum": 24,
+        "lesion": 71
+      },
+      "link_groups": {
+        "case_peritoneum": 26,
+        "control_endometrium": 37,
+        "control_peritoneum": 24,
+        "lesion": 51
+      },
+      "link_groups_with_both_control_tissues_by_phase": {
+        "medication": 4,
+        "proliferative": 2,
+        "secretory": 6,
+        "unknown": 2
+      },
+      "link_groups_with_lesion_and_case_peritoneum": 14
+    }
+  },
+  "exclusions_within_candidate_descriptions": {
+    "marked_replicate": 10,
+    "missing_or_discordant_stage": 4
+  },
+  "geo_arrays_all_tissues": 408,
+  "geo_link_groups_all_tissues": 162,
+  "wg6_human_refseq_addresses_for_frozen_entrez": {
+    "2568": [
+      3840113
+    ],
+    "3512": [
+      6450672
+    ],
+    "55026": [
+      60064
+    ],
+    "6299": [
+      2360678
+    ],
+    "9077": [
+      4570725
+    ]
+  },
+  "wg6_manifest_address_count": 48701
+}

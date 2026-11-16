@@ -1,0 +1,230 @@
+{
+  "all_native_pathology_rows_by_specimen_tissue": {
+    "Endometrium tissue": 163
+  },
+  "case_lesion_and_peritoneum": {
+    "donors_with_a_shared_run": 9,
+    "donors_with_both_labels": 17,
+    "donors_with_one_assay_each": 12,
+    "donors_with_one_assay_each_and_shared_run": 6,
+    "donors_with_one_common_run_one_specimen_each_within_it": 8,
+    "hormonal_medication_among_paired_donors": {
+      "stored_false": 4,
+      "stored_true": 13
+    }
+  },
+  "control_peritoneum_and_uterus": {
+    "donors_with_a_shared_run": 8,
+    "donors_with_both_labels": 14,
+    "donors_with_one_assay_each": 9,
+    "donors_with_one_assay_each_and_shared_run": 5,
+    "donors_with_one_common_run_one_specimen_each_within_it": 8,
+    "hormonal_medication_among_paired_donors": {
+      "stored_false": 14
+    },
+    "stored_false_one_common_run_one_specimen_each_with_consistent_matched_uterine_phase": {
+      "proliferative": 3,
+      "secretory": 3
+    },
+    "stored_false_shared_run_with_consistent_matched_uterine_phase": {
+      "proliferative": 3,
+      "secretory": 3
+    }
+  },
+  "data_origin_codes": [
+    "DB200",
+    "DB201"
+  ],
+  "donors_by_run_within_arm": {
+    "10": {
+      "case_peritoneum": 13,
+      "control_endometrium": 15,
+      "control_peritoneum": 2,
+      "lesion": 10
+    },
+    "11": {
+      "case_peritoneum": 1,
+      "control_endometrium": 4,
+      "control_peritoneum": 5,
+      "lesion": 4
+    },
+    "1102": {
+      "case_peritoneum": 10,
+      "control_endometrium": 5,
+      "control_peritoneum": 0,
+      "lesion": 4
+    },
+    "12": {
+      "case_peritoneum": 2,
+      "control_endometrium": 3,
+      "control_peritoneum": 1,
+      "lesion": 16
+    },
+    "13": {
+      "case_peritoneum": 1,
+      "control_endometrium": 4,
+      "control_peritoneum": 6,
+      "lesion": 15
+    },
+    "14": {
+      "case_peritoneum": 2,
+      "control_endometrium": 2,
+      "control_peritoneum": 5,
+      "lesion": 6
+    },
+    "15": {
+      "case_peritoneum": 0,
+      "control_endometrium": 9,
+      "control_peritoneum": 0,
+      "lesion": 2
+    },
+    "9": {
+      "case_peritoneum": 5,
+      "control_endometrium": 4,
+      "control_peritoneum": 5,
+      "lesion": 4
+    }
+  },
+  "excluded_peritoneal_assays_by_recruitment_and_confirmed_status": {
+    "lesion / control / unexpected endometriosis": 5,
+    "peritoneum / control / unexpected endometriosis": 4
+  },
+  "input": {
+    "file_url": "https://ndownloader.figshare.com/files/22809185",
+    "head": {
+      "inclusive_bytes": [
+        0,
+        65535
+      ],
+      "sha256": "023a9ee95ecb6901cac61f1fdf82ed699e1c8d2159e61665d2ef499ebd8708fa"
+    },
+    "public_release": "https://doi.org/10.6084/m9.figshare.12195975.v1",
+    "tail": {
+      "inclusive_bytes": [
+        2955439946,
+        2955839945
+      ],
+      "sha256": "75f0e4ce7f600af1716c16b5b551331725d437f0608b92dc4544024f2a351fc8"
+    }
+  },
+  "lesion_histopathology_codebook_entries": 0,
+  "native_assays_all_tissues": 418,
+  "native_participants": 168,
+  "release_catalog": {
+    "clinical_foreign_keys": [
+      "pathology_report_endometrium.code_histology_class_id -> code_value.id",
+      "pathology_report_endometrium.code_histology_phase_id -> code_value.id",
+      "pathology_report_endometrium.code_histology_subclass_id -> code_value.id",
+      "pathology_report_endometrium.patient_sample_id -> patient_sample.id",
+      "patient.code_confirmed_disease_status_id -> code_value.id",
+      "patient.code_data_origin_id -> code_value.id",
+      "patient.code_patient_category_id -> code_value.id",
+      "patient_sample.code_tissue_type_id -> code_value.id",
+      "patient_sample.code_tissue_type_original_id -> code_value.id",
+      "patient_sample.patient_id -> patient.id",
+      "patient_sample.sample_id -> sample.id",
+      "patient_survey.patient_id -> patient.id",
+      "sample.code_sample_type_id -> code_value.id",
+      "sample_analysis_result.sample_id -> sample.id"
+    ],
+    "clinical_join_columns": {
+      "pathology_report_endometrium": [
+        "id",
+        "patient_sample_id",
+        "code_histology_class_id",
+        "code_histology_subclass_id",
+        "code_histology_phase_id"
+      ],
+      "patient": [
+        "id",
+        "patient_code",
+        "code_patient_category_id",
+        "code_data_origin_id",
+        "code_confirmed_disease_status_id"
+      ],
+      "patient_sample": [
+        "id",
+        "sample_id",
+        "patient_id",
+        "code_tissue_type_id",
+        "code_tissue_type_original_id"
+      ],
+      "patient_survey": [
+        "id",
+        "patient_id",
+        "age",
+        "hormonal_medication"
+      ],
+      "sample": [
+        "id",
+        "code_sample_type_id"
+      ],
+      "sample_analysis_result": [
+        "id",
+        "sample_id",
+        "analysis_run_id",
+        "result_data_type"
+      ]
+    },
+    "copy_table_names": [
+      "code_group",
+      "code_value",
+      "microarray_data",
+      "normalized_microarray_data",
+      "pathology_report_endometrium",
+      "patient",
+      "patient_endometriosis_classification",
+      "patient_sample",
+      "patient_survey",
+      "sample",
+      "sample_analysis_result"
+    ]
+  },
+  "tissue_label_capacity": {
+    "case_peritoneum": {
+      "assays": 36,
+      "donor_hormonal_medication": {
+        "stored_false": 7,
+        "stored_true": 25,
+        "unknown": 2
+      },
+      "donors": 34,
+      "donors_seen_in_multiple_runs": 0,
+      "specimens": 34,
+      "specimens_with_native_pathology_row": 0
+    },
+    "control_endometrium": {
+      "assays": 46,
+      "donor_hormonal_medication": {
+        "stored_false": 34,
+        "stored_true": 1,
+        "unknown": 1
+      },
+      "donors": 36,
+      "donors_seen_in_multiple_runs": 9,
+      "specimens": 45,
+      "specimens_with_native_pathology_row": 43
+    },
+    "control_peritoneum": {
+      "assays": 24,
+      "donor_hormonal_medication": {
+        "stored_false": 24
+      },
+      "donors": 24,
+      "donors_seen_in_multiple_runs": 0,
+      "specimens": 24,
+      "specimens_with_native_pathology_row": 0
+    },
+    "lesion": {
+      "assays": 74,
+      "donor_hormonal_medication": {
+        "stored_false": 14,
+        "stored_true": 36
+      },
+      "donors": 50,
+      "donors_seen_in_multiple_runs": 9,
+      "specimens": 71,
+      "specimens_with_native_pathology_row": 0
+    }
+  }
+}
