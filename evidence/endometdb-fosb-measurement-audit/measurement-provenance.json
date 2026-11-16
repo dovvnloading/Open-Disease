@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "publication": "https://doi.org/10.1038/s41597-020-00623-x",
+    "geo": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141549",
+    "figshare": "https://doi.org/10.6084/m9.figshare.12195975.v1"
+  },
+  "physical_probes": {
+    "GPL13376": {
+      "probe": "ILMN_1730706",
+      "address": 6040086,
+      "sha256": "c6f2c87ab7bc094b22270c907e1f9a6d74e9990b62726b53bf44660b0db700c1"
+    },
+    "GPL10558": {
+      "probe": "ILMN_1751607",
+      "address": 7160239,
+      "sha256": "770fb74bb90e548ee731924310d8f5c48589e63ee530dc11c7686d28a3ba5ba6"
+    }
+  },
+  "probe_oligos_distinct": true,
+  "combined_workbook": {
+    "sha256": "9919fc5d6d6c09dbdae5a815da798b8250edf17a781fdb86dc25c2f9c9b21d50",
+    "rows": 28247,
+    "fosb_rows": 1,
+    "fosb_excel_row": 21565,
+    "reported_fosb_probe": "ILMN_1751607",
+    "wg6_probe_labels": 0,
+    "documented_wg6_to_pooled_fosb_mapping": null,
+    "documented_native_to_geo_assay_crosswalk": null
+  },
+  "ht12_geo_primary_endometrium_controls": 0,
+  "native_cohort": {
+    "clinically_eligible": 38,
+    "complete_wg6": 32,
+    "duplicated_address_assays": 6,
+    "complete_wg6_cases": 15,
+    "complete_wg6_controls": 17,
+    "hormone_medication_lookback": "unknown",
+    "no_donor_cross_release_matching": true,
+    "shared_run_phase_cells": [
+      {"run": 10, "phase": "secretory", "cases": 2, "controls": 6},
+      {"run": 11, "phase": "proliferative", "cases": 2, "controls": 1},
+      {"run": 12, "phase": "proliferative", "cases": 1, "controls": 1},
+      {"run": 12, "phase": "secretory", "cases": 1, "controls": 2},
+      {"run": 13, "phase": "proliferative", "cases": 2, "controls": 1},
+      {"run": 13, "phase": "secretory", "cases": 1, "controls": 1},
+      {"run": 14, "phase": "proliferative", "cases": 3, "controls": 1}
+    ]
+  }
+}
