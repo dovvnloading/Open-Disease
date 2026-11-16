@@ -146,11 +146,11 @@ def native_chip(observed, n_duplicates, manifests):
     return chip
 
 
-def census(rows, selected, native_ids, manifests, *, selected_status=None):
-    """Report aggregates; optionally retain chip classifications in caller memory."""
-    records = {r["analysis_result_id"].encode(): r for r in selected}
-    if len(records) != len(selected):
-        raise ValueError("Duplicate clinically selected assay")
+def classify_addresses(rows, selected_ids, native_ids, manifests):
+    """Classify only the requested assay keys. Never parse quantitative columns."""
+    selected = set(selected_ids)
+    if len(selected) != len(selected_ids) or not selected <= native_ids:
+        raise ValueError("Duplicate or unknown selected native assay")
     unknown = set()
     seen_assays = set()
     addresses = defaultdict(set)
@@ -161,7 +161,7 @@ def census(rows, selected, native_ids, manifests, *, selected_status=None):
         seen_assays.add(assay)
         if assay not in native_ids:
             unknown.add(assay)
-        if assay in records:
+        if assay in selected:
             numeric = int(address)
             if numeric in addresses[assay]:
                 duplicates[assay] += 1
@@ -169,25 +169,37 @@ def census(rows, selected, native_ids, manifests, *, selected_status=None):
     if unknown:
         raise ValueError("Unmapped raw assay outside native clinical namespace")
 
-    by_status = Counter()
+    statuses = {
+        assay: native_chip(addresses[assay], duplicates[assay], manifests)
+        for assay in selected
+    }
+    return statuses, {
+        "native_raw_rows": total, "native_raw_assays": len(seen_assays),
+        "native_assay_rows": len(native_ids), "clinically_selected": len(selected),
+        "selected_assays_with_repeated_addresses": sum(n > 0 for n in duplicates.values()),
+        "selected_excess_address_rows": sum(duplicates.values()),
+        "selected_by_status": dict(sorted(Counter(statuses.values()).items())),
+    }
+
+
+def census(rows, selected, native_ids, manifests, *, selected_status=None):
+    """Report aggregates; optionally retain chip classifications in caller memory."""
+    records = {r["analysis_result_id"].encode(): r for r in selected}
+    if len(records) != len(selected):
+        raise ValueError("Duplicate clinically selected assay")
+    statuses, summary = classify_addresses(rows, records.keys(), native_ids, manifests)
+    if selected_status is not None:
+        selected_status.update(statuses)
     strata = defaultdict(Counter)
     models = {}
     for assay, record in records.items():
-        observed = addresses[assay]
-        status = native_chip(observed, duplicates[assay], manifests)
-        if selected_status is not None:
-            selected_status[assay] = status
-        by_status[status] += 1
+        status = statuses[assay]
         strata[status, record["analysis_run_id"], record["phase"]][record["group"]] += 1
     for chip in manifests:
         cells = [c for (status, _, _), c in strata.items() if status == chip and c["case"] and c["control"]]
         models[chip] = {"shared_cells": len(cells), **{g: sum(c[g] for c in cells) for g in ("case", "control")}}
     return {
-        "native_raw_rows": total, "native_raw_assays": len(seen_assays),
-        "native_assay_rows": len(native_ids), "clinically_selected": len(records),
-        "selected_assays_with_repeated_addresses": sum(n > 0 for n in duplicates.values()),
-        "selected_excess_address_rows": sum(duplicates.values()),
-        "selected_by_status": dict(sorted(by_status.items())),
+        **summary,
         "overlap_by_complete_manifest": models,
         "selected_by_status_run_phase": [
             {"status": status, "run": run, "phase": phase, "case": c["case"], "control": c["control"]}
