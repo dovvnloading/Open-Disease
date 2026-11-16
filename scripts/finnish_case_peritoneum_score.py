@@ -84,7 +84,7 @@ def compare(pairs, lines, annotation):
     if extreme * 20 <= assignments:
         decision = "higher_in_labelled_lesion" if effect > 0 else "lower_in_labelled_lesion"
     report.update(
-        assays=len(ids), difference_definition="superficial lesion minus case peritoneum",
+        assays=len(ids), difference_definition="surgically labelled superficial lesion minus case peritoneum",
         panel_sha256=PANEL, full_feature_denominator=len(addresses),
         leave_run_10_out={"donors": 2, "mean_difference_pp": float(mean(remaining))},
         synthetic_controls_passed=True, independent_verification_passed=True, decision=decision,
