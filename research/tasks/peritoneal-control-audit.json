@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "peritoneal-control-audit",
+  "title": "Audit the missing peritoneal comparator for the frozen five-gene panel",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/49",
+  "question": "Can public human data compare superficial peritoneal lesion, histologically negative case peritoneum and comparable non-endometriosis peritoneum with independent donor-level inference?",
+  "scope": "Prospective eligibility audit only. Verify site, biopsy pathology, donor diagnosis, repeat or reused material, collection, clinical covariates, batch support and rights. Prefer distant negative case biopsies. Do not open expression matrices, inspect target outcomes, modify the panel or contact researchers.",
+  "dependencies": [],
+  "sources": [
+    "https://doi.org/10.1038/s41597-020-00623-x",
+    "https://doi.org/10.6084/m9.figshare.12195975.v1",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141549",
+    "https://doi.org/10.1038/s41588-022-01254-1",
+    "https://doi.org/10.1038/s41556-022-00961-5"
+  ],
+  "steps": [
+    "Check the queue, branches, issues, prior reports and the frozen scoring definition.",
+    "Search public series, archives and primary publications, including tissue-matched studies using targeted assays. Trace reanalyses to original recruitment.",
+    "Audit public metadata and count unique source-provided donors separately from material and assays. Audit matching, pathology, batch crossing and rights without deriving individual identities.",
+    "Publish ranked reasons and a decision. GO requires a frozen donor-level protocol before any separately authorized outcome access. Otherwise record the exact missing evidence and a bounded next step."
+  ],
+  "deliverables": [
+    "Source-linked research report and ranked cohort inventory",
+    "Offline metadata audit, aggregate counts and regression tests",
+    "Reviewable pull request with decision, limitations and next action"
+  ],
+  "acceptance": [
+    "Separate operative donor diagnosis from pathology of each tissue comparator, including unknown and undocumented distance.",
+    "Distinguish independent donor counts and recruitment from replicate tissues, reused datasets and joined accessions.",
+    "Verify whether relevant tissue groups share preparation, anatomy, platform, run and clinical support. Document unknowns and public-use conditions.",
+    "Preserve the sign and weights for all five genes. Never use expression outcomes for source selection or eligibility.",
+    "Provide reproducible public-safe checks, no subject records or matrices, and a reasoned GO, NO-GO or BLOCKED decision with a next action."
+  ],
+  "budget": {"max_runtime_minutes": 120, "max_ram_gb": 2, "network": "public-opt-in", "max_download_mb": 25}
+}
