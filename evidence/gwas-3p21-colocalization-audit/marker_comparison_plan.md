@@ -1,0 +1,5 @@
+# Four published markers in the European reference panel
+
+This ancillary comparison follows inspection of the published disease and expression workbooks. The two-marker LD result for rs1352889 versus rs13100173 was already known. No other pair from this comparison had been queried by the team at the time of this plan.
+
+Use all six unordered pairs among the four markers that define the scientific contrasts: Rahmioglu's univariate lead rs1352889, Koller's cross-ancestry combined lead rs9831967, Koller's cross-ancestry combined PAINTOR candidate rs6804970 and Koller's European clinical HYAL3 colocalization candidate rs13100173. Query the same GRCh37 Ensembl pairwise endpoint for 1000GENOMES:phase_3:EUR. Record the provider's r² and D′ (or a missing response) for every pair and SHA-256 receipts. No selection on results. Interpret LD as reference haplotype tagging. The comparison does not test conditional disease association or mediation. Preserve the earlier two-source calculation for the original pair.
