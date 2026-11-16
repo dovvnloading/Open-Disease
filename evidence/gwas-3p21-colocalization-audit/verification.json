@@ -1,0 +1,57 @@
+{
+  "assembly": "GRCh37",
+  "chromosome": "3",
+  "window_center": "rs1352889",
+  "window_center_position": 49652148,
+  "coloc_candidate": "rs13100173",
+  "coloc_candidate_position": 50332697,
+  "physical_distance_bp": 680549,
+  "windows": {
+    "published": {
+      "radius_bp": 500000,
+      "start_inclusive": 49152148,
+      "end_inclusive": 50152148,
+      "contains_candidate": false,
+      "distance_outside_bp": 180549
+    },
+    "audit": {
+      "radius_bp": 1000000,
+      "start_inclusive": 48652148,
+      "end_inclusive": 50652148,
+      "contains_candidate": true,
+      "distance_outside_bp": 0
+    }
+  },
+  "published_gene_annotations": {
+    "reported_mtag_endometrial_eqtl": [
+      "CCDC36",
+      "GMPPB",
+      "HYAL3",
+      "KLHDC8B",
+      "NCKIPSD",
+      "RBM6",
+      "UBA7"
+    ],
+    "selected_koller_uterus_twas": [
+      "GMPPB",
+      "HYAL3",
+      "RBM6",
+      "TMEM115"
+    ],
+    "both": [
+      "GMPPB",
+      "HYAL3",
+      "RBM6"
+    ],
+    "mtag_endometrial_eqtl_only": [
+      "CCDC36",
+      "KLHDC8B",
+      "NCKIPSD",
+      "UBA7"
+    ],
+    "koller_uterus_twas_only": [
+      "TMEM115"
+    ]
+  },
+  "uterus_twas_source_sha256": "9f4915b3e23203ac09cf5656b527d8968e8ca13729bb06f889d25dc41079fbc2"
+}
