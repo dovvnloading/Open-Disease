@@ -1,0 +1,196 @@
+{
+  "source": "https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41588-026-02582-2/MediaObjects/41588_2026_2582_MOESM4_ESM.xlsx",
+  "source_sha256": "c021b6c20c668644939fd83381307a2c8cf08f18d95156b33e65fb0301997815",
+  "source_bytes": 25743840,
+  "assembly": "GRCh37",
+  "chromosome": "3",
+  "start_inclusive": 48652148,
+  "end_inclusive": 50652148,
+  "position_crosschecks": {
+    "rs9831967": {
+      "url": "https://grch37.rest.ensembl.org/variation/human/rs9831967?content-type=application/json",
+      "retrieval": "GET with Accept: application/json, 2026-11-16",
+      "receipt_sha256": "2a7d09473dd3e98b1bf81aeaffed6d86a13bf100998a1c6d278a0687355b513f",
+      "chromosome": "3",
+      "grch37_position": 50217234,
+      "ensembl_allele_string": "C/A/G/T"
+    },
+    "rs6804970": {
+      "url": "https://grch37.rest.ensembl.org/variation/human/rs6804970?content-type=application/json",
+      "retrieval": "GET with Accept: application/json, 2026-11-16",
+      "receipt_sha256": "fbafd1e0d2cb0757d7c33813ae7a305bb7644320c93be20021a47f510827dd1a",
+      "chromosome": "3",
+      "grch37_position": 49804290,
+      "ensembl_allele_string": "C/T"
+    }
+  },
+  "selection": {
+    "S4": "All published lead rows were examined, including the separate non-cross-ancestry section. Report leads in the frozen interval.",
+    "S5": "All reported genome-wide significant secondary association rows were examined. Absence from this table does not establish a zero conditional effect.",
+    "S7": "Report either a marker in the frozen interval or any published PAINTOR interval overlapping it. The sheet reports selected variants above 0.5, not a complete credible set.",
+    "S8": "Report every published positive row on chromosome 3. The SNP coordinates are absent from S8. The p gwas field is transcribed as labelled, without assigning a new meaning or inferring an allele."
+  },
+  "S4": {
+    "data_rows_scanned": 86,
+    "rows": [
+      {
+        "row": 22,
+        "variant": "rs9831967",
+        "position": 50217234,
+        "effect_allele": "T",
+        "other_allele": "C",
+        "nearest_gene": "SEMA3F",
+        "classification": "Previously reported",
+        "effects": {
+          "cross_ancestry_combined": {
+            "beta": -0.0132959,
+            "se": 0.00208531,
+            "p": 1.82e-10,
+            "eaf": 0.4003,
+            "heterogeneity_p": 0.01172
+          },
+          "eur_combined": {
+            "beta": -0.0120686,
+            "se": 0.00203793,
+            "p": 3.19e-09,
+            "eaf": 0.3483,
+            "heterogeneity_p": 0.007715
+          },
+          "eur_clinical": {
+            "beta": -0.0153004,
+            "se": 0.00343135,
+            "p": 8.22e-06,
+            "eaf": 0.4016,
+            "heterogeneity_p": 0.2161
+          },
+          "eur_self_reported": {
+            "beta": -0.0197088,
+            "se": 0.0036552,
+            "p": 6.96e-08,
+            "eaf": 0.5418,
+            "heterogeneity_p": 0.4453
+          },
+          "eur_adenomyosis": {
+            "beta": -0.0261675,
+            "se": 0.00849317,
+            "p": 0.002064,
+            "eaf": 0.5917,
+            "heterogeneity_p": 0.6077
+          },
+          "eur_excluding_adenomyosis": {
+            "beta": -0.0195815,
+            "se": 0.01096386,
+            "p": 0.07408,
+            "eaf": 0.5479,
+            "heterogeneity_p": 1
+          }
+        }
+      }
+    ]
+  },
+  "S5": {
+    "data_rows_scanned": 15,
+    "rows": []
+  },
+  "S7": {
+    "data_rows_scanned": 96,
+    "rows": [
+      {
+        "row": 27,
+        "analysis": "Cross-Ancestry Combined Definition",
+        "position": 49804290,
+        "variant": "rs6804970",
+        "allele_1": "T",
+        "allele_2": "C",
+        "z_score": 2.41,
+        "pip": 0.78844,
+        "source_locus": "chr3:49217614-51216578",
+        "marker_in_interval": true,
+        "locus_overlaps": true
+      }
+    ]
+  },
+  "S8": {
+    "data_rows_scanned": 29,
+    "rows": [
+      {
+        "row": 13,
+        "analysis": "EUR Clinical Definition",
+        "tissue": "Vagina",
+        "gene_id": "ENSG00000186792.16",
+        "gene_symbol": "HYAL3",
+        "chromosome": 3,
+        "p_gwas_as_labelled": 5.01e-06,
+        "posterior_probability": 0.7094,
+        "regional_probability": 0.8526,
+        "candidate_snp": "rs13100173",
+        "posterior_proportion_explained_by_snp": 0.7517
+      },
+      {
+        "row": 14,
+        "analysis": "EUR Clinical Definition",
+        "tissue": "Ovary",
+        "gene_id": "ENSG00000186792.16",
+        "gene_symbol": "HYAL3",
+        "chromosome": 3,
+        "p_gwas_as_labelled": 5.01e-06,
+        "posterior_probability": 0.8066,
+        "regional_probability": 0.9211,
+        "candidate_snp": "rs13100173",
+        "posterior_proportion_explained_by_snp": 0.9966
+      },
+      {
+        "row": 15,
+        "analysis": "EUR Clinical Definition",
+        "tissue": "Sigmoid colon",
+        "gene_id": "ENSG00000186792.16",
+        "gene_symbol": "HYAL3",
+        "chromosome": 3,
+        "p_gwas_as_labelled": 5.01e-06,
+        "posterior_probability": 0.8074,
+        "regional_probability": 0.9215,
+        "candidate_snp": "rs13100173",
+        "posterior_proportion_explained_by_snp": 0.9379
+      },
+      {
+        "row": 16,
+        "analysis": "EUR Clinical Definition",
+        "tissue": "Transverse colon",
+        "gene_id": "ENSG00000186792.16",
+        "gene_symbol": "HYAL3",
+        "chromosome": 3,
+        "p_gwas_as_labelled": 5.01e-06,
+        "posterior_probability": 0.8076,
+        "regional_probability": 0.9215,
+        "candidate_snp": "rs13100173",
+        "posterior_proportion_explained_by_snp": 0.925
+      },
+      {
+        "row": 17,
+        "analysis": "EUR Clinical Definition",
+        "tissue": "Breast mammary tissue",
+        "gene_id": "ENSG00000186792.16",
+        "gene_symbol": "HYAL3",
+        "chromosome": 3,
+        "p_gwas_as_labelled": 5.01e-06,
+        "posterior_probability": 0.8087,
+        "regional_probability": 0.922,
+        "candidate_snp": "rs13100173",
+        "posterior_proportion_explained_by_snp": 0.8452
+      },
+      {
+        "row": 18,
+        "analysis": "EUR Clinical Definition",
+        "tissue": "Uterus",
+        "gene_id": "ENSG00000186792.16",
+        "gene_symbol": "HYAL3",
+        "chromosome": 3,
+        "p_gwas_as_labelled": 5.01e-06,
+        "posterior_probability": 0.817,
+        "regional_probability": 0.9254,
+        "candidate_snp": "rs13100173",
+        "posterior_proportion_explained_by_snp": 0.7208
+      }
+    ]
+  }
+}

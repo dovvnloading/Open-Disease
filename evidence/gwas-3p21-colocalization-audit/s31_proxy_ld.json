@@ -1,0 +1,89 @@
+{
+  "frozen_plan_commit": "cb402dcdb127c8e2d36149116d4f9a11984a01c1",
+  "queried_at_utc": "2026-11-16T14:26:58+00:00",
+  "assembly": "GRCh37",
+  "provider": "Ensembl GRCh37 REST",
+  "reference_population": "1000GENOMES:phase_3:EUR",
+  "panel_size_reference": 503,
+  "documentation": "https://grch37.rest.ensembl.org/documentation/info/ld_pairwise_get",
+  "method": "HTTPS GET with Accept: application/json. Source response text and SHA-256 cover its original bytes. r2 and d_prime are the unsigned values supplied by the provider; the response has no signed r or allele phase.",
+  "pairs": [
+    {
+      "markers": [
+        "rs1352889",
+        "rs4955420"
+      ],
+      "url": "https://grch37.rest.ensembl.org/ld/human/pairwise/rs1352889/rs4955420?population_name=1000GENOMES%3Aphase_3%3AEUR",
+      "http_status": 200,
+      "received_bytes": 134,
+      "sha256": "89dadf4a66a30d87cff3b4e9ce2e7a30833ab45565147b836b512de2b93ef35d",
+      "response_text": "[{\"d_prime\":\"0.827947\",\"population_name\":\"1000GENOMES:phase_3:EUR\",\"variation2\":\"rs4955420\",\"r2\":\"0.282043\",\"variation1\":\"rs1352889\"}]",
+      "response": [
+        {
+          "d_prime": "0.827947",
+          "population_name": "1000GENOMES:phase_3:EUR",
+          "variation2": "rs4955420",
+          "r2": "0.282043",
+          "variation1": "rs1352889"
+        }
+      ],
+      "attempts": 1
+    },
+    {
+      "markers": [
+        "rs1352889",
+        "rs9835439"
+      ],
+      "url": "https://grch37.rest.ensembl.org/ld/human/pairwise/rs1352889/rs9835439?population_name=1000GENOMES%3Aphase_3%3AEUR",
+      "http_status": 200,
+      "received_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "response_text": "[]",
+      "response": [],
+      "attempts": 1
+    },
+    {
+      "markers": [
+        "rs1352889",
+        "rs6446298"
+      ],
+      "url": "https://grch37.rest.ensembl.org/ld/human/pairwise/rs1352889/rs6446298?population_name=1000GENOMES%3Aphase_3%3AEUR",
+      "http_status": 200,
+      "received_bytes": 134,
+      "sha256": "67a510a23b7ef98218fbd3ea19f439cd5d46e72c7d028754ee74ddafa445a4d8",
+      "response_text": "[{\"population_name\":\"1000GENOMES:phase_3:EUR\",\"r2\":\"0.101146\",\"d_prime\":\"0.999906\",\"variation1\":\"rs1352889\",\"variation2\":\"rs6446298\"}]",
+      "response": [
+        {
+          "population_name": "1000GENOMES:phase_3:EUR",
+          "r2": "0.101146",
+          "d_prime": "0.999906",
+          "variation1": "rs1352889",
+          "variation2": "rs6446298"
+        }
+      ],
+      "attempts": 1
+    },
+    {
+      "markers": [
+        "rs1352889",
+        "rs6792892"
+      ],
+      "url": "https://grch37.rest.ensembl.org/ld/human/pairwise/rs1352889/rs6792892?population_name=1000GENOMES%3Aphase_3%3AEUR",
+      "http_status": 200,
+      "received_bytes": 134,
+      "sha256": "b70b683310ea1429951ccd5e28702e34877da78788de32c51925ca84b6000c89",
+      "response_text": "[{\"population_name\":\"1000GENOMES:phase_3:EUR\",\"variation2\":\"rs6792892\",\"variation1\":\"rs1352889\",\"d_prime\":\"0.832044\",\"r2\":\"0.126754\"}]",
+      "response": [
+        {
+          "population_name": "1000GENOMES:phase_3:EUR",
+          "variation2": "rs6792892",
+          "variation1": "rs1352889",
+          "d_prime": "0.832044",
+          "r2": "0.126754"
+        }
+      ],
+      "attempts": 1
+    }
+  ],
+  "published_plan_commit": "dc2d0a425dc0bda7aec71aa9a46f438eeaf749d3"
+}

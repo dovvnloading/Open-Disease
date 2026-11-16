@@ -94,5 +94,6 @@
     "independent cross-compartment test"
   ],
   "access": "The public literature and author/cross-study supplement text were readable. The publisher XLSX readers did not expose cells. A direct acquisition request for the 2023 workbook was rejected because this environment disables sandbox escalation. Koller Zenodo file-level metadata were not verified. No paid compute, restricted data, participant records or outreach.",
-  "interpretation": "Coordinate arithmetic and annotation overlap only. No signed LD, allelic effect on endometrial RNA, disease conditional signal or biological null was estimated. See inventory.md for source-by-source eligibility and inherited checksums."
+  "interpretation": "Coordinate arithmetic and annotation overlap only. No signed LD, allelic effect on endometrial RNA, disease conditional signal or biological null was estimated. See inventory.md for source-by-source eligibility and inherited checksums.",
+  "scope_of_this_receipt": "Initial checkpoint only. For completed continuation and new public aggregate inputs see replay.md and its linked receipts."
 }
