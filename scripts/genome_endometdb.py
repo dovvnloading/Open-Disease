@@ -62,11 +62,9 @@ def finland_annotation_ids(directory):
     return np.array(sorted(set(mapping.values()) - {0}), dtype=np.int64)
 
 
-def selected_signals(lines, design, annotation):
-    """Read finite signals in aligned, local-only arrays without exposing IDs."""
-    addresses = sorted(annotation)
+def selected_signal_matrix(lines, assays, addresses):
+    """Read only selected assays into rows and addresses in the supplied order."""
     columns = {address: col for col, address in enumerate(addresses)}
-    assays = sorted(design)
     rows = {assay: row for row, assay in enumerate(assays)}
     signals = np.full((len(assays), len(addresses)), np.nan)
     for line in lines:
@@ -89,6 +87,14 @@ def selected_signals(lines, design, annotation):
         signals[row, col] = signal
     if np.isnan(signals).any():
         raise ValueError("Incomplete selected WG-6 assay")
+    return signals
+
+
+def selected_signals(lines, design, annotation):
+    """Read finite signals in aligned, local-only arrays without exposing IDs."""
+    addresses = sorted(annotation)
+    assays = sorted(design)
+    signals = selected_signal_matrix(lines, assays, addresses)
     cases = np.array([design[assay][1] == "case" for assay in assays], dtype=bool)
     strata = np.array(["-".join(design[assay][0]) for assay in assays])
     probe_genes = np.array([annotation[address] for address in addresses], dtype=np.int64)

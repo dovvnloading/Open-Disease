@@ -1,0 +1,105 @@
+{
+  "outcome": {
+    "assays": 16,
+    "compatibility_95pct_common_shift_pp": [
+      14.20833247777253,
+      41.568345619186466
+    ],
+    "decision": "higher_in_peritoneum",
+    "difference_definition": "peritoneum minus uterus",
+    "donors": 8,
+    "extreme_two_sided": 2,
+    "full_feature_denominator": 48701,
+    "leave_one_donor_out_mean_range_pp": [
+      27.209532218464272,
+      31.99394556286612
+    ],
+    "mean_difference_pp": 29.219369212131166,
+    "panel_sha256": "4c634a65d648a83af8418e7ad1bf50e03d1a83982d0265d47d9ccbd06aba0114",
+    "phase_sensitivity": {
+      "donors": 6,
+      "mean_difference_pp": 29.53101579023018,
+      "phase_counts": {
+        "proliferative": 3,
+        "secretory": 3
+      }
+    },
+    "positive_zero_negative": [
+      8,
+      0,
+      0
+    ],
+    "sign_assignments": 256,
+    "synthetic_controls_passed": true,
+    "technical_control": {
+      "assay_pairs": 0,
+      "repeated_specimens": 0
+    },
+    "two_sided_p": 0.0078125,
+    "verified_all_target_midranks": true
+  },
+  "preflight": {
+    "address_census": {
+      "clinically_selected": 16,
+      "native_assay_rows": 418,
+      "native_raw_assays": 400,
+      "native_raw_rows": 25355096,
+      "selected_assays_with_repeated_addresses": 0,
+      "selected_by_status": {
+        "WG6": 16
+      },
+      "selected_excess_address_rows": 0
+    },
+    "chip_gate": {
+      "candidate_assay_status_by_tissue": {
+        "peritoneum": {
+          "WG6": 8
+        },
+        "uterus": {
+          "WG6": 8
+        }
+      },
+      "candidate_pairs": 8,
+      "excluded_donors_by_chip": {},
+      "minimum_pairs": 6,
+      "passes_pair_count_gate": true,
+      "retained_assays_by_tissue": {
+        "peritoneum": 8,
+        "uterus": 8
+      },
+      "retained_medication_codes": {
+        "stored_false": 8
+      },
+      "retained_sensitivity_phase_counts": {
+        "proliferative": 3,
+        "secretory": 3
+      },
+      "retained_uterine_histology": {
+        "atrophic": 1,
+        "missing": 1,
+        "proliferative": 3,
+        "secretory": 3
+      },
+      "verified_pairs": 8
+    },
+    "clinical_design": {
+      "candidate_assays_by_tissue": {
+        "peritoneum": 8,
+        "uterus": 8
+      },
+      "candidate_pairs": 8,
+      "candidate_sensitivity_phase_counts": {
+        "proliferative": 3,
+        "secretory": 3
+      },
+      "excluded_donors_by_design": {
+        "missing_control_endometrium": 10,
+        "missing_control_peritoneum": 22,
+        "no_shared_run": 6
+      },
+      "healthy_donors_with_both_tissues": 14,
+      "healthy_donors_with_either_tissue": 46
+    }
+  },
+  "status": "completed"
+}

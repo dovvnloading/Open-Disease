@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "normal-peritoneum-uterus",
+  "title": "Test the frozen five-gene score in paired organs from laparoscopically negative Finnish controls",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "done",
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/54",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/53",
+  "question": "Is the peritoneum-minus-uterus signed five-gene score positive within same-run, verified WG-6 paired tissues from surgically negative donors?",
+  "scope": "Execute the protocol frozen at d4c6ba1 in PR #51. Only the specified native control pairs, public Figshare v1 archive prefix and pinned manufacturer manifests. No other expression analyses, no gene discovery, no paid compute, restricted sources or external contact.",
+  "dependencies": [
+    "peritoneal-control-audit"
+  ],
+  "sources": [
+    "https://github.com/dovvnloading/Open-Disease/blob/d4c6ba11ddad7c5a9abf7fbaedf22d43de4e1184/docs/research-notes/NORMAL_PERITONEUM_UTERUS_PLAN_2026-11-16.md",
+    "https://doi.org/10.6084/m9.figshare.12195975.v1",
+    "https://doi.org/10.1038/s41597-020-00623-x",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL13376",
+    "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL10558"
+  ],
+  "steps": [
+    "Reuse pinned private inputs, reserve the task and lock native metadata selection and chip eligibility before decoding target expression.",
+    "Stop without opening target signals if fewer than six pairs pass. Otherwise run the frozen score and exact inference with synthetic controls, independent ranks and descriptive sensitivity.",
+    "Verify and publish only aggregates, code, tests, source provenance and limitations in a separate PR."
+  ],
+  "deliverables": [
+    "Reproducible chip attrition and exact inference where estimable, or documented stop condition",
+    "Source-linked results note, tests and reviewable follow-up PR"
+  ],
+  "acceptance": [
+    "Respect one common run and one physical specimen per tissue, one contribution per donor, full 48,701-address exclusive WG-6 identity, all five locked addresses/directions and the six-pair gate.",
+    "If qualified, report mean in percentile points, positive/zero/negative counts, exact two-sided sign-flip and common-shift interval, phase sensitivity, repeat and leave-one-out checks. Report any failures without switching methods.",
+    "No individual clinical or expression records in tracked files, issue text or logs. Report provenance, executed tests, data limitations and implications for the full specificity question."
+  ],
+  "budget": {
+    "max_runtime_minutes": 90,
+    "max_ram_gb": 2,
+    "network": "public-opt-in",
+    "max_download_mb": 600
+  }
+}

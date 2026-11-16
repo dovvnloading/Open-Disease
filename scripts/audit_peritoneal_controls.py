@@ -29,6 +29,7 @@ class Assay:
     specimen: str
     run: str
     endometrial_histology: str | None
+    assay_id: str = ""
 
 
 def paired_capacity(assays, first, second, medication):
@@ -83,15 +84,14 @@ def paired_capacity(assays, first, second, medication):
     return result
 
 
-def summarize(tables):
+def native_assays(tables):
+    """Decode labels and clinical joins in the native namespace, without reading signal."""
     codes = index(tables["code_value"], "id")
     patients = index(tables["patient"], "id")
+    index(tables["patient_sample"], "id")  # physical specimen key must also be unique
     samples = index(tables["patient_sample"], "sample_id")
-    sample_rows = index(tables["patient_sample"], "id")
     surveys = index(tables["patient_survey"], "patient_id")
     pathology = index(tables["pathology_report_endometrium"], "patient_sample_id")
-    tissue_histology = Counter(codes[sample_rows[key]["code_tissue_type_id"]]["title_en"]
-                               for key in pathology)
     medication = {
         key: MEDICATION.get(surveys.get(key, {}).get("hormonal_medication"), "unknown")
         for key in patients
@@ -106,8 +106,10 @@ def summarize(tables):
         sample = samples[row["sample_id"]]
         donor = sample["patient_id"]
         patient = patients[donor]
-        category = codes[patient["code_patient_category_id"]]["title_en"]
-        disease = codes[patient["code_confirmed_disease_status_id"]]["title_en"]
+        category_key = patient["code_patient_category_id"]
+        disease_key = patient["code_confirmed_disease_status_id"]
+        category = codes[category_key]["title_en"] if category_key not in ("", r"\N", None) else "unknown"
+        disease = codes[disease_key]["title_en"] if disease_key not in ("", r"\N", None) else "unknown"
         group = GROUPS.get((category, disease))
         tissue = codes[sample["code_tissue_type_id"]]["value"]
         if tissue in LESIONS and group == "case":
@@ -126,8 +128,17 @@ def summarize(tables):
             raise ValueError("Missing native run; do not treat unknown runs as matched")
         phase_key = pathology.get(sample["id"], {}).get("code_histology_class_id")
         phase = codes[phase_key]["title_en"] if phase_key and phase_key != r"\N" else None
-        assays.append(Assay(arm, donor, sample["id"], run, phase))
+        assays.append(Assay(arm, donor, sample["id"], run, phase, row["id"]))
+    return assays, medication, excluded
 
+
+def summarize(tables):
+    assays, medication, excluded = native_assays(tables)
+    codes = index(tables["code_value"], "id")
+    sample_rows = index(tables["patient_sample"], "id")
+    pathology = index(tables["pathology_report_endometrium"], "patient_sample_id")
+    tissue_histology = Counter(codes[sample_rows[key]["code_tissue_type_id"]]["title_en"]
+                               for key in pathology)
     groups = {}
     for arm in (*ARMS, UTERUS):
         members = [a for a in assays if a.arm == arm]
@@ -146,7 +157,7 @@ def summarize(tables):
         for run in sorted({a.run for a in assays}, key=int)
     }
     return {
-        "native_participants": len(patients), "native_assays_all_tissues": len(results),
+        "native_participants": len(tables["patient"]), "native_assays_all_tissues": len(tables["sample_analysis_result"]),
         "tissue_label_capacity": groups, "donors_by_run_within_arm": runs,
         "excluded_peritoneal_assays_by_recruitment_and_confirmed_status": dict(excluded),
         "case_lesion_and_peritoneum": paired_capacity(assays, ARMS[0], ARMS[1], medication),

@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "donors": 8,
+  "primary_fields_checked": [
+    "compatibility_95pct_common_shift_pp",
+    "donors",
+    "extreme_two_sided",
+    "leave_one_donor_out_mean_range_pp",
+    "mean_difference_pp",
+    "positive_zero_negative",
+    "sign_assignments",
+    "two_sided_p"
+  ],
+  "checked_phase_sensitivity": true,
+  "checked_technical_pair_count": true
+}
