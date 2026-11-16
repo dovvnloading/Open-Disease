@@ -1,0 +1,98 @@
+{
+  "task_id": "gwas-3p21-colocalization-audit",
+  "decision": "INCONCLUSIVE",
+  "level": "source-audit",
+  "issue": 50,
+  "completion_pr": 52,
+  "published_date_checked": "2026-11-16",
+  "run_started_utc": "2026-11-16T13:10:30+00:00",
+  "verification_finished_utc": "2026-11-16T13:33:30+00:00",
+  "design_commit": "456a029bf0390434bdc4d17f3b70853403dcb889",
+  "verification_code_commit": "e238b906493eafa32e19ece5c28ce37d897e6d6b",
+  "base_main_commit": "c98c108cf01bd5c848fd770489dac6154bb8ee2f",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux",
+    "analysis_dependencies": "Python standard library",
+    "seed": null
+  },
+  "budget": {
+    "max_runtime_minutes": 90,
+    "max_ram_gb": 4,
+    "network": "public-opt-in",
+    "max_download_mb": 250
+  },
+  "data_payload_bytes_to_local_workspace": {
+    "regional_gwas": 0,
+    "qtl": 0,
+    "ld": 0,
+    "publisher_workbooks": 0
+  },
+  "accounting": "Payload counts exclude repository source, metadata-only HTTP HEAD and reading primary sources online. Whole-session network and memory usage were not metered. Timings/RSS below are measured per child process; the final tracked-file guard is repeated after staging this receipt.",
+  "local_source_sha256": {
+    "evidence/gwas-3p21-colocalization-audit/observations.json": "e0601bccf27824c741a036276974ad0360674ca0ee8bfccd45ce7f99c0bbcab1",
+    "evidence/uterine-genetic-direction-2026-11-15/results.json": "9f4915b3e23203ac09cf5656b527d8968e8ca13729bb06f889d25dc41079fbc2",
+    "evidence/locked-genetics-2026-11-15/genetics_sources.json": "3523ed227b50d25e6f4b848182c972473b57bd663c42c38a580086d202ee5812",
+    "docs/research-notes/GENETIC_ANCHOR_TRANSFER_2026-11-15.md": "4aab81e8fbdf443bfbe6ed461228f5b26117fb860e5cd3e923c7d6d331902658",
+    "docs/research-notes/UTERINE_GENETIC_SCORE_RESULTS_2026-11-15.md": "1c2bdfb91d303451f7b6b0b5a4bee2e6167487723be64813eade3b9e61629d3c",
+    "docs/research-notes/GENETICS_AND_BLOOD_GROUPS_2026-11-15.md": "ba16a808fd0d4fbbfe97f86b7065af225f8b30fcf5438cc2eefe5848ef789713",
+    "docs/research-notes/GENETIC_ANCHORS_TISSUE_RESULTS_2026-11-15.md": "71dbb78168ad6eaf48c38ff91f3a2b2a0689092fe55da3e232004048bb7cd9b6"
+  },
+  "checks": [
+    {
+      "command": "python scripts/gwas_3p21_colocalization_audit.py",
+      "exit_code": 0,
+      "result": "Byte-identical to verification.json.",
+      "elapsed_seconds": 0.0318,
+      "peak_rss_kib": 10624
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_gwas_3p21_colocalization_audit.py",
+      "exit_code": 0,
+      "result": "6 tests passed.",
+      "elapsed_seconds": 0.0915,
+      "peak_rss_kib": 14020
+    },
+    {
+      "command": "python scripts/research_queue.py validate",
+      "exit_code": 0,
+      "result": "Validated 19 task records, 0 ready",
+      "elapsed_seconds": 0.0396,
+      "peak_rss_kib": 10752
+    },
+    {
+      "command": "python scripts/research_queue.py ready",
+      "exit_code": 0,
+      "result": "No ready tasks listed.",
+      "elapsed_seconds": 0.049,
+      "peak_rss_kib": 10752
+    },
+    {
+      "command": "python scripts/verify_catalog.py",
+      "exit_code": 0,
+      "result": "{\"analyzed\": 12, \"sources\": 17, \"status\": \"exploratory_computation\"}",
+      "elapsed_seconds": 0.0284,
+      "peak_rss_kib": 10752
+    },
+    {
+      "command": "python scripts/repo_safety.py",
+      "exit_code": 0,
+      "result": "Tracked-file check passed (398 files). Separate human-data audit required.",
+      "elapsed_seconds": 0.0557,
+      "peak_rss_kib": 10752
+    }
+  ],
+  "output_sha256": {
+    "evidence/gwas-3p21-colocalization-audit/verification.json": "1c477da018db38df6a4bd9e0fc140574cc0461247a00f4dafbbc5dab76f071be"
+  },
+  "biological_models_fitted": 0,
+  "not_run": [
+    "Exact HyPrColoc",
+    "coloc.abf prior grid",
+    "conditional coloc.susie and LD sensitivity",
+    "sigmoid and VEZT controls",
+    "independent cross-compartment test"
+  ],
+  "access": "The public literature and author/cross-study supplement text were readable. The publisher XLSX readers did not expose cells. A direct acquisition request for the 2023 workbook was rejected because this environment disables sandbox escalation. Koller Zenodo file-level metadata were not verified. No paid compute, restricted data, participant records or outreach.",
+  "interpretation": "Coordinate arithmetic and annotation overlap only. No signed LD, allelic effect on endometrial RNA, disease conditional signal or biological null was estimated. See inventory.md for source-by-source eligibility and inherited checksums."
+}

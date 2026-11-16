@@ -4,7 +4,7 @@
   "title": "Resolve what the 3p21.31 endometriosis association establishes",
   "program": "endometriosis",
   "priority": "P0",
-  "status": "ready",
+  "status": "done",
   "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/50",
   "question": "Can disease and molecular associations distinguish HYAL3 regulation from linked signals, co-regulation and non-endometrial effects at 3p21.31?",
   "scope": "Source audit and gated regional analysis for inherited susceptibility. Use only public primary publications, aggregate supplements, public regional summary statistics and signed aggregate LD where permitted. Exclude participant records, whole-genome analyses, lesion panels and issue 49.",
@@ -34,5 +34,11 @@
     "Apply the frozen input gates and document blocked comparisons.",
     "Give one scientific decision and a discriminating next experiment. Isolate all changes from issue 49."
   ],
-  "budget": {"max_runtime_minutes": 90, "max_ram_gb": 4, "network": "public-opt-in", "max_download_mb": 250}
+  "budget": {
+    "max_runtime_minutes": 90,
+    "max_ram_gb": 4,
+    "network": "public-opt-in",
+    "max_download_mb": 250
+  },
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/52"
 }
