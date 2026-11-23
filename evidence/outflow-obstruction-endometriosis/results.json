@@ -1,0 +1,61 @@
+[
+  {
+    "study_id": "beijing-peking-union-obstructed-hemivagina",
+    "outcome": "endometriosis",
+    "difference_pp": 25.096739,
+    "newcombe_95_pp": [
+      6.70553,
+      44.697173
+    ],
+    "tipping_point": {
+      "additional_reference_cases": 17,
+      "recorded_reference_noncases": 59,
+      "percent_of_reference_noncases": 28.813559,
+      "difference_one_case_before_pp": 1.216142,
+      "difference_at_threshold_pp": -0.276396
+    }
+  },
+  {
+    "study_id": "london-unicornuate-uterus-ultrasound",
+    "outcome": "endometriosis",
+    "difference_pp": 12.6443,
+    "newcombe_95_pp": [
+      1.945527,
+      23.813358
+    ],
+    "tipping_point": {
+      "additional_reference_cases": 16,
+      "recorded_reference_noncases": 109,
+      "percent_of_reference_noncases": 14.678899,
+      "difference_one_case_before_pp": 0.739538,
+      "difference_at_threshold_pp": -0.054113
+    }
+  },
+  {
+    "study_id": "london-unicornuate-uterus-ultrasound",
+    "outcome": "adenomyosis",
+    "difference_pp": -1.298701,
+    "newcombe_95_pp": [
+      -13.06421,
+      11.089962
+    ]
+  },
+  {
+    "study_id": "london-unicornuate-uterus-ultrasound",
+    "outcome": "fibroids",
+    "difference_pp": -0.414863,
+    "newcombe_95_pp": [
+      -10.344854,
+      10.367778
+    ]
+  },
+  {
+    "study_id": "london-unicornuate-uterus-ultrasound",
+    "outcome": "horn_excision",
+    "difference_pp": 48.304473,
+    "newcombe_95_pp": [
+      36.851733,
+      58.67472
+    ]
+  }
+]

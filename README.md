@@ -4,6 +4,13 @@
 
 Open-Disease is a place to aim research agents and bounded compute at difficult disease questions. Agents can audit public papers/data, write and test analyses, reproduce known findings, explore falsifiable hypotheses, and publish the *methods, failures, uncertainties and source-backed evidence*. The goal is useful work that future agents or researchers can build on—not a grant-funded lab, research consortium, clinical service or claim to have cured anything.
 
+## Current endometriosis research
+
+- **Does higher MMP2 protein in peritoneal fluid correspond to increased enzyme activity?** Four primary studies use different assays. The task distinguishes protein abundance, inferred activity and directly measured activity in fluid. [Study plan and sources](research/tasks/peritoneal-mmp2-activity.json)
+- **How sensitive is the association between obstructed menstrual outflow and endometriosis to missed diagnoses?** In two clinical cohorts, recorded endometriosis was more common in the anatomical group expected to retain more menstrual flow. The difference would disappear with 17 additional diagnoses among 59 women recorded without endometriosis in the Beijing comparison group, or 16 among 109 in London. In London, horn excision was also 48.3 percentage points more frequent in the group with more diagnoses, leaving differential detection unresolved. [Analysis, published counts and reproduction](docs/research-notes/OUTFLOW_OBSTRUCTION_ENDOMETRIOSIS_2026-11-23.md)
+
+## Published findings
+
 **The five-gene score rises in peritoneum from women without visible endometriosis.** It was higher in peritoneum than in paired uterine endometrium in all eight Finnish controls whose laparoscopy excluded endometriosis. The mean difference was **+29.22 within-array percentile points** (two-sided exact p = 0.0078). The same score previously rose in 23 of 25 external lesion–uterus pairs, and six matched cases showed little difference between lesion cores and adjacent peritoneum (−0.46 points). Ordinary tissue differences can therefore produce the direction previously seen with lesions. Any additional lesion-specific effect requires a comparison within anatomically matched peritoneal tissue. [Frozen control-donor experiment and results](docs/research-notes/NORMAL_PERITONEUM_UTERUS_RESULTS_2026-11-16.md) · [Earlier lesion cohorts](docs/research-notes/LESION_PANEL_SYNTHESIS_2026-11-15.md) · [Why all 13 German pairs are scanner-confounded, and which seven Finnish case pairs qualify for a narrower test](docs/research-notes/PERITONEAL_CONTROL_FOLLOWUP_2026-11-16.md)
 
 **Uterine expression, inherited risk and long-term outcomes.** A Finnish case–control expression pattern reversed for 64.7% of 11,464 genes measured in Rome, including within shared scan dates, although the separate scan-order audit found all controls were scanned before cases on both mixed dates. A separate external GWAS check bounded the population-average effects of 12 published suggestive markers within odds ratios of 0.909 to 1.10. A three-registry analysis quantified the concentration of clear-cell and endometrioid histotypes among ovarian cancers at least ten years after recorded endometriosis. [Expression transfer](docs/research-notes/TRANSCRIPTOME_TRANSFER_RESULTS_2026-11-15.md) · [Genetic portability](docs/research-notes/INDIA_GWAS_PORTABILITY_2026-11-15.md) · [Long-lag registry evidence](docs/research-notes/LONG_LAG_OVARIAN_HISTOTYPES_2026-11-15.md)
@@ -45,10 +52,11 @@ Read [AGENTS.md](AGENTS.md) for operating rules and [the agent workflow](docs/AG
 
     python scripts/research_queue.py validate
     python scripts/research_queue.py ready
+    python scripts/research_queue.py history EndometDB
 
-Each JSON task defines a falsifiable question, sources, dependencies, acceptance criteria and a rough resource budget. An agent can create a **local, ignored** run record with `python scripts/research_queue.py new-run --task TASK_ID --agent AGENT_ID --out results/TASK_ID/run.json`. The queue is a lightweight coordination format, **not** an automatic scheduler or a compute sandbox. A task does not automatically authorize network access, external API costs, high-memory workloads or contact with people.
+Each new task identifies its closest prior work, the evidence it adds, and a result that would change the scientific interpretation. Reusing a cohort requires a specific reason. The history command searches known accessions, aliases and task records. An agent can create a **local, ignored** run record with `python scripts/research_queue.py new-run --task TASK_ID --agent AGENT_ID --out results/TASK_ID/run.json`. The queue is a lightweight coordination format, **not** an automatic scheduler or a compute sandbox. A task does not automatically authorize network access, external API costs, high-memory workloads or contact with people.
 
-The [complete Finnish chip census](docs/research-notes/GSE141549_CHIP_CENSUS_2026-11-14.md) links physical addresses to native clinical records. Of 38 donors with one qualifying assay, 32 had a complete HumanWG-6 v2 address set. The authors' pooled normalized row has a separate unresolved [measurement question](https://github.com/dovvnloading/Open-Disease/issues/26).
+The [complete Finnish chip census](docs/research-notes/GSE141549_CHIP_CENSUS_2026-11-14.md) links physical addresses to native clinical records. Of 38 donors with one qualifying assay, 32 had a complete HumanWG-6 v2 address set. The [cross-platform audit](docs/research-notes/GSE141549_FOSB_CROSS_PLATFORM_DECISION_2026-11-16.md) found insufficient provenance to interpret the pooled normalized row as a single measurement.
 
 ### Original endometriosis reproduction (GSE51981)
 
@@ -81,7 +89,7 @@ The demo generates **SIMULATED ONLY** data in ignored `results/`. No automated r
 
 ## Research directions and science boundary
 
-The immediate question is whether source-verified, phase-aware endometrial microarray results can reproduce a specific published signal, with other pelvic pathology **distinct from** healthy controls. Study: [GEO GSE51981](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981); [published paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC4239429/). Never treat arrays as RNA-seq counts. The [Swiss epithelial analysis](docs/research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md) uses a smaller derivative of the 60-donor atlas. The full multi-cell-type atlas and genetic mapping remain separate computational directions.
+The [research roadmap](docs/RESEARCH_ROADMAP.md) identifies the decisions that could move the endometriosis program forward. The [original GSE51981 reproduction](docs/research-notes/GSE51981_REPRODUCTION_STATUS_2026-11-13.md) requires new evidence of donor eligibility before its outcome can be tested.
 
 Computational evidence can suggest or rule against hypotheses. It does not by itself prove causal mechanisms, treatment benefit, clinical safety or a cure. Human/sample-level data and restricted files are never committed. A public source must still be checked for permission and data quality. See [protocol](PROTOCOL.md), [limitations](ETHICS_AND_LIMITATIONS.md), [data sources](DATA_SOURCES.md), [charter](docs/CHARTER.md), and [roadmap](docs/RESEARCH_ROADMAP.md).
 

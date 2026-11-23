@@ -1,0 +1,34 @@
+{
+  "unit": "women",
+  "cohorts": [
+    {
+      "study_id": "beijing-peking-union-obstructed-hemivagina",
+      "citation": "Tong J, Zhu L, Chen N, Lang J. Fertility and Sterility. 2014;102:790–794.",
+      "source": "https://doi.org/10.1016/j.fertnstert.2014.05.025",
+      "locator": "Abstract, Results, sentence comparing pelvic endometriosis by complete versus incomplete hemivaginal obstruction. The abstract's Intervention(s) and Main Outcome Measure(s) describe ascertainment.",
+      "recruitment": "Peking Union Medical College Hospital, Beijing. Retrospective case series of 94 women with Herlyn–Werner–Wunderlich syndrome. Recruitment dates were unavailable in the verified abstract.",
+      "ascertainment": "The authors reviewed clinical and operative records and contacted patients for follow-up. The abstract does not establish equal diagnostic investigation across obstruction groups.",
+      "higher_retention_group": {"label": "Complete hemivaginal obstruction", "women": 27},
+      "reference_group": {"label": "Incomplete hemivaginal obstruction", "women": 67},
+      "outcomes": [
+        {"outcome": "endometriosis", "source_row": "Abstract, Results, pelvic endometriosis by obstruction", "higher_retention_events": 10, "reference_events": 8}
+      ]
+    },
+    {
+      "study_id": "london-unicornuate-uterus-ultrasound",
+      "citation": "Tellum T, Bracco B, De Braud LV, et al. Ultrasound in Obstetrics & Gynecology. 2023;61:99–108.",
+      "source": "https://doi.org/10.1002/uog.26073",
+      "locator": "Table 3, denominators in the non-communicating functional and non-communicating non-functional column headers. Outcome-specific row names are recorded below. Methods, Study population and Image acquisition, describe ascertainment.",
+      "recruitment": "University College London Hospital, January 2008 to September 2021. Consecutive clinic attendees aged 16 or older with a unicornuate uterus. Only women with a noncommunicating rudimentary horn contribute.",
+      "ascertainment": "Systematic specialist pelvic ultrasound and clinical and surgical histories. Functional endometrium was visible in the rudimentary horn. The ultrasound criteria for endometriosis describe nodules and endometriomas. Horn excision records a procedure.",
+      "higher_retention_group": {"label": "Functional noncommunicating horn", "women": 88},
+      "reference_group": {"label": "Nonfunctional noncommunicating horn", "women": 126},
+      "outcomes": [
+        {"outcome": "endometriosis", "source_row": "Table 3, Endometriosis", "higher_retention_events": 23, "reference_events": 17},
+        {"outcome": "adenomyosis", "source_row": "Table 3, Adenomyosis", "higher_retention_events": 24, "reference_events": 36},
+        {"outcome": "fibroids", "source_row": "Table 3, Fibroids", "higher_retention_events": 15, "reference_events": 22},
+        {"outcome": "horn_excision", "source_row": "Table 3, Excision of rudimentary horn", "higher_retention_events": 46, "reference_events": 5}
+      ]
+    }
+  ]
+}

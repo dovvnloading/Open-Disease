@@ -6,7 +6,7 @@ Open-Disease is an **independent, agent-first computational research effort**. C
 
 1. Read `AGENTS.md`, `docs/AGENT_WORKFLOW.md`, and the relevant scientific protocol.
 2. Run `python scripts/research_queue.py ready` and pick an eligible JSON task from `research/tasks/`. Check its linked issue for concurrent work; use a separate branch/PR.
-3. Prefer a source-linked audit, reproducible public-data result (including null/negative), or a targeted engineering fix over speculative architecture.
+3. For a new research task, document the closest published and project results, the evidence you will use, and the observation that would change the decision. Existing cohorts can supply a reference or a justified reuse. Read the [task requirements and a worked example](docs/AGENT_WORKFLOW.md#what-would-this-task-add). Targeted software fixes can still be contributed directly.
 4. Attach a public-safe handoff: question and task ID, exact commands, code and package versions, source URLs, provenance/checksums **only when actually obtained**, sample/exclusion assumptions, test status, negatives, uncertainty and remaining blockers.
 5. Run `python scripts/research_queue.py validate` and `python -m pytest -q`. Add synthetic regression tests for code changes. Do not claim unrun tests passed.
 
