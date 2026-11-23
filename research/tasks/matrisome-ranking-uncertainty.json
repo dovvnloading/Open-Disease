@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "matrisome-ranking-uncertainty",
+  "title": "Quantify uncertainty and design sensitivity in the scan-disjoint matrisome benchmark",
+  "program": "endometriosis",
+  "priority": "P1",
+  "status": "done",
+  "completion_pr": "https://github.com/dovvnloading/Open-Disease/pull/58",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/45",
+  "question": "How much support do the released array rankings give for transfer, and how much do phase weighting, array omissions and scanner-day comparisons change that interpretation?",
+  "scope": "Retrospective analysis of the existing three target-cohort summaries and Rome scanner margins. The benchmark rankings, phase counts and scan-order imbalance are already public. No participant-level inputs, training or source downloads.",
+  "dependencies": ["external-bulk-pathways"],
+  "sources": [
+    "https://github.com/dovvnloading/Open-Disease/blob/1859b40b4c274212c24bc3d5c20fc80faf2c88ab/evidence/matrisome-holdout-2026-11-15/transfer-benchmark.json",
+    "https://github.com/dovvnloading/Open-Disease/blob/1859b40b4c274212c24bc3d5c20fc80faf2c88ab/evidence/genome-transport-2026-11-15/rome_scan_transport.json",
+    "https://doi.org/10.1007/s43032-023-01359-w"
+  ],
+  "steps": [
+    "Pin the two aggregate inputs and check case, comparator, pair and tie counts.",
+    "Enumerate rank-sum null distributions under array-label exchangeability, preserving U.S. phase margins. Report nominal and three-target Holm results.",
+    "Reweight and omit U.S. phases, bound the impact of individual array omissions, and identify all attainable Rome within-day ranking totals from its scanner margins."
+  ],
+  "deliverables": [
+    "Reproducible offline calculation with synthetic exhaustive checks",
+    "Machine-readable results and a source-linked research note"
+  ],
+  "acceptance": [
+    "Distinguish exact arithmetic from the assumptions about arrays and scanner order needed for inference.",
+    "Use the scan-disjoint fit for all tests and keep sensitivity analyses outside the three-target test family.",
+    "Distinguish sharp bounds compatible with aggregates from observed deletion or scanner-adjusted results."
+  ],
+  "budget": {"max_runtime_minutes": 60, "max_ram_gb": 2, "network": "none", "max_download_mb": 0}
+}
