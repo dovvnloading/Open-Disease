@@ -138,6 +138,13 @@ def validate_novelty(tasks: dict[str, dict], by_name: dict[str, dict]) -> None:
                 first_use[study] = ident
             else:
                 raise ValueError(f"{ident}: evidence use must be new or reused")
+    # A bare DOI cannot distinguish cohorts. Check after collecting all claims
+    # so earlier task filenames do not get precedence over later ones.
+    for key, study in source_ids.items():
+        bare, anchor, _ = key.partition("#")
+        if anchor and bare.startswith("https://doi.org/") and bare in source_ids and source_ids[bare] != study:
+            raise ValueError(f"{key} uses study ID {study}, while the bare DOI identifies {source_ids[bare]}; "
+                             "use the same ID or cite cohort-specific evidence links for both")
     for study, ident in first_use.items():
         if study in completed_reuse and tasks[ident]["status"] != "done":
             raise ValueError(f"{ident}: {study} was already used in completed task "
@@ -149,8 +156,15 @@ def history_lines(query: str, tasks: dict[str, dict], by_name: dict[str, dict]) 
     if not nonblank(query):
         raise ValueError("Supply a study ID or alias to look up")
     query = query.strip()
-    term = (source_key(query) if query.startswith("https://") else query).casefold()
-    matched = {study["id"] for name, study in by_name.items() if term in name}
+    key = source_key(query).casefold() if query.casefold().startswith(("https://", "http://")) else query.casefold()
+    terms = {query.casefold(), key}
+    bare = key.partition("#")[0] if key.startswith("https://doi.org/") else None
+
+    def matches(name: str) -> bool:
+        name = name.casefold()
+        return name == bare or any(term in name for term in terms)
+
+    matched = {study["id"] for name, study in by_name.items() if matches(name)}
     lines = []
     for ident in sorted(matched):
         study = by_name[ident.strip().casefold()]
@@ -161,8 +175,8 @@ def history_lines(query: str, tasks: dict[str, dict], by_name: dict[str, dict]) 
         for item in task["novelty"]["evidence"]:
             name = item["study_id"].strip()
             historic = by_name.get(name.casefold())
-            source = source_key(item["source"]).casefold()
-            if (term in name.casefold() or term in source or (historic and historic["id"] in matched)):
+            source = item["source"]
+            if matches(name) or matches(source) or matches(source_key(source)) or (historic and historic["id"] in matched):
                 lines.append(f'{name}  {task["status"]} ({item["use"]})  research/tasks/{ident}.json')
     return lines
 

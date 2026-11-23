@@ -285,6 +285,27 @@ def test_distinct_cohorts_in_an_unindexed_paper_can_cite_published_anchors(tmp_p
     assert len(ready_tasks(load_tasks(tmp_path))) == 2
 
 
+@pytest.mark.parametrize("completed_id", ["a-earlier", "z-later"])
+def test_completion_doi_and_supplement_cannot_label_the_same_input_new_twice(tmp_path, history, completed_id):
+    first, other = task(completed_id), task("m-proposed")
+    complete(first)
+    first["sources"] = ["https://doi.org/10.2345/example"]
+    supplement = "https://dx.doi.org/10.2345/EXAMPLE?version=public#supplement"
+    other["sources"] = [supplement]
+    for record in (first, other):
+        record["novelty"]["evidence"][0]["source"] = record["sources"][0]
+        write(tmp_path, record)
+    with pytest.raises(ValueError, match="bare DOI"):
+        load_tasks(tmp_path)
+    other["novelty"]["evidence"][0].update(study_id=completed_id, use="reused")
+    other["novelty"]["reuse_reason"] = "Resolves the original coding assumption."
+    write(tmp_path, other)
+    tasks = load_tasks(tmp_path)
+    _, names = research_queue.load_history(history)
+    rows = research_queue.history_lines(supplement, tasks, names)
+    assert len(rows) == 2 and any("done (new)" in row for row in rows)
+
+
 def test_ready_prefers_new_evidence_inside_each_priority(tmp_path):
     old, fresh, urgent = task("a-reuse"), task("z-new"), task("urgent")
     old["novelty"]["evidence"][0]["use"] = "reused"
@@ -309,4 +330,10 @@ def test_history_search_reports_aliases_canonical_ids_and_task_status(tmp_path, 
         "Original  historical  docs/previous.md",
         "ORIGINAL  ready (reused)  research/tasks/toy-one.json",
     ]
+    for alternate in [
+            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE24nnn/GSE24680/matrix/",
+            "https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-1234/?type=study",
+            "https://dx.doi.org/10.1234/OLD?read=paper#supplement",
+    ]:
+        assert research_queue.history_lines(alternate, tasks, names) == research_queue.history_lines("Ali", tasks, names)
     assert research_queue.history_lines("unlisted", tasks, names) == []

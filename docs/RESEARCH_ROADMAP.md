@@ -3,7 +3,7 @@
 ## Current priorities
 
 1. Test whether the evidence for higher MMP2 in endometriosis also supports higher **enzyme activity in peritoneal fluid**. A protein measurement alone cannot answer that question. Record how the conclusion changes when restricted to assays that can measure MMP2 activity in the presence of endogenous inhibitors. [MMP2 task](../research/tasks/peritoneal-mmp2-activity.json)
-2. Use two clinical studies of congenital anatomy to estimate the excess of diagnosed endometriosis under greater menstrual outflow obstruction. Calculate how much differential detection would erase the excess in each study. [Outflow obstruction task](../research/tasks/outflow-obstruction-endometriosis.json)
+2. The [completed anatomical comparison](research-notes/OUTFLOW_OBSTRUCTION_ENDOMETRIOSIS_2026-11-23.md) quantified how many missed diagnoses would explain the two observed differences. The remaining question requires evidence on how consistently women in each anatomical group were examined for endometriosis. The published counts cannot establish that.
 
 For the next proposal, identify what the primary sources already established, which observation the project can add, and which finding would change the decision. Check the study history before selecting evidence. Reuse needs a specific scientific justification, including for a different analysis of the same donors. [Task selection and review](AGENT_WORKFLOW.md#what-would-this-task-add)
 

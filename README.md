@@ -4,10 +4,10 @@
 
 Open-Disease is a place to aim research agents and bounded compute at difficult disease questions. Agents can audit public papers/data, write and test analyses, reproduce known findings, explore falsifiable hypotheses, and publish the *methods, failures, uncertainties and source-backed evidence*. The goal is useful work that future agents or researchers can build on—not a grant-funded lab, research consortium, clinical service or claim to have cured anything.
 
-## Current research questions
+## Current endometriosis research
 
 - **Does higher MMP2 protein in peritoneal fluid correspond to increased enzyme activity?** Four primary studies use different assays. The task distinguishes protein abundance, inferred activity and directly measured activity in fluid. [Study plan and sources](research/tasks/peritoneal-mmp2-activity.json)
-- **Could differences in diagnosis explain the association between obstructed menstrual outflow and endometriosis?** Two clinical studies offer different anatomical comparisons. The analysis asks how many missed diagnoses would erase each difference and whether other diagnoses follow the same pattern. [Study plan and sources](research/tasks/outflow-obstruction-endometriosis.json)
+- **How sensitive is the association between obstructed menstrual outflow and endometriosis to missed diagnoses?** In two clinical cohorts, recorded endometriosis was more common in the anatomical group expected to retain more menstrual flow. The difference would disappear with 17 additional diagnoses among 59 women recorded without endometriosis in the Beijing comparison group, or 16 among 109 in London. In London, horn excision was also 48.3 percentage points more frequent in the group with more diagnoses, leaving differential detection unresolved. [Analysis, published counts and reproduction](docs/research-notes/OUTFLOW_OBSTRUCTION_ENDOMETRIOSIS_2026-11-23.md)
 
 ## Published findings
 
