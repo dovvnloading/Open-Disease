@@ -1,0 +1,330 @@
+{
+  "legacy_tasks": [
+    "cross-cohort-pathway-discovery",
+    "cross-study-evidence-audit",
+    "endometdb-eligible-chip-census",
+    "endometdb-fosb-measurement-audit",
+    "endometdb-wg6-fosb-direction",
+    "endometriosis-evidence-transport",
+    "external-bulk-pathways",
+    "genetic-anchors-tissue-context",
+    "gpl570-annotation-audit",
+    "gse120103-fosb-direction",
+    "gse25628-fosb-direction",
+    "gse266265-epithelial-feasibility",
+    "gse315857-fosb-transcript",
+    "gse51981-first-reproduction",
+    "gse51981-sample-audit",
+    "gwas-3p21-colocalization-audit",
+    "heca-glandular-metadata",
+    "matrisome-ranking-uncertainty",
+    "melbourne-five-gene-summary",
+    "normal-peritoneum-uterus",
+    "peritoneal-control-audit",
+    "peritoneal-followup-qualification",
+    "swiss-glandular-pathways"
+  ],
+  "legacy_blocked_tasks": [
+    "gse51981-first-reproduction",
+    "gse51981-sample-audit"
+  ],
+  "studies": [
+    {
+      "id": "Anand-India-GWAS",
+      "aliases": [
+        "Indian discovery GWAS",
+        "https://doi.org/10.1038/s41598-026-69642-9"
+      ],
+      "report": "docs/research-notes/INDIA_GWAS_PORTABILITY_2026-11-15.md"
+    },
+    {
+      "id": "E-MTAB-14039",
+      "aliases": [
+        "HECA Oxford",
+        "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-14039"
+      ],
+      "report": "docs/research-notes/HECA_GLANDULAR_FEASIBILITY_2026-11-14.md"
+    },
+    {
+      "id": "E-MTAB-694",
+      "aliases": [
+        "Sohler Erlangen",
+        "https://doi.org/10.1177/1933719112451147",
+        "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-694"
+      ],
+      "report": "docs/research-notes/PERITONEAL_CONTROL_FOLLOWUP_2026-11-16.md"
+    },
+    {
+      "id": "Fogg-matrisome-split",
+      "aliases": [
+        "https://doi.org/10.1007/s43032-023-01359-w",
+        "https://github.com/fogg-lab/characterizing-ecm-transcriptome-of-endometriosis/tree/df538583652d3359d71959437837ea3e0d1195e6"
+      ],
+      "report": "docs/research-notes/MATRISOME_HOLDOUT_AUDIT_2026-11-15.md"
+    },
+    {
+      "id": "Fung2018-S20",
+      "aliases": [
+        "Melbourne high-detection probe panel",
+        "https://doi.org/10.1038/s41598-018-29462-y"
+      ],
+      "report": "docs/research-notes/MELBOURNE_FIVE_GENE_RESULTS_2026-11-14.md"
+    },
+    {
+      "id": "GSE105764",
+      "aliases": [
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE105764"
+      ],
+      "report": "docs/research-notes/GENETIC_ANCHORS_TISSUE_RESULTS_2026-11-15.md"
+    },
+    {
+      "id": "GSE11691",
+      "aliases": [
+        "Hull extraovarian pairs",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE11691"
+      ],
+      "report": "docs/research-notes/LESION_TRANSFER_RESULTS_2026-11-15.md"
+    },
+    {
+      "id": "GSE120103",
+      "aliases": [
+        "New Delhi GSE120103",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE120103",
+        "https://doi.org/10.1186/s12958-019-0465-z"
+      ],
+      "report": "docs/research-notes/GSE120103_FOSB_RESULTS_2026-11-14.md"
+    },
+    {
+      "id": "GSE141549",
+      "aliases": [
+        "EndometDB",
+        "Finnish EndometDB",
+        "https://doi.org/10.6084/m9.figshare.12195975.v1",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141549",
+        "https://doi.org/10.1038/s41597-020-00623-x"
+      ],
+      "report": "docs/research-notes/NORMAL_PERITONEUM_UTERUS_RESULTS_2026-11-16.md"
+    },
+    {
+      "id": "GSE153739",
+      "aliases": [
+        "Mumbai mid-proliferative cohort",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153739",
+        "https://doi.org/10.1093/humrep/deaa255"
+      ],
+      "report": "docs/research-notes/EXTERNAL_BULK_PATHWAYS_RESULTS_2026-11-14.md"
+    },
+    {
+      "id": "GSE179640",
+      "aliases": [
+        "Tan peritoneal cohort",
+        "https://doi.org/10.1038/s41556-022-00961-5",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE179640",
+        "PRJNA744463",
+        "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA744463"
+      ],
+      "report": "docs/research-notes/ADJACENT_PERITONEUM_RESULTS_2026-11-15.md"
+    },
+    {
+      "id": "GSE213216",
+      "aliases": [
+        "Fonseca peritoneal cohort",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE213216",
+        "https://doi.org/10.1038/s41588-022-01254-1"
+      ],
+      "report": "docs/research-notes/FONSECA_PERITONEUM_COMPARATOR_2026-11-15.md"
+    },
+    {
+      "id": "GSE214411",
+      "aliases": [
+        "HECA Huang",
+        "https://doi.org/10.1093/cei/uxad029",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE214411"
+      ],
+      "report": "docs/research-notes/HECA_GLANDULAR_FEASIBILITY_2026-11-14.md"
+    },
+    {
+      "id": "GSE234354",
+      "aliases": [
+        "Melbourne phase RNA-seq",
+        "https://doi.org/10.1038/s41467-023-41979-z",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234354"
+      ],
+      "report": "docs/research-notes/MELBOURNE_PHASE_RESULTS_2026-11-15.md"
+    },
+    {
+      "id": "GSE25628",
+      "aliases": [
+        "Rome proliferative cohort",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE25628",
+        "https://doi.org/10.1002/jcp.24358",
+        "https://github.com/dovvnloading/Open-Disease/blob/1859b40b4c274212c24bc3d5c20fc80faf2c88ab/evidence/genome-transport-2026-11-15/rome_scan_transport.json"
+      ],
+      "report": "docs/research-notes/GENOME_TRANSPORT_2026-11-15.md"
+    },
+    {
+      "id": "GSE263897",
+      "aliases": [
+        "Burns spatial panel",
+        "https://doi.org/10.1016/j.isci.2025.111790",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE263897"
+      ],
+      "report": "docs/research-notes/SPATIAL_PANEL_RESULTS_2026-11-15.md"
+    },
+    {
+      "id": "GSE266265",
+      "aliases": [
+        "Swiss glandular cohort",
+        "zenodo.19278464",
+        "https://doi.org/10.5281/zenodo.19278464",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE266265",
+        "https://doi.org/10.1038/s41467-026-73020-4"
+      ],
+      "report": "docs/research-notes/SWISS_GLANDULAR_RESULTS_2026-11-14.md"
+    },
+    {
+      "id": "GSE282532",
+      "aliases": [
+        "PRJNA1189111",
+        "https://doi.org/10.1038/s41467-026-69551-5",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE282532"
+      ],
+      "report": "docs/research-notes/RNASEQ_PANEL_RESULTS_2026-11-15.md"
+    },
+    {
+      "id": "GSE29981",
+      "aliases": [
+        "US GSE29981 arrays",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE29981"
+      ],
+      "report": "docs/research-notes/MATRISOME_HOLDOUT_AUDIT_2026-11-15.md"
+    },
+    {
+      "id": "GSE315857",
+      "aliases": [
+        "PRJNA1399448",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE315857",
+        "https://doi.org/10.1093/reprod/xaag038",
+        "GSE272606",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE272606"
+      ],
+      "report": "docs/research-notes/GSE315857_FOSB_RESULTS_2026-11-14.md"
+    },
+    {
+      "id": "GSE4888",
+      "aliases": [
+        "US GSE4888 arrays",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE4888"
+      ],
+      "report": "docs/research-notes/MATRISOME_HOLDOUT_AUDIT_2026-11-15.md"
+    },
+    {
+      "id": "GSE5108",
+      "aliases": [
+        "CodeLink lesion pairs",
+        "https://doi.org/10.1016/j.fertnstert.2007.01.056",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE5108"
+      ],
+      "report": "docs/research-notes/CODELINK_PANEL_RESULTS_2026-11-15.md"
+    },
+    {
+      "id": "GSE51981",
+      "aliases": [
+        "UCSF GSE51981",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4239429/",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE51981",
+        "E-GEOD-51981",
+        "https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-GEOD-51981"
+      ],
+      "report": "docs/research-notes/MATRISOME_HOLDOUT_AUDIT_2026-11-15.md"
+    },
+    {
+      "id": "GSE6364",
+      "aliases": [
+        "Burney GSE6364",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6364",
+        "https://doi.org/10.1210/en.2006-1692"
+      ],
+      "report": "docs/research-notes/MATRISOME_HOLDOUT_AUDIT_2026-11-15.md"
+    },
+    {
+      "id": "GSE7305",
+      "aliases": [
+        "Hever ovarian pairs",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC1941489/",
+        "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE7305"
+      ],
+      "report": "docs/research-notes/LESION_TRANSFER_RESULTS_2026-11-15.md"
+    },
+    {
+      "id": "HECA-2024",
+      "aliases": [
+        "Human Endometrial Cell Atlas",
+        "https://www.reproductivecellatlas.org/endometrium_reference.html",
+        "https://doi.org/10.1038/s41588-024-01873-w"
+      ],
+      "report": "docs/research-notes/HECA_GLANDULAR_FEASIBILITY_2026-11-14.md"
+    },
+    {
+      "id": "Hermens-Dutch-registry",
+      "aliases": [
+        "Dutch pathology registry",
+        "ENOCA",
+        "https://doi.org/10.1016/j.ygyno.2021.07.006"
+      ],
+      "report": "docs/research-notes/LONG_LAG_OVARIAN_HISTOTYPES_2026-11-15.md"
+    },
+    {
+      "id": "Koller-2026",
+      "aliases": [
+        "Koller-2026-S13",
+        "zenodo.18983492",
+        "GCST90841386",
+        "https://doi.org/10.5281/zenodo.18983492",
+        "https://doi.org/10.1038/s41588-026-02582-2"
+      ],
+      "report": "docs/research-notes/GWAS_3P21_COLOCALIZATION_AUDIT_2026-11-16.md"
+    },
+    {
+      "id": "Moberg-Swedish-registry",
+      "aliases": [
+        "Swedish endometriosis and adenomyosis registry",
+        "https://doi.org/10.1111/aogs.70223"
+      ],
+      "report": "docs/research-notes/LONG_LAG_OVARIAN_HISTOTYPES_2026-11-15.md"
+    },
+    {
+      "id": "Open-Disease-matrisome-benchmark",
+      "aliases": [
+        "scan-disjoint matrisome benchmark",
+        "https://github.com/dovvnloading/Open-Disease/blob/1859b40b4c274212c24bc3d5c20fc80faf2c88ab/evidence/matrisome-holdout-2026-11-15/transfer-benchmark.json"
+      ],
+      "report": "docs/research-notes/MATRISOME_RANKING_UNCERTAINTY_2026-11-23.md"
+    },
+    {
+      "id": "Pan-UKB",
+      "aliases": [
+        "Pan-UK Biobank",
+        "https://pan.ukbb.broadinstitute.org/downloads/"
+      ],
+      "report": "docs/research-notes/INDIA_GWAS_PORTABILITY_2026-11-15.md"
+    },
+    {
+      "id": "Rahmioglu-2023",
+      "aliases": [
+        "Rahmioglu-2023-T1",
+        "GCST90205183",
+        "https://doi.org/10.1038/s41588-023-01323-z"
+      ],
+      "report": "docs/research-notes/GWAS_3P21_COLOCALIZATION_AUDIT_2026-11-16.md"
+    },
+    {
+      "id": "Saavalainen-Finnish-registry",
+      "aliases": [
+        "Finnish surgical endometriosis registry",
+        "https://doi.org/10.1097/AOG.0000000000002624"
+      ],
+      "report": "docs/research-notes/LONG_LAG_OVARIAN_HISTOTYPES_2026-11-15.md"
+    }
+  ]
+}

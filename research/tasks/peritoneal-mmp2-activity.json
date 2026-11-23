@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "id": "peritoneal-mmp2-activity",
+  "title": "Test whether higher peritoneal fluid MMP2 abundance is accompanied by increased enzyme activity",
+  "program": "endometriosis",
+  "priority": "P0",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/59",
+  "question": "In surgically assessed endometriosis, do independent human studies find greater MMP2-specific cleavage activity in peritoneal fluid from cases than from controls?",
+  "scope": "Literature and aggregate evidence assessment. Compare published group contrasts in human peritoneal fluid, including assays of antigen, latent proenzyme and endogenous activity. Use public methods, tables, figures and aggregate supplementary results only.",
+  "dependencies": [],
+  "sources": [
+    "https://doi.org/10.1016/j.fertnstert.2003.10.027",
+    "https://doi.org/10.1038/s41598-021-00299-2",
+    "https://doi.org/10.1021/ja307866z",
+    "https://doi.org/10.31744/einstein_journal/2025AO1345"
+  ],
+  "novelty": {
+    "prior_work": "The project's lesion transcript and matrisome score analyses leave enzyme activity in peritoneal fluid unresolved. Four primary reports outside those datasets already describe concentration, substrate cleavage or zymography. Their published directions are known at task creation.",
+    "contribution": "Determine whether the case for increased MMP2 activity survives restricting the evidence to independently recruited cohorts and assays that distinguish active MMP2 from other gelatinases in the presence of endogenous inhibitors. Identify exactly which contrast changes the conclusion when that restriction is applied.",
+    "falsifier": "The prediction is higher MMP2-specific activity in case fluid. A credible independent opposite-direction activity result with uncertainty excluding zero challenges this prediction in that surgical population. Inconclusive activity evidence leaves the mechanism unresolved even if antigen levels rise.",
+    "evidence": [
+      {"study_id": "huang-zhejiang-peritoneal-fluid", "source": "https://doi.org/10.1016/j.fertnstert.2003.10.027", "use": "new"},
+      {"study_id": "jansa-ljubljana-peritoneal-fluid", "source": "https://doi.org/10.1038/s41598-021-00299-2", "use": "new"},
+      {"study_id": "chen-peritoneal-fluid-prama", "source": "https://doi.org/10.1021/ja307866z", "use": "new"},
+      {"study_id": "palmieri-sao-paulo-retrocervical", "source": "https://doi.org/10.31744/einstein_journal/2025AO1345", "use": "new"}
+    ]
+  },
+  "steps": [
+    "Start with Huang's infertility cases and tubal-ligation controls, Janša's stage III follicular-phase discovery set (Table 1), Chen's moderate/severe cases and surgical controls, and Palmieri's retrocervical disease subcohort. Record recruitment site, selection, stage, cycle, hormonal exposure and assay-specific group counts when reported. Use recruitment descriptions and cited parent cohorts to identify shared material. Keep independence unknown where provenance is insufficient.",
+    "Check Janša Table 3 against the discovery methods (MMP2 antibody signal, log2 case/control fold change +0.66, Benjamini–Hochberg adjusted p = 0.0082). The subsequent ELISA panel covered other proteins. Check Huang's fluid concentration and phase comparisons separately. In Chen, compare the same-cohort antigen ELISA (Supplementary 9) with the MMP2 activity estimate from mixed-substrate cleavage (Figure 3E). Chen found no significant change in MMP2 antigen and a decrease in its selected, model-inferred activity. Record model selection, inhibitor specificity and uncertainty. In Palmieri, distinguish the fluid pro-MMP2 zymogram (Figure 1D) from both lesion bands and activity retained in native fluid.",
+    "Seek independent direct activity evidence with this PubMed query: endometriosis AND (\"peritoneal fluid\" OR \"peritoneal fluids\") AND (MMP2 OR \"MMP-2\" OR \"matrix metalloproteinase 2\" OR \"gelatinase A\"). Record search date and total. Screen the first 40 hits in ascending publication date (PMID breaks ties) plus the four starting papers. Within budget inspect all primary human case/control fluid studies that might contain an MMP2 activity assay, including studies with null or opposing results. Record study, inclusion or exclusion reason, and any inaccessible report or unreviewed hits. Add each newly used cohort and its primary source to this task's evidence list before completion.",
+    "For each eligible endpoint, extract the units, case-minus-control direction, group contrast or interval, test and multiplicity where reported, with a table, figure or abstract locator. Distinguish directly attributed native-fluid MMP2 activity, model-inferred activity, renatured proenzyme bands and antigen abundance. Document how a study distinguished MMP2 from MMP9 or other proteases and whether activation, separation or dilution altered endogenous inhibition. Count co-assays and parent-study derivatives once per cohort.",
+    "Apply the decision first with all readouts visible, then with only comparisons of MMP2-specific activity in native fluid. Require evidence that the assay distinguishes MMP2 from other proteases and preserves endogenous inhibition. A selective capture assay that removes native inhibitors measures activity under different conditions. Report competing explanations, including surgical indication, case phenotype, phase and assay preparation."
+  ],
+  "deliverables": [
+    "A source-linked aggregate evidence table with distinct rows for each cohort and readout, including study and assay eligibility, precision, and primary-source locators.",
+    "A dated search and exclusion log and a short decision note stating how the evidence changes when restricted to native-fluid MMP2 activity."
+  ],
+  "acceptance": [
+    "Account for all four named reports and each screened candidate. Report missing group counts, intervals and specificity controls as unknown. Keep results in their published units and preserve overlapping cohorts as a single source of biological evidence.",
+    "Retain increased activity as a priority if at least two independently recruited comparable cohorts support an increase on MMP2-specific native-fluid assays with reported uncertainty excluding no difference and no qualifying cohort shows a supported decrease. For a supported decrease record the affected population and revise the directional hypothesis; for discordant qualifying results report heterogeneity. Otherwise record insufficient evidence. Without a complete search, qualify the decision by its recorded coverage.",
+    "Identify the nearest available within-cohort abundance/activity comparison and which control or missing measurement would distinguish a change in functional MMP2 from a change in antigen or other proteases. Treat nonsignificance as inconclusive unless precision supports a prespecified equivalence claim. Keep the conclusion exploratory."
+  ],
+  "budget": {"max_runtime_minutes": 90, "max_ram_gb": 1, "network": "public-opt-in", "max_download_mb": 25}
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "id": "outflow-obstruction-endometriosis",
+  "title": "Test the specificity of the endometriosis association with obstructed menstrual outflow",
+  "program": "endometriosis",
+  "priority": "P1",
+  "status": "ready",
+  "issue_url": "https://github.com/dovvnloading/Open-Disease/issues/60",
+  "question": "Across two congenital anomalies, does the anatomical group expected to retain more menstrual flow have a higher recorded prevalence of pelvic endometriosis, and how much differential detection would erase each contrast?",
+  "scope": "Retrospective comparison of published group counts in two separately recruited cohorts. The unit is a woman. The outcome is recorded prevalence at ascertainment. Recruitment, referral, selection for surgery and diagnostic modality limit any inference about disease onset, progression or causation.",
+  "dependencies": [],
+  "sources": [
+    "https://doi.org/10.1016/j.fertnstert.2014.05.025",
+    "https://doi.org/10.1002/uog.26073"
+  ],
+  "novelty": {
+    "prior_work": "The project's lesion and uterine expression studies compare tissue already present at surgery. Tong et al. published an endometriosis excess with complete versus incomplete hemivaginal obstruction. Tellum et al. reported higher endometriosis prevalence in women with functional rudimentary horns and provided diagnoses by horn subtype. These published directions are known when defining this task.",
+    "contribution": "Compare two routes to greater retained menstrual flow. In London, hold horn noncommunication constant and vary the presence of functional endometrium. Compare the descriptive prevalence difference for endometriosis with those for adenomyosis and fibroids within the same two groups. Quantify how many missed diagnoses in the lower-prevalence anatomical group would remove the observed endometriosis excess in each cohort.",
+    "falsifier": "A nonpositive endometriosis difference in either prespecified anatomical contrast defeats a common positive direction. An equal or larger positive difference for either comparison diagnosis in London defeats the descriptive prediction of a larger endometriosis-specific excess. Wide intervals or unknown detection differences leave the mechanism unresolved.",
+    "evidence": [
+      {"study_id": "beijing-peking-union-obstructed-hemivagina", "source": "https://doi.org/10.1016/j.fertnstert.2014.05.025", "use": "new"},
+      {"study_id": "london-unicornuate-uterus-ultrasound", "source": "https://doi.org/10.1002/uog.26073", "use": "new"}
+    ]
+  },
+  "steps": [
+    "Check the primary reports for recruitment site and period, ascertainment, definitions, counts and denominators. Use the Tong surgical and clinical-record comparison of complete versus incomplete hemivaginal obstruction. Use the two noncommunicating-horn columns of Tellum Table 3, functional versus nonfunctional. Exclude absent and communicating horns from the London contrast.",
+    "Compute the absolute difference in recorded endometriosis prevalence with a 95% Newcombe interval for each cohort. Keep the contrasts separate because the anomalies and diagnostic pathways differ. In London, calculate the corresponding descriptive differences for adenomyosis, fibroids and horn excision. The first two have different biology and detectability and are imperfect comparison outcomes. Horn excision documents opportunities for detection.",
+    "For each positive endometriosis difference, keep both group sizes and the numerator in the higher-prevalence group fixed. Find the smallest integer number of additional true cases among recorded noncases in the other group that reduces the difference to zero or below. Report this count and the fraction of recorded noncases it represents. This sensitivity calculation assumes no false positives and does not estimate how many diagnoses were actually missed.",
+    "Report the prespecified contrasts and falsifier even if directions differ. If the primary sources cannot separate the two exposure groups or verify outcome counts, stop the affected comparison. Group margins cannot identify individual surveillance histories, joint diagnoses or an adjusted causal effect."
+  ],
+  "deliverables": [
+    "Source-attributed aggregate numerators, denominators and study definitions with a reproducible offline calculation",
+    "One table of cohort-specific contrasts, comparator diagnoses and ascertainment tipping points, with the hypothesis decision and limitations"
+  ],
+  "acceptance": [
+    "Trace each count to a primary article location, distinguish prior results from newly calculated comparisons, and exclude overlapping publications from the cohort count.",
+    "Verify each reported tipping point by comparing the difference one case before and at the threshold. For a nonpositive original difference report zero additional cases needed.",
+    "Keep two cohorts separate and label the London outcome comparisons descriptive because cross-outcome covariance is unavailable. Publish only numeric facts and original summaries with attribution. Preserve third-party rights and exclude article copies and individual records."
+  ],
+  "budget": {"max_runtime_minutes": 60, "max_ram_gb": 1, "network": "public-opt-in", "max_download_mb": 5}
+}
