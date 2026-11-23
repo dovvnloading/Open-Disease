@@ -1,0 +1,260 @@
+{
+  "array_label_tests": {
+    "GSE6364": {
+      "assignments": 943422480,
+      "extreme": 174582066,
+      "holm_p": 0.37010368037869945,
+      "maximum": 120,
+      "observed": 77,
+      "two_sided_p": 0.18505184018934973
+    },
+    "Mumbai": {
+      "assignments": 35,
+      "extreme": 8,
+      "holm_p": 0.37010368037869945,
+      "maximum": 12,
+      "observed": 2,
+      "two_sided_p": 0.22857142857142856
+    },
+    "Rome": {
+      "assignments": 3003,
+      "extreme": 24,
+      "holm_p": 0.023976023976023976,
+      "maximum": 48,
+      "observed": 44,
+      "two_sided_p": 0.007992007992007992
+    }
+  },
+  "fit": "scan_disjoint",
+  "fixed_score_omission_bounds": {
+    "GSE6364": {
+      "at_threshold": {
+        "lower": {
+          "denominator": 84,
+          "numerator": 41
+        },
+        "omissions": 4,
+        "upper": {
+          "denominator": 92,
+          "numerator": 77
+        }
+      },
+      "baseline": {
+        "fraction": {
+          "denominator": 120,
+          "numerator": 77
+        },
+        "higher": 77,
+        "pairs": 120
+      },
+      "direction": "above_half",
+      "just_before_threshold": {
+        "lower": {
+          "denominator": 93,
+          "numerator": 50
+        },
+        "omissions": 3,
+        "upper": {
+          "denominator": 14,
+          "numerator": 11
+        }
+      },
+      "minimum_omissions_to_lose_direction": 4,
+      "one_omission": {
+        "lower": {
+          "denominator": 111,
+          "numerator": 68
+        },
+        "omissions": 1,
+        "upper": {
+          "denominator": 111,
+          "numerator": 77
+        }
+      }
+    },
+    "Mumbai": {
+      "at_threshold": {
+        "lower": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "omissions": 2,
+        "upper": {
+          "denominator": 2,
+          "numerator": 1
+        }
+      },
+      "baseline": {
+        "fraction": {
+          "denominator": 6,
+          "numerator": 1
+        },
+        "higher": 2,
+        "pairs": 12
+      },
+      "direction": "below_half",
+      "just_before_threshold": {
+        "lower": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "omissions": 1,
+        "upper": {
+          "denominator": 4,
+          "numerator": 1
+        }
+      },
+      "minimum_omissions_to_lose_direction": 2,
+      "one_omission": {
+        "lower": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "omissions": 1,
+        "upper": {
+          "denominator": 4,
+          "numerator": 1
+        }
+      }
+    },
+    "Rome": {
+      "at_threshold": {
+        "lower": {
+          "denominator": 2,
+          "numerator": 1
+        },
+        "omissions": 5,
+        "upper": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      },
+      "baseline": {
+        "fraction": {
+          "denominator": 12,
+          "numerator": 11
+        },
+        "higher": 44,
+        "pairs": 48
+      },
+      "direction": "above_half",
+      "just_before_threshold": {
+        "lower": {
+          "denominator": 4,
+          "numerator": 3
+        },
+        "omissions": 4,
+        "upper": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      },
+      "minimum_omissions_to_lose_direction": 5,
+      "one_omission": {
+        "lower": {
+          "denominator": 10,
+          "numerator": 9
+        },
+        "omissions": 1,
+        "upper": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "genome-transport-2026-11-15/rome_scan_transport.json": "46824dbfb93e62ec65e3a18aa5923f1493be174623169d368cd13b6a52355e9a",
+    "matrisome-holdout-2026-11-15/transfer-benchmark.json": "eca5133ab7fa796492d40d306026bbd20912626c599fae77072e9e21637baaa5"
+  },
+  "rome_scan_day_sensitivity": {
+    "cases_scanned_after_comparator_within_day": 15,
+    "compatible_within_day_tests": [
+      {
+        "extreme": 62,
+        "possible_within_day_wins": 11,
+        "two_sided_p": 0.31
+      },
+      {
+        "extreme": 34,
+        "possible_within_day_wins": 12,
+        "two_sided_p": 0.17
+      },
+      {
+        "extreme": 16,
+        "possible_within_day_wins": 13,
+        "two_sided_p": 0.08
+      },
+      {
+        "extreme": 6,
+        "possible_within_day_wins": 14,
+        "two_sided_p": 0.03
+      },
+      {
+        "extreme": 2,
+        "possible_within_day_wins": 15,
+        "two_sided_p": 0.01
+      }
+    ],
+    "scan_day_margins": [
+      {
+        "cases": 3,
+        "comparators": 3
+      },
+      {
+        "cases": 2,
+        "comparators": 3
+      },
+      {
+        "cases": 3,
+        "comparators": 0
+      }
+    ],
+    "within_day_assignments": 200,
+    "within_day_pairs": 15
+  },
+  "us_phase_sensitivity": {
+    "by_phase": {
+      "early_secretory": {
+        "cases": 6,
+        "comparators": 3,
+        "higher": 5,
+        "pairs": 18
+      },
+      "mid_secretory": {
+        "cases": 9,
+        "comparators": 8,
+        "higher": 56,
+        "pairs": 72
+      },
+      "proliferative": {
+        "cases": 6,
+        "comparators": 5,
+        "higher": 16,
+        "pairs": 30
+      }
+    },
+    "equal_phase_fraction": 0.5296296296296297,
+    "equal_phase_test": {
+      "assignments": 943422480,
+      "extreme": 741988286,
+      "maximum": 1080,
+      "observed": 572,
+      "two_sided_p": 0.7864856962068574
+    },
+    "omit_one_phase_pair_weighted": {
+      "early_secretory": {
+        "higher": 72,
+        "pairs": 102
+      },
+      "mid_secretory": {
+        "higher": 21,
+        "pairs": 48
+      },
+      "proliferative": {
+        "higher": 61,
+        "pairs": 90
+      }
+    }
+  }
+}
